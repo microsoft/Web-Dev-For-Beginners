@@ -10,27 +10,27 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# Веб-розробка для початківців - Навчальний план
+# Веб-розробка для початківців - навчальна програма
 
-Вивчайте основи веб-розробки за нашим комплексним 12-тижневим курсом від Microsoft Cloud Advocates. Кожен з 24 уроків занурюється у JavaScript, CSS та HTML через практичні проєкти, такі як тераріуми, розширення для браузера та космічні ігри. Взаємодійте з вікторинами, дискусіями та практичними завданнями. Покращуйте свої навички та оптимізуйте засвоєння знань за допомогою ефективної педагогіки, орієнтованої на проєкти. Почніть свою подорож у кодинг вже сьогодні!
+Вивчайте основи веб-розробки за допомогою нашого комплексного курсу тривалістю 12 тижнів від Microsoft Cloud Advocates. Кожен з 24 уроків занурюється у JavaScript, CSS та HTML через практичні проєкти, такі як тераріуми, розширення для браузера та космічні ігри. Залучайтесь до вікторин, обговорень і практичних завдань. Покращуйте свої навички та оптимізуйте засвоєння знань за допомогою нашої ефективної проектно-орієнтованої педагогіки. Розпочніть свою програмістську подорож сьогодні!
 
-Приєднуйтесь до спільноти Azure AI Foundry в Discord
+Приєднуйтесь до Azure AI Foundry Discord і зустрічайте експертів та інших розробників.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Виконайте ці кроки, щоб розпочати роботу з цими ресурсами:
-1. **Форкніть репозиторій**: Натисніть [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+Виконайте ці кроки, щоб почати використовувати ці ресурси:
+1. **Зробіть форк репозиторію**: Клікніть [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
 2. **Клонуйте репозиторій**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Приєднуйтесь до Azure AI Foundry Discord, зустрічайте експертів та колег-розробників**](https://discord.com/invite/ByRwuEEgH4)
+3. [**Приєднуйтесь до Azure AI Foundry Discord і зустрічайте експертів та інших розробників**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 Підтримка кількох мов
+### 🌐 Підтримка декількох мов
 
-#### Підтримується через GitHub Action (автоматично і завжди актуально)
+#### Підтримується через GitHub Action (автоматично та завжди актуально)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](./README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **Віддаєте перевагу клонувати локально?**
+> **Віддаєте перевагу клонуванню локально?**
 >
 > Цей репозиторій містить понад 50 мовних перекладів, що значно збільшує розмір завантаження. Щоб клонувати без перекладів, використовуйте sparse checkout:
 >
@@ -48,82 +48,82 @@
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> Це надасть вам все необхідне для проходження курсу з набагато швидшим завантаженням.
+> Це дасть вам все необхідне для проходження курсу з значно швидшим завантаженням.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**Якщо ви хочете, щоб підтримувалися додаткові мови перекладу, вони перелічені [тут](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**Якщо ви хочете мати додаткові переклади, підтримувані мови наведені [тут](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 #### 🧑‍🎓 _Ви студент?_
 
-Відвідайте [**сторінку Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), де ви знайдете ресурси для початківців, студентські набори та навіть можливості отримати безкоштовний сертифікат. Це сторінка, яку варто додати до закладок і періодично перевіряти, оскільки вміст оновлюється щомісяця.
+Відвідайте [**сторінку Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), де ви знайдете ресурси для початківців, студентські комплекти та навіть способи отримати безкоштовний сертифікат. Цю сторінку варто додати в закладки та перевіряти час від часу, оскільки щомісяця оновлюється контент.
 
-### 📣 Оголошення - Нові виклики в режимі GitHub Copilot Agent для виконання!
+### 📣 Оголошення - Нові завдання в режимі GitHub Copilot Agent для виконання!
 
-Додано нове завдання, шукайте "GitHub Copilot Agent Challenge 🚀" у більшості розділів. Це нове завдання, яке ви можете виконати за допомогою GitHub Copilot та режиму Agent. Якщо ви раніше не використовували режим Agent, він може не лише генерувати текст, а й створювати та редагувати файли, запускати команди та багато іншого.
+Додано нове завдання, шукайте "GitHub Copilot Agent Challenge 🚀" у більшості розділів. Це нове завдання, яке вам потрібно виконати за допомогою GitHub Copilot і режиму Agent. Якщо ви ще не використовували режим Agent, він здатний не лише генерувати текст, а й створювати та редагувати файли, запускати команди та інше.
 
-### 📣 Оголошення - _Новий проєкт для створення із використанням генеративного ШІ_ 
+### 📣 Оголошення - _Новий проєкт на основі Генеративного ШІ_ 
 
-Щойно додано новий AI Assistant проєкт, ознайомтеся з ним [проєкт](./9-chat-project/README.md)
+Додав новий проєкт AI Assistant, перевірте його [тут](./9-chat-project/README.md)
 
-### 📣 Оголошення - _Новий навчальний план_ з генеративного ШІ для JavaScript щойно випущено
+### 📣 Оголошення - _Нова навчальна програма_ з генеративного ШІ для JavaScript тільки що випущена
 
-Не пропустіть наш новий навчальний план з генеративного ШІ!
+Не пропустіть нашу нову навчальну програму з генеративного ШІ!
 
-Відвідайте [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), щоб розпочати!
+Відвідайте [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), щоб почати!
 
 ![Background](../../translated_images/uk/background.148a8d43afde5730.webp)
 
-- Уроки охоплюють все від основ до RAG.
-- Спілкуйтеся з історичними персонажами за допомогою GenAI та нашого супутнього додатку.
-- Весела та захоплююча наративна подорож, ви подорожуватимете в часі!
+- Уроки, що охоплюють усе від основ до RAG.
+- Взаємодійте з історичними персонажами за допомогою GenAI та нашого супутнього додатка.
+- Весела та захоплива історія, ви будете подорожувати у часі!
 
 ![character](../../translated_images/uk/character.5c0dd8e067ffd693.webp)
 
 
-Кожен урок включає завдання для виконання, перевірку знань та виклик, які допоможуть у вивченні таких тем, як:
-- Підказки та інженерія підказок
-- Генерація текстових і графічних додатків
+Кожен урок містить завдання для виконання, перевірку знань та виклик, який допоможе вам освоїти теми, такі як:
+- Формулювання запитів та інженерія запитів
+- Генерація текстових та графічних додатків
 - Пошукові додатки
 
-Відвідайте [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), щоб розпочати!
+Відвідайте [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course), щоб почати!
 
 
 
 ## 🌱 Початок роботи
 
-> **Вчителі**, ми включили [деякі пропозиції](for-teachers.md) щодо використання цього навчального плану. Ми будемо раді вашим відгукам [на нашому форумі обговорень](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Викладачі**, ми включили [деякі пропозиції](for-teachers.md) щодо того, як використовувати цю навчальну програму. Ми будемо раді вашим відгукам [у нашому форумі обговорень](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Учні](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, для кожного уроку починайте з передлекційної вікторини, потім читайте матеріал лекції, виконуйте різні активності та перевіряйте розуміння за допомогою післялекційної вікторини.
+**[Учні](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, для кожного уроку починайте з вікторини перед лекцією та продовжуйте читати матеріал лекції, виконувати різні активності та перевіряти свої знання за допомогою вікторини після лекції.
 
-Щоб покращити свій досвід навчання, об'єднуйтесь із однокурсниками для спільної роботи над проєктами! Обговорення заохочуються на нашому [форумі обговорень](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), де команда модераторів допоможе відповісти на ваші запитання.
+Щоб покращити ваш досвід навчання, спілкуйтеся з однокласниками, щоб працювати над проєктами разом! Заохочуємо обговорення у нашому [форумі обговорень](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), де наша команда модераторів буде готова відповідати на ваші питання.
 
-Для поглиблення освіти ми настійно рекомендуємо досліджувати [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) для додаткових навчальних матеріалів.
+Для подальшої освіти ми настійно рекомендуємо досліджувати [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) для додаткових навчальних матеріалів.
 
-### 📋 Налаштування вашого середовища
+### 📋 Налаштування середовища
 
-Цей навчальний план має готове до роботи середовище розробки! Розпочинаючи, ви можете вибрати запуск курсу в [Codespace](https://github.com/features/codespaces/) (_браузерне середовище без потреби встановлення_), або локально на своєму комп’ютері, використовуючи текстовий редактор, наприклад [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Ця навчальна програма має готове до роботи середовище розробки! Починаючи, ви можете обрати запуск програми в [Codespace](https://github.com/features/codespaces/) (_браузерне середовище без необхідності інсталяції_), або локально на вашому комп'ютері за допомогою текстового редактора, такого як [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
 #### Створіть свій репозиторій
-Щоб легко зберігати свою роботу, рекомендується створити власну копію цього репозиторію. Ви можете зробити це, натиснувши кнопку **Use this template** у верхній частині сторінки. Це створить новий репозиторій у вашому обліковому записі GitHub з копією навчального плану.
+Щоб вам було легко зберігати свою роботу, радимо створити власну копію цього репозиторію. Це можна зробити, натиснувши кнопку **Use this template** у верхній частині сторінки. Це створить новий репозиторій у вашому акаунті GitHub із копією навчальної програми.
 
 Виконайте ці кроки:
-1. **Форкніть репозиторій**: Натисніть кнопку "Fork" у правому верхньому куті цієї сторінки.
+1. **Зробіть форк репозиторію**: Натисніть кнопку "Fork" у верхньому правому куті цієї сторінки.
 2. **Клонуйте репозиторій**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Запуск курсу в Codespace
+#### Запуск програми в Codespace
 
-У власній копії репозиторію, що ви створили, натисніть кнопку **Code** та оберіть **Open with Codespaces**. Це створить для вас новий Codespace для роботи.
+У вашій копії репозиторію, яку ви створили, натисніть кнопку **Code** та оберіть **Open with Codespaces**. Це створить новий Codespace для вашої роботи.
 
 ![Codespace](../../translated_images/uk/createcodespace.0238bbf4d7a8d955.webp)
 
-#### Запуск курсу локально на вашому комп'ютері
+#### Запуск програми локально на вашому комп’ютері
 
-Для локального запуску цього курсу вам знадобиться текстовий редактор, браузер та інструмент командного рядка. Перший урок, [Вступ до мов програмування та інструментів професії](../../1-getting-started-lessons/1-intro-to-programming-languages), проведе вас через різні варіанти кожного з цих інструментів, щоб ви могли обрати найкращий для себе.
+Щоб запускати цю навчальну програму локально на вашому комп’ютері, вам потрібен текстовий редактор, браузер і інструмент командного рядка. Наш перший урок, [Вступ до мов програмування та інструментів](../../1-getting-started-lessons/1-intro-to-programming-languages), познайомить вас з різними варіантами для кожного з цих інструментів, щоб ви могли обрати найзручніший для себе.
 
-Ми рекомендуємо використовувати [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) як свій редактор, який також має вбудований [термінал](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Завантажити Visual Studio Code можна [тут](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-1. Клонуйте ваш репозиторій на свій комп’ютер. Ви можете зробити це, натиснувши кнопку **Code** і скопіювавши URL:
+Ми рекомендуємо використовувати [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) як текстовий редактор, який також має вбудований [Термінал](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Завантажити Visual Studio Code можна [тут](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+1. Клонувати ваше сховище на комп’ютер. Це можна зробити, клацнувши кнопку **Code** і скопіювавши URL:
 
     [CodeSpace](./images/createcodespace.png)
 
@@ -133,89 +133,90 @@
     git clone <your-repository-url>
     ```
 
-2. Відкрийте папку у Visual Studio Code. Ви можете зробити це, натиснувши **File** > **Open Folder** і вибравши щойно клоновану папку.
+2. Відкрийте папку у Visual Studio Code. Це можна зробити, клацнувши **File** > **Open Folder** і вибравши папку, яку ви щойно клонували.
 
 
 >  Рекомендовані розширення Visual Studio Code:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - для перегляду HTML-сторінок у Visual Studio Code
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - для попереднього перегляду HTML-сторінок всередині Visual Studio Code
 > * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - щоб допомогти вам швидше писати код
 
-## 📂 Кожен урок включає:
+## 📂 Кожен урок містить:
 
-- необов’язкову схематичну замітку
-- необов’язкове додаткове відео
-- розминку у вигляді вікторини перед уроком
+- додаткову замальовку (sketchnote) за бажанням
+- додаткове відео за бажанням
+- розігрівальний вікторину перед уроком
 - письмовий урок
-- для уроків, заснованих на проектах, покрокові інструкції з будування проекту
+- для проектно-орієнтованих уроків — покрокові керівництва зі створення проєкту
 - перевірки знань
-- завдання
+- виклик (challenge)
 - додаткове читання
+- завдання
 - [вікторину після уроку](https://ff-quizzes.netlify.app/web/)
 
-> **Примітка про вікторини**: Усі вікторини зберігаються у папці Quiz-app, загалом 48 вікторин по три питання кожна. Вони доступні [тут](https://ff-quizzes.netlify.app/web/), додаток для вікторин може запускатися локально або бути розгорнутим в Azure; дотримуйтесь інструкцій у папці `quiz-app`.
+> **Примітка щодо вікторин**: Усі вікторини знаходяться в папці Quiz-app, всього 48 вікторин по три запитання кожна. Вони доступні [тут](https://ff-quizzes.netlify.app/web/). Квіз-додаток можна запускати локально або розгортати в Azure; дотримуйтесь інструкцій у папці `quiz-app`.
 
 ## 🗃️ Уроки
 
-|     |                       Назва проекту                       |                            Навчаємі концепції                             | Навчальні цілі                                                                                                                  |                                                         Пов’язаний урок                                                          |         Автор         |
-| :-: | :-------------------------------------------------------: | :-----------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :-------------------: |
-| 01  |                     Початок роботи                        |           Вступ до програмування та інструментів професії                | Вивчити основні поняття, що лежать в основі більшості мов програмування, та про програмне забезпечення для професійних розробників | [Вступ до мов програмування та інструментів](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine       |
-| 02  |                     Початок роботи                        |             Основи GitHub, робота в команді                             | Як використовувати GitHub у своєму проєкті, як співпрацювати з іншими у кодовій базі                                            |                            [Вступ у GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor        |
-| 03  |                     Початок роботи                        |                             Доступність                                | Вивчення основ доступності веб-контенту                                                                                        |                       [Основи доступності](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher     |
-| 04  |                        Основи JS                          |                         Типи даних JavaScript                          | Основи типів даних JavaScript                                                                                                   |                                       [Типи даних](./2-js-basics/1-data-types/README.md)                                        |         Jasmine       |
-| 05  |                        Основи JS                          |                         Функції та методи                             | Вивчення функцій та методів для керування логікою програми                                                                     |                              [Функції та методи](./2-js-basics/2-functions-methods/README.md)                               | Jasmine та Christopher|
-| 06  |                        Основи JS                          |                        Прийняття рішень у JS                           | Вивчити, як створювати умови в коді із використанням методів прийняття рішень                                                  |                                 [Прийняття рішень](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine       |
-| 07  |                        Основи JS                          |                            Масиви та цикли                            | Робота з даними за допомогою масивів та циклів у JavaScript                                                                     |                                   [Масиви та цикли](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine       |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML на практиці                           | Створити HTML для онлайн-терраріуму, зосереджуючись на побудові макету                                                         |                                 [Вступ до HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen         |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS на практиці                            | Робота з CSS для стилізації онлайн-терраріуму, зосереджуючись на основах CSS, включно з адаптивністю сторінки                  |                                  [Вступ до CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen         |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 Замикання JavaScript, маніпулювання DOM                 | Написати JavaScript, щоб зробити терраріум із можливістю перетягування, з акцентом на замикання та роботу з DOM                |                  [Замикання JavaScript, маніпулювання DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen         |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Створення гри для набору тексту               | Вивчення використання подій клавіатури для логіки у JavaScript додатку                                                         |                                [Програмування на подіях](./4-typing-game/typing-game/README.md)                                |       Christopher     |
-| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Робота з браузерами                           | Вивчення роботи браузерів, їхньої історії та створення перших елементів розширення браузера                                     |                               [Про браузери](./5-browser-extension/1-about-browsers/README.md)                                |           Jen         |
-| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Створення форми, виклик API та збереження змінних у локальне сховище | Написання JavaScript для виклику API в розширенні браузера із змінними, збереженими у локальному сховищі                         |                [API, форми і локальне сховище](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen         |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Процеси у фоновому режимі браузера, продуктивність веба               | Використання фонового режиму браузера для керування іконкою розширення; знайомство з продуктивністю та оптимізаціями веба     |             [Фонові задачі та продуктивність](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen         |
-| 15  |           [Space Game](./6-space-game/solution/README.md)           |             Розвинена розробка ігор на JavaScript                      | Вивчення спадкоємності на базі класів, композиції та шаблону Pub/Sub для створення гри                                          |                      [Вступ до розвиненої розробки ігор](./6-space-game/1-introduction/README.md)                       |          Chris        |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Малювання на canvas                          | Ознайомлення з Canvas API для малювання елементів на екрані                                                                     |                                [Малювання на Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris        |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Рух елементів по екрану                             | Дізнатися про рух елементів за допомогою декартових координат і Canvas API                                                      |                           [Рух елементів на екрані](./6-space-game/3-moving-elements-around/README.md)                           |          Chris        |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Виявлення колізій                             | Зробити зіткнення і реакцію між об’єктами за допомогою натискань клавіш та реалізувати функцію охолодження для продуктивності|                              [Виявлення колізій](./6-space-game/4-collision-detection/README.md)                              |          Chris        |
-| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Ведення рахунку                            | Виконувати обчислення на основі стану і результатів гри                                                                         |                                    [Ведення рахунку](./6-space-game/5-keeping-score/README.md)                                    |          Chris        |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Завершення та перезапуск гри                      | Вивчити завершення та перезапуск гри, в тому числі очищення ресурсів та скидання змінних                                         |                                [Умова завершення](./6-space-game/6-end-condition/README.md)                                 |          Chris        |
-| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 HTML-шаблони та маршрути в вебдодатку                 | Вивчити створення каркасу мультисторінкового сайту, використання маршрутизації та HTML-шаблонів                                |                            [HTML-шаблони і маршрути](./7-bank-project/1-template-route/README.md)                             |          Yohan        |
-| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Створення форм для входу та реєстрації               | Вивчити створення форм та обробку перевірок                                                                                      |                                           [Форми](./7-bank-project/2-forms/README.md)                                           |          Yohan        |
-| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Методи отримання та використання даних              | Розуміння потоків даних у додатку, їх отримання, збереження та видалення                                                         |                                            [Дані](./7-bank-project/3-data/README.md)                                            |          Yohan        |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Концепції керування станом                      | Вивчити, як додаток зберігає стан і як ним керувати програмно                                                                   |                                [Керування станом](./7-bank-project/4-state-management/README.md)                                |          Yohan        |
-| 25 | [Browser/VScode Code](../../8-code-editor) | Робота з VScode | Навчитися використовувати редактор коду | [Використання редактора VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AI Assistants](./9-chat-project/README.md) | Робота з AI | Навчитися створювати власного AI-асистента | [Проєкт AI асистента](./9-chat-project/README.md) | Chris |
+|     |                       Назва проєкту                       |                            Навчені поняття                             | Навчальні цілі                                                                                                                    |                                                         Пов’язаний урок                                                          |         Автор          |
+| :-: | :-------------------------------------------------------: | :--------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     Початок роботи                       |           Вступ до програмування та інструменти професії              | Вивчити базові основи більшості мов програмування і програмне забезпечення, яке допомагає професійним розробникам                | [Вступ до мов програмування та інструментів](./1-getting-started-lessons/1-intro-to-programming-languages/README.md)            |         Jasmine         |
+| 02  |                     Початок роботи                       |             Основи GitHub, включаючи командну роботу                   | Як використовувати GitHub у вашому проєкті, як співпрацювати з іншими над базою коду                                             |                            [Вступ до GitHub](./1-getting-started-lessons/2-github-basics/README.md)                              |          Floor          |
+| 03  |                     Початок роботи                       |                             Доступність                               | Вивчити основи веб-доступності                                                                                                   |                       [Основи доступності](./1-getting-started-lessons/3-accessibility/README.md)                                |       Christopher       |
+| 04  |                        Основи JS                         |                         Типи даних в JavaScript                       | Основи типів даних у JavaScript                                                                                                  |                                       [Типи даних](./2-js-basics/1-data-types/README.md)                                         |         Jasmine         |
+| 05  |                        Основи JS                         |                        Функції та методи                             | Вивчити функції та методи для управління логікою застосування                                                                   |                              [Функції та методи](./2-js-basics/2-functions-methods/README.md)                                     | Jasmine and Christopher |
+| 06  |                        Основи JS                         |                        Прийняття рішень з JS                         | Навчитися створювати умови у вашому коді за допомогою способів прийняття рішень                                                  |                                 [Прийняття рішень](./2-js-basics/3-making-decisions/README.md)                                 |         Jasmine         |
+| 07  |                        Основи JS                         |                          Масиви та цикли                             | Працювати з даними, використовуючи масиви та цикли в JavaScript                                                                 |                                   [Масиви та цикли](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Тераріум](./3-terrarium/solution/README.md)        |                            HTML на практиці                           | Створити HTML для онлайн-тераріуму, зосереджуючись на побудові макету                                                           |                                 [Вступ до HTML](./3-terrarium/1-intro-to-html/README.md)                                      |           Jen           |
+| 09  |       [Тераріум](./3-terrarium/solution/README.md)        |                            CSS на практиці                            | Створити CSS для стилізації онлайн-тераріуму, зосереджуючись на основах CSS, включаючи створення адаптивної сторінки            |                                  [Вступ до CSS](./3-terrarium/2-intro-to-css/README.md)                                       |           Jen           |
+| 10  |            [Тераріум](./3-terrarium/solution/README.md)           |                  Замикання JavaScript, маніпулювання DOM              | Написати JavaScript для функціонування тераріуму як інтерфейсу перетягування, зосереджуючись на замиканнях і маніпулюванні DOM  |                  [Замикання JS, маніпулювання DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                       |           Jen           |
+| 11  |           [Гра на друкування](./4-typing-game/solution/README.md)            |                     Створення гри на друкування                       | Вивчити, як використовувати події клавіатури для керування логікою вашого JS-додатка                                           |                                [Подійне програмування](./4-typing-game/typing-game/README.md)                                  |       Christopher       |
+| 12  | [Зелене розширення для браузера](./5-browser-extension/solution/README.md) |                         Робота з браузерами                          | Дізнатися, як працюють браузери, їх історію і як створити перші елементи розширення для браузера                                 |                               [Про браузери](./5-browser-extension/1-about-browsers/README.md)                                 |           Jen           |
+| 13  | [Зелене розширення для браузера](./5-browser-extension/solution/README.md) | Створення форм, виклик API та збереження змінних у локальному сховищі | Створити JS-елементи розширення браузера для виклику API, використовуючи змінні у локальному сховищі                             |                 [API, форми та локальне сховище](./5-browser-extension/2-forms-browsers-local-storage/README.md)               |           Jen           |
+| 14  | [Зелене розширення для браузера](./5-browser-extension/solution/README.md) |        Фонові процеси у браузері, веб-продуктивність                 | Користуватись фоновими процесами браузера для керування іконкою розширення; вивчити веб-продуктивність і оптимізації            |                  [Фонові завдання та продуктивність](./5-browser-extension/3-background-tasks-and-performance/README.md)       |           Jen           |
+| 15  |           [Космічна гра](./6-space-game/solution/README.md)           |            Більш просунута розробка ігор на JavaScript               | Вивчити наслідування за допомогою класів і композиції та патерн Pub/Sub перед створенням гри                                     |                      [Вступ до просунутої розробки ігор](./6-space-game/1-introduction/README.md)                              |          Chris          |
+| 16  |           [Космічна гра](./6-space-game/solution/README.md)           |                        Малювання на канвасі                          | Вивчити Canvas API, який використовується для малювання елементів на екрані                                                    |                                [Малювання на канвасі](./6-space-game/2-drawing-to-canvas/README.md)                           |          Chris          |
+| 17  |           [Космічна гра](./6-space-game/solution/README.md)           |                  Переміщення елементів по екрану                     | Дізнатися, як елементи можуть набувати рух за допомогою картезіанських координат і Canvas API                                    |                            [Переміщення елементів](./6-space-game/3-moving-elements-around/README.md)                         |          Chris          |
+| 18  |           [Космічна гра](./6-space-game/solution/README.md)           |                        Виявлення зіткнень                           | Зробити зіткнення елементів і реакцію один на одного з використанням натискань клавіш, а також реалізувати функцію охолодження  |                              [Виявлення зіткнень](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Космічна гра](./6-space-game/solution/README.md)           |                            Підрахунок очок                           | Виконувати математичні обчислення на основі статусу та продуктивності гри                                                      |                                    [Підрахунок очок](./6-space-game/5-keeping-score/README.md)                               |          Chris          |
+| 20  |           [Космічна гра](./6-space-game/solution/README.md)           |                      Завершення та перезапуск гри                    | Вивчити завершення та перезапуск гри, включно з очищенням ресурсів та скиданням змінних                                         |                                [Умова завершення](./6-space-game/6-end-condition/README.md)                                  |          Chris          |
+| 21  |         [Банківський додаток](./7-bank-project/solution/README.md)          |                 HTML-шаблони та маршрути у веб-додатку                 | Вивчити, як створювати каркас мультисторінкового сайту, використовуючи маршрутизацію та HTML-шаблони                           |                            [HTML-шаблони та маршрути](./7-bank-project/1-template-route/README.md)                            |          Yohan          |
+| 22  |         [Банківський додаток](./7-bank-project/solution/README.md)          |                  Створення форми входу та реєстрації                 | Вивчити створення форм і перевірку даних                                                                                            |                                           [Форми](./7-bank-project/2-forms/README.md)                                        |          Yohan          |
+| 23  |         [Банківський додаток](./7-bank-project/solution/README.md)          |                   Методи отримання та використання даних             | Як дані надходять і виходять з вашого додатку, як їх отримувати, зберігати і видаляти                                             |                                            [Дані](./7-bank-project/3-data/README.md)                                         |          Yohan          |
+| 24  |         [Банківський додаток](./7-bank-project/solution/README.md)          |                      Поняття управління станом                       | Вивчити, як ваш додаток зберігає стан і як програмно ним управляти                                                               |                                [Управління станом](./7-bank-project/4-state-management/README.md)                              |          Yohan          |
+| 25 | [Код браузера/VScode](../../8-code-editor) | Робота з VScode | Вивчити використання редактора коду | [Використання редактора коду VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI Асистенти](./9-chat-project/README.md) | Робота з AI | Вивчити створення власного AI асистента | [Проєкт AI асистента](./9-chat-project/README.md) | Chris |
 
 ## 🏫 Педагогіка
 
-Наша навчальна програма розроблена з дотриманням двох ключових педагогічних принципів:
-* навчання на основі проєктів
+Наша навчальна програма розроблена з урахуванням двох ключових педагогічних принципів:
+* навчання на основі проектів
 * часті вікторини
 
-Програма навчає основам JavaScript, HTML та CSS, а також сучасним інструментам і методам, які застосовують сьогодні веб-розробники. Студенти матимуть можливість отримати практичний досвід, створюючи гру для набору тексту, віртуальний терраріум, екологічне розширення браузера, гру у стилі space-invader і банківський додаток для бізнесу. Наприкінці серії учні отримають ґрунтовні знання з веб-розробки.
+Програма викладає основи JavaScript, HTML та CSS, а також сучасні інструменти і техніки, які використовують сьогоднішні веб-розробники. Студенти матимуть можливість отримати практичний досвід, створюючи гру на друку, віртуальний тераріум, екологічно дружнє розширення для браузера, гру в стилі космічних загарбників і банківський додаток для бізнесу. Наприкінці курсу студенти здобудуть міцне розуміння веб-розробки.
 
-> 🎓 Ви можете пройти перші кілька уроків цієї навчальної програми як [шлях навчання](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) на Microsoft Learn!
+> 🎓 Ви можете пройти перші уроки цієї навчальної програми як [шлях навчання](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) на Microsoft Learn!
 
-Забезпечуючи відповідність контенту проєктам, процес навчання стає більш захопливим, а засвоєння концепцій покращується. Ми також створили кілька початкових уроків з основ JavaScript, щоб представити концепції, підкріплених відео з колекції "[Серія для початківців: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", автори якої також долучились до цієї програми.
+Забезпечення відповідності контенту проєктам робить процес більш захопливим для студентів і підвищує засвоєння понять. Ми також написали кілька вступних уроків з основ JavaScript у поєднанні з відео з колекції "[Серія для початківців з JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", де деякі автори брали участь у створенні цієї навчальної програми.
 
-Додатково, вікторина з низькою ставкою перед заняттям налаштовує намір студента вивчати тему, а друга вікторина після заняття забезпечує подальше закріплення матеріалу. Ця навчальна програма спроектована як гнучка та цікава, її можна проходити повністю або частково. Проєкти починаються просто і поступово ускладнюються до кінця 12-тижневого циклу.
+Крім того, низькопорогова вікторина перед заняттям встановлює намір студента вивчити тему, а друга вікторина після уроку забезпечує кращу засвоюваність. Ця програма розроблена так, щоб бути гнучкою і цікавою, і її можна пройти повністю або частково. Проєкти починаються з невеликих і стають дедалі складнішими до кінця 12-тижневого циклу.
 
-Хоч ми цілеспрямовано уникали введення фреймворків JavaScript, щоб зосередитись на базових навичках веб-розробника перед впровадженням фреймворку, хорошим наступним кроком після цієї програми буде вивчення Node.js за допомогою іншої колекції відео: "[Серія для початківців: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+Ми навмисно утримувалися від впровадження JavaScript-фреймворків, щоб зосередитися на базових навичках, необхідних веб-розробнику, перш ніж починати роботу з фреймворком, однак наступним кроком після проходження цієї програми варто вивчити Node.js за допомогою іншої колекції відео: "[Серія для початківців з Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> Відвідайте наші правила [Code of Conduct](CODE_OF_CONDUCT.md) та [Contributing](CONTRIBUTING.md). Ми радо приймаємо ваші конструктивні відгуки!
+> Відвідайте наші настанови [Кодекс поведінки](CODE_OF_CONDUCT.md) та [Участь](CONTRIBUTING.md). Ми вітаємо ваші конструктивні зауваження!
 
 
-## 🧭 Офлайн-доступ
+## 🧭 Доступ офлайн
 
-Ви можете переглядати цю документацію офлайн за допомогою [Docsify](https://docsify.js.org/#/). Форкніть цей репозиторій, [встановіть Docsify](https://docsify.js.org/#/quickstart) на свій локальний комп’ютер, а потім у кореневій папці репозиторію введіть `docsify serve`. Вебсайт буде запущений на порту 3000 локального хоста: `localhost:3000`.
+Ви можете працювати з цією документацією офлайн, використовуючи [Docsify](https://docsify.js.org/#/). Форкніть це репозиторій, [встановіть Docsify](https://docsify.js.org/#/quickstart) на свій локальний комп’ютер, а потім у кореневій папці репозиторію введіть команду `docsify serve`. Вебсайт буде доступний на порту 3000 на вашому локальному хості: `localhost:3000`.
 
 ## 📘 PDF
-PDF усіх уроків можна знайти [тут](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+PDF-файл усіх уроків можна знайти [тут](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
-## 🎒 Інші курси
+## 🎒 Інші Курси
 
-Наша команда створює інші курси! Ознайомтесь із ними:
+Наша команда створює інші курси! Ознайомтесь:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -232,7 +233,7 @@ PDF усіх уроків можна знайти [тут](https://microsoft.git
 
 ---
  
-### Серія про генеративний ШІ
+### Серія Generative AI
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -240,7 +241,7 @@ PDF усіх уроків можна знайти [тут](https://microsoft.git
 
 ---
  
-### Основні курси
+### Основне навчання
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -251,7 +252,7 @@ PDF усіх уроків можна знайти [тут](https://microsoft.git
 
 ---
  
-### Серія про Copilot
+### Серія Copilot
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
@@ -259,21 +260,21 @@ PDF усіх уроків можна знайти [тут](https://microsoft.git
 
 ## Отримання допомоги
 
-Якщо ви застрягли або маєте питання щодо створення AI-додатків. Приєднуйтесь до інших учнів та досвідчених розробників у обговореннях MCP. Це підтримуюча спільнота, де питання вітаються, а знання вільно діляться.
+Якщо ви застрягли або маєте питання щодо створення AI-додатків, приєднуйтесь до інших учнів і досвідчених розробників у обговореннях MCP. Це підтримуюча спільнота, де питання вітаються, а знання вільно поширюються.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Якщо у вас є відгуки про продукт або ви стикнулися з помилками під час створення, відвідайте:
+Якщо у вас є відгуки про продукт або помилки під час розробки, відвідайте:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Ліцензія
 
-Цей репозиторій ліцензовано під ліцензією MIT. Детальніше дивіться у файлі [LICENSE](../../LICENSE).
+Цей репозиторій ліцензовано за ліцензією MIT. Детальніше див. у файлі [LICENSE](../../LICENSE).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Відмова від відповідальності**:
-Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Незважаючи на наші зусилля забезпечити точність, будь ласка, враховуйте, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ його рідною мовою вважається авторитетним джерелом. Для критичної інформації рекомендується професійний переклад людиною. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникають внаслідок використання цього перекладу.
+Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, врахуйте, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується професійний людський переклад. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

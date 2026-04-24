@@ -1,56 +1,79 @@
-# [Pamokos tema]
+# Pamokos tema
 
-![Įterpkite vaizdo įrašą čia](../../../lesson-template/video-url)
+## 🎥 Vaizdo įrašas
 
-## [Prieš paskaitą viktorina](../../../lesson-template/quiz-url)
-
-[Aprašykite, ką išmoksime]
-
-### Įvadas
-
-Aprašykite, kas bus aptarta
-
-> Pastabos
-
-### Būtinos žinios
-
-Kokius žingsnius reikėjo atlikti prieš šią pamoką?
-
-### Pasiruošimas
-
-Parengiamieji žingsniai, kad galėtumėte pradėti šią pamoką
+> Pridėkite įterptą vaizdo įrašą arba pamokos nuorodą čia.
 
 ---
 
-[Turinio peržiūra blokais]
+## Priešpaskaitinis testas
 
-## [Tema 1]
+> Pridėkite testo nuorodą čia, kai ji bus prieinama.
+
+---
+
+Trumpai aprašykite, ko studentai išmoks šioje pamokoje.
+
+---
+
+### Įvadas
+
+Trumpai pristatykite, kas bus aptariama šioje pamokoje.
+
+> Pastabos
+
+---
+
+### Išankstinės žinios
+
+Išvardykite sąvokas ar temas, su kuriomis studentai turėtų būti susipažinę prieš pradėdami šią pamoką.
+
+---
+
+### Paruošimas
+
+Išvardykite nustatymo veiksmus ar įrankius, reikalingus prieš pradedant pamoką.
+
+---
+
+### Turinys
+
+Žingsnis po žingsnio pereikite pamokos turinį struktūrizuotose dalyse.
+
+---
+
+## Tema 1
 
 ### Užduotis:
 
-Dirbkite kartu, kad palaipsniui patobulintumėte savo kodų bazę ir sukurtumėte projektą su bendru kodu:
+Dirbkite kartu, kad palaipsniui patobulintumėte savo kodo bazę ir sukurtumėte projektą su bendro naudojimo kodu:
 
 ```html
 code blocks
 ```
 
-✅ Žinių patikrinimas - pasinaudokite šia akimirka, kad praplėstumėte studentų žinias atvirais klausimais
+✅ Žinių patikrinimas
+Pasinaudokite šia proga išplėsti studentų žinias atvirais klausimais.
 
-## [Tema 2]
+## Tema 2
+## Tema 3
 
-## [Tema 3]
+🚀 Iššūkis
+Pridėkite bendradarbiavimo iššūkį studentams, kad patobulintų projektą.
 
-🚀 Iššūkis: Pasiūlykite studentams klasėje bendradarbiaujant dirbti su projektu ir jį patobulinti
+Pasirinktinai: pridėkite ekrano nuotrauką, kurioje matomas baigtos pamokos UI, jei tinkama.
 
-Pasirinktinai: pridėkite ekrano nuotrauką su baigtos pamokos sąsaja, jei tai tinkama
+## Po paskaitos testas
 
-## [Po paskaitos viktorina](../../../lesson-template/quiz-url)
+Pridėkite testo nuorodą po pamokos pabaigos.
 
-## Apžvalga ir savarankiškas mokymasis
+## Peržiūra ir savarankiškas mokymasis
 
-**Užduoties terminas [MM/YY]**: [Užduoties pavadinimas](assignment.md)
+**Uždavinys turi būti atliktas iki [MM/YY]**: [Uždavinio pavadinimas](assignment.md)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius naudojant šį vertimą.
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatizuoti vertimai gali turėti klaidų arba netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojame naudotis profesionalaus žmogaus vertimu. Mes neatsakome už jokius nesusipratimus ar neteisingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
