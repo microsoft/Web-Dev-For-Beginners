@@ -1,29 +1,29 @@
-[![Lisensi GitHub](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
-[![Kontributor GitHub](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
-[![Masalah GitHub](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
-[![Permintaan tarik GitHub](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
-[![PRs Selamat Datang](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
+[![GitHub license](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 
-[![Pengamat GitHub](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
-[![Fork GitHub](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
-[![Bintang GitHub](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
+[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
+[![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 # Pengembangan Web untuk Pemula - Kurikulum
 
-Pelajari dasar-dasar pengembangan web dengan kursus komprehensif selama 12 minggu dari Microsoft Cloud Advocates. Setiap dari 24 pelajaran membahas JavaScript, CSS, dan HTML melalui proyek langsung seperti terarium, ekstensi browser, dan permainan luar angkasa. Ikuti kuis, diskusi, dan tugas praktis. Tingkatkan kemampuan Anda dan optimalkan retensi pengetahuan dengan pedagogi berbasis proyek kami yang efektif. Mulailah perjalanan coding Anda hari ini!
+Pelajari dasar-dasar pengembangan web dengan kursus komprehensif selama 12 minggu oleh Microsoft Cloud Advocates. Setiap dari 24 pelajaran mendalami JavaScript, CSS, dan HTML melalui proyek langsung seperti terarium, ekstensi browser, dan permainan luar angkasa. Ikuti kuis, diskusi, dan tugas praktis. Tingkatkan keterampilan Anda dan optimalkan retensi pengetahuan Anda dengan pedagogi berbasis proyek yang efektif. Mulailah perjalanan pemrograman Anda hari ini!
 
-Bergabung dengan Komunitas Discord Azure AI Foundry
+Bergabunglah dengan Azure AI Foundry Discord dan temui para ahli serta sesama pengembang.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ikuti langkah-langkah ini untuk mulai menggunakan sumber daya ini:
-1. **Fork Repository**: Klik [![Fork GitHub](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **Clone Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+Ikuti langkah-langkah ini untuk memulai menggunakan sumber daya ini:
+1. **Fork Repositori**: Klik [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **Clone Repositori**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 3. [**Bergabung dengan Azure AI Foundry Discord dan temui para ahli serta sesama pengembang**](https://discord.com/invite/ByRwuEEgH4)
 
-### 🌐 Dukungan Multibahasa
+### 🌐 Dukungan Multi-Bahasa
 
 #### Didukung melalui GitHub Action (Otomatis & Selalu Terbaru)
 
@@ -32,7 +32,7 @@ Ikuti langkah-langkah ini untuk mulai menggunakan sumber daya ini:
 
 > **Lebih suka Clone Secara Lokal?**
 >
-> Repository ini mencakup lebih dari 50 terjemahan bahasa yang secara signifikan meningkatkan ukuran unduhan. Untuk clone tanpa terjemahan, gunakan sparse checkout:
+> Repositori ini mencakup lebih dari 50 terjemahan bahasa yang secara signifikan meningkatkan ukuran unduhan. Untuk clone tanpa terjemahan, gunakan sparse checkout:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -48,24 +48,24 @@ Ikuti langkah-langkah ini untuk mulai menggunakan sumber daya ini:
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> Ini memberi Anda semua yang diperlukan untuk menyelesaikan kursus dengan waktu unduh yang jauh lebih cepat.
+> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan unduhan yang jauh lebih cepat.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**Jika Anda ingin bahasa terjemahan tambahan didukung, daftar lengkapnya ada [di sini](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**Jika Anda ingin memiliki terjemahan tambahan, bahasa yang didukung terdaftar di sini. [di sini](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
-[![Buka di Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-#### 🧑‍🎓 _Apakah kamu seorang pelajar?_
+#### 🧑‍🎓 _Apakah Anda seorang pelajar?_
 
-Kunjungi [**halaman Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) di mana Anda akan menemukan sumber belajar pemula, paket Pelajar dan bahkan cara mendapatkan voucher sertifikat gratis. Ini adalah halaman yang patut Anda tandai dan cek secara berkala karena kami mengganti konten setiap bulan.
+Kunjungi [**halaman Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) di mana Anda akan menemukan sumber daya pemula, paket pelajar dan bahkan cara untuk mendapatkan voucher sertifikat gratis. Ini adalah halaman yang ingin Anda tandai dan periksa dari waktu ke waktu karena kami mengganti konten setiap bulan.
 
 ### 📣 Pengumuman - Tantangan mode GitHub Copilot Agent baru untuk diselesaikan!
 
 Tantangan baru ditambahkan, cari "GitHub Copilot Agent Challenge 🚀" di sebagian besar bab. Itu adalah tantangan baru untuk Anda selesaikan menggunakan GitHub Copilot dan mode Agent. Jika Anda belum pernah menggunakan mode Agent sebelumnya, mode ini tidak hanya mampu menghasilkan teks tetapi juga dapat membuat dan mengedit file, menjalankan perintah dan lainnya.
 
-### 📣 Pengumuman - _Proyek Baru yang dibuat menggunakan Generative AI_ 
+### 📣 Pengumuman - _Proyek Baru untuk dibangun menggunakan Generative AI_
 
-Proyek Asisten AI baru saja ditambahkan, lihat [proyek](./9-chat-project/README.md)
+Proyek Asisten AI baru saja ditambahkan, cek [proyek](./9-chat-project/README.md)
 
 ### 📣 Pengumuman - _Kurikulum Baru_ tentang Generative AI untuk JavaScript baru saja dirilis
 
@@ -73,18 +73,18 @@ Jangan lewatkan kurikulum Generative AI baru kami!
 
 Kunjungi [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) untuk memulai!
 
-![Latar Belakang](../../translated_images/id/background.148a8d43afde5730.webp)
+![Background](../../translated_images/id/background.148a8d43afde5730.webp)
 
-- Pelajaran yang mencakup semuanya dari dasar hingga RAG.
+- Pelajaran mencakup segala sesuatu mulai dari dasar hingga RAG.
 - Berinteraksi dengan karakter sejarah menggunakan GenAI dan aplikasi pendamping kami.
 - Narasi yang menyenangkan dan menarik, Anda akan melakukan perjalanan waktu!
 
-![karakter](../../translated_images/id/character.5c0dd8e067ffd693.webp)
+![character](../../translated_images/id/character.5c0dd8e067ffd693.webp)
 
 
-Setiap pelajaran mencakup tugas untuk diselesaikan, pemeriksaan pengetahuan, dan tantangan untuk membimbing Anda mempelajari topik seperti:
+Setiap pelajaran mencakup tugas yang harus diselesaikan, pemeriksaan pengetahuan dan tantangan untuk memandu Anda mempelajari topik seperti:
 - Prompting dan rekayasa prompt
-- Generasi aplikasi teks dan gambar
+- Pembuatan aplikasi teks dan gambar
 - Aplikasi pencarian
 
 Kunjungi [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) untuk memulai!
@@ -93,37 +93,37 @@ Kunjungi [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) untuk 
 
 ## 🌱 Memulai
 
-> **Guru**, kami telah [menyertakan beberapa saran](for-teachers.md) tentang cara menggunakan kurikulum ini. Kami sangat menghargai umpan balik Anda [di forum diskusi kami](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Guru**, kami telah [menyertakan beberapa saran](for-teachers.md) tentang cara menggunakan kurikulum ini. Kami sangat menghargai masukan Anda [di forum diskusi kami](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Pembelajar](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, untuk setiap pelajaran, mulailah dengan kuis sebelum kuliah dan lanjutkan dengan membaca materi kuliah, menyelesaikan berbagai aktivitas dan periksa pemahaman Anda dengan kuis pasca kuliah.
+**[Pembelajar](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, untuk setiap pelajaran, mulailah dengan kuis pra-kuliah dan lanjutkan dengan membaca materi kuliah, menyelesaikan berbagai aktivitas dan memeriksa pemahaman Anda dengan kuis pasca-kuliah.
 
-Untuk meningkatkan pengalaman belajar Anda, hubungkan dengan teman sebaya untuk mengerjakan proyek bersama! Diskusi sangat dianjurkan di [forum diskusi kami](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) di mana tim moderator kami akan siap menjawab pertanyaan Anda.
+Untuk memperkaya pengalaman belajar Anda, hubungkan dengan rekan Anda untuk mengerjakan proyek bersama! Diskusi dianjurkan di [forum diskusi](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) kami di mana tim moderator kami akan siap menjawab pertanyaan Anda.
 
-Untuk melanjutkan pendidikan Anda, kami sangat menyarankan untuk menjelajahi [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) untuk materi belajar tambahan.
+Untuk melanjutkan pendidikan Anda, kami sangat menyarankan menjelajahi [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) untuk bahan studi tambahan.
 
 ### 📋 Menyiapkan lingkungan Anda
 
-Kurikulum ini memiliki lingkungan pengembangan yang siap digunakan! Saat Anda memulai, Anda dapat memilih menjalankan kurikulum ini di [Codespace](https://github.com/features/codespaces/) (_lingkungan berbasis browser tanpa perlu instalasi_), atau secara lokal di komputer Anda menggunakan editor teks seperti [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Kurikulum ini sudah memiliki lingkungan pengembangan siap pakai! Saat Anda memulai, Anda dapat memilih menjalankan kurikulum di [Codespace](https://github.com/features/codespaces/) (_lingkungan berbasis browser tanpa perlu instalasi_), atau secara lokal di komputer Anda menggunakan editor teks seperti [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-#### Buat repository Anda
-Untuk memudahkan Anda menyimpan pekerjaan, disarankan untuk membuat salinan sendiri dari repository ini. Anda bisa melakukannya dengan mengklik tombol **Use this template** di bagian atas halaman. Ini akan membuat repository baru di akun GitHub Anda dengan salinan kurikulum.
+#### Buat repositori Anda
+Agar Anda mudah menyimpan pekerjaan Anda, disarankan untuk membuat salinan repositori ini sendiri. Anda dapat melakukannya dengan mengklik tombol **Use this template** di bagian atas halaman. Ini akan membuat repositori baru di akun GitHub Anda dengan salinan kurikulum.
 
-Ikuti langkah-langkah ini:
-1. **Fork Repository**: Klik tombol "Fork" di pojok kanan atas halaman ini.
-2. **Clone Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+Ikuti langkah berikut:
+1. **Fork Repositori**: Klik tombol "Fork" di pojok kanan atas halaman ini.
+2. **Clone Repositori**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
 #### Menjalankan kurikulum di Codespace
 
-Di salinan repository yang Anda buat, klik tombol **Code** dan pilih **Open with Codespaces**. Ini akan membuat Codespace baru untuk Anda bekerja di sana.
+Di salinan repositori yang Anda buat, klik tombol **Code** dan pilih **Open with Codespaces**. Ini akan membuat Codespace baru untuk Anda bekerja.
 
 ![Codespace](../../translated_images/id/createcodespace.0238bbf4d7a8d955.webp)
 
 #### Menjalankan kurikulum secara lokal di komputer Anda
 
-Untuk menjalankan kurikulum ini secara lokal di komputer Anda, Anda memerlukan editor teks, browser, dan alat baris perintah. Pelajaran pertama kami, [Pengenalan Bahasa Pemrograman dan Alat Perdagangan](../../1-getting-started-lessons/1-intro-to-programming-languages), akan membimbing Anda melalui berbagai opsi untuk masing-masing alat ini agar Anda dapat memilih yang terbaik untuk Anda.
+Untuk menjalankan kurikulum ini secara lokal di komputer Anda, Anda memerlukan editor teks, browser dan alat baris perintah. Pelajaran pertama kami, [Pengantar Bahasa Pemrograman dan Alat Perdagangan](../../1-getting-started-lessons/1-intro-to-programming-languages), akan memandu Anda melalui berbagai opsi untuk setiap alat ini agar Anda dapat memilih yang terbaik untuk Anda.
 
 Rekomendasi kami adalah menggunakan [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) sebagai editor Anda, yang juga memiliki [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) bawaan. Anda dapat mengunduh Visual Studio Code [di sini](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-1. Clone repositori Anda ke komputer Anda. Anda dapat melakukan ini dengan mengklik tombol **Code** dan menyalin URL:
+1. Kloning repositori Anda ke komputer. Anda dapat melakukannya dengan mengklik tombol **Code** dan menyalin URL-nya:
 
     [CodeSpace](./images/createcodespace.png)
 
@@ -133,15 +133,15 @@ Rekomendasi kami adalah menggunakan [Visual Studio Code](https://code.visualstud
     git clone <your-repository-url>
     ```
 
-2. Buka folder tersebut di Visual Studio Code. Anda dapat melakukan ini dengan mengklik **File** > **Open Folder** dan memilih folder yang baru saja Anda clone.
+2. Buka folder di Visual Studio Code. Anda dapat melakukannya dengan mengklik **File** > **Open Folder** dan memilih folder yang baru saja Anda kloning.
 
 
->  Ekstensi Visual Studio Code yang direkomendasikan:
+>  Ekstensi Visual Studio Code yang Direkomendasikan:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - untuk mempratinjau halaman HTML di dalam Visual Studio Code
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - untuk melihat pratinjau halaman HTML di dalam Visual Studio Code
 > * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - untuk membantu Anda menulis kode lebih cepat
 
-## 📂 Setiap pelajaran termasuk:
+## 📂 Setiap pelajaran mencakup:
 
 - sketchnote opsional
 - video tambahan opsional
@@ -152,63 +152,63 @@ Rekomendasi kami adalah menggunakan [Visual Studio Code](https://code.visualstud
 - tantangan
 - bacaan tambahan
 - tugas
-- [kuis pasca-pelajaran](https://ff-quizzes.netlify.app/web/)
+- [kuis setelah pelajaran](https://ff-quizzes.netlify.app/web/)
 
-> **Catatan tentang kuis**: Semua kuis terdapat dalam folder Quiz-app, total 48 kuis dengan tiga pertanyaan masing-masing. Mereka tersedia [di sini](https://ff-quizzes.netlify.app/web/) aplikasi kuis dapat dijalankan secara lokal atau dideploy ke Azure; ikuti instruksi di folder `quiz-app`.
+> **Catatan tentang kuis**: Semua kuis terdapat di dalam folder Quiz-app, total 48 kuis dengan tiga pertanyaan setiap kuis. Kuis tersedia [di sini](https://ff-quizzes.netlify.app/web/), aplikasi kuis dapat dijalankan secara lokal atau dideploy ke Azure; ikuti instruksi di folder `quiz-app`.
 
 ## 🗃️ Pelajaran
 
-|     |                       Nama Proyek                       |                            Konsep yang Diajarkan                             | Tujuan Pembelajaran                                                                                                                 |                                                         Pelajaran Terkait                                                          |         Penulis          |
+|     |                       Nama Proyek                       |                            Konsep yang Diajarkan                             | Tujuan Pembelajaran                                                                                                                 |                                                         Pelajaran Terkait                                                          |         Penulis         |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Memulai                             |           Pengenalan Pemrograman dan Alat Kerja           | Pelajari dasar-dasar di balik sebagian besar bahasa pemrograman dan tentang perangkat lunak yang membantu pengembang profesional melakukan pekerjaan mereka | [Pengenalan Bahasa Pemrograman dan Alat](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     Memulai                             |             Dasar-dasar GitHub, termasuk bekerja dalam tim             | Cara menggunakan GitHub dalam proyek Anda, cara berkolaborasi dengan orang lain pada basis kode                                                    |                            [Pengenalan GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     Memulai                             |                             Aksesibilitas                              | Pelajari dasar-dasar aksesibilitas web                                                                                               |                       [Dasar-dasar Aksesibilitas](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        Dasar JS                         |                         Tipe Data JavaScript                          | Dasar-dasar tipe data JavaScript                                                                                                 |                                       [Tipe Data](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 01  |                     Memulai                            |           Pengenalan Pemrograman dan Alat Bantu           | Pelajari dasar-dasar di balik sebagian besar bahasa pemrograman dan tentang perangkat lunak yang membantu pengembang profesional melakukan pekerjaan mereka | [Pengantar Bahasa Pemrograman dan Alat](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     Memulai                            |             Dasar-dasar GitHub, termasuk bekerja dalam tim             | Cara menggunakan GitHub dalam proyek Anda, cara berkolaborasi dengan orang lain dalam basis kode                                                    |                            [Pengantar GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     Memulai                            |                             Aksesibilitas                              | Pelajari dasar-dasar aksesibilitas web                                                                                               |                       [Dasar-Dasar Aksesibilitas](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        Dasar JS                         |                         Tipe Data JavaScript                          | Dasar-dasar tipe data pada JavaScript                                                                                                 |                                       [Tipe Data](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
 | 05  |                        Dasar JS                         |                         Fungsi dan Metode                          | Pelajari tentang fungsi dan metode untuk mengelola alur logika aplikasi                                                             |                              [Fungsi dan Metode](./2-js-basics/2-functions-methods/README.md)                               | Jasmine dan Christopher |
-| 06  |                        Dasar JS                         |                        Membuat Keputusan dengan JS                        | Pelajari cara membuat kondisi dalam kode Anda menggunakan metode pengambilan keputusan                                                           |                                 [Membuat Keputusan](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        Dasar JS                         |                            Array dan Loop                            | Bekerja dengan data menggunakan array dan loop di JavaScript                                                                                 |                                   [Array dan Loop](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML dalam Praktik                            | Bangun HTML untuk membuat terrarium online, fokus pada membangun tata letak                                                         |                                 [Pengenalan HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS dalam Praktik                             | Bangun CSS untuk menata terrarium online, fokus pada dasar-dasar CSS termasuk membuat halaman responsif                     |                                  [Pengenalan CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript Closures, manipulasi DOM                  | Bangun JavaScript agar terrarium berfungsi sebagai antarmuka drag/drop, fokus pada closures dan manipulasi DOM             |                  [JavaScript Closures, manipulasi DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Membuat Game Mengetik                           | Pelajari cara menggunakan peristiwa keyboard untuk menggerakkan logika aplikasi JavaScript Anda                                                          |                                [Pemrograman Berbasis Event](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Bekerja dengan Browser                          | Pelajari cara kerja browser, sejarahnya, dan cara membuat elemen pertama dari ekstensi browser                               |                               [Tentang Browser](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Membangun formulir, memanggil API dan menyimpan variabel di penyimpanan lokal | Bangun elemen JavaScript pada ekstensi browser Anda untuk memanggil API menggunakan variabel yang disimpan di penyimpanan lokal                      |                [API, Formulir, dan Penyimpanan Lokal](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Proses latar belakang di browser, performa web          | Gunakan proses latar belakang browser untuk mengelola ikon ekstensi; pelajari tentang performa web dan beberapa optimasi untuk meningkatkan   |             [Tugas Latar Belakang dan Performa](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [Space Game](./6-space-game/solution/README.md)           |             Pengembangan Game Lanjutan dengan JavaScript             | Pelajari tentang Pewarisan menggunakan Kelas dan Komposisi serta pola Pub/Sub, sebagai persiapan untuk membangun game              |                      [Pengenalan Pengembangan Game Lanjutan](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Menggambar ke kanvas                           | Pelajari tentang Canvas API, yang digunakan untuk menggambar elemen ke layar                                                                       |                                [Menggambar ke Kanvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Memindahkan elemen di sekitar layar                    | Temukan bagaimana elemen dapat bergerak menggunakan koordinat kartesius dan Canvas API                                            |                           [Memindahkan Elemen](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Deteksi tabrakan                           | Buat elemen bertabrakan dan bereaksi satu sama lain menggunakan penekanan tombol dan berikan fungsi pending untuk memastikan performa game    |                              [Deteksi Tabrakan](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Menjaga skor                              | Lakukan perhitungan matematis berdasarkan status dan performa game                                                                |                                    [Menjaga Skor](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Mengakhiri dan memulai ulang game                     | Pelajari tentang mengakhiri dan memulai ulang game, termasuk membersihkan aset dan mereset nilai variabel                              |                                [Kondisi Akhir](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 06  |                        Dasar JS                         |                        Membuat Keputusan dengan JS                        | Pelajari bagaimana membuat kondisi dalam kode menggunakan metode pengambilan keputusan                                                           |                                 [Membuat Keputusan](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        Dasar JS                         |                            Array dan Perulangan                            | Bekerja dengan data menggunakan array dan perulangan di JavaScript                                                                                 |                                   [Array dan Perulangan](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML dalam Praktik                            | Bangun HTML untuk membuat terrarium online, fokus pada membangun tata letak                                                         |                                 [Pengantar ke HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS dalam Praktik                             | Bangun CSS untuk menata terrarium online, fokus pada dasar-dasar CSS termasuk membuat halaman responsif                     |                                  [Pengantar ke CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript Closures, manipulasi DOM                  | Bangun JavaScript agar terrarium berfungsi sebagai antarmuka seret dan lepas, fokus pada closures dan manipulasi DOM             |                  [JavaScript Closures, manipulasi DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          Membangun Game Mengetik                           | Pelajari cara menggunakan event keyboard untuk menjalankan logika aplikasi JavaScript                                                          |                                [Pemrograman Berbasis Event](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         Bekerja dengan Browser                          | Pelajari cara kerja browser, sejarahnya, dan bagaimana membuat pondasi elemen pertama sebuah ekstensi browser                               |                               [Tentang Browser](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | Membangun form, memanggil API, dan menyimpan variabel di penyimpanan lokal | Bangun elemen JavaScript dari ekstensi browser Anda untuk memanggil API menggunakan variabel yang disimpan di penyimpanan lokal                      |                [API, Form, dan Penyimpanan Lokal](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          Proses latar belakang di browser, kinerja web          | Gunakan proses latar belakang browser untuk mengelola ikon ekstensi; pelajari tentang kinerja web dan beberapa optimisasi untuk membuat   |             [Tugas Latar Belakang dan Kinerja](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [Space Game](./6-space-game/solution/README.md)           |             Pengembangan Game Lebih Lanjut dengan JavaScript             | Pelajari tentang Pewarisan menggunakan Kelas dan Komposisi serta pola Pub/Sub, sebagai persiapan membangun game              |                      [Pengantar Pengembangan Game Lanjutan](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           Menggambar di kanvas                            | Pelajari tentang Canvas API, digunakan untuk menggambar elemen ke layar                                                                       |                                [Menggambar ke Kanvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   Memindahkan elemen di sekitar layar                    | Temukan bagaimana elemen bisa bergerak menggunakan koordinat kartesius dan Canvas API                                            |                           [Memindahkan Elemen](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          Deteksi tabrakan                           | Membuat elemen bertabrakan dan bereaksi satu sama lain menggunakan penekanan tombol dan menyediakan fungsi cooldown untuk memastikan kinerja game    |                              [Deteksi Tabrakan](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             Menghitung skor                              | Melakukan perhitungan matematika berdasarkan status dan kinerja game                                                                |                                    [Menghitung Skor](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     Mengakhiri dan memulai ulang game                     | Pelajari tentang mengakhiri dan memulai ulang game, termasuk membersihkan aset dan mengatur ulang nilai variabel                              |                                [Kondisi Akhir](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
 | 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 Template HTML dan Rute dalam Aplikasi Web                 | Pelajari cara membuat kerangka arsitektur situs web multipage menggunakan routing dan template HTML                             |                            [Template HTML dan Rute](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Membuat Form Login dan Registrasi                   | Pelajari tentang membangun formulir dan menangani rutinitas validasi                                                                          |                                           [Formulir](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Metode Mengambil dan Menggunakan Data                   | Bagaimana data mengalir masuk dan keluar dari aplikasi Anda, cara mengambilnya, menyimpannya, dan membuangnya                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  Membuat Formulir Login dan Registrasi                   | Pelajari tentang membuat formulir dan menangani rutin validasi                                                                          |                                           [Formulir](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   Metode Pengambilan dan Penggunaan Data                   | Bagaimana data mengalir masuk dan keluar dari aplikasi Anda, bagaimana mengambilnya, menyimpannya, dan membuangnya                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan          |
 | 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      Konsep Manajemen Status                      | Pelajari bagaimana aplikasi Anda mempertahankan status dan cara mengelolanya secara programatik                                                              |                                [Manajemen Status](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [Browser/VScode Code](../../8-code-editor) | Bekerja dengan VScode | Pelajari cara menggunakan editor kode | [Gunakan Editor Kode VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 25 | [Browser/VScode Code](../../8-code-editor) | Bekerja dengan VScode | Pelajari cara menggunakan editor kode| [Gunakan Editor Kode VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
 | 26 | [AI Assistants](./9-chat-project/README.md) | Bekerja dengan AI | Pelajari cara membangun asisten AI Anda sendiri | [Proyek Asisten AI](./9-chat-project/README.md) | Chris |
 
 ## 🏫 Pedagogi
 
-Kurikulum kami dirancang dengan dua prinsip pedagogis utama:
+Kurikulum kami dirancang dengan dua prinsip pedagogis utama dalam pikiran:
 * pembelajaran berbasis proyek
 * kuis yang sering
 
-Program ini mengajarkan dasar-dasar JavaScript, HTML, dan CSS, serta alat dan teknik terbaru yang digunakan oleh pengembang web masa kini. Siswa akan memiliki kesempatan untuk mengembangkan pengalaman langsung dengan membangun game mengetik, terrarium virtual, ekstensi browser ramah lingkungan, game bergaya penyerang luar angkasa, dan aplikasi perbankan untuk bisnis. Pada akhir seri, siswa akan memiliki pemahaman yang solid tentang pengembangan web.
+Program ini mengajarkan dasar-dasar JavaScript, HTML, dan CSS, serta alat dan teknik terbaru yang digunakan oleh pengembang web saat ini. Siswa akan memiliki kesempatan untuk mengembangkan pengalaman langsung dengan membangun game mengetik, terrarium virtual, ekstensi browser ramah lingkungan, permainan gaya invasi ruang angkasa, dan aplikasi perbankan untuk bisnis. Pada akhir seri, siswa akan memperoleh pemahaman yang kuat tentang pengembangan web.
 
 > 🎓 Anda dapat mengikuti beberapa pelajaran pertama dalam kurikulum ini sebagai [Jalur Pembelajaran](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) di Microsoft Learn!
 
-Dengan memastikan konten sesuai dengan proyek, proses pembelajaran menjadi lebih menarik bagi siswa dan retensi konsep akan meningkat. Kami juga menulis beberapa pelajaran awal tentang dasar-dasar JavaScript untuk memperkenalkan konsep, dipasangkan dengan video dari koleksi tutorial video "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", beberapa penulisnya berkontribusi pada kurikulum ini.
+Dengan memastikan konten sesuai dengan proyek, proses pembelajaran menjadi lebih menarik bagi siswa dan retensi konsep akan meningkat. Kami juga menulis beberapa pelajaran awal mengenai dasar-dasar JavaScript untuk memperkenalkan konsep, dipadukan dengan video dari koleksi tutorial video "[Seri Pemula untuk: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", beberapa penulisnya berkontribusi pada kurikulum ini.
 
-Selain itu, kuis tanpa tekanan sebelum kelas mengatur niat siswa untuk mempelajari topik, sementara kuis kedua setelah kelas memastikan retensi lebih lanjut. Kurikulum ini dirancang agar fleksibel dan menyenangkan serta dapat diambil secara penuh atau sebagian. Proyek dimulai dari yang kecil dan menjadi semakin kompleks di akhir siklus 12 minggu.
+Selain itu, kuis dengan risiko rendah sebelum kelas menetapkan niat siswa terhadap pembelajaran topik, sementara kuis kedua setelah kelas memastikan retensi lebih lanjut. Kurikulum ini dirancang agar fleksibel dan menyenangkan dan dapat diambil secara lengkap atau sebagian. Proyek dimulai kecil dan menjadi semakin kompleks pada akhir siklus 12 minggu.
 
-Walaupun kami sengaja menghindari pengenalan kerangka kerja JavaScript untuk berkonsentrasi pada keterampilan dasar yang dibutuhkan sebagai pengembang web sebelum mengadopsi kerangka kerja, langkah selanjutnya yang baik setelah menyelesaikan kurikulum ini adalah belajar tentang Node.js melalui koleksi video lain: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+Meskipun kami sengaja menghindari mengenalkan framework JavaScript untuk fokus pada keterampilan dasar yang dibutuhkan sebagai pengembang web sebelum menggunakan framework, langkah selanjutnya yang baik setelah menyelesaikan kurikulum ini adalah mempelajari Node.js melalui koleksi video lain: "[Seri Pemula untuk: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> Kunjungi [Kode Etik](CODE_OF_CONDUCT.md) dan panduan [Kontribusi](CONTRIBUTING.md) kami. Kami menyambut umpan balik konstruktif Anda!
+> Kunjungi [Kode Etik](CODE_OF_CONDUCT.md) dan pedoman [Kontribusi](CONTRIBUTING.md) kami. Kami menyambut umpan balik konstruktif Anda!
 
 
 ## 🧭 Akses Offline
 
-Anda dapat menjalankan dokumentasi ini secara offline dengan menggunakan [Docsify](https://docsify.js.org/#/). Fork repo ini, [instal Docsify](https://docsify.js.org/#/quickstart) di mesin lokal Anda, lalu di folder root repo ini, ketik `docsify serve`. Situs web akan disajikan pada port 3000 di localhost Anda: `localhost:3000`.
+Anda dapat menjalankan dokumentasi ini secara offline dengan menggunakan [Docsify](https://docsify.js.org/#/). Fork repositori ini, [pasang Docsify](https://docsify.js.org/#/quickstart) pada mesin lokal Anda, lalu di folder root dari repositori ini, ketik `docsify serve`. Situs web akan dilayani pada port 3000 di localhost Anda: `localhost:3000`.
 
 ## 📘 PDF
 PDF dari semua pelajaran dapat ditemukan [di sini](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
@@ -216,7 +216,7 @@ PDF dari semua pelajaran dapat ditemukan [di sini](https://microsoft.github.io/W
 
 ## 🎒 Kursus Lainnya
 
-Tim kami memproduksi kursus lain! Lihat:
+Tim kami memproduksi kursus lain! Periksa:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -225,7 +225,7 @@ Tim kami memproduksi kursus lain! Lihat:
 [![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
-### Azure / Edge / MCP / Agens
+### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -260,11 +260,11 @@ Tim kami memproduksi kursus lain! Lihat:
 
 ## Mendapatkan Bantuan
 
-Jika Anda mengalami kebuntuan atau memiliki pertanyaan tentang membangun aplikasi AI. Bergabunglah dengan sesama pembelajar dan pengembang berpengalaman dalam diskusi tentang MCP. Ini adalah komunitas yang mendukung di mana pertanyaan dipersilakan dan pengetahuan dibagikan secara bebas.
+Jika Anda mengalami kesulitan atau memiliki pertanyaan tentang membangun aplikasi AI. Bergabunglah dengan sesama pembelajar dan pengembang berpengalaman dalam diskusi tentang MCP. Ini adalah komunitas yang mendukung di mana pertanyaan dipersilakan dan pengetahuan dibagikan secara bebas.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Jika Anda memiliki umpan balik produk atau menemukan kesalahan saat membangun kunjungi:
+Jika Anda memiliki masukan produk atau kesalahan saat membangun, kunjungi:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -275,6 +275,6 @@ Repositori ini dilisensikan di bawah lisensi MIT. Lihat file [LICENSE](../../LIC
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Penafian**:
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi penting, disarankan menggunakan terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
+**Disclaimer**:  
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk keakuratan, harap diingat bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sah. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

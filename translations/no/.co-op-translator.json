@@ -493,7 +493,7 @@
   },
   "AGENTS.md": {
     "original_hash": "a362efd06d64d4134a0cfe8515a86d34",
-    "translation_date": "2026-04-20T15:55:04+00:00",
+    "translation_date": "2026-04-24T12:30:20+00:00",
     "source_file": "AGENTS.md",
     "language_code": "no"
   },
@@ -516,8 +516,8 @@
     "language_code": "no"
   },
   "README.md": {
-    "original_hash": "b885c87c7544109b78d6684daad6cba6",
-    "translation_date": "2026-04-06T18:11:05+00:00",
+    "original_hash": "b1766b45123e043ef2c72612f28b86dd",
+    "translation_date": "2026-04-24T12:25:48+00:00",
     "source_file": "README.md",
     "language_code": "no"
   },
@@ -564,8 +564,8 @@
     "language_code": "no"
   },
   "lesson-template/README.md": {
-    "original_hash": "0494be70ad7fadd13a8c3d549c23e355",
-    "translation_date": "2025-08-26T23:13:57+00:00",
+    "original_hash": "ce2f64fd0d518f0500fc082b97c1e662",
+    "translation_date": "2026-04-24T12:26:00+00:00",
     "source_file": "lesson-template/README.md",
     "language_code": "no"
   },
