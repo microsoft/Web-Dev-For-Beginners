@@ -1,56 +1,79 @@
-# [Mada ya Somo]
+# Somo la Mada
 
-![Weka video hapa](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Jaribio la kabla ya somo](../../../lesson-template/quiz-url)
-
-[Eleza kile tutakachojifunza]
-
-### Utangulizi
-
-Eleza kile kitakachojadiliwa
-
-> Vidokezo
-
-### Mahitaji ya awali
-
-Ni hatua zipi zinapaswa kuwa zimekamilika kabla ya somo hili?
-
-### Maandalizi
-
-Hatua za maandalizi kuanza somo hili
+> Ongeza video iliyojumuishwa au kiungo cha somo hapa.
 
 ---
 
-[Pitisha maudhui kwa hatua]
+## Mtihani wa awali
 
-## [Mada 1]
+> Ongeza kiungo cha mtihani hapa unapopatikana.
+
+---
+
+Toa muhtasari mfupi wa kile wanafunzi watajifunza katika somo hili.
+
+---
+
+### Utangulizi
+
+Toa utangulizi mfupi unaoelezea kile kitakachojadiliwa katika somo hili.
+
+> Vidokezo
+
+---
+
+### Mahitaji ya awali
+
+Orodhesha dhana au mada ambazo wanafunzi wanapaswa kuwa tayari nazo kabla ya kuanza somo hili.
+
+---
+
+### Maandalizi
+
+Orodhesha hatua za maandalizi au zana zinazohitajika kabla ya kuanza somo.
+
+---
+
+### Yaliyomo
+
+Pitia yaliyomo kwenye somo kwa sehemu zilizopangwa.
+
+---
+
+## Mada 1
 
 ### Kazi:
 
-Fanyeni kazi pamoja kuboresha msimbo wenu hatua kwa hatua ili kujenga mradi kwa kutumia msimbo wa pamoja:
+Fanyeni kazi pamoja kuboresha hatua kwa hatua msimbo wenu kwa ajili ya kujenga mradi kwa kutumia msimbo unaoshirikiwa:
 
 ```html
 code blocks
 ```
 
-✅ Ukaguzi wa Maarifa - tumia muda huu kupanua uelewa wa wanafunzi kwa maswali ya wazi
+✅ Kagua Maarifa
+Tumia fursa hii kupanua maarifa ya wanafunzi kwa maswali ya wazi.
 
-## [Mada 2]
+## Mada 2
+## Mada 3
 
-## [Mada 3]
+🚀 Changamoto
+Ongeza changamoto ya ushirikiano kwa wanafunzi kuboresha mradi.
 
-🚀 Changamoto: Ongeza changamoto kwa wanafunzi kufanya kazi kwa pamoja darasani ili kuboresha mradi
+Hiari: Ongeza picha ya skrini ya UI ya somo lililokamilika ikiwa ni sahihi.
 
-Hiari: ongeza picha ya skrini ya UI ya somo lililokamilika ikiwa inafaa
+## Mtihani wa baada ya somo
 
-## [Jaribio la baada ya somo](../../../lesson-template/quiz-url)
+Ongeza kiungo cha mtihani hapa baada ya kumaliza somo.
 
-## Mapitio na Kujisomea
+## Mapitio & Kujifunza Binafsi
 
-**Kazi Inayopaswa Kukamilika [MM/YY]**: [Jina la Kazi](assignment.md)
+**Kazi ya Nyumbani Inayotarajiwa [MM/YY]**: [Jina la Kazi ya Nyumbani](assignment.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kumbusho**:  
+Hati hii imefasirishwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upotoshaji. Hati ya asili katika lugha yake halisi inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au utofauti unaotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
