@@ -64,12 +64,14 @@ router.post('/accounts', (req, res) => {
   }
 
   // Create account
+  const token = crypto.randomBytes(16).toString('hex');
   const account = {
     user: req.body.user,
     currency: req.body.currency,
     description: req.body.description || `${req.body.user}'s budget`,
     balance: balance || 0,
     transactions: [],
+    token,
   };
   db[req.body.user] = account;
 
@@ -87,6 +89,11 @@ router.get('/accounts/:user', (req, res) => {
     return res.status(404).json({ error: 'User does not exist' });
   }
 
+  // Verify caller identity via token
+  if (req.headers.authorization !== account.token) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+
   return res.json(account);
 });
 
@@ -99,6 +106,11 @@ router.delete('/accounts/:user', (req, res) => {
   // Check if account exists
   if (!account) {
     return res.status(404).json({ error: 'User does not exist' });
+  }
+
+  // Verify caller identity via token
+  if (req.headers.authorization !== account.token) {
+    return res.status(401).json({ error: 'Unauthorized' });
   }
 
   // Removed account
@@ -116,6 +128,11 @@ router.post('/accounts/:user/transactions', (req, res) => {
   // Check if account exists
   if (!account) {
     return res.status(404).json({ error: 'User does not exist' });
+  }
+
+  // Verify caller identity via token
+  if (req.headers.authorization !== account.token) {
+    return res.status(401).json({ error: 'Unauthorized' });
   }
 
   // Check mandatory requests parameters
@@ -169,6 +186,11 @@ router.delete('/accounts/:user/transactions/:id', (req, res) => {
   // Check if account exists
   if (!account) {
     return res.status(404).json({ error: 'User does not exist' });
+  }
+
+  // Verify caller identity via token
+  if (req.headers.authorization !== account.token) {
+    return res.status(401).json({ error: 'Unauthorized' });
   }
 
   const transactionIndex = account.transactions.findIndex(
