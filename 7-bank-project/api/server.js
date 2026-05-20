@@ -35,6 +35,15 @@ app.options('*', cors());
 // Configure routes
 const router = express.Router();
 
+// Authorization middleware - verify requester is authorized for the target account
+const authorizeUser = (req, res, next) => {
+  const authenticatedUser = req.headers['x-user'];
+  if (!authenticatedUser || authenticatedUser !== req.params.user) {
+    return res.status(403).json({ error: 'Unauthorized' });
+  }
+  next();
+};
+
 // Get server infos
 router.get('/', (req, res) => {
   return res.send(`${pkg.description} v${pkg.version}`);
@@ -79,7 +88,7 @@ router.post('/accounts', (req, res) => {
 // ----------------------------------------------
 
 // Get all data for the specified account
-router.get('/accounts/:user', (req, res) => {
+router.get('/accounts/:user', authorizeUser, (req, res) => {
   const account = db[req.params.user];
 
   // Check if account exists
@@ -93,7 +102,7 @@ router.get('/accounts/:user', (req, res) => {
 // ----------------------------------------------
 
 // Remove specified account
-router.delete('/accounts/:user', (req, res) => {
+router.delete('/accounts/:user', authorizeUser, (req, res) => {
   const account = db[req.params.user];
 
   // Check if account exists
