@@ -8,6 +8,7 @@ JavaScript is the language of the web. In these four lessons, you'll learn its b
 2. [Functions and Methods](2-functions-methods/README.md)
 3. [Making Decisions with JavaScript](3-making-decisions/README.md)
 4. [Arrays and Loops](4-arrays-loops/README.md)
+5. [Local Storage](5-local-storage/README.md)
 
 ### Credits
 
