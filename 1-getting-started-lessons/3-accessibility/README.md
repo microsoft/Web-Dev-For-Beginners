@@ -75,7 +75,10 @@ Assistive technologies are pretty amazing tools that help people with disabiliti
 I like to think of a screen reader as having a really smart narrator reading a book to you. It reads content aloud in a logical order, announces interactive elements like "button" or "link," and provides keyboard shortcuts for jumping around a page. But here's the thing—screen readers can only work their magic if we build websites with proper structure and meaningful content. That's where you come in as a developer!
 
 **Popular screen readers across platforms:**
-- **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (free and most popular), [JAWS](https://webaim.org/articles/jaws/), [Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1/?WT.mc_id=academic-77807-sagibbon) (built-in)
+- **Windows**: [NVDA](https://www.nvaccess.org/about-nvda/) (free and most popular), [JAWS](https://webaim.org/articles/jaws/), [Narrator]([https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1])([support.microsoft.com][1])
+
+[1]: https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1?utm_source=chatgpt.com "Complete guide to Narrator"
+) (built-in)
 - **macOS/iOS**: [VoiceOver](https://support.apple.com/guide/voiceover/welcome/10) (built-in and very capable)
 - **Android**: [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (built-in)
 - **Linux**: [Orca](https://wiki.gnome.org/Projects/Orca) (free and open-source)
