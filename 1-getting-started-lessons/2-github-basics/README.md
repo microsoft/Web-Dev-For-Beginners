@@ -580,7 +580,7 @@ And here's the most beautiful part: the open source community is like the intern
 
 ```mermaid
 flowchart TD
-    A[🔍 Explore GitHub] --> B[🏷️ Find "good first issue"]
+    A[🔍 Explore GitHub] --> B[🏷️ Find 'good first issue']
     B --> C[📖 Read Contributing Guidelines]
     C --> D[🍴 Fork Repository]
     D --> E[💻 Set Up Local Environment]
