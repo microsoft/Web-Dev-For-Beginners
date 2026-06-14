@@ -560,7 +560,7 @@ mindmap
 
 ```mermaid
 flowchart TD
-    A[🔍 Explore GitHub] --> B[🏷️ Find "good first issue"]
+    A[🔍 Explore GitHub] --> B[🏷️ Find 'good first issue']
     B --> C[📖 Read Contributing Guidelines]
     C --> D[🍴 Fork Repository]
     D --> E[💻 Set Up Local Environment]
