@@ -18,6 +18,7 @@
 
 </style>
 <template>
+  <div>
     <div class="card">
         Back to <router-link to="/">Quizzes</router-link>
     </div>
@@ -59,9 +60,14 @@
         </div>
       </div>
     </div>
+  </div>
   </template>
   
   <script>
+
+  function normalizeLocale(locale) {
+    return (locale || "").toLowerCase().replace("-", "_");
+  }
 
   function getFileByLocale(locale) {
     // loop keys in messages, if key is the start of locale, return that file
@@ -71,8 +77,9 @@
         quizzes: [],
         title: "Default Quiz",
     };
+    const normalizedLocale = normalizeLocale(locale);
     for (let key in messages) {
-      if (locale.startsWith(key)) {
+      if (normalizedLocale.startsWith(key)) {
         file = messages[key];
         break;
       }
@@ -94,8 +101,8 @@
         complete: false,
         error: false,
         route: "",
-        locale: "",
-        file: getFileByLocale(locale),
+        locale: this.$route.query.loc || locale,
+        file: getFileByLocale(this.$route.query.loc || locale),
       };
     },
     computed: {
@@ -105,7 +112,6 @@
     },
     created() {
       this.route = this.$route.params.id;
-      this.locale = this.$route.query.loc;
     },
     methods: {
       handleAnswerClick(isCorrect) {

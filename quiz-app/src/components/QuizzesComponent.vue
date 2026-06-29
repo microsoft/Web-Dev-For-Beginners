@@ -8,21 +8,29 @@
 
 </style>
 <template>
-    <div class="question" v-for="q in questions" :key="q.id" >
+  <div>
+    <div
+      class="question"
+      v-for="q in questions"
+      :key="q.id"
+    >
       <router-link
-        
-        :key="q.id"
         :to="`quiz/${q.id}`"
         class="link"
       >
         {{ q.title }}
       </router-link>
     </div>
+  </div>
   </template>
   
   <script>
   import messages from "@/assets/translations";
   
+  function normalizeLocale(locale) {
+    return (locale || "").toLowerCase().replace("-", "_");
+  }
+
   function getFileByLocale(locale) {
     // loop keys in messages, if key is the start of locale, return that file
     let file = {
@@ -31,8 +39,9 @@
         quizzes: [],
         title: "Default Quiz",
     };
+    const normalizedLocale = normalizeLocale(locale);
     for (let key in messages) {
-      if (locale.startsWith(key)) {
+      if (normalizedLocale.startsWith(key)) {
         file = messages[key];
         break;
       }
@@ -46,7 +55,7 @@
     name: "QuizzesComponent",
     data() {
       return {
-        file: getFileByLocale(locale),
+        file: getFileByLocale(this.$route.query.loc || locale),
       };
     },
     computed: {
