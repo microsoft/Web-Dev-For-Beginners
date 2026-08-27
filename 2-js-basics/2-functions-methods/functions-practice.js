@@ -31,3 +31,8 @@ function createFullName(firstName, lastName)
     return FullName;
     }
 
+function calculateTip(billAmount, tipPercentage = 15) 
+{
+    Tip = billAmount * (tipPercentage/100);
+    return Tip;
+}
