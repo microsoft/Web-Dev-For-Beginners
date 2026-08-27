@@ -1,41 +1,38 @@
 
 function sayHello()
 {
-    console.Log("Hello");
+    console.log("Hello");
 }
 
 
 function introduceYourself(name)
 {
-    console.Log(`Hi, my name is ${name}`);
+    console.log(`Hi, my name is ${name}`);
 }
 
 function greetPerson(name, greeting='Hello' )
 {
-    console.Log(`${greeting}, ${name}!`);
+    console.log(`${greeting}, ${name}!`);
 }
 
-// setTimeout(() => {
-  // console.log('3 seconds has elapsed');
-// }, 3000);
+ /* setTimeout((time) => {
+  console.log('3 seconds has elapsed');
+  return time;
+ }, 3000); */
 
-function addNumbers(num1, num2)
-{
- sum = num1 + num2;
- return sum;
-}
+const addNumbers = (num1, num2) => num1 + num2;
 
-function createFullName(firstName, lastName)
-    {
-    FullName = `${firstName} ${lastName}`;
+const createFullName = (firstName, lastName) => `${firstName} ${lastName}`;
+   /* {
+    const FullName = `${firstName} ${lastName}`;
     return FullName;
-    }
+     }*/
 
-function calculateTip(billAmount, tipPercentage = 15) 
-{
-    Tip = billAmount * (tipPercentage/100);
+const calculateTip = (billAmount, tipPercentage = 15) => billAmount * (tipPercentage/100);
+/* {
+    const Tip = billAmount * (tipPercentage/100);
     return Tip;
-}
+} */
 
 
 //Default test calls
@@ -53,3 +50,5 @@ console.log(`Full name: ${fullName}`);
 
 const tip = calculateTip(50);
 console.log(`Tip for $50 bill: $${tip}`);
+
+
