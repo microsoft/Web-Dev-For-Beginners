@@ -134,7 +134,8 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
    - The previous value is replaced – variables store only one value at a time
    - This mutability is the key characteristic of variables declared with `let`
 
-   ✅ Try it! You can write JavaScript right in your browser. Open a browser window and navigate to Developer Tools. In the console, you will find a prompt; type `let myVariable = 123`, press return, then type `myVariable`. What happens? Note, you'll learn more about these concepts in subsequent lessons.
+   ✅ Try it! You can write JavaScript right in your browser. Open a browser window and navigate to Developer Tools. In the console, you will find a prompt; type `
+   `, press return, then type `myVariable`. What happens? Note, you'll learn more about these concepts in subsequent lessons.
 
 ### 🧠 **Variables Mastery Check: Getting Comfortable**
 
@@ -152,7 +153,7 @@ stateDiagram-v2
     Reassigned --> [*]: Updated value
     
     note right of Declared
-        Variable exists but
+        Variable exists b.ut
         has no value (undefined)
     end note
     
@@ -411,7 +412,7 @@ You can achieve your formatting goals with either method, but template literals 
 stateDiagram-v2
     [*] --> PlainText: "Hello"
     [*] --> Variable: name = "Alice"
-    PlainText --> Concatenated: + " " + name
+    PlainText --> Concatenated: + " " + name  
     Variable --> Concatenated
     PlainText --> Template: `Hello ${name}`
     Variable --> Template

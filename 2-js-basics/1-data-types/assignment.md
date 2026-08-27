@@ -85,3 +85,4 @@ By completing this assignment, you will:
 - ✅ **Create** working code examples that demonstrate data type usage
 - ✅ **Explain** technical concepts in beginner-friendly language
 - ✅ **Connect** fundamental programming concepts to practical applications
+
