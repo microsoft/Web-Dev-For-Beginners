@@ -25,3 +25,9 @@ function addNumbers(num1, num2)
  return sum;
 }
 
+function createFullName(firstName, lastName)
+    {
+    FullName = `${firstName} ${lastName}`;
+    return FullName;
+    }
+
