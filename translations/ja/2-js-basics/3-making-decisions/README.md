@@ -42,8 +42,15 @@ journey
 ```mermaid
 mindmap
   root((Decision Making))
+    Operators
+      Comparison
+        "=== !== < > <= >="
+        Value relationships
+      Logical
+        "&& || !"
+        Combine conditions
     Boolean Logic
-      true/false
+      true / false
       Comparison results
       Logical expressions
     Conditional Statements
@@ -56,16 +63,9 @@ mindmap
       switch
         Multiple options
         Clean structure
-    Operators
-      Comparison
-        === !== < > <= >=
-        Value relationships
-      Logical
-        && || !
-        Combine conditions
     Advanced Patterns
-      Ternary
-        ? : syntax
+      Ternary Operator
+        "? : syntax"
         Inline decisions
       Complex Logic
         Nested conditions
@@ -565,7 +565,7 @@ Josh Comeauの素晴らしい[operator lookup](https://joshwcomeau.com/operator-
 
 ## 課題
 
-[Operators](assignment.md)
+[演算子](assignment.md)
 
 ---
 
