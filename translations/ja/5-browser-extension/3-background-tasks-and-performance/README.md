@@ -360,7 +360,7 @@ chrome.runtime.sendMessage({
 
 これで、洗濯物をするのに良いタイミングか、よりクリーンなエネルギーを待つべきかが一目で分かります。ブラウザのパフォーマンスについて学びながら、本当に役立つものを作り上げました。
 
-## GitHub Copilot Agent Challenge 🚀
+## GitHub Copilot Agent チャレンジ 🚀
 
 Agentモードを使用して以下のチャレンジを完了してください:
 
