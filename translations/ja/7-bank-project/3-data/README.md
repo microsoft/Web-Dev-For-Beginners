@@ -873,7 +873,7 @@ timeline
 - オフライン機能を備えたプログレッシブウェブアプリの構築が可能
 - 高度な状態管理パターンを学ぶための基盤が整いました
 
-## GitHub Copilot Agent Challenge 🚀
+## GitHub Copilot Agent チャレンジ 🚀
 
 Agentモードを使用して以下のチャレンジを完了してください:
 
