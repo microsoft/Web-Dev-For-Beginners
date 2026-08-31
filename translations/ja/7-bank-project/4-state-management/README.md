@@ -721,7 +721,7 @@ timeline
 - オフラインファーストのプログレッシブウェブアプリの構築準備完了
 - 状態マシンやオブザーバーのような高度なパターンの基盤が整備済み
 
-## GitHub Copilot Agent Challenge 🚀
+## GitHub Copilot Agent チャレンジ 🚀
 
 Agentモードを使用して以下のチャレンジを完了してください:
 
