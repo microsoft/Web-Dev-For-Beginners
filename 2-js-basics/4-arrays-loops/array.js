@@ -159,7 +159,28 @@ if (!arr.length){
             return null;
         }
 
-        for (let movie in arr){
-            
+//let Fin = "";
+        for (let movie of arr){
+            //movie is i so you can directly output it
+            console.log(movie.toUpperCase());
         }
 }
+
+Cap(movies);
+
+function CharCounter(arr){
+    if (!arr.length){
+            return null;
+        }
+
+    let totalChars = 0;
+
+  arr.forEach(movie => {
+    totalChars += movie.length; //movie is element in array
+  }); //foreach doesn't return anything outside of the function/at all
+
+  console.log(`Total characters across all titles: ${totalChars}`);
+}
+
+
+CharCounter(movies);
