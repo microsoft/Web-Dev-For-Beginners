@@ -184,3 +184,60 @@ function CharCounter(arr){
 
 
 CharCounter(movies);
+
+
+
+/*
+### Exercise 4: Data Filtering (Advanced)
+Create a program that processes an array of objects representing students.
+
+**Requirements:**
+- Create an array of at least 5 student objects with properties: `name`, `age`, `grade`
+- Use loops to find students who are 18 or older
+- Calculate the average grade of all students
+- Create a new array containing only students with grades above 85
+
+**Example Structure:**
+```javascript
+const students = [
+  { name: "Alice", age: 17, grade: 92 },
+  { name: "Bob", age: 18, grade: 84 },
+  // Add more students...
+];
+```
+*/
+
+const students = [
+
+ { name: "Lena", age: 21, grade: 100},   
+ { name: "Amir", age: 21, grade: 92},
+ { name: "Marlene", age: 20, grade: 85},   
+ { name: "Abu Yusuf", age: 13, grade: 23},
+ { name: "Jacob", age: 16, grade: 72},   
+ { name: "Ifu", age: 20, grade: 96},
+ { name: "Johnny", age: 17, grade: 65},
+ { name: "Bridge", age: 15, grade: 22},
+
+];
+
+function Adult(arr){
+    arr.forEach(student => {
+        if (student.age > 18){
+            console.log(`${student.name}`);
+        }
+    });
+}
+
+function Average(arr){
+    let a = 0;
+
+    arr.forEach(student => {
+       a += student.grade;
+    });
+    
+    console.log(a)
+}
+
+
+Adult(students);
+Average(students);
