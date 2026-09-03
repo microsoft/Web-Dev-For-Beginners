@@ -45,12 +45,18 @@ return min;
 
 function calculateSum(){
     let a = 0;
+    let i = 0;
 
     for (const num of numbers){
         if (num === numbers[0]){
             a += num;
+            i++;
+            console.log(`step ${i}: ${a}`);
+
         }else {
             a += a + num;
+            i++;
+            console.log(`step ${i}: ${a}`);
         }
     }
 
