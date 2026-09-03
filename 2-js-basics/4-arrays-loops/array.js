@@ -22,6 +22,11 @@ console.log(NumPattern());
 numbers = [8,393,200,700,4,2000,638,29999, -2]
 
 function findMaximum(){
+
+    if (!numbers.length){
+            
+        }
+        
 let max = 0;
 
     for (let num of numbers){
@@ -33,6 +38,10 @@ return max;
 }
 
 function findMinimum(){
+
+    if (!numbers.length){
+            
+        }
 let min = numbers[0];
 
     for (let num of numbers){
@@ -44,11 +53,17 @@ return min;
 }
 
 function calculateSum(){
+
+    if (!numbers.length){
+            
+        }
+
     let a = 0;
-    let i = 0;
+    //let i = 0;
+
 
     for (const num of numbers){
-        if (num === numbers[0]){
+     if (num === numbers[0]){
             a = num;
             //i++;
             //console.log(`step ${i}: ${a}`);
