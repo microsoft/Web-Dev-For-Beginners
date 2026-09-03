@@ -9,4 +9,18 @@ let Pattern = [];
 return Pattern;
 }
 
+
 console.log(NumPattern());
+
+
+
+//- Create an array called `numbers` with at least 8 values
+//- Write a function `findMaximum()` that returns the highest number
+//- Write a function `findMinimum()` that returns the lowest number  
+//- Write a function `calculateSum()` that returns the total of all numbers
+
+numbers = [8,393,200,700,4,2000,638,29999]
+
+function findMaximum(){
+
+}
