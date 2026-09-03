@@ -22,5 +22,29 @@ console.log(NumPattern());
 numbers = [8,393,200,700,4,2000,638,29999]
 
 function findMaximum(){
+let max = numbers[0];
 
+    for (let num of numbers){
+     if (max < numbers[i]){
+        max = numbers[i];
+     }
+    }
+return max;
 }
+
+function findMaximum1(){
+let max = 0;
+
+    for (i = 0; i < numbers.length; i++){
+     if (max < numbers[i]){
+        max = numbers[i];
+     }
+    }
+return max;
+}
+
+
+
+console.log(findMaximum())
+
+console.log(findMaximum1())
