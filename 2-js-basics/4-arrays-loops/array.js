@@ -43,9 +43,22 @@ let min = numbers[0];
 return min;
 }
 
+function calculateSum(){
+    let a = 0;
+
+    for (const num of numbers){
+        if (num === numbers[0]){
+            a += num;
+        }else {
+            a += a + num;
+        }
+    }
+
+    return a;
+}
 
 
 console.log(findMaximum())
 console.log(findMinimum())
-
+console.log(calculateSum())
 //console.log(findMaximum1())
