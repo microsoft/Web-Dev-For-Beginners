@@ -219,6 +219,10 @@ const students = [
 ];
 
 function Adult(arr){
+    if (!arr.length){
+            return null;
+        }
+
     arr.forEach(student => {
         if (student.age > 18){
             console.log(`${student.name}`);
@@ -227,6 +231,10 @@ function Adult(arr){
 }
 
 function Average(arr){
+    if (!arr.length){
+            return null;
+        }
+
     let a = 0;
 
     arr.forEach(student => {
@@ -237,6 +245,12 @@ function Average(arr){
 }
 
 function EliteStudents(arr){
+
+    if (!arr.length){
+            console.log("Empty");
+            return null;
+        }
+
     let TopScores = [];
 
     arr.forEach(student => {
@@ -248,8 +262,11 @@ function EliteStudents(arr){
     console.log(TopScores);
 }
 
+const EMPTY = [];
+
 
 
 Adult(students);
 Average(students);
 EliteStudents(students);
+EliteStudents(EMPTY);
