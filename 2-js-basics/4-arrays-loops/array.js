@@ -26,7 +26,7 @@ function findMaximum(){
     if (!numbers.length){
             
         }
-        
+
 let max = 0;
 
     for (let num of numbers){
@@ -79,7 +79,26 @@ function calculateSum(){
 }
 
 
-console.log(findMaximum())
-console.log(findMinimum())
-console.log(calculateSum())
+function SecondMaximum(){
+
+    if (!numbers.length){
+            
+        }
+        
+let max = numbers[0];
+let secondMax = 0;
+
+    for (let num of numbers){
+     if (max < num){
+       secondMax = max;
+        max = num;
+     }
+    }
+return secondMax;
+}
+
+console.log(findMaximum());
+console.log(SecondMaximum());
+console.log(findMinimum());
+console.log(calculateSum());
 //console.log(findMaximum1())
