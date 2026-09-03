@@ -208,7 +208,6 @@ const students = [
 */
 
 const students = [
-
  { name: "Lena", age: 21, grade: 100},   
  { name: "Amir", age: 21, grade: 92},
  { name: "Marlene", age: 20, grade: 85},   
@@ -217,7 +216,6 @@ const students = [
  { name: "Ifu", age: 20, grade: 96},
  { name: "Johnny", age: 17, grade: 65},
  { name: "Bridge", age: 15, grade: 22},
-
 ];
 
 function Adult(arr){
@@ -235,9 +233,23 @@ function Average(arr){
        a += student.grade;
     });
     
-    console.log(a/arr.length)
+    console.log(a/arr.length);
 }
+
+function EliteStudents(arr){
+    let TopScores = [];
+
+    arr.forEach(student => {
+      if (student.grade >= 85){
+        TopScores.push(student);
+      }
+    });
+    
+    console.log(TopScores);
+}
+
 
 
 Adult(students);
 Average(students);
+EliteStudents(students);
