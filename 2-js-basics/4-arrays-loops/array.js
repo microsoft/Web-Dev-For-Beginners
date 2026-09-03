@@ -49,14 +49,14 @@ function calculateSum(){
 
     for (const num of numbers){
         if (num === numbers[0]){
-            a += num;
-            i++;
-            console.log(`step ${i}: ${a}`);
+            a = num;
+            //i++;
+            //console.log(`step ${i}: ${a}`);
 
         }else {
-            a += a + num;
-            i++;
-            console.log(`step ${i}: ${a}`);
+            a = a + num;
+            //i++;
+            //console.log(`step ${i}: ${a}`);
         }
     }
 
