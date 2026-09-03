@@ -144,8 +144,22 @@ function List(arr){
         }
 
     for (i = 0; i < arr.length; i++){
-        console.log(`${i}. ${arr[i]}`);
+         console.log(`${i + 1}. ${arr[i]}`);
     }
 }
 
+// WHY??
+//Because it doesn't return anything, instead prints
+List(movies);
 
+
+function Cap(arr){
+
+if (!arr.length){
+            return null;
+        }
+
+        for (let movie in arr){
+            
+        }
+}
