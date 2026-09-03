@@ -235,7 +235,7 @@ function Average(arr){
        a += student.grade;
     });
     
-    console.log(a)
+    console.log(a/arr.length)
 }
 
 
