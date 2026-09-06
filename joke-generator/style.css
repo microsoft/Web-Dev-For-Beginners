@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+#joke-text {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.5rem 0;
+  padding: 0 0.5rem;
+}
+
+button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #ff4c4c;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
