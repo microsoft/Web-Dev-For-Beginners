@@ -144,7 +144,7 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
 - When would you choose `let` over `const` for a variable?
 
 ```mermaid
-stateDiagram-v2
+　　stateDiagram-v2
     [*] --> Declared: let myVar
     Declared --> Assigned: myVar = 123
     Assigned --> Reassigned: myVar = 456
@@ -188,10 +188,10 @@ Constants have two main rules:
 
    **Simple value** - The following is NOT allowed:
    
-      ```javascript
+  ```javascript
       const PI = 3;
       PI = 4; // not allowed
-      ```
+  ```
 
    **What you need to remember:**
    - **Attempts** to reassign a constant will cause an error
@@ -200,10 +200,10 @@ Constants have two main rules:
  
    **Object reference is protected** - The following is NOT allowed:
    
-      ```javascript
+   ```javascript
       const obj = { a: 3 };
       obj = { b: 5 } // not allowed
-      ```
+   ```
 
    **Understanding these concepts:**
    - **Prevents** replacing the entire object with a new one
@@ -212,15 +212,15 @@ Constants have two main rules:
 
     **Object value is not protected** - The following IS allowed:
     
-      ```javascript
+  ```javascript
       const obj = { a: 3 };
       obj.a = 5;  // allowed
-      ```
+  ```
 
-      **Breaking down what happens here:**
-      - **Modifies** the property value inside the object
-      - **Keeps** the same object reference
-      - **Demonstrates** that object contents can change while the reference stays constant
+  **Breaking down what happens here:**
+  - **Modifies** the property value inside the object
+  - **Keeps** the same object reference
+  - **Demonstrates** that object contents can change while the reference stays constant
 
    > Note, a `const` means the reference is protected from reassignment. The value is not _immutable_ though and can change, especially if it's a complex construct like an object.
 
