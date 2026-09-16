@@ -382,7 +382,7 @@ quadrantChart
 ```
 
 **Understanding why these parameters matter**: Different applications need different types of responses. A customer service bot should be consistent and factual (low temperature), while a creative writing assistant should be imaginative and varied (high temperature). Understanding these parameters gives you control over your AI's personality and response style.
-```
+
 
 **Here's what's happening in this code:**
 - **We import** the tools we need: `os` for reading environment variables and `OpenAI` for talking to the AI
