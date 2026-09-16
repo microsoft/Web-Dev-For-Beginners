@@ -167,7 +167,6 @@ flowchart TB
     style D fill:#fff3e0
     style H fill:#e8f5e8
 ```
-
 ### Let Me Show You Why High-Level Languages Are So Much Friendlier
 
 Alright, I'm about to show you something that perfectly demonstrates why I fell in love with high-level languages, but first – I need you to promise me something. When you see that first code example, don't panic! It's supposed to look intimidating. That's exactly the point I'm making!
