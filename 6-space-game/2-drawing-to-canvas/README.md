@@ -153,7 +153,7 @@ ctx.fillRect(0, 0, 200, 200); // x, y, width, height
 
 You can draw all sorts of things with the Canvas API like:
 
-- **Geometrical shapes**, we've already showed how to draw a rectangle, but there is much more you can draw.
+- **Geometrical shapes**, we've already shown how to draw a rectangle, but there is much more you can draw.
 - **Text**, you can draw a text with any font and color you wish.
 - **Images**, you can draw an image based off of an image asset like a .jpg or .png for example.
 
