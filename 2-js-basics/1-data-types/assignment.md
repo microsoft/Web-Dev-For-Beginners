@@ -38,11 +38,11 @@ For each data type, structure your response like this:
 **Purpose in Shopping Cart:** [Explain what this data type does]
 
 **Why This Type:** [Explain why this is the best choice]
+```
 
 **Code Example:**
 ```javascript
 // Your realistic code example here
-```
 
 **Real-world Usage:** [Describe how this would work in practice]
 
