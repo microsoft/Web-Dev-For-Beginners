@@ -539,7 +539,7 @@ if(res.tool_calls):
 print("CONTENT: ",res.content)
 ```
 
-Now that we call `invoke` on this new llm, that has tools, we maybe the the property `tool_calls` populated. If so, any identified tools has a `name` and `args` property that identifies what tool should be called and with arguments. The full code looks like so:
+Now that we call `invoke` on this new llm, that has tools, we may see the `tool_calls` property populated. If so, any identified tools has a `name` and `args` property that identifies what tool should be called and with arguments. The full code looks like so:
 
 ```python
 from langchain_core.messages import HumanMessage, SystemMessage
