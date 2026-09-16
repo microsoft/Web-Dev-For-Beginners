@@ -382,21 +382,20 @@ quadrantChart
 ```
 
 **これらのパラメータが重要な理由を理解する**: 異なるアプリケーションには異なるタイプの応答が必要です。カスタマーサービスボットは一貫性があり事実に基づくべき (低温度) ですが、創造的なライティングアシスタントは想像力豊かで多様であるべき (高温度) です。これらのパラメータを理解することで、AIの性格や応答スタイルを制御できます。
-```
 
-**Here's what's happening in this code:**
-- **We import** the tools we need: `os` for reading environment variables and `OpenAI` for talking to the AI
-- **We set up** the OpenAI client to point to GitHub's AI servers instead of OpenAI directly
-- **We authenticate** using a special GitHub token (more on that in a minute!)
-- **We structure** our conversation with different "roles" – think of it like setting the scene for a play
-- **We send** our request to the AI with some fine-tuning parameters
-- **We extract** the actual response text from all the data that comes back
+**このコードの処理内容は以下の通りです：**
+- **必要なツールをインポートします**：環境変数を読み込むための `os` と、AIとやり取りするための `OpenAI` を使用します。
+- **OpenAIクライアントを設定します**：OpenAIのサーバーに直接接続するのではなく、GitHubのAIサーバーを指すように設定します。
+- **認証を行います**：特別なGitHubトークンを使用します（これについては後ほど詳しく説明します）。
+- **会話を構成します**：さまざまな「役割（ロール）」を定義します。これは、演劇の舞台設定を行うようなものだと考えてください。
+- **リクエストを送信します**：微調整（ファインチューニング）用のパラメータを添えて、AIにリクエストを送ります。
+- **応答テキストを抽出します**：返ってきたデータ全体から、実際の応答テキストを取り出します。
 
-> 🔐 **Security Note**: Never hardcode API keys in your source code! Always use environment variables to store sensitive credentials like your `GITHUB_TOKEN`.
+> 🔐 **セキュリティ上の注意**：APIキーをソースコードに直接記述（ハードコーディング）しないでください！`GITHUB_TOKEN` のような機密情報は、必ず環境変数を使用して管理するようにしましょう。
 
-### Creating a Reusable AI Function
+### 再利用可能なAI関数の作成
 
-Let's refactor this code into a clean, reusable function that we can easily integrate into our web application:
+このコードを、Webアプリケーションに簡単に組み込めるような、すっきりと整理された再利用可能な関数にリファクタリングしてみましょう。
 
 ```python
 import asyncio
