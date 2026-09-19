@@ -1,38 +1,38 @@
-[![GitHub ലൈസൻസ്](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
-[![GitHub സംഭാവനക്കാർ](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
-[![GitHub പ്രശ്നങ്ങൾ](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
-[![GitHub പുൾ-റിക്വസ്റ്റുകൾ](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
-[![പുൾ-റിക്ക്വെസ്റ്റുകൾ സ്വാഗതം](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
+[![GitHub license](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 
-[![GitHub വാച്ചേഴ്സ്](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
-[![GitHub ഫോർക്സ്](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
-[![GitHub താരക്കൾ](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
-
-[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
-
-# പുതിയവർക്കുള്ള വെബ് ഡെവലപ്പ്മെന്റ് - ഒരു പാഠ്യപദ്ധതി
-
-Microsoft Cloud Advocates ഒരുക്കുന്ന 12-വാര വ്യാപ്തിയുള്ള സമഗ്ര കോഴ്സിലൂടെ വെബ് ഡെവലപ്പ്മെന്റിന്റെ അടിസ്ഥാനങ്ങൾ പഠിക്കൂ. 24 പാഠങ്ങളിലായി ജാവാസ്ക്രിപ്റ്റ്, CSS, HTML എന്നിവയെ ഇവിടെ തൊട്ടു പഠിക്കുന്ന പ്രാക്ടിക്കൽ പ്രോജക്ടുകൾ മുഖേന അടിയുറച്ചു പഠനമാണ്, ഉദാഹരണമായി ടെറേറിയം, ബ്രൗസർ എക്സടൻഷനുകൾ, സ്പേസ് ഗെയിംസ് എന്നിവ. ക്വിസുകൾ, സംവാദങ്ങൾ, പ്രായോഗിക അസൈൻമെന്റുകൾ എന്നിവയിൽ പങ്കാളികളാകുക. നിങ്ങളുടെ കഴിവുകൾ മെച്ചപ്പെടുത്തുകയും നിങ്ങൾ പഠിച്ച കാര്യങ്ങൾ നല്ല രീതിയിൽ പകർന്നു വെക്കുകയും ചെയ്യുക നമ്മുടെ ഫലപ്രദമായ പ്രോജക്ട് അധിഷ്ഠിത പഠനരീതികൾ ഉപയോഗിച്ച്. ഇന്ന് തന്നെ നിങ്ങളുടെ കോഡിംഗ് യാത്ര ആരംഭിക്കൂ!
-
-Azure AI Foundry Discord കമ്മ്യൂണിറ്റിയിൽ ചേർക്കുക
+[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
+[![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-ഈ വിഭവങ്ങൾ ഉപയോഗിച്ച് ആരംഭിക്കാൻ ഈ പടികളേ പിന്തുടരുക:
-1. **റിപോസിറ്ററി ഫോർക്ക് ചെയ്യുക**: ക്ലിക്ക് ചെയ്യൂ [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **റിപോസിറ്ററി ക്ലോൺ ചെയ്യുക**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**Azure AI Foundry Discord-ലേക്ക് ചേരുക, വിദഗ്ധരും മറ്റ് ഡെവലപ്പർമാരും കണ്ടുമുട്ടുക**](https://discord.com/invite/ByRwuEEgH4)
+# Web Development for Beginners - ഒരു പാഠ്യപദ്ധതി
 
-### 🌐 ബഹുഭാഷാ പിന്തുണ
+Microsoft Cloud Advocates ഒരുക്കുന്ന 12 ആഴ്‌ചകളുള്ള സമഗ്ര കോഴ്സിനൊപ്പം വെബ് ഡെവലപ്പ്മെന്റിന്റെ അടിസ്ഥാനങ്ങൾ പഠിക്കൂ. 24 പാഠങ്ങളുടെ ഓരോതും ടെറേറിയം, ബ്രൗസർ എക്സ്റ്റൻഷനുകൾ, സ്‌പേസ് ഗെയിമുകൾ പോലുള്ള പ്രായോഗിക പ്രോജക്ടുകൾ വഴിയുള്ള ജാവാസ്ക്രിപ്റ്റ്, CSS, HTML എന്നിവയിൽ ആഴത്തിലുള്ള പഠനം നൽകുന്നു. ക്വിസുകളും, ചർച്ചകളും, പ്രായോഗിക അസൈൻമെന്റുകളും നിങ്ങളെ സജീവമാക്കും. പ്രൊജക്ട് അടിസ്ഥാനമുള്ള ഈ പാഠരീതിയോടെ നിങ്ങളുടെ വിദ്യയുയർത്തി പരിപൂർണമായി മനസ്സിലാക്കുക. ഇന്ന് തന്നെ നിങ്ങളുടെ കോഡിംഗ് യാത്ര ആരംഭിക്കുക!
 
-#### GitHub ആക്‌ഷൻ വഴി പിന്തുണ (സ്വയം പ്രവർത്തിക്കുകയും എപ്പോഴും പുതുക്കുകയാണ്)
+Azure AI Foundry Discord-ലേക്ക് ചേരുക, വിദഗ്ധരുമായും മറ്റ് ഡവലപ്പർമാരുമായും പരിചയപ്പെടുക.
+
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
+
+ഈ സ്രോതസുകൾ ഉപയോഗിച്ച് ആരംഭിക്കാൻ ഈ ചുവടുകളെ പിന്തുടരുക:
+1. **റിപ്പോസിറ്ററി Fork ചെയ്യുക**: ക്ലിക്ക് ചെയ്യുക [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **റിപ്പോസിറ്ററി ക്ലോൺ ചെയ്യുക**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Azure AI Foundry Discord-ലേക്ക് ചേരുക, വിദഗ്ധരുമായും മറ്റ് ഡവലപ്പർമാരുമായും പരിചയപ്പെടുക**](https://discord.com/invite/ByRwuEEgH4)
+
+### 🌐 බഹു-ഭാഷാ പിന്തുണ
+
+#### GitHub Action വഴി പിന്തുണ (സ്വയം ക്രമീകരണമായും സ്ഥിരമായി അപ്‌ഡേറ്റ് ചെയ്യുന്നവ)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](./README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **ഏകദേശം ക്ലോൺ ചെയ്യാൻ ആഗ്രഹമുണ്ടോ?**
+> **പ്രാദേശികമായി ക്ലോൺ ചെയ്യാമോ?**
 >
-> ഈ റിപോസിട്ടറിയിൽ 50-മായ ഭാഷാ തർജ്ജമകൾ ഉൾപ്പെടുത്തിയിരിക്കുന്നതിനാൽ ഡൗൺലോഡ് വലുതാണ്. തർജ്ജമകൾ ഒഴിവാക്കി ക്ലോൺ ചെയ്യാൻ sparse checkout ഉപയോഗിക്കുക:
+> ഈ റിപോസിറ്ററിയിൽ 50+ ഭാഷാ പരിഭാഷകളും അടങ്ങിയിട്ടുണ്ട്, ഇത് ഡൗൺലോഡ് വലിപ്പം വളരെയധികം വർദ്ധിപ്പിക്കുന്നു. പരിഭാഷകൾ ഇല്ലാതെ ക്ലോൺ ചെയ്യാൻ, സ്‌പാർസ് ചെക്ക്ഔട്ട് ഉപയോഗിക്കുക:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -48,175 +48,175 @@ Azure AI Foundry Discord കമ്മ്യൂണിറ്റിയിൽ ചേ
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> ഇതുകൊണ്ട് കോഴ്സിന്റെ പൂര്‍ത്തീകരണത്തിന് ആവശ്യമുള്ള എല്ലാം വളരെ വേഗത്തില്‍ ഡൗൺലോഡ് ചെയ്യാൻ കഴിയും.
+> ഇത് നിങ്ങൾക്ക് കോഴ്‌സ് പൂർത്തിയാക്കാൻ വേണ്ടതെല്ലാം ഒരു വേഗത്തിലുള്ള ഡൗൺലോഡുമായി നൽകും.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**നിങ്ങൾക്ക് കൂടുതൽ തർജ്ജമാ ഭാഷകൾ വേണ്ടെങ്കിൽ അവ [ഇവിടെ](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md) പട്ടികപ്പെടുത്തിയിട്ടുണ്ട്**
+**മേറെ വിവർത്തനങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, പിന്തുണയുള്ള ഭാഷകൾ ഇവിടെ കൊടുക്കപ്പെട്ടിരിക്കുന്നു. [ഇവിടെ](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
-[![Visual Studio Code-ൽ തുറക്കൂ](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-#### 🧑‍🎓 _നീങ്ങൾ വിദ്യാർത്ഥിയാണോ?_
+#### 🧑‍🎓 _നിങ്ങൾ ഒരു വിദ്യാർത്ഥിയാണോ?_
 
-[**Student Hub പേജ്**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) സന്ദർശിക്കൂ, ഇവിടെ നിങ്ങൾക്ക് തുടക്കദിശാസൂചനുകൾ, വിദ്യാർത്ഥി പാക്കുകൾ, സൗജന്യ സർട്ടിഫിക്കറ്റ് വൗചറുകൾ ലഭിക്കും. മാസത്തിലെ മാറ്റങ്ങൾക്കനുസരിച്ച് ഇതു താങ്കളുടെ ബുക്ക്‌മാർക്കാക്കി ഇടയ്ക്ക് പരിശോധിക്കേണ്ട ഈ പേജ് ആണ്.
+[**Student Hub പേജ്**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) സന്ദർശിക്കുക, അവിടെ നിങ്ങൾക്ക് തുടക്കക്കാരൻ ആയതിനുള്ള ഉറവിടങ്ങൾ, വിദ്യാർത്ഥി പാക്കുകൾ, ഒപ്പം സൗജന്യ സർട്ടിഫിക്കറ്റ് വൗചർ നേടാനുള്ള മാർഗങ്ങൾ ലഭിക്കും. ഓരോ മാസവും ഉള്ളടക്കം മാറ്റുമ്പോൾ ഇവിടെ ബുക്ക്‌മാർക്ക് ചെയ്യുകയും ഇടയ്ക്കിടെ പരിശോധിക്കുകയുമാണ് ഏറ്റവും നല്ലത്.
 
-### 📣 പ്രഖ്യാപനo - GitHub Copilot Agent മോഡ് വെല്ലുവിളികൾ പൂർത്തിയാക്കൂ!
+### 📣 പ്രഖ്യാപനം - പുതിയ GitHub Copilot Agent മോഡ് ചലഞ്ചുകൾ പൂർത്തിയാക്കണം!
 
-പുതിയ വെല്ലുവിളി ചേർക്കപ്പെട്ടിരിക്കുന്നു, അധികം അധ്യായങ്ങളിൽ "GitHub Copilot Agent Challenge 🚀" എന്ന് നോക്കൂ. GitHub Copilot-ഉം Agent മോഡും ഉപയോഗിച്ച് പൂർത്തിയാക്കാവുന്ന പുതിയ വെല്ലുവിളിയാണ് ഇത്. Agent മോഡ് ഉപയോഗിച്ചിട്ടില്ലെങ്കിൽ വായിച്ച് നോക്കൂ, ഇത് ടെക്സ്റ്റ് സൃഷ്ടിക്കുന്നതിനുപുറവും ഫയലുകൾ സൃഷ്ടിക്കുകയും തിരുത്തുകയും കമാൻഡുകൾ चलിപ്പിക്കുകയും മുതലായവ ചെയ്യാൻ കഴിയും.
+പുതിയ ചലഞ്ച് ചേർത്തിട്ടുണ്ട്, മിക്ക അധ്യായങ്ങളിലും "GitHub Copilot Agent Challenge 🚀" കാണുക. GitHub Copilot, Agent മോഡ് ഉപയോഗിച്ച് നിങ്ങൾക്ക് പൂർത്തിയാക്കാനുള്ള പുതിയ ഒരു ചലഞ്ച് ആണ് ഇത്. Agent മോഡിന്റെ ഉപയോഗം ഇല്ലെങ്കിൽ, ഇത് തീരുവടക്കം എഴുത്ത് സൃഷ്‌ടിക്കുക മാത്രമല്ല, ഫയലുകൾ സൃഷ്‌ടിക്കുകയും എഡിറ്റ് ചെയ്യുകയും, കമാൻഡുകൾ ഓടിക്കുകയും മറ്റും ചെയ്യാൻ കഴിയും.
 
-### 📣 പ്രഖ്യാപനo - _ജനറേറ്റീവ് AI ഉപയോഗിച്ച് പുതിയ പ്രോജക്ട് നിർമ്മിക്കൂ_ 
+### 📣 പ്രഖ്യാപനം - _Generative AI ഉപയോഗിച്ച് നിർമ്മിക്കാനുള്ള പുതിയ പ്രോജക്ട്_
 
-പുതിയ AI അസിസ്റ്റന്റ് പ്രോജക്ട് പേസ്റ്റ് ചെയ്തിരിക്കുന്നു, [പ്രോജക്ട്](./9-chat-project/README.md) നിരീക്ഷിക്കുക
+പുതിയ AI അസിസ്റ്റന്റ് പ്രോജക്ട് ചേർത്തിട്ടുണ്ട്, പരിശോധിക്കുക [project](./9-chat-project/README.md)
 
-### 📣 പ്രഖ്യാപനo - _ജനറേറ്റീവ് AI-യ്ക്കായി ജാവാസ്ക്രിപ്റ്റ് പുതിയ പാഠ്യപദ്ധതി_
+### 📣 പ്രഖ്യാപനം - _Generative AI-നുള്ള പുതിയ പാഠ്യപദ്ധതി_ ജാവാസ്ക്രിപ്റ്റിനായുള്ളത് പുറത്തിറങ്ങിയിരിക്കുന്നു
 
-പുതിയ ജനറേറ്റീവ് AI പാഠ്യപദ്ധതി പുറത്തിറക്കി!
+പുതിയ Generative AI പാഠ്യപദ്ധതി ഒഴിവാക്കേണ്ടതില്ല!
 
-തുടങ്ങാൻ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) സന്ദർശിക്കൂ!
+[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) സന്ദർശിച്ച് തുടങ്ങിയെടുക്കുക!
 
-![പശ്ചാത്തലം](../../translated_images/ml/background.148a8d43afde5730.webp)
+![Background](../../translated_images/ml/background.148a8d43afde5730.webp)
 
-- അടിസ്ഥാനങ്ങളിൽ നിന്നും RAG വരെ മുഴുവൻ പാഠങ്ങൾ.
-- GenAI-ഉം, നമ്മുടെ കൂട്ടുആപ്പ് ഉപയോഗിച്ചുള്ള ചരിത്ര കഥാപാത്രങ്ങളുമായ സംവാദങ്ങൾ.
-- രസകരവും ആകർഷകവുമായ കഥാപ്രസംഗം, നിങ്ങൾ സമയ യാത്ര ചെയ്യുന്നു!
+- അടിസ്ഥാനങ്ങൾ മുതൽ RAG-വരെ ഉൾക്കൊള്ളുന്ന പാഠങ്ങൾ.
+- GenAI-യുടേയും നമ്മുടെ കൂട്ടിച്ചേർത്ത ആപ്ലിക്കേഷന്റേയും സഹായത്തോടെ ചരിത്ര കഥാപാത്രങ്ങളുമായി സംവദിക്കുക.
+- രസകരവും ആകർഷകവുമായ കഥാപ്രവാഹം, നിങ്ങൾക്കൊരു കാലയാത്ര!
 
-![കഥാപാത്രം](../../translated_images/ml/character.5c0dd8e067ffd693.webp)
-
-ഓരോ പാഠത്തിലും അസൈൻമെന്റും, പരിജ്ഞാനപരിശോധനയും, വെല്ലുവിളിയും ഉണ്ട്, ഇരക്കുന്നതിൽ:
-
-- പ്രോംപ്റ്റിംഗ്, പ്രോംപ്റ്റ് എന്‍‌ജിനീയറിംഗ്
-- ടെക്സ്റ്റ്, ഇമേജ് ആപ്പ് സൃഷ്ടിക്കൽ
-- സെർച്ച് ആപ്പുകൾ
-
-തുടങ്ങാൻ സന്ദർശിക്കൂ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)
+![character](../../translated_images/ml/character.5c0dd8e067ffd693.webp)
 
 
+ഓരോ പാഠവും ഒരു അസൈൻമെന്റ്, ഒരു വിജ്ഞാന പരിശോധന, ഒരു ചോദ്യോത്തര ചലഞ്ച് എന്നിവ ഉൾക്കൊള്ളുന്നു, പഠിക്കാനുള്ള വിഷയങ്ങൾ:
+- പ്രോംപ്റ്റിങ്, പ്രോംപ്റ്റ് എഞ്ചിനീയറിംഗ്
+- ടെക്സ്റ്റ്, ഇമേജ് ആപ് ജനറേഷൻ
+- സെർച്ച് ആപ്ലിക്കേഷനുകൾ
 
-## 🌱 ആരംഭിക്കൽ
+[https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) സന്ദർശിച്ച് തുടങ്ങിയെടുക്കുക!
 
-> **ടീച്ചർമാർക്ക്**, ഈ പాఠ്യപദ്ധതി ഉപയോഗിക്കുന്നതിൽ കുറച്ച് നിർദ്ദേശങ്ങളും ഞങ്ങൾ ഉൾപ്പെടുത്തിയിട്ടുണ്ട് [for-teachers.md](for-teachers.md). നിങ്ങളുടെ അഭിപ്രായങ്ങൾ [സംവാദ ഫോറത്തിൽ](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) പ്രതീക്ഷിക്കുന്നു!
 
-**[പഠിതാക്കൾ](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, ഓരോ പാഠവും പ്രീ-ലെക്ചർ ക്വിസിലൂടെ തുടങ്ങുക, മുൻപിൽ നൽകുന്ന പാഠവസ്തു വായിച്ചുക, വിവിധ പ്രവർത്തനങ്ങൾ പൂർത്തിയാക്കി, പിന്നീട് പോസ്റ്റ്-ലെക്ചർ ക്വിസ് ചെയ്താൽ തിരിച്ചറിയൽ ഉറപ്പാക്കാം.
 
-നിങ്ങളുടെ പഠനാനുഭവം മെച്ചപ്പെടുത്താൻ, കൂട്ടരോടൊപ്പം ചേർന്നു പ്രോജക്ടുകൾ നിർവ്വഹിക്കൂ! സംവാദങ്ങൾക്ക് ഞങ്ങളുടെ [സംവാദ ഫോറം](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) ഉണ്ട്, അവിടെ ഞങ്ങളുടെ മോദറേറ്റിംഗ് ടീം നിങ്ങളുടെ ചോദ്യങ്ങൾക്ക് മറുപടി നൽകുന്നതാണ്.
+## 🌱 ആരംഭിക്കാം
 
-കൂടുതൽ പഠനം ആഗ്രഹിക്കുന്നവർക്ക്, Microsoft Learn [ഇവിടെ](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) ഉപയോഗിച്ച് കൂടുതൽ പഠനപദ്ധതികൾ തേടാൻ ഞങ്ങൾ നിർദേശിക്കുന്നു.
+> **അദ്ധ്യാപകർ**, ഈ പാഠ്യപദ്ധതി ഉപയോഗിക്കുന്നതിന് ചില നിർദ്ദേശങ്ങൾ ഞങ്ങൾ [ഉൾപ്പെടുത്തിയിട്ടുണ്ട്](for-teachers.md). നിങ്ങളുടെ പ്രതികരണം [നമ്മുടെ ചർച്ച ഫോറത്തിൽ](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) നാം ആഗ്രഹിക്കുന്നു!
 
-### 📋 നിങ്ങളുടെ പരിസരമൊരുക്കൽ
+**[പഠിക്കുന്നവർ](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, ഓരോ പാഠത്തിനും തുടക്കത്തിൽ ഒരു പ്രീ-ലെക്ചർ ക്വിസ് നടത്തുകയും പാഠഭാഗം വായിക്കുകയും വിവിധ പ്രവർത്തനങ്ങൾ പൂർത്തിയാക്കുകയും പോസ്റ്റ്-ലെക്ചർ ക്വിസ് വഴി മനസ്സിലാക്കിയ കാര്യങ്ങളെ പരിശോധിക്കുകയും ചെയ്യുക.
 
-ഈ പാഠ്യപദ്ധതിക്ക് തയ്യാറായ വികസന പരിസരം ഉണ്ട്! തുടങ്ങുമ്പോൾ, ഇത് ഒരു [Codespace](https://github.com/features/codespaces/) (_ബ്രൗസർ അധിഷ്ഠിത, ഇൻസ്റ്റാൾ ആവശ്യമില്ലാത്ത പരിസരം_) എന്ന നിലയിൽ ഓടിക്കാൻ അല്ലെങ്കിൽ നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) പോലുള്ള ടെക്സ്റ്റ് എഡിറ്റർ ഉപയോഗിച്ച് ലോക്കൽ ആയി ഓടിക്കാം.
+പഠനാനുഭവം മെച്ചപ്പെടുത്താൻ, സഹപാഠികളുമായി ചേർന്ന് പ്രോജക്ടുകൾ രൂപകരിക്കാൻ ശ്രമിക്കുക! ചർച്ചകൾക്ക് ഞങ്ങളുടെ [ചർച്ച ഫോറം](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) ഉണ്ട്, അവിടെ ഒരു നിരന്തരമായ നിരീക്ഷക സംഘം നിങ്ങളുടെ ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകാൻ സന്നദ്ധമാണ്.
+
+കൂടുതൽ വിദ്യാഭ്യാസത്തിനും മൈക്രോസോഫ്റ്റ് ലേൺ ([Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon)) ഉപയോഗിച്ച് കൂടുതൽ പഠനസാധനങ്ങൾ തേടാൻ ഞങ്ങൾ ശക്തമായി നിർദ്ദേശിക്കുന്നു.
+
+### 📋 നിങ്ങളുടെ പരിസ്ഥിതി സജ്ജീകരിക്കൽ
+
+ഈ പാഠ്യപദ്ധതിയിൽ വികസന പരിസ്ഥിതി തയ്യാറാണ്! പഠനം തുടങ്ങിയാൽ [Codespace](https://github.com/features/codespaces/) (_ബ്രൗസറിലെ, ഇൻസ്റ്റാളേഷൻ ഇല്ലാതെ പ്രവർത്തിക്കുന്ന ഒരു പരിസ്ഥിതി_) അല്ലെങ്കിൽ നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ പ്രാദേശികമായി [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) പോലുള്ള ടെക്സ്റ്റ് എഡിറ്റർ ഉപയോഗിച്ച് കോഴ്സ് ഓടിക്കാം.
 
 #### നിങ്ങളുടെ റിപോസിറ്ററി സൃഷ്ടിക്കുക
-നിങ്ങളുടെ പ്രവർത്തനം എളുപ്പത്തിൽ ബുക്ക് ചെയ്യാൻ, ഈ റിപോസിറ്ററിയുടെ ഒരു കോപ്പി സൃഷ്ടിക്കാൻ ശുപാർശ ചെയ്യുന്നു. പേജ് മുകളിൽ ഉള്ള **Use this template** ബട്ടൺ ക്ലിക്കുചെയ്യുമ്പോൾ ഇത് നിങ്ങളുടെ GitHub അക്കൗട്ടിൽ പുതിയ റിപോസിറ്ററി സൃഷ്ടിക്കും, അതിൽ ഈ പാഠ്യപദ്ധതി ഉൾപ്പെടും.
+നിങ്ങളുടെ പ്രവൃത്തി സ്ത്രസപ്പെടുത്താതെ സംരക്ഷിക്കാനായി, ഈ റെപ്പോസിറ്ററിയുടെ സ്വന്തം കോപ്പി സൃഷ്ടിക്കേണ്ടതുണ്ട്. പേജിന്റെ മുകളിലുള്ള **Use this template** ബട്ടൺ ക്ലിക്കുചെയ്താൽ ഇത് നിങ്ങളുടെ GitHub അക്കൗണ്ടിൽ പുതിയ റിപോസിറ്ററി ആയി സൃഷ്ടിക്കും.
 
-പടികൾ അനുസരിച്ച്:
-1. **റിപോസിറ്ററി ഫോർക്ക് ചെയ്യുക**: ഈ പേജിന്റെ മുകളിൽ വലത് കോണിൽ "Fork" ബട്ടണിൽ ക്ലിക്കുചെയ്യുക.
-2. **റിപോസിറ്ററി ക്ലോൺ ചെയ്യുക**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+ഈ ചുവടുകൾ പിന്തുടരുക:
+1. **റിപ്പോസിറ്ററി Fork ചെയ്യുക**: ഈ പേജിന്റെ മുകളിലേയ്ക്ക് വലതുവശത്തുള്ള "Fork" ബട്ടൺ ക്ലിക്ക് ചെയ്യുക.
+2. **റിപ്പോസിറ്ററി ക്ലോൺ ചെയ്യുക**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Codespace-ലാണ് പാഠ്യപദ്ധതി ഓടിക്കൽ
+#### Codespace-ൽ പാഠ്യപദ്ധതി ഓടിക്കുക
 
-നിങ്ങൾ സൃഷ്ടിച്ച ഈ കോപ്പി റിപോസിറ്ററിയിൽ, **Code** ബട്ടൺ ക്ലിക്കുചെയ്യുക, പിന്‌വീട് **Open with Codespaces** തിരഞ്ഞെടുക്കുക. നിങ്ങളുടെ പ്രവർത്തനത്തിന് പുതിയ ഒരു Codespace സൃഷ്ടിക്കും.
+നിങ്ങളുടെ സൃഷ്ടിച്ച കോപ്പിയിൽ, **Code** ബട്ടൺ ക്ലിക്ക് ചെയ്ത് **Open with Codespaces** തിരഞ്ഞെടുക്കുക. ഇതു വഴി നിങ്ങൾക്കായി പുതിയ Codespace സൃഷ്ടിക്കപ്പെടും.
 
 ![Codespace](../../translated_images/ml/createcodespace.0238bbf4d7a8d955.webp)
 
-#### നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ ലോക്കൽ ആയി പാഠ്യപദ്ധതി ഓടിക്കൽ
+#### പ്രാദേശികമായി പാഠ്യപദ്ധതി ഓടിക്കുക
 
-ഈ പാഠ്യപദ്ധതി ലോക്കലായി ഓടിക്കാൻ, നിങ്ങൾക്ക് ഒരു ടെക്സ്റ്റ് എഡിറ്ററും ഒരു ബ്രൗസറും, കമാൻഡ് ലൈൻ ഉപകരണവും ആവശ്യമാണ്. ആദ്യം പാഠം [Programming Languages and Tools of the Trade-ലേക്ക് പരിചയം](../../1-getting-started-lessons/1-intro-to-programming-languages) എന്നതിൽ ഈ ഉപകരണങ്ങളിൽ നിന്നെ തിരഞ്ഞെടുക്കാനുള്ള വഴികൾ വിശദമാക്കും.
+നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ പാഠ്യപദ്ധതി ഓടിക്കാൻ, ഒരു ടെക്സ്റ്റ് എഡിറ്റർ, ഒരു ബ്രൗസർ, ഒരു കമാൻഡ് ലൈൻ ടൂൾ എന്നിവ ആവശ്യമാണ്. ആദ്യ പാഠം, [പ്രോഗ്രാമിംഗ് ഭാഷകളും ഉപകരണങ്ങളുമായുള്ള പരിചയം](../../1-getting-started-lessons/1-intro-to-programming-languages) സഹായത്തോടെ എല്ലാ ടൂള്‍ ഓപ്ഷനുകളും പരിചയപ്പെടാം, നിങ്ങൾക്ക് ഏറ്റവും അനുയോജ്യം തിരഞ്ഞെടുക്കാം.
 
-ഞങ്ങളുടെ ശുപാർശ [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ആണ്, ഇതിൽ നിർമ്മിച്ച [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) ഉണ്ട്. Visual Studio Code [ഇവിടെയായാണ് ഡൗൺലോഡ് ചെയ്യുക](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-1. നിങ്ങളുടെ റിപ്പോസിറ്ററി നിങ്ങളുടെ കമ്പ്യൂട്ടറിലേക്ക് ക്ലോൺ ചെയ്യുക. ഇത് ചെയ്യാൻ **Code** ബട്ടൺ ക്ലിക്ക് ചെയ്ത് URL കോപ്പി ചെയ്യാം:
+ഞങ്ങളുടെ ശുപാർശ: [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ആണ്, അതിൽ ഉൾക്കൊള്ളുന്ന [ടർമിനൽ](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) അനുബദ്ധമാണ്. Visual Studio Code [ഇവിടെ](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) നിന്നും ഡൗൺലോഡ് ചെയ്യാം.
+1. നിങ്ങളുടെ കമ്പ്യൂട്ടറിലേക്ക് നിങ്ങളുടെ റിപ്പോസിറ്ററി ക്ലോൺ ചെയ്യുക. നിങ്ങൾക്ക് ഇത് **Code** ബട്ടൺ ക്ലിക്ക് ചെയ്ത് URL പകര്‍ത്തി ചെയ്യാം:
 
     [CodeSpace](./images/createcodespace.png)
 
-    ശേഷം, [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)ൽ ഉള്ള [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) തുറന്ന് താഴെയുള്ള കമാൻഡ് പ്രവർത്തിപ്പിക്കുക, `<your-repository-url>` എന്നിടത്തു കോപ്പി ചെയ്ത URL അടിക്കുക:
+    പിന്നീട്, [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)–യിലെ [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) തുറന്നുകൊണ്ട്, മേൽപ്പറഞ്ഞാൽ URL ബଦലായി `<your-repository-url>` ഉപയോഗിച്ച് താഴെ പറയുന്ന കമാൻഡ് റൺ ചെയ്യുക:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Visual Studio Code-ൽ ഫോൾഡർ തുറക്കുക. ഇതിനു **File** > **Open Folder** ക്ലിക്ക് ചെയ്ത് നിങ്ങൾ നിലവിൽ ക്ലോൺ ചെയ്ത ഫോൾഡർ തിരഞ്ഞെടുത്താൽ മതി.
+2. Visual Studio Code-ൽ ഫോൾഡർ തുറക്കുക. നിങ്ങൾ ഇപ്പോൾ ക്ലോൺ ചെയ്ത ഫോൾഡർ തിരഞ്ഞെടുത്ത് **File** > **Open Folder** ക്ലിക്ക് ചെയ്യുക.
 
 
 >  ശുപാർശ ചെയ്യുന്ന Visual Studio Code എക്സ്റ്റൻഷനുകൾ:
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - Visual Studio Code-ലുള്ള HTML പേജുകൾ സമീപകാലത്ത് കാണാൻ
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - നിങ്ങൾക്ക് പെട്ടെന്ന് കോഡ് എഴുതാൻ സഹായിക്കാൻ
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - Visual Studio Code-ൽ HTML പേജുകൾ പ്രിവ്യൂ ചെയ്യാൻ
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - കോഡ് എഴുതാൻ വേഗത കൂട്ടാൻ സഹായിക്കുന്നു
 
 ## 📂 ഓരോ പാഠവും ഉൾക്കൊള്ളുന്നത്:
 
-- ഐച്ഛിക സ്കെച്‌నോട്ട്
-- ഐച്ഛിക സവഹായ വീഡിയോ
-- പാഠത്തിന് മുൻപ് വെയർം-അപ്പ് ക്വിസ്
-- എഴുത്തുകാരന്‍റെ പാഠം
-- പ്രോജക്ട് അടിസ്ഥാനത്തിലുള്ള പാഠങ്ങൾക്ക്, പ്രോജക്ട് നിർമ്മിക്കാൻ ഘട്ടം ഘട്ടമായുള്ള മാർഗനിർദ്ദേശങ്ങൾ
-- നോളേജ് ചെക്കുകൾ
-- ഒരു ചാലഞ്ച്
-- യാത്രക്കാർ വായന
+- നിർബന്ധമല്ലാത്ത സ്കെച്ച് നോട്ട്
+- നിർബന്ധമല്ലാത്ത സഹായക വീഡിയോ
+- പാഠത്തിന് മുമ്പുള്ള വാര്മപ്പ് ക്വിസ്
+- എഴുത്തുപരമായ പാഠം
+- പ്രൊജക്റ്റ് അടിസ്ഥാനമാക്കിയുള്ള പാഠങ്ങൾക്കായി, പ്രോജക്റ്റ് നിർമ്മിക്കാൻ ഘട്ടം ഘട്ടമായ മാർഗനിർദ്ദേശങ്ങൾ
+- അറിവ് പരിശോദനകൾ
+- ഒരു ചൈലഞ്ച്
+- സഹായക വായന
 - അസൈൻമെന്റ്
-- [പാഠത്തിനുശേഷം ക്വിസ്](https://ff-quizzes.netlify.app/web/)
+- [പാഠത്തിന് ശേഷം ക്വിസ്](https://ff-quizzes.netlify.app/web/)
 
-> **ക്വിസുകളുടെ കുറിപ്പ്**: എല്ലാ ക്വിസുകളും Quiz-app ഫോൾഡറിൽ സമാഹരിച്ചിരിക്കുന്നു, മொത്തം 48 ക്വിസുകൾ, ഓരോത് മുക്കാൽ ചോദ്യങ്ങൾ ഉൾക്കൊണ്ട്. അവ [ഇവിടെ](https://ff-quizzes.netlify.app/web/) ലഭ്യമാണ്. ക്വിസ് ആപ്പ് ലോക്കലായി ഓടിക്കാനോ അഥവാ Azure-ലേക്കു ഡിപ്ലോയ്ചെയ്യാനോ കഴിയും; “quiz-app” ഫോൾഡറിലുള്ള നിർദ്ദേശങ്ങൾ പിന്തുടരുക.
+> **ക്വിസുകളെക്കുറിച്ച് ഒരു കുറിപ്പ്**: എല്ലാ ക്വിസുകളും Quiz-app ഫോൾഡറിൽ സഞ്ചയിച്ചിരിക്കുന്നു, മൂന്ന് ചോദ്യങ്ങളുള്ള 48 ക്വിസുകൾ. അവ [ഇവിടെ](https://ff-quizzes.netlify.app/web/) ലഭ്യമാണ്, ക്വിസ് ആപ്പ് ലോക്കലായി ഓടിക്കാനോ അല്ലെങ്കിൽ ആസ്യൂറിലേക്ക് വിന്യസ്തമാക്കാനോ കഴിയും; `quiz-app` ഫോൾഡറിലുള്ള നിർദ്ദേശങ്ങൾ പാലിക്കുക.
 
 ## 🗃️ പാഠങ്ങൾ
 
-|     |                       പ്രോജക്ട് പേര്                       |                            പഠിപ്പിച്ച ആശയങ്ങൾ                             | പഠന ലക്ഷ്യങ്ങൾ                                                                                                                 |                                                         ബന്ധപെട്ട പാഠം                                                          |         എഴുത്തുകാരൻ          |
+|     |                       പ്രോജക്റ്റ് നാമം                       |                            പഠിപ്പിച്ച ആശയങ്ങൾ                             | പഠന ലക്ഷ്യങ്ങൾ                                                                                                                 |                                                         ബന്ധപ്പെട്ട പാഠം                                                          |         രചയിതാവ്          |
 | :-: | :------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     ആരംഭിക്കൽ                      |           പ്രോഗ്രാമിങ്ങ് പരിചയം, തൊഴിലാളി ഉപകരണങ്ങൾ           | മിക്ക പ്രോഗ്രാമിങ്ങ് ഭാഷകൾക്ക് അടിസ്ഥാനം തരും ആശയങ്ങൾ പഠിക്കുക, പ്രൊഫഷണൽ ഡെവലപ്പർമാർക്കുള്ള സഹായകരമായ സോഫ്റ്റ്‌വെയർക്കുറിച്ച് അറിയുക | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         ജാസ്മിൻ         |
-| 02  |                     ആരംഭിക്കൽ                      |             GitHub അടിസ്ഥാനങ്ങൾ, ടീമിൽ പ്രവർത്തിക്കലും             | നിങ്ങളുടെ പ്രോജക്ടിൽ GitHub എങ്ങനെ ഉപയോഗിക്കാം, മറ്റുള്ളവരുമായി എങ്ങനെ ചേർന്ന് പ്രവർത്തിക്കാം                                                     |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          ഫ്ലോർ          |
-| 03  |                     ആരംഭിക്കൽ                      |                             ആക്സസിബിലിറ്റി                              | വെബ് ആക്സസിബിലിറ്റിയുടെ അടിസ്ഥാനങ്ങൾ പഠിക്കുക                                                                                               |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       ക്രിസ്റ്റോഫർ       |
-| 04  |                        ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ                         |                         ജാവാസ്ക്രിപ്റ്റ് ഡാറ്റാ ടൈപ്പുകൾ                          | ജാവാസ്ക്രിപ്റ്റ് ഡാറ്റാ ടൈപ്പുകളുടെ അടിസ്ഥാനങ്ങൾ                                                                                                 |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         ജാസ്മിൻ         |
-| 05  |                        ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ                         |                         ഫങ്ഷനുകളും മെത്തഡുകളും                          | അപ്ലിക്കേഷന്റെ ലൊജിക് ഫ്ലോ കൈകാര്യം ചെയ്യാൻ ഫങ്ഷനുകളും മെത്തഡുകളും പഠിക്കുക                                                             |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | ജാസ്മിൻ & ക്രിസ്റ്റോഫർ |
-| 06  |                        ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ                         |                        JS ഉപയോഗിച്ച് തീരുമാനം എടുക്കൽ                        | decision making രീതികൾ ഉപയോഗിച്ച് കോഡിൽ നിബന്ധനകൾ സൃഷ്ടിക്കാൻ പഠിക്കുക                                                           |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         ജാസ്മിൻ         |
-| 07  |                        ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ                         |                            അറെയ്‌സ്, ലൂപ്പുകൾ                            | JS-യിൽ അറെയ്‌സും ലൂപ്പുകളും ഉപയോഗിച്ച് ഡാറ്റ പ്രവർത്തനം                                                                                 |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         ജാസ്മിൻ         |
-| 08  |       [ടെറേറിയം](./3-terrarium/solution/README.md)       |                            HTML പ്രായോഗികം                            | ഒരു ഓൺലൈൻ ടെറേറിയം രൂപപ്പെടുത്താനുള്ള HTML നിർമ്മാണം, ലേഔട്ടിനെ കേന്ദ്രീകരിച്ച്                                                          |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           ജെൻ           |
-| 09  |       [ടെറേറിയം](./3-terrarium/solution/README.md)       |                            CSS പ്രായോഗികം                             | ഓൺലൈൻ ടെറേറിയം സ്റ്റൈലിംഗിനു CSS നിർമ്മിക്കുക, പ്രധാനമായ CSS അടിസ്ഥാനങ്ങൾ ഉൾപ്പെടെ പേജ് റെസ്പോൺസീവ് ആക്കൽ                                   |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           ജെൻ           |
-| 10  |            [ടെറേറിയം](./3-terrarium/solution/README.md)            |                 ജാവാസ്ക്രിപ്റ്റ് ക്ലോഷറുകൾ, DOM മ্যানിപ്പുലേഷൻ                  | ടെറേറിയം ഡ്രാഗ്/ഡ്രോപ് ഇൻറർഫേസ് ആകാൻ ജാവാസ്ക്രിപ്റ്റ് നിർമ്മിക്കുക, ക്ലോഷറുകൾക്കും DOM-ഉം കേന്ദ്രീകരിച്ചുള്ള പ്രവർത്തനം                     |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           ജെൻ           |
-| 11  |          [ടൈപ്പിംഗ് ഗെയിം](./4-typing-game/solution/README.md)          |                          ടൈപ്പിംഗ് ഗെയിം നിർമ്മിക്കുക                           | കീബോർഡ് ഇവന്റുകൾ ഉപയോഗിച്ച് ജാവാസ്ക്രിപ്റ്റ് ലൊജിക് ചലിപ്പിക്കുക                                                          |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       ക്രിസ്റ്റോഫർ       |
-| 12  | [ഗ്രീൻ ബ്രൗസർ എക്സ്റ്റൻഷൻ](./5-browser-extension/solution/README.md) |                         ബ്രൗസറുകളുമായി പ്രവൃത്തി                          | ബ്രൗസറുകളും അവയുടെ ചരിത്രവും എങ്ങനെ പ്രവർത്തിക്കുന്നു, ബ്രൗസർ എക്സ്റ്റൻഷന്റെ മുഖ്യ ഘടകങ്ങൾ നിർമ്മിക്കാനന്ത്രം                          |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           ജെൻ           |
-| 13  | [ഗ്രീൻ ബ്രൗസർ എക്സ്റ്റൻഷൻ](./5-browser-extension/solution/README.md) | ഫോം നിർമ്മിച്ച് API വിളിക്കുകയും ലോക്കൽ സ്റ്റോറേജിൽ വേരിയബിൾ സേവ് ചെയ്യുകയും ചെയ്യൽ | API-നെ വിളിക്കാൻ Local Storage-ൽ സൂക്ഷിച്ച വേരിയബിളുകൾ ഉപയോഗിച്ച് ബ്രൗസർ എക്സ്റ്റൻഷൻ ജാവാസ്ക്രിപ്റ്റ് വിഷയങ്ങൾ തയ്യാറാക്കുക                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           ജെൻ           |
-| 14  | [ഗ്രീൻ ബ്രൗസർ എക്സ്റ്റൻഷൻ](./5-browser-extension/solution/README.md) |          ബ്രൗസറിലെ പശ്ചാത്തല പ്രോസസ്സുകൾ, വെബ് പ്രകടനം          | എക്സ്റ്റൻഷനിന്റെ ഐക്കൺ നിയന്ത്രിക്കാൻ ബ്രൗസറിന്റെ പശ്ചാത്തല പ്രോസസ്സുകൾ ഉപയോഗിക്കുക; വെബ് പ്രകടനവും അതിന്റെ ഓപ്റ്റിമൈസേഷനുകളും അറിയുക   |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           ജെൻ           |
-| 15  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |             ജാവാസ്ക്രിപ്റ്റ് ഉപയോഗിച്ച് മെച്ചപ്പെട്ട ഗെയിം വികസനം             | ക്ലാസുകളും കോമ്പോസിഷനിൽ കാണപ്പെടുന്ന ഇൻഹെറിറ്റൻസ്, പബ്/സബ് പാറ്റേൺ എന്നിവയെക്കുറിച്ച് പഠിക്കുക, ഗെയിം നിർമ്മാണത്തിനു തയ്യാറെടുക്കൽ              |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          ക്രിസ്          |
-| 16  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                           കാൻവാസിൽ വരയ്ക്കൽ                            | സ്‌ക്രീനിൽ എലമെന്റുകൾ വരയ്ക്കാൻ ഉപയോഗിക്കുന്ന Canvas APIക്കുറിച്ച് പഠിക്കുക                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          ക്രിസ്          |
-| 17  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                   സ്‌ക്രീനിൽ എലമെന്റുകൾ നീക്കം ചെയ്യൽ                    | കോട്ടേഷ്യൻ Coordinates ഉപയോഗിച്ച് ഇലമെന്റുകൾക്ക് ചലനമുണ്ടാക്കാൻ പഠിക്കുക, Canvas API ഉപയോഗിച്ച്                                              |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          ക്രിസ്          |
-| 18  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                          തകരാഴ് കണ്ടെത്തൽ                           | കീപ്രസ്സ് മുഖാന്തിരം എലമെന്റുകൾ തമ്മിൽ തകരാറിലാക്കുകയും അവർ പരസ്പരം പ്രതികരിക്കുകയും ചെയ്യുക; ഗെയിം പ്രകടനം ഉറപ്പാക്കാൻ കൂള്‍ഡൗൺ ഫങ്ഷൻ നൽകുക    |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          ക്രിസ്          |
-| 19  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                             സ്‌കോർ നൽകൽ                              | ഗെയിമിന്റെ സ്ഥിതി പ്രകാരം ഗണിത കണക്കുകൂട്ടലുകൾ ചെയ്യുക                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          ക്രിസ്          |
-| 20  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                     ഗെയിം അവസാനിപ്പിക്കുകയും പുനരാരംഭിക്കുകയും ചെയ്യൽ                     | ഗെയിം അവസാനിപ്പിക്കൽ, പുനരാരംഭിക്കൽ, ആസ്തുക്കൾ സംസ്‌കരിക്കൽ, വേരിയബിൾ മൂല്യങ്ങൾ റീസെറ്റ് ചെയ്യൽ എന്നിവ പഠിക്കുക                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          ക്രിസ്          |
-| 21  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                 വെബ് ആപ്പിൽ HTML ടেম്പ്ലേറ്റുകളും റൂട്ടുകളും                 | റൂട്ടിംഗ് ഉപയോഗിച്ച് മൾട്ടി‌പേജ് വെബ്‌സൈറ്റിന്റെ സ്കാഫോൾഡ് നിർമ്മിക്കുന്നത്, HTML ടেম്പ്ലേറ്റുകൾ നിർമ്മിക്കുന്നത് പഠിക്കുക                             |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          യോഹാൻ          |
-| 22  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                  ലോഗിൻ, രജിസ്ട്രേഷൻ ഫോമുകൾ നിർമ്മിക്കൽ                   | ഫോമുകൾ നിർമ്മിക്കുന്നതും വെരിഫിക്കേഷൻ നടപടിക്രമങ്ങളും കൈകാര്യം ചെയ്യുന്നതും പഠിക്കുക                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          യോഹാൻ          |
-| 23  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                   ഡാറ്റാ നേടുകയും ഉപയോഗിക്കുകയും ചെയ്യുന്നതിനുള്ള രീതികൾ                   | നിങ്ങളുടെ ആപ്പിൽ ഡാറ്റ എങ്ങനെ പ്രവേശിക്കുകയും പുറത്തുവിടുകയും ചെയ്യുന്നു, എങ്ങനെ ഡാറ്റ നേടുന്നു, സൂക്ഷിക്കുന്നു, ഒഴിവാക്കുന്നു രൂപം പഠിക്കുക                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          യോഹാൻ          |
-| 24  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                      സ്റ്റേറ്റ് മാനേജ്മെന്റ് ആശയങ്ങൾ                      | നിങ്ങളുടെ ആപ്പ് എങ്ങനെ സ്റ്റേറ്റ് സൂക്ഷിക്കുന്നു, അത് പ്രോഗ്രാമാറ്റിക് ആയി എങ്ങനെ കൈകാര്യം ചെയ്യുന്നു എന്നത് പഠിക്കുക                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          യോഹാൻ          |
-| 25 | [Browser/VScode Code](../../8-code-editor) | VScode ഉപയോഗിച്ച് ജോലി | കോഡ് എഡിറ്റർ എങ്ങനെ ഉപയോഗിക്കുന്നത് | [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | ക്രിസ് |
-| 26 | [AI അസിസ്റ്റന്റുകൾ](./9-chat-project/README.md) | AI ഉപയോഗിച്ച് ജോലി ചെയ്യൽ | നിങ്ങളുടെ സ്വന്തം AI അസിസ്റ്റന്റ് എങ്ങനെ നിർമ്മിക്കാം | [AI Assistant project](./9-chat-project/README.md) | ക്രിസ് |
+| 01  |                     തുടങ്ങി കൊള്ളാം                      |           പ്രോഗ്രാമിംഗിന്റെയും 工 herramientasതുൽനിൽപുകൾ പരിചയം           | പല പ്രോഗ്രാമിംഗ് ഭാഷകളുടെ അടിസ്ഥാനങ്ങളും പ്രൊഫഷണൽ വികസകരുടെ ജോലി സഹായിക്കുന്ന സോഫ്റ്റ്‌വെയർ പഠിക്കുക | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         ജാസ്മിൻ         |
+| 02  |                     തുടങ്ങി കൊള്ളാം                      |             GitHub അടിസ്ഥാനങ്ങൾ ഉൾപ്പെടെ ടീം പ്രവർത്തനം             | നിങ്ങളുടെ പ്രോജക്റ്റിൽ GitHub എങ്ങനെ ഉപയോഗിക്കാമെന്ന് അറിയുക, മറ്റുമായി സഹകരിക്കൽ                     |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          ഫ്‌ലോർ          |
+| 03  |                     തുടങ്ങി കൊള്ളാം                      |                             പ്രാപ്യത                                   | വെബ് പ്രാപ്യതയുടെ അടിസ്ഥാനങ്ങൾ പഠിക്കുക                                                                                                |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       ക്രിസ്റ്റോഫർ       |
+| 04  |                        JS അടിസ്ഥാനങ്ങൾ                         |                         ജാവാസ്ക്രിപ്റ്റ് ഡാറ്റ ടൈപ്പുകൾ                          | ജാവാസ്ക്രിപ്റ്റ് ഡാറ്റ ടൈപ്പുകളുടെ അടിസ്ഥാനങ്ങൾ                  |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         ജാസ്മിൻ         |
+| 05  |                        JS അടിസ്ഥാനങ്ങൾ                         |                         ഫംഗ്ഷനുകളും മെത്തഡുകളും                          | അപ്ലിക്കേഷന്റെ ലജിക് ഫ്ലോ നിയന്ത്രിക്കാൻ ഫംഗ്ഷനുകളും മെഥഡുകളും പഠിക്കുക                                           |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | ജാസ്മിൻ, ക്രിസ്റ്റോഫർ |
+| 06  |                        JS അടിസ്ഥാനങ്ങൾ                         |                        JS ഉപയോഗിച്ച് തീരുമാനങ്ങൾ എടുക്കൽ                        | കോഡിൽ നിബന്ധനകൾ സൃഷ്ടിക്കാൻ തീരുമാനമെടുക്കൽ രീതി പഠിക്കുക                                                                  |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         ജാസ്മിൻ         |
+| 07  |                        JS അടിസ്ഥാനങ്ങൾ                         |                            അറേസും ലൂപ്പുകളും                            | ജാവാസ്ക്രിപ്റ്റിൽ അറേകളും ലൂപ്പുകളും ഉപയോഗിച്ച് ഡാറ്റ കൈകാര്യം ചെയ്യുക                                                                             |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         ജാസ്മിൻ         |
+| 08  |       [ടെറേറിയം](./3-terrarium/solution/README.md)       |                            പ്രായോഗികത്തിൽ HTML                            | ഓൺലൈൻ ടെറേറിയത്തിനായി HTML നിർമ്മിക്കുക, ലേയൗട്ട് നിർമ്മിക്കാൻ കേന്ദ്രീകരിക്കുന്നു                                                         |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           ജെൻ           |
+| 09  |       [ടെറേറിയം](./3-terrarium/solution/README.md)       |                            പ്രായോഗികത്തിൽ CSS                             | ഓൺലൈൻ ടെറേറിയത്തിന് മിക്കസിലായി CSS നിർമ്മിക്കുക, പേജ് റെസ്പോൺസീവ് ആക്കാൻ കേന്ദ്രസഹായം നൽകുക                     |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           ജെൻ           |
+| 10  |            [ടെറേറിയം](./3-terrarium/solution/README.md)            |                 ജാവാസ്ക്രിപ്റ്റ് ക്ലോസറുകൾ, DOM മാനിപ്പുലേഷൻ                  | ഡ്രാഗ്/ഡ്രോപ്പ് ഇന്റർഫേസ് പോലെ പ്രവർത്തിക്കാൻ ടെറേറിയം ജാവാസ്ക്രിപ്റ്റ് നിർമ്മിക്കുക, ക്ലോസറുകളും DOM മാനിപ്പുലേഷനും കേന്ദ്രീകരിച്ച്             |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           ജെൻ           |
+| 11  |          [ടൈപ്പിങ് ഗേം](./4-typing-game/solution/README.md)          |                          ഒരു ടൈപ്പിങ് ഗെയിം നിർമ്മിക്കൽ                           | കീബോർഡ് ഇവന്റുകൾ ഉപയോഗിച്ച് ജാവാസ്ക്രിപ്റ്റ് ആപ്പിന്റെ ലജിക് നിയന്ത്രിക്കുന്നത് പഠിക്കുക                                                          |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       ക്രിസ്റ്റോഫർ       |
+| 12  | [ഗ്രീൻ ബ്രൗസർ എക്സ്റ്റൻഷൻ](./5-browser-extension/solution/README.md) |                         ബ്രൗസറുകളുമായി ജോലിചെയ്യൽ                          | ബ്രൗസറുകൾ എങ്ങനെ പ്രവർത്തിക്കുന്നു, അവരുടെ ചരിത്രം, ബ്രൗസർ എക്സ്റ്റൻഷൻ ആദ്യ ഘടകങ്ങൾ നിർമ്മിക്കല്                        |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           ജെൻ           |
+| 13  | [ഗ്രീൻ ബ്രൗസർ എക്സ്റ്റൻഷൻ](./5-browser-extension/solution/README.md) | ഫോം പ്ലാൻ ചെയ്യൽ, API കോൾ ചെയ്യൽ, ലോക്കൽ സ്റ്റോറേജിൽ വേരിയബിളുകൾ സൂക്ഷിക്കൽ | ബ്രൗസർ എക്സ്റ്റൻഷന്റെ ജാവാസ്ക്രിപ്റ്റ് ഘടകങ്ങൾ API കോൾ ചെയ്യാനും വേരിയബിളുകൾ ലോക്കൽ സ്റ്റോറേജിൽ സൂക്ഷിക്കാനും നിർമ്മിക്കുക                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           ജെൻ           |
+| 14  | [ഗ്രീൻ ബ്രൗസർ എക്സ്റ്റൻഷൻ](./5-browser-extension/solution/README.md) |          ബ്രൗസറിലെ പശ്ചാത്തല പ്രോസസ്സുകൾ, വെബ് പ്രവർത്തനം          | എക്സ്റ്റൻഷന്റെ ഐകോൺ നിയന്ത്രിക്കാൻ ബ്രൗസറിലെ പശ്ചാത്തല പ്രോസസ്സുകൾ ഉപയോഗിക്കുക; വെബ് പ്രകടനം കുറിചറിയുക, ചില മെച്ചപ്പെടുത്തലുകൾ പഠിക്കുക   |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           ജെൻ           |
+| 15  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |             ജാവാസ്ക്രിപ്റ്റ് ഉപയോഗിച്ചുള്ള ഉയർന്ന തലത്തിലുള്ള ഗെയിം വികസനം             | ക്ലാസ്സുകളും കംപോസിഷനും ഉപയോഗിച്ച് ഇൻഹെറിറ്റൻസ് പഠിക്കുക, പബ്ലിഷർ/സബ്സ്ക്രൈബർ പാറ്റേൺ പഠിച്ച് ഗെയിം നിർമ്മിക്കാൻ തയ്യാറെടുക്കുക              |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          ക്രിസ്          |
+| 16  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                           കാൻവാസിലേക്ക് ചിത്രങ്ങൾ ആകുക                            | സ്ക്രീനിൽ ഘടകങ്ങൾ വരയ്ക്കാൻ ഉപയോഗിക്കുന്ന കാൻവാസ് API പഠിക്കുക                                                                       |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          ക്രിസ്          |
+| 17  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                   സ്ക്രീനിലുടനീളം ഘടകങ്ങൾ പ്രയാണം ചെയ്യൽ                    | ഘടകങ്ങൾ ചലിപ്പിക്കാൻ കാർട്ടീഷ്യൻ കോർഡിനേറ്റുകളും കാൻവാസ് API-യും ഉപയോഗിക്കുന്നത് അറിയുക                                            |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          ക്രിസ്          |
+| 18  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                          ഘടകങ്ങൾ കൂട്ടിയിടിക്കൽ                           | കീപ്രസ് ഉപയോഗിച്ച് ഘടകങ്ങൾ കൂട്ടിയിടിക്കാനും പ്രതികരിക്കാനും കളിയുടെ പ്രകടനം ഉറപ്പാക്കാൻ കൂൾഡൗൺ ഫംഗ്ഷൻ നൽകാനും പഠിക്കുക    |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          ക്രിസ്          |
+| 19  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                             സ്‌കോർ ക്രമീകരിക്കൽ                              | ഗെയിമിന്റെ നിലയും പ്രകടനവും അടിസ്ഥാനമാക്കിയുള്ള ഗണിത സൂചനകൾ നിർവഹിച്ചു പഠിക്കുക                                                                |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          ക്രിസ്          |
+| 20  |           [സ്പേസ് ഗെയിം](./6-space-game/solution/README.md)           |                     ഗെയിം അവസാനിപ്പിക്കുകയും വീണ്ടും തുടങ്ങുകയും ചെയ്യൽ                     | ഗെയിം അവസാനിപ്പിക്കുകയും പുനരാരംഭിക്കുകയും ചെയ്യുന്നതിനെക്കുറിച്ച് പഠിക്കുകയും അസറ്റുകൾ ശുചീകരിക്കുകയും വേരിയബിളുകൾ റീസെറ്റ് ചെയ്യുക                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          ക്രിസ്          |
+| 21  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                 വെബ് ആപ്പിൽ HTML ടെംപ്ലേറ്റുകളും റൂട്ടുകളും                 | മൾട്ടിപേജ് വെബ്സൈറ്റിന്റെ ഘടന സൃഷ്ടിക്കാൻ റൂട്ടിംഗും HTML ടെംപ്ലേറ്റുകളും ഉപയോഗിച്ച് പഠിക്കുക                             |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          യോഗന്          |
+| 22  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                  ലോഗിൻ/രജിസ്ട്രേഷൻ ഫോമുകൾ നിർമ്മിക്കൽ                   | ഫോമുകൾ നിർമ്മിക്കൽ, സാധുത പരിശോധനയുമായി ബന്ധപ്പെട്ട നടപടികൾ പഠിക്കുക                                                                          |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          യോഗന്          |
+| 23  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                   ഡാറ്റ ഓങ്ങനെ സ്വീകരിക്കുകയും ഉപയോഗിക്കുകയോ                   | നിങ്ങളുടെ ആപ്പിലേക്ക് ഡാറ്റ എങ്ങനെ പ്രവേശിക്കുന്നു, എങ്ങനെ സ്വീകരിക്കുന്നു, സംഭരിക്കുന്നു, നശിപ്പിക്കുന്നു പഠിക്കുക                                                 |                                            [Data](./7-bank-project/3-data/README.md)                                            |          യോഗന്          |
+| 24  |         [ബാങ്കിംഗ് ആപ്പ്](./7-bank-project/solution/README.md)          |                      സ്റ്റേറ്റ് മാനേജ്മെന്റ് ആശയങ്ങൾ                      | നിങ്ങളുടെ ആപ്പ് സ്റ്റേറ്റ് എങ്ങനെ കൈകാര്യം ചെയ്യുന്നു, പ്രോഗ്രാമാറ്റിക്കായി അതിനെ നിയന്ത്രിക്കുക                                                              |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          യോഗന്          |
+| 25 | [Browser/VScode Code](../../8-code-editor) | VScode-ഉം ഉപയോഗിച്ച് ജോലി ചെയ്യൽ | കോഡ് എഡിറ്റർ ഉപയോഗിക്കുന്നത് പഠിക്കുക| [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | ക്രിസ് |
+| 26 | [AI അസിസ്റ്റൻറുകൾ](./9-chat-project/README.md) | AI-യുമായി ജോലി ചെയ്യൽ | നിങ്ങളുടെ സ്വന്തം AI അസിസ്റ്റന്റ് നിർമ്മിക്കാൻ പഠിക്കുക | [AI Assistant project](./9-chat-project/README.md) | ക്രിസ് |
 
-## 🏫 പാഠ്യരീതി
+## 🏫 പാഠശാസ്ത്രം
 
-നമ്മുടെ പാഠക്രമം രണ്ട് പ്രധാന പാഠ്യേതര സിദ്ധാന്തങ്ങളാൽ രൂപകൽപ്പന ചെയ്തിരിക്കുന്നു:
-* പ്രോജക്റ്റ് അടിസ്ഥാന പഠനം
-* പലതവണ ക്വിസുകൾ നടത്തൽ
+നമ്മുടെ പാഠ്യപദ്ധതി രണ്ട് പ്രധാന പാഠശാസ്ത്ര സിദ്ധാന്തങ്ങളെ അടിസ്ഥാനമാക്കിയാണ് രൂപകല്പന ചെയ്തിരിക്കുന്നത്:
+* പ്രോജക്റ്റ്-ആധാരിത പഠനം
+* തുടർച്ചയായ ക്വിസുകൾ
 
-ഈ പ്രോഗ്രാം ജാവാസ്ക്രിപ്റ്റ്, HTML, CSS എന്നിവയുടെ അടിസ്ഥാനങ്ങൾ മാത്രമല്ല ഇന്നത്തെ വെബ് ഡെവലപ്പർമാർ ഉപയോഗിക്കുന്ന ഏറ്റവും പുതിയ ഉപകരണങ്ങളും സാങ്കേതിക വിദ്യകളും പഠിപ്പിക്കുന്നു. വിദ്യാർത്ഥികൾക്ക് ടൈപ്പിംഗ് ഗെയിം, വെർച്വൽ ടെറേറിയം, ഇക്കോ-ഫ്രണ്ട്ലി ബ്രൗസർ എക്സ്റ്റൻഷൻ, സ്പേസ്-ഇൻവേഡർ-സ്റ്റൈൽ ഗെയിം, ബിസിനസ്സ് ലക്ഷ്യമിട്ടുള്ള ബാങ്കിംഗ് ആപ്പ് എന്നിവ നിർമ്മിച്ച് കൈയിൽ പ്രായോഗിക അനുഭവം നേടാൻ അവസരം ഉണ്ടായിരിക്കും. പരമ്പരയുടെ അവസാനം, വിദ്യാർത്ഥികൾക്ക് വെബ്ഡെവലപ്പ്മെന്റിന്റെ ഉറച്ച് മനസ്സിലാക്കൽ ഉണ്ടാകും.
+ജാവാസ്ക്രിപ്റ്റും HTML-ഉം CSS-ഉം ഉൾപ്പെടെയുള്ള അടിസ്ഥാനങ്ങൾ, ഇന്നത്തെ വെബ് ഡെവലപ്പർമാർ ഉപയോഗിക്കുന്ന ഏറ്റവും പുതിയ ഉപകരണങ്ങളും സാങ്കേതിക വിദ്യകളും ഈ പ്രോഗ്രാം പഠിപ്പിക്കുന്നു. വിദ്യാര്‍ഥികൾ ടൈപ്പിങ് ഗെയിം, വിർച്വൽ ടെറേറിയം, പാരിസ്ഥിതിക സൗഹൃദ ബ്രൗസർ എക്സ്റ്റൻഷൻ, സ്‌പേസ്-ഇന്വേഡർ-ശൈലിയുടെ ഗെയിം, ബിസിനസ്സുകൾക്കുള്ള ബാങ്കിംഗ് ആപ്പ് എന്നിവ നിർമ്മിച്ചുകൊണ്ട് പ്രായോഗിക പരിചയം നേടും. പരമ്പര അവസാനത്തിൽ, വിദ്യാർത്ഥികൾക്ക് വെബ് ഡെവലപ്‌മെന്റിന്റെ സുതാര്യമായ ബോധം ഉണ്ടാകും.
 
-> 🎓 Microsoft Learn-ൽ [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) എന്നിങ്ങനെ ഈ പാഠ്യരീതി ആരംഭിക്കാൻ ആഗ്രഹിക്കുന്നവർക്ക് ഏതാനും പാഠങ്ങൾ തിരഞ്ഞെടുക്കാം!
+> 🎓 നിങ്ങൾക്ക് Microsoft Learn-ൽ [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) ആയി ഈ പാഠ്യപദ്ധതിയിലെ ആദ്യ പാഠങ്ങൾ സ്വീകരിക്കാൻ കഴിയും!
 
-പദ്ധതികളുമായി ഉള്ള ഉള്ളടക്കം പൊരുത്തപ്പെടുന്നതിനാൽ, വിദ്യാർത്ഥികൾക്ക് പഠന പ്രക്രിയ കൂടുതൽ ആകർഷകവും ആശയങ്ങളുടെ ദൃઢമായ നിലനിൽക്കും. ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനങ്ങൾ പരിചയപ്പെടുത്താൻ ഞങ്ങൾ നിരവധി സ്റ്റാർട്ടർ പാഠങ്ങൾ തയ്യാറാക്കി, അവയ്ക്ക് "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" എന്ന വീഡിയോ ട്യൂട്ടോർസിന്റെ വിഡിയോ കൂടെ നൽകിയിട്ടുണ്ട്. ഇതിലെ ചില രചയിതാക്കൾ ഈ പാഠകുറിപ്പ് രൂപകൽപ്പന ചെയ്യുന്നതിൽ പങ്കെടുത്തു.
+ഉള്ളടക്കം പ്രോജക്റ്റുകളുമായി സങ്കലിപ്പിക്കപ്പെട്ടിട്ടുള്ളതുകൊണ്ട് വിദ്യാര്‍ഥികൾക്ക് എളുപ്പത്തിലാണ് ആസ്വദിക്കാൻ സാധിക്കുന്നത്, ആശയങ്ങളുടെ ഉറപ്പുള്ള പകർത്തൽ ഉറപ്പാക്കുന്നു. കൂടാതെ ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനപരമായ ആശയങ്ങൾ പരിചയപ്പെടുത്താൻ വിവിധ തുടക്ക പാഠങ്ങൾ നമ്മൾ തയ്യാറാക്കിയിട്ടുണ്ട്, കൂടാതെ “[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)” വീഡിയോ ട്യൂട്ടോറിയലുകളിൽ നിന്നുള്ള ചില രചയിതാക്കൾ ഈ പാഠ്യപദ്ധതിയിൽ സംഭാവന നൽകിയിട്ടുണ്ട്.
 
-ക്ലാസിന് മുൻപ് കുറുപ്പാം ക്വിസ് ഒരു വിഷയത്തിൽ വിദ്യാർഥിയുടെ മനോഭാവം സജ്ജമാക്കുകയും, ക്ലാസിന് ശേഷം സംഗ്രഹിക്കാനുള്ള രണ്ടാം ക്വിസ് ആശയം നിലനിർത്താൻ സഹായിക്കുകയും ചെയ്യും. ഈ പാഠ്യരീതി സൗകര്യപ്രദവും രസകരവുമായതാണ്, പൂർണ്ണമായി അല്ലെങ്കിൽ ഭാഗികമായി സ്വീകരിക്കാം. പ്രോജക്റ്റുകൾ തുടക്കത്തിൽ ചെറിയതായിട്ട് ഒടുവിൽ കൂടുതൽ സങ്കീർണ്ണമാവും, 12 ആഴ്ചകളുടെ ചക്രത്തിൽ.
+ക്ലാസിനുമുന്‍പ് കുറഞ്ഞമാപ്പുള്ള ക്വിസ് ഒരു വിഷയം പഠിക്കാനുള്ള മനോഭാവം സജ്ജമാക്കുകയും, ക്ലാസിനുശേഷം രണ്ടാം ക്വിസ് അറിവിന്റെ ഉറപ്പാക്കൽ ഉറപ്പാക്കുകയും ചെയ്യുന്നു. ഈ പാഠ്യപദ്ധതി ലവണീയവും രസകരവും ആക്കാൻ രൂപകല്പന ചെയ്തതാണ്, മുഴുവനായോ ഭാഗങ്ങളായോ സ്വീകരിക്കാം. പ്രോജക്റ്റുകൾ ചെറിയതായിരിക്കുമ്പോഴുതന്നെ 12 ആഴ്ചകളുടെ കാലയളവിൽ അതിഗംഭീരമായി വികസിക്കുന്നു.
 
-ജാവാസ്ക്രിപ്റ്റ് ഫ്രെയിംവർക്ക് പരിചയപ്പെടുത്തലുകൾ ഉൾപ്പെടുത്താതെ വെബ് ഡെവലപ്പർക്ക് അ ബേസ്‌ലൈൻ സ്കിൽ കാത്തു നിൽക്കാൻ തയ്യാറായിട്ടുള്ള ഈ പാഠ്യക്രമം കഴിഞ്ഞ് അടുത്ത് പഠിക്കേണ്ടത് Node.js ജോലികൾ അറിയുന്നതിനായുള്ള "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)" എന്ന വീഡിയോ സ്കൂളാണ്.
+നാം ജാവാസ്ക്രിപ്റ്റ് ഫ്രെയിംവർക്ക്‌സുകൾ നീക്കം ചെയ്യാതിരിക്കുകയാണ് വെബ് ഡെവലപ്പർക്ക് അഭ്യസിക്കേണ്ട അടിസ്ഥാന കഴിവുകൾക്ക് ആദ്യം ശ്രദ്ധ കേന്ദ്രീകരിക്കാൻ; ഈ പാഠ്യപദ്ധതി പൂര്‍ത്തിയാക്കിയതിന് പിന്മടങ്ങ്, Node.js പഠിക്കാനായി "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)" എന്ന വീഡിയോ ശേഖരം ഉപയോഗിച്ച് പഠനം തുടരുന്നത് നല്ലതാകും.
 
-> ഞങ്ങളുടെ [Code of Conduct](CODE_OF_CONDUCT.md) ഉം [Contributing](CONTRIBUTING.md) നയങ്ങളും സന്ദർശിക്കുക. നിങ്ങളുടെ സാമ്പത്തിക സംവൃത്തിക്കുള്ള നല്ല അഭിപ്രായങ്ങൾ ഞങ്ങൾ സ്വാഗതം ചെയ്യുന്നു!
+> ഞങ്ങളുടെ [Code of Conduct](CODE_OF_CONDUCT.md) മുറിച്ചു [Contributing](CONTRIBUTING.md) മാർഗനിർദ്ദേശങ്ങൾ സന്ദർശിക്കുക. നിങ്ങളുടെ നിർമാണാത്മക പ്രതികരണം സ്വീകരിക്കുന്നു!
 
 
 ## 🧭 ഓഫ്‌ലൈൻ ആക്സസ്
 
-[Docsify](https://docsify.js.org/#/) ഉപയോഗിച്ച് നിങ്ങൾക്ക് ഈ ഡോക്യുമെന്റേഷൻ ഓഫ്‌ലൈൻ പ്രവർത്തിപ്പിക്കാം. ഈ റിപൊ ഫോർക്ക് ചെയ്യുക, നിങ്ങളുടെ ലൊക്കൽ മെഷീനിൽ [Docsify ഇൻസ്റ്റാൾ ചെയ്യുക](https://docsify.js.org/#/quickstart), പിന്നീട് ഈ റിപൊയുടെ മൂല ഫോൾഡറിൽ `docsify serve` എന്ന കമാൻഡ് ടൈപ്പ് ചെയ്യുക. വെബ്സൈറ്റ് your localhost ൽ പോർട്ട് 3000ൽ ലഭിക്കും: `localhost:3000`.
+[Docsify](https://docsify.js.org/#/) ഉപയോഗിച്ച് ഈ ഡോക്യുമെന്റേഷൻ ഓഫ്ലൈനായി റൺ ചെയ്യാം. ഈ റിപ്പോ ഫോർക്ക് ചെയ്യുക, നിങ്ങളുടെ ലോക്കൽ മെഷീനിൽ [Docsify ഇൻസ്റ്റാൾ](https://docsify.js.org/#/quickstart) ചെയ്യുക, തുടർന്ന് ഈ റിപ്പോയുടെ റൂട്ട് ഫോൾഡറിലേക്ക് പോയി `docsify serve` ടൈപ്പ് ചെയ്യുക. പോർട്ട് 3000-ൽ വെബ്സൈറ്റ് ലോക്കൽഹോസ്റ്റിൽ ലഭ്യമാകും: `localhost:3000`.
 
 ## 📘 PDF
-എല്ലാ പാഠങ്ങളും അടങ്ങിയ ഒരു PDF ഇവിടെ ലഭ്യമാണ് [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
+ഏതാനും പാഠങ്ങളുടെ PDF ഇവിടെ ലഭ്യമാണ് [here](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
 
 
 ## 🎒 മറ്റ് കോഴ്സുകൾ
 
-ഞങ്ങളുടെ ടീം മറ്റ് കോഴ്സുകളും ഒരുക്കുന്നു! കാണുക:
+നമ്മൾ മറ്റു കോഴ്സുകളും നിർമ്മിക്കുന്നു! പരിശോധിക്കുക:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -225,7 +225,7 @@ Azure AI Foundry Discord കമ്മ്യൂണിറ്റിയിൽ ചേ
 [![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
-### Azure / Edge / MCP / Agents
+### Azure / Edge / MCP / ഏജന്റുമാർ
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -233,7 +233,7 @@ Azure AI Foundry Discord കമ്മ്യൂണിറ്റിയിൽ ചേ
 
 ---
  
-### Genเരative AI Series
+### ജനറേറ്റീവ് AI സിരീസ്
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -241,7 +241,7 @@ Azure AI Foundry Discord കമ്മ്യൂണിറ്റിയിൽ ചേ
 
 ---
  
-### കേർ ലേണിംഗ്
+### കോർ ലേണിംഗ്
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -252,29 +252,29 @@ Azure AI Foundry Discord കമ്മ്യൂണിറ്റിയിൽ ചേ
 
 ---
  
-### കോപ്പൈലറ്റ് സീരീസ്
+### കോപൈലറ്റ് സിരീസ്
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## സഹായം നേടുന്നു
+## സഹായം ലഭ്യമാക്കൽ
 
-നിങ്ങൾ കുടുങ്ങുകയാണെങ്കിൽ അല്ലെങ്കിൽ AI ആപ്പുകൾ നിർമ്മിക്കാൻ പറ്റിയ ചോദ്യങ്ങളുണ്ടെങ്കിൽ. MCP യുമായി ബന്ധപ്പെട്ട ചർച്ചകളിൽ അനുഭവസമ്പന്നരായ ഡെവലപ്പർമാരും അനുഭവ പ്രവർത്തകരും ചേർന്ന് പഠിക്കുക. ചോദ്യങ്ങൾ സ്വാഗതം ചെയ്യുന്ന ഒരു പിന്തുണയുള്ള സമൂഹമാണ് ഇത്, അറിവ് സ്വതന്ത്രമായി പങ്കിടുന്നു.
+നിങ്ങൾ പിഴച്ചോ അല്ലെങ്കിൽ AI ആപ്പുകൾ നിർമ്മിക്കുന്നതിൽ ഏതെങ്കിലും സംശയങ്ങളുണ്ടെങ്കിൽ MCP সম্পর্কে fellow learners နှင့် അനുഭവസമ്പന്നരായ ഡെവലപ്പർമാരുമായി ചർച്ചകളിൽ ചേർന്നു. സംശയങ്ങൾ സ്വാഗതം ചെയ്യുന്ന, അറിവ് സ്വതന്ത്രമായി പങ്കുവെക്കുന്ന ഒരു പിന്തുണയുള്ള സമൂഹമാണ് ഇത്.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-നിർമാണസമയം ഉൽപ്പന്ന ഫീഡ്ബാക്കും പിശകുകളും ഉണ്ടെങ്കിൽ സന്ദർശിക്കുക:
+നിങ്ങൾക്ക് ഉൽപ്പന്ന പ്രതികരണം അല്ലെങ്കിൽ പിശകുകൾ ഉണ്ടെങ്കിൽ, സന്ദർശിക്കുക:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## ലൈസൻസ്
 
-ഈ സംഭരണിയിലെവലം MIT ലൈസൻസെയുടെ অধീനമാണ്. കൂടുതൽ വിവരങ്ങൾക്ക് [LICENSE](../../LICENSE) ഫയൽ കാണുക.
+ഈ റിപോസിറ്ററി MIT ലൈസൻസിന് കീഴിലാണ്. കൂടുതൽ വിവരങ്ങൾക്ക് [LICENSE](../../LICENSE) ഫയൽ നോക്കുക.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**സ്പഷ്ടികരണം**:  
-ഈ പ്രമാണം [Co-op Translator](https://github.com/Azure/co-op-translator) എന്ന എഐ വിവർത്തന സേവനം ഉപയോഗിച്ച് വിവർത്തനം ചെയ്‌തതാണ്. നമ്മൾ ക്രമാണുസൃതതയ്ക്ക് ശ്രമിച്ചിരുന്നാലും, സ്വയം പ്രവർത്തിക്കുന്ന വിവർത്തനങ്ങളിൽ തെറ്റുകൾ അല്ലെങ്കിൽ അശുദ്ധതകൾ ഉള്ളതായി ശ്രദ്ധിക്കുക. സ്വതന്ത്ര ഭാഷയിൽ ഉള്ള ഓരിജിനൽ പ്രമാണം പ്രാമാണിക ഉറവിടമായി വേണമെന്ന് കണ്ടവം പ്രധാനമാണ്. പ്രാധാന്യമർഹിക്കുന്ന വിവരങ്ങൾക്ക് പ്രൊഫഷണൽ മനുഷ്യ വിവർത്തനം ശിപാർശ ചെയ്യുന്നു. ഈ വിവർത്തനം ഉപയോഗിക്കുന്നതിൽ നിന്നുണ്ടാകുന്ന തെറ്റിദ്ധാരണകൾക്കോ വ്യാഖ്യാനങ്ങളിലോ ഞങ്ങൾ ബാധ്യത വഹിക്കുന്നില്ല.
+**പരിഭവം**:  
+ഈ പ്രമാണം AI വിവർത്തന സേവനമായ [Co-op Translator](https://github.com/Azure/co-op-translator) ഉപയോഗിച്ചുകൊണ്ട് വിവർത്തനം ചെയ്തതാണ്. ഞങ്ങൾ ശുദ്ധതയ്ക്കായി പരിശ്രമിച്ചാലും, സ്വയംഘടിത വിവർത്തനത്തിൽ പിശകുകൾ അല്ലെങ്കിൽ തെറ്റായവ ഉണ്ടാകാമെന്നും ദയവായി ശ്രദ്ധിക്കുക. പ്രമാണത്തിന്റെ മാതൃഭാഷയിലെ ആദ്യരൂപം തന്നെയാണ് സർവ്വ്വാധികാരSOURCE ആയി കണക്കാക്കേണ്ടത്. നിർണായകമായ വിവരങ്ങൾക്ക്, പ്രൊഫഷണൽ മനുഷ്യ വിവർത്തനം ശുപാർശ ചെയുന്നു. ഈ വിവർത്തനത്തിന്റെ ഉപയോഗത്തിൽ ഉണ്ടാകുന്ന തെറ്റായ മനസ്സിലാക്കലുകൾക്കോ തെറ്റായ വ്യാഖ്യാനങ്ങൾക്കോ നാം ഉത്തരവാദികളല്ല.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

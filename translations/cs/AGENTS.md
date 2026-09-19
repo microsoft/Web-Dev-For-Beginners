@@ -2,27 +2,27 @@
 
 ## Přehled projektu
 
-Toto je vzdělávací repozitář kurikula pro výuku základů webového vývoje pro začátečníky. Kurikulum je komplexní 12týdenní kurz vyvinutý týmem Microsoft Cloud Advocates, obsahující 24 praktických lekcí pokrývajících JavaScript, CSS a HTML.
+Toto je vzdělávací repozitář kurikula pro výuku základů webového vývoje pro začátečníky. Kurikulum je komplexní 12týdenní kurz vyvinutý Microsoft Cloud Advocates, obsahující 24 praktických lekcí pokrývajících JavaScript, CSS a HTML.
 
-### Klíčové komponenty
+### Klíčové součásti
 
-- **Vzdělávací obsah**: 24 strukturovaných lekcí uspořádaných do modulů založených na projektech
-- **Praktické projekty**: Terrárium, Hra na psaní, Prodlžek prohlížeče, Hra ve vesmíru, Bankovní aplikace, Kódový editor a AI chatovací asistent
-- **Interaktivní kvízy**: 48 kvízů po 3 otázkách (testy před a po lekci)
-- **Podpora více jazyků**: Automatizované překlady do více než 50 jazyků pomocí GitHub Actions
+- **Vzdělávací obsah**: 24 strukturovaných lekcí uspořádaných v modulech založených na projektech
+- **Praktické projekty**: Terrárium, Typovací hra, Rozšíření pro prohlížeč, Vesmírná hra, Bankovní aplikace, Editor kódu a AI chat asistent
+- **Interaktivní kvízy**: 48 kvízů po 3 otázkách (před a po lekci)
+- **Podpora více jazyků**: Automatické překlady do 50+ jazyků pomocí GitHub Actions
 - **Technologie**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (pro AI projekty)
 
 ### Architektura
 
 - Vzdělávací repozitář se strukturou založenou na lekcích
-- Každá složka lekce obsahuje README, příklady kódu a řešení
-- Samostatné projekty v oddělených adresářích (quiz-app, různé projektové lekce)
+- Každá složka lekce obsahuje README, ukázky kódu a řešení
+- Samostatné projekty v oddělených adresářích (quiz-app, různé projekty lekcí)
 - Překladový systém využívající GitHub Actions (co-op-translator)
-- Dokumentace podávaná přes Docsify a dostupná jako PDF
+- Dokumentace servírovaná přes Docsify a dostupná jako PDF
 
-## Příkazy k nastavení
+## Příkazy pro nastavení
 
-Tento repozitář je primárně určen pro konzumaci vzdělávacího obsahu. Pro práci s konkrétními projekty:
+Tento repozitář je primárně určen ke konzumaci vzdělávacího obsahu. Pro práci s konkrétními projekty:
 
 ### Nastavení hlavního repozitáře
 
@@ -41,17 +41,17 @@ npm run build      # Sestavit pro produkci
 npm run lint       # Spustit ESLint
 ```
 
-### Bankovní API projekt (Node.js + Express)
+### API projektu banky (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Spusťte API server
-npm run lint       # Spusťte ESLint
-npm run format     # Naformátujte pomocí Prettier
+npm start          # Spustit API server
+npm run lint       # Spustit ESLint
+npm run format     # Formátovat pomocí Prettier
 ```
 
-### Projekty pro prodloužení prohlížeče
+### Projekty Rozšíření prohlížeče
 
 ```bash
 cd 5-browser-extension/solution
@@ -59,7 +59,7 @@ npm install
 # Postupujte podle pokynů pro načítání rozšíření specifických pro prohlížeč
 ```
 
-### Projekty hry ve vesmíru
+### Projekty Vesmírné hry
 
 ```bash
 cd 6-space-game/solution
@@ -67,7 +67,7 @@ npm install
 # Otevřete index.html v prohlížeči nebo použijte Live Server
 ```
 
-### Chatovací projekt (Python Backend)
+### Chat projekt (Python Backend)
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -76,42 +76,42 @@ pip install openai
 python api.py
 ```
 
-## Vývojový pracovní postup
+## Vývojový workflow
 
 ### Pro přispěvatele obsahu
 
-1. **Vytvořte fork** repozitáře do svého GitHub účtu
-2. **Klonujte svůj fork** lokálně
+1. **Vytvořte fork** tohoto repozitáře na svůj GitHub účet
+2. **Naklonujte svůj fork** lokálně
 3. **Vytvořte novou větev** pro své změny
-4. Proveďte změny ve vzdělávacím obsahu nebo příkladech kódu
-5. Otestujte jakékoliv změny kódu v příslušných adresářích projektů
-6. Odešlete pull requesty dle pokynů pro přispívání
+4. Proveďte změny obsahu lekcí nebo ukázek kódu
+5. Otestujte všechny změny kódu v relevantních projektech
+6. Odešlete pull request podle pokynů pro přispívání
 
 ### Pro studenty
 
-1. Vytvořte fork nebo klonujte repozitář
-2. Procházejte adresáře lekcí postupně
+1. Forkněte nebo naklonujte repozitář
+2. Procházejte složky lekcí postupně
 3. Čtěte README soubory ke každé lekci
-4. Dokončete kvízy před lekcí na https://ff-quizzes.netlify.app/web/
-5. Procházejte příklady kódu v adresářích lekcí
-6. Splňte úkoly a výzvy
-7. Dokončete kvízy po lekci
+4. Vyplňte předlekční kvízy na https://ff-quizzes.netlify.app/web/
+5. Procházejte ukázky kódu v adresářích lekcí
+6. Vyplňujte úkoly a výzvy
+7. Vyplňte poválečné kvízy
 
 ### Živý vývoj
 
 - **Dokumentace**: Spusťte `docsify serve` v kořenovém adresáři (port 3000)
-- **Quiz App**: Spusťte `npm run dev` v adresáři quiz-app
-- **Projekty**: Použijte rozšíření VS Code Live Server pro HTML projekty
-- **API projekty**: Spusťte `npm start` v příslušných API adresářích
+- **Quiz App**: Spusťte `npm run dev` ve složce quiz-app
+- **Projekty**: Použijte VS Code Live Server rozšíření pro HTML projekty
+- **API Projekty**: Spusťte `npm start` v odpovídajících API složkách
 
-## Pokyny k testování
+## Instrukce pro testování
 
 ### Testování Quiz App
 
 ```bash
 cd quiz-app
 npm run lint       # Zkontrolujte problémy se stylem kódu
-npm run build      # Ověřte, zda sestavení proběhne úspěšně
+npm run build      # Ověřte úspěšnost sestavení
 ```
 
 ### Testování Bank API
@@ -124,155 +124,155 @@ node server.js     # Ověřte, že server startuje bez chyb
 
 ### Obecný přístup k testování
 
-- Jedná se o vzdělávací repozitář bez komplexních automatizovaných testů
-- Manuální testování se zaměřuje na:
-  - Příklady kódu bez chyb při spuštění
-  - Funkčnost odkazů v dokumentaci
-  - Úspěšné dokončení buildů projektů
-  - Dodržování osvědčených postupů v příkladech
+- Jedná se o vzdělávací repozitář bez komplexních automatických testů
+- Manuální testování zahrnuje:
+  - Ukázky kódu fungují bez chyb
+  - Odkazy v dokumentaci jsou funkční
+  - Projektové sestavení proběhne úspěšně
+  - Ukázky dodržují nejlepší postupy
 
-### Kontroly před odesláním PR
+### Kontroly před odesláním
 
-- Spusťte `npm run lint` v adresářích s package.json
+- Spusťte `npm run lint` ve složkách s package.json
 - Ověřte platnost markdown odkazů
-- Testujte příklady kódu v prohlížeči nebo Node.js
-- Zkontrolujte správnou strukturu překladů
+- Otestujte ukázky kódu v prohlížeči nebo Node.js
+- Zkontrolujte, že překlady zachovávají správnou strukturu
 
-## Směrnice pro styl kódu
+## Pravidla stylu kódu
 
 ### JavaScript
 
-- Používejte moderní syntax ES6+
-- Dodržujte standardní konfigurace ESLint v projektech
-- Používejte srozumitelné názvy proměnných a funkcí pro vzdělávací přehlednost
-- Přidávejte komentáře vysvětlující koncepty studentům
+- Používejte moderní syntaxi ES6+
+- Dodržujte standardní ESLint konfigurace uváděné v projektech
+- Používejte smysluplné názvy proměnných a funkcí pro lepší vzdělávací srozumitelnost
+- Přidávejte komentáře vysvětlující koncepty pro studenty
 - Formátujte pomocí Prettier tam, kde je nastaven
 
 ### HTML/CSS
 
 - Sémantické HTML5 prvky
 - Principy responzivního designu
-- Jasné konvence pojmenování tříd
+- Jasná pravidla pojmenování tříd
 - Komentáře vysvětlující CSS techniky pro studenty
 
 ### Python
 
-- Dodržujte PEP 8 styl
-- Jasné, vzdělávací příklady kódu
-- Používejte typové nápovědy, kde to pomáhá učení
+- Dodržujte stylové zásady PEP 8
+- Jasné vzdělávací příklady kódu
+- Typové anotace kde pomáhají s učením
 
-### Dokumentace v Markdown
+### Markdown dokumentace
 
-- Přehledná hierarchie nadpisů
+- Jasná hierarchie nadpisů
 - Kódové bloky s uvedením jazyka
-- Odkazy na další zdroje
-- Snímky obrazovky a obrázky v adresářích `images/`
-- Alternativní text obrázků pro přístupnost
+- Odkazy na doplňkové zdroje
+- Screenshoty a obrázky ve složkách `images/`
+- Alternativní texty obrázků pro přístupnost
 
 ### Organizace souborů
 
-- Lekce číslované sekvenčně (1-getting-started-lessons, 2-js-basics, atd.)
-- Každý projekt má adresáře `solution/` a často `start/` nebo `your-work/`
-- Obrázky uložené ve složkách `images/` specifických pro lekce
-- Překlady v adresářové struktuře `translations/{language-code}/`
+- Lekce číslené pořadově (1-getting-started-lessons, 2-js-basics, atd.)
+- Každý projekt má složky `solution/` a často `start/` nebo `your-work/`
+- Obrázky uchovávány ve složkách `images/` specifických pro lekci
+- Překlady ve struktuře `translations/{language-code}/`
 
 ## Sestavení a nasazení
 
 ### Nasazení Quiz App (Azure Static Web Apps)
 
-Quiz-app je nakonfigurován pro nasazení pomocí Azure Static Web Apps:
+Quiz-app je nakonfigurován pro nasazení v Azure Static Web Apps:
 
 ```bash
 cd quiz-app
 npm run build      # Vytváří složku dist/
-# Nasazuje pomocí workflow GitHub Actions při push na main
+# Nasazuje pomocí pracovního postupu GitHub Actions při pushi do větve main
 ```
 
 Konfigurace Azure Static Web Apps:
 - **Umístění aplikace**: `/quiz-app`
-- **Výstupní umístění**: `dist`
+- **Výstupní složka**: `dist`
 - **Workflow**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
 ### Generování PDF dokumentace
 
 ```bash
 npm install                    # Nainstalujte docsify-to-pdf
-npm run convert               # Vytvořte PDF z docs
+npm run convert               # Vygenerujte PDF z docs
 ```
 
-### Dokumentace přes Docsify
+### Dokumentace v Docsify
 
 ```bash
 npm install -g docsify-cli    # Nainstalujte Docsify globálně
 docsify serve                 # Spusťte na localhost:3000
 ```
 
-### Sestavení specifická pro projekt
+### Sestavení specifické pro projekty
 
 Každý projekt může mít vlastní build proces:
 - Vue projekty: `npm run build` vytváří produkční balíčky
-- Statické projekty: Žádný build, soubory se podávají přímo
+- Statické projekty: Nemají sestavení, soubory se servírují přímo
 
-## Směrnice pro pull requesty
+## Pravidla pro pull requesty
 
 ### Formát názvu
 
-Používejte jasné, popisné názvy uvádějící oblast změny:
+Používejte jasné, popisné názvy indikující oblast změny:
 - `[Quiz-app] Přidat nový kvíz pro lekci X`
 - `[Lesson-3] Opravit překlep v projektu terrárium`
 - `[Translation] Přidat španělský překlad pro lekci 5`
-- `[Docs] Aktualizovat instrukce k nastavení`
+- `[Docs] Aktualizovat instrukce pro nastavení`
 
 ### Požadované kontroly
 
 Před odesláním PR:
 
 1. **Kvalita kódu**:
-   - Spusťte `npm run lint` v dotčených projektech
-   - Opravte všechny lintovací chyby a varování
+   - Spusťte `npm run lint` v ovlivněných složkách
+   - Opravte všechny linting chyby a varování
 
-2. **Ověření buildů**:
+2. **Ověření sestavení**:
    - Spusťte `npm run build` pokud je relevantní
-   - Ujistěte se, že build proběhl bez chyb
+   - Zajistěte, že nejsou chyby při sestavení
 
-3. **Kontrola odkazů**:
+3. **Validace odkazů**:
    - Otestujte všechny markdown odkazy
-   - Ověřte pracovní odkazy na obrázky
+   - Ověřte, že obrázky jsou dostupné
 
 4. **Kontrola obsahu**:
    - Korektura pravopisu a gramatiky
-   - Zajištění správnosti a vzdělávací hodnoty příkladů kódu
-   - Ověření správnosti překladů
+   - Ověření správnosti a vzdělávací hodnoty kódových příkladů
+   - Kontrola, že překlady zachovávají původní význam
 
 ### Požadavky na přispívání
 
 - Souhlas s Microsoft CLA (automatická kontrola při prvním PR)
 - Dodržování [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- Viz [CONTRIBUTING.md](./CONTRIBUTING.md) pro podrobné pokyny
-- Uvádějte čísla issue v popisu PR, pokud jsou relevantní
+- Podrobné pokyny v [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Pokud relevantní, odkazování na čísla issue v popisu PR
 
-### Proces revize
+### Proces recenze
 
-- PR kontrolují správci a komunita
-- Upřednostňuje se vzdělávací jasnost
-- Příklady kódu by měly odpovídat současným osvědčeným postupům
-- Překlady se kontrolují na přesnost a kulturní vhodnost
+- PR jsou recenzovány správci a komunitou
+- Priorita vzdělávací srozumitelnosti
+- Příklady kódu by měly odpovídat aktuálním nejlepším praktikám
+- Překlady jsou kontrolovány z hlediska přesnosti a kulturní vhodnosti
 
 ## Překladový systém
 
 ### Automatický překlad
 
-- Používá GitHub Actions s workflow co-op-translator
-- Automaticky překládá do více než 50 jazyků
+- Použití GitHub Actions s workflow co-op-translator
+- Překlady do 50+ jazyků automaticky
 - Zdrojové soubory v hlavních adresářích
-- Přeložené soubory v adresářích `translations/{language-code}/`
+- Přeložené soubory ve složkách `translations/{language-code}/`
 
-### Přidání ručních vylepšení překladu
+### Úpravy manuálních překladů
 
 1. Najděte soubor v `translations/{language-code}/`
 2. Proveďte vylepšení při zachování struktury
-3. Zajistěte funkčnost příkladů kódu
-4. Otestujte případný lokalizovaný kvízový obsah
+3. Zajistěte funkčnost kódových ukázek
+4. Testujte lokalizovaný obsah kvízů
 
 ### Metadata překladu
 
@@ -293,116 +293,116 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Běžné problémy
 
-**Quiz app se nespustí**:
+**Quiz app se nespouští**:
 - Zkontrolujte verzi Node.js (doporučeno v14+)
-- Odstraňte `node_modules` a `package-lock.json`, spusťte `npm install` znovu
-- Zkontrolujte konflikty portů (výchozí: Vite používá port 5173)
+- Smažte `node_modules` a `package-lock.json`, spusťte `npm install` znovu
+- Zkontrolujte konflikt portů (výchozí: Vite používá port 5173)
 
-**API server se nespustí**:
-- Ověřte minimální verzi Node.js (node >=10)
-- Zkontrolujte, zda port není obsazen
-- Ujistěte se, že všechny závislosti jsou nainstalovány pomocí `npm install`
+**API server nenastartuje**:
+- Ověřte, že verze Node.js je minimálně (node >=10)
+- Zkontrolujte, jestli port není obsazen
+- Ujistěte se, že jsou všechny závislosti nainstalovány přes `npm install`
 
-**Prodlžek prohlížeče se nenačítá**:
-- Zkontrolujte, že manifest.json je správně formátován
-- Prohlédněte konzoli prohlížeče kvůli chybám
-- Postupujte podle specifických instrukcí pro instalaci prodlužků v prohlížeči
+**Rozšíření prohlížeče se nenačte**:
+- Ověřte správné formátování manifest.json
+- Zkontrolujte konzoli prohlížeče pro chyby
+- Postupujte podle pokynů pro instalaci rozšíření v daném prohlížeči
 
 **Problémy s Python chat projektem**:
-- Ujistěte se, že je nainstalován balík OpenAI: `pip install openai`
-- Zkontrolujte, že je nastavena proměnná prostředí GITHUB_TOKEN
-- Prověřte oprávnění přístupu k GitHub Models
+- Ujistěte se, že balíček OpenAI je nainstalován: `pip install openai`
+- Zkontrolujte, že je nastavená proměnná prostředí GITHUB_TOKEN
+- Překontrolujte přístupová práva GitHub Models
 
-**Docsify nedoručuje dokumenty**:
+**Docsify nenačítá dokumentaci**:
 - Globálně nainstalujte docsify-cli: `npm install -g docsify-cli`
-- Spusťte ze základního adresáře repozitáře
+- Spusťte z kořenového adresáře repozitáře
 - Ověřte, že existuje `docs/_sidebar.md`
 
 ### Tipy pro vývojové prostředí
 
 - Používejte VS Code s rozšířením Live Server pro HTML projekty
-- Nainstalujte rozšíření ESLint a Prettier pro konzistentní formátování
-- Používejte DevTools prohlížeče pro ladění JavaScriptu
-- Pro Vue projekty použijte Vue DevTools rozšíření do prohlížeče
+- Nainstalujte si ESLint a Prettier rozšíření pro konzistentní formátování
+- Používejte nástroje pro vývojáře v prohlížeči pro ladění JavaScriptu
+- Pro Vue projekty nainstalujte Vue DevTools rozšíření do prohlížeče
 
-### Výkonnostní úvahy
+### Výkonové poznámky
 
-- Velké množství přeložených souborů (50+ jazyků) znamená, že plné klony jsou rozsáhlé
-- Použijte shallow clone, pokud pracujete jen s obsahem: `git clone --depth 1`
-- Při práci s angličtinou vylučte překlady z hledání
-- Build procesy mohou být pomalé při prvním spuštění (npm install, Vite build)
+- Velké množství přeložených souborů (50+ jazyků) znamená, že plné klony jsou velké
+- Použijte shallow clone, pokud pracujete pouze s obsahem: `git clone --depth 1`
+- Vylučujte překlady z vyhledávání při práci na anglickém obsahu
+- Build procesy mohou být při prvním spuštění pomalé (npm install, Vite build)
 
 ## Bezpečnostní aspekty
 
 ### Proměnné prostředí
 
-- API klíče nikdy nesmí být commitovány do repozitáře
+- API klíče nikdy necommitujte do repozitáře
 - Používejte `.env` soubory (jsou v `.gitignore`)
-- Dokumentujte požadované proměnné prostředí v README projektů
+- Dokumentujte požadované proměnné prostředí v README souborech projektů
 
 ### Python projekty
 
 - Používejte virtuální prostředí: `python -m venv venv`
-- Udržujte závislosti aktuální
-- GitHub tokeny by měly mít minimální potřebná oprávnění
+- Udržujte závislosti aktualizované
+- GitHub tokeny by měly mít minimální požadovaná oprávnění
 
 ### Přístup k GitHub Models
 
-- Pro GitHub Models jsou vyžadovány Personal Access Tokens (PAT)
+- Pro GitHub Models jsou vyžadovány Personal Access Tokeny (PAT)
 - Tokeny ukládejte jako proměnné prostředí
-- Nikdy nesdílejte tokeny ani přihlašovací údaje v repozitáři
+- Nikdy necommitujte tokeny nebo přihlašovací údaje
 
 ## Další poznámky
 
-### Cílové publikum
+### Cílová skupina
 
-- Absolutní začátečníci ve webovém vývoji
+- Kompletní začátečníci ve webovém vývoji
 - Studenti a samouci
 - Učitelé používající kurikulum ve třídách
-- Obsah je navržen pro přístupnost a postupné budování dovedností
+- Obsah navržený pro přístupnost a postupné budování dovedností
 
 ### Vzdělávací filozofie
 
 - Přístup založený na projektech
 - Časté kontroly znalostí (kvízy)
-- Praktické kódovací cvičení
-- Příklady aplikací z reálného světa
+- Praktická cvičení v kódování
+- Ukázky reálných aplikací
 - Zaměření na základy před frameworky
 
 ### Údržba repozitáře
 
 - Aktivní komunita studentů a přispěvatelů
 - Pravidelné aktualizace závislostí a obsahu
-- Problémy a diskuse spravovány správci
-- Aktualizace překladů automatizovány přes GitHub Actions
+- Problémy a diskuse sledovány správci
+- Aktualizace překladů automatizovány GitHub Actions
 
 ### Související zdroje
 
 - [Microsoft Learn moduly](https://docs.microsoft.com/learn/)
 - [Student Hub zdroje](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) doporučen pro studenty
-- Další kurzy: Generativní AI, Data Science, ML, IoT dostupné kurikula
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) doporučený pro studenty
+- Další kurzy: Generativní AI, Data Science, ML, IoT kurikula k dispozici
 
 ### Práce s konkrétními projekty
 
-Pro detailní instrukce u jednotlivých projektů nahlédněte do README souborů:
+Pro podrobné instrukce k jednotlivým projektům odkazujte na README soubory v:
 - `quiz-app/README.md` - Vue 3 aplikace kvízu
 - `7-bank-project/README.md` - Bankovní aplikace s autentizací
-- `5-browser-extension/README.md` - Vývoj prodlužků prohlížeče
-- `6-space-game/README.md` - Vývoj hry na canvasu
+- `5-browser-extension/README.md` - Vývoj rozšíření prohlížeče
+- `6-space-game/README.md` - Vývoj hry založené na Canvasu
 - `9-chat-project/README.md` - Projekt AI chat asistenta
 
 ### Struktura monorepa
 
-I když nejde o tradiční monorepo, tento repozitář obsahuje několik nezávislých projektů:
+I když se nejedná o tradiční monorepo, tento repozitář obsahuje několik nezávislých projektů:
 - Každá lekce je samostatná
-- Projekty nesdílí závislosti
-- Práce na jednotlivých projektech neovlivňuje ostatní
+- Projekty nesdílejí závislosti
+- Pracujte na jednotlivých projektech bez ovlivnění ostatních
 - Naklonujte celý repozitář pro plný zážitek kurikula
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Prohlášení o vyloučení odpovědnosti**:
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme zodpovědní za jakákoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, uvědomte si, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho rodném jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné výklady vzniklé použitím tohoto překladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

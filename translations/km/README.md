@@ -1,38 +1,26 @@
-[![GitHub license](https://img.shields.io/github/license/microsoft/Web-Dev-For-Beginners.svg)](https://github.com/microsoft/Web-Dev-For-Beginners/blob/master/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/issues/)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Web-Dev-For-Beginners.svg)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/pulls/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
+# ការអភិវឌ្ឍគេហទំព័រសម្រាប់អ្នកដំបូង - មេរៀនមួយ
 
-[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/watchers/)
-[![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/network/)
-[![GitHub stars](https://img.shields.io/github/stars/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/stargazers/)
+រៀនមូលដ្ឋាននៃការអភិវឌ្ឍគេហទំព័រជាមួយវគ្គបណ្តុះបណ្តាលពេញលេញរយៈពេល ១២ សប្តាហ៍ដោយ Microsoft Cloud Advocates។ មហាវិទ្យាល័យ ២៤ មេរៀននីមួយៗជ្រាបចូលទៅក្នុង JavaScript, CSS និង HTML តាមរយៈគំរោង​ដោយដៃ​ដូចជា តារៀរីញូម, ការពង្រីកកម្មវិធីរុករក និងហ្គេមអន្ទងអាកាស។ ចូលរួមជាមួយគ្រោងសំណួរ, ការពិភាក្សា និងភារកិច្ចអនុវត្ត។ បង្កើនជំនាញរបស់អ្នក និងបង្កើនការចងចាំចំណេះដឹងជាមួយវិធីសាស្រ្តបង្រៀនផ្អែកលើគំរោងយ៉ាងមានប្រសិទ្ធភាពរបស់យើង។ ចាប់ផ្តើមការធ្វើកូដរបស់អ្នកថ្ងៃនេះ!
+
+ចូលរួមជាមួយ Azure AI Foundry Discord ហើយជួបជាមួយអ្នកជំនាញ និងអ្នកអភិវឌ្ឍន៍មិត្តរួម។
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-# ការអភិវឌ្ឍន៍គេហទំព័រសម្រាប់អ្នកចាប់ផ្តើម - មេរៀនមួយ
+អនុវត្តជំហានទាំងនេះដើម្បីចាប់ផ្តើមប្រើប្រាស់ធនធានទាំងនេះ៖
+1. **បង្កើត Fork របស់ Repository**: ចុច [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **ក្លោន Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**ចូលរួម Azure AI Foundry Discord ហើយជួបជាមួយអ្នកជំនាញ និងអ្នកអភិវឌ្ឍន៍មិត្តរួម**](https://discord.com/invite/ByRwuEEgH4)
 
-សូមរៀនមូលដ្ឋាននៃការអភិវឌ្ឍន៍គេហទំព័រជាមួយវគ្គសិក្សារយៈពេល 12 សប្តាហ៍ដែលមានការរួមចំណែកយ៉ាងទូលំទូលាយដោយ Microsoft Cloud Advocates។ មេរៀនទាំង 24 នីមួយៗនាំចូលទៅកាន់ការរៀនភាសា JavaScript, CSS, និង HTML តាមរយៈគម្រោងជាក់ស្តែងដូចជា terrariums, browser extensions, និងហ្គេមអាកាស។ សូមចូលរួមជាមួយនឹងសំណួរសម្លប់, ការពិភាក្សា និងការងារអនុវត្តន៍ផ្ទាល់។ បង្កើនជំនាញរបស់អ្នកហើយបង្កើតការចងចាំបានល្អជាមួយវិធីសាស្រ្តបង្រៀនផ្អែកលើគម្រោងយ៉ាងមានប្រសិទ្ធភាព។ ចាប់ផ្តើមដំណើរការកូដរបស់អ្នកថ្ងៃនេះ!
+### 🌐 គាំទ្រជាច្រើនភាសា
 
-ចូលរួមជាមួយសហគមន៍ Azure AI Foundry Discord
-
-[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
-
-អនុវត្តតាមជំហានទាំងនេះដើម្បីចាប់ផ្តើមប្រើប្រាស់ធនធានទាំងនេះ៖
-1. **ចម្លង Repository**: ចុច [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
-2. **គំលោប Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
-3. [**ចូលរួម Azure AI Foundry Discord និងជួបជាមួយអ្នកជំនាញ និងអ្នកអភិវឌ្ឍផ្សេងទៀត**](https://discord.com/invite/ByRwuEEgH4)
-
-### 🌐 គាំទ្រភាសាច្រើន
-
-#### គាំទ្រតាមរយៈ GitHub Action (ស្វ័យប្រវត្តិ និងតែងតែទាន់សម័យ)
+#### គាំទ្រតាមរយៈ GitHub Action (អូតូម៉ាទិច និងតែងតែទាន់សម័យ)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](./README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **ចូលចិត្តចម្លងក្នុងកុំព្យូទ័រផ្ទាល់?**
+> **ចូលចិត្តក្លោនក្នុងកុំព្យូទ័ររបស់អ្នក?**
 >
-> Repository នេះមានការបំបែកជាភាសាជាង 50 ដែលធ្វើអោយទំហំទាញយកធំទូលាយ។ ដើម្បីចម្លងដោយគ្មានការបកប្រែ ប្រើ sparse checkout៖
+> Repository នេះមានការបកប្រែជាភាសាជាង ៥០ ដែលបន្ថែមទំហំនៃការទាញយកយ៉ាងខ្លាំង។ ដើម្បីក្លោនដោយគ្មានការបកប្រែ, ប្រើ sparse checkout:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -48,228 +36,230 @@
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> វានឹងផ្តល់អ្វីដែលអ្នកត្រូវការទាំងអស់ដើម្បីបញ្ចប់វគ្គជាមួយការទាញយកលឿនជាងមុន។
+> នេះផ្តល់ឲ្យអ្នកនូវអ្វីដែលអ្នកត្រូវការដើម្បីបញ្ចប់វគ្គរៀនជាមួយការទាញយកដែលឆាប់រហ័សជាង។
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-**បើអ្នកចង់បានបន្ថែមភាសាបកប្រែ ដែលគាំទ្របានរាយក្នុងតំណខាង [នេះ](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**បើអ្នកចង់បានការបកប្រែបន្ថែម ភាសាដែលគាំទ្រត្រូវបានបញ្ជាក់នៅទីនេះ។ [here](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
-#### 🧑‍🎓 _តើអ្នកជាសិស្សម្នាក់ទេ?_
+#### 🧑‍🎓 _តើអ្នកជាសិស្សមែនទេ?_
 
-សូមចូលមើល [**ទំព័រ Student Hub**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) ដែលអ្នកនឹងឃើញធនធានសម្រាប់អ្នកចាប់ផ្តើម, ឯកសារសិស្ស, និងវិធីសាស្រ្តដទៃទៀតសម្រាប់ទទួលបានសំបុត្រសម្ងាត់ឥតគិតថ្លៃ។ ទំព័រនេះជាទំព័រដែលអ្នកគួរជួយដាក់សញ្ញាទុកហើយត្រឡប់មកពិនិត្យវាប្រចាំខែ ដែលដោយយើងធ្វើការកែប្រែមាតិកាឲ្យទាន់សម័យ។
+សូមទៅកាន់ [**ទំព័រសិស្ស**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) ដែលអ្នកនឹងបានជួបជាមួយធនធានសម្រាប់អ្នកដំបូង, ប្រដាប់របស់សិស្ស និងវិធីសាស្រ្តទទួលសន្ទនាប័ណ្ណបញ្ញត្តិដោយឥតគិតថ្លៃ។ ទំព័រនេះគួរត្រូវបានរក្សាទុកជាទំព័ររបស់អ្នក និងពិនិត្យវាប្រចាំពេលពីព្រោះយើងប្តូរមាតិកាប្រចាំខែ។
 
-### 📣 សេចក្តីប្រកាស - ជម្រើស GitHub Copilot Agent ថ្មីសម្រាប់បញ្ចប់!
+### 📣 សេចក្តីប្រកាស - ការប្រកួតថ្មីរបៀប GitHub Copilot Agent ដែលត្រូវបញ្ចប់!
 
-មានការបន្ថែមជម្រើសថ្មី សូមស្វែងរក "GitHub Copilot Agent Challenge 🚀" នៅក្នុងជំពូកភាគច្រើន។ នេះគឺជាជម្រើសថ្មីសម្រាប់អ្នកបញ្ចប់ដោយប្រើ GitHub Copilot និងមុខងារ Agent mode។ ប្រសិនបើអ្នកមិនបានប្រើ Agent mode មុននេះ វាមានសមត្ថភាពមិនត្រឹមតែបង្កើតអក្សរ ទេ តែថែមទាំងអាចបង្កើត និងកែប្រែឯកសារ, រត់ពាក្យបញ្ជា និងដូច្នោះទៀត។
+ការប្រកួតថ្មីត្រូវបានបន្ថែម, សូមស្វែងរក "GitHub Copilot Agent Challenge 🚀" នៅក្នុងជំពូកភាគច្រើន។ នេះជាការប្រកួតថ្មីសម្រាប់អ្នកបញ្ចប់ដោយប្រើ GitHub Copilot និងរបៀប Agent។ ប្រសិនបើអ្នកមិនធ្លាប់ប្រើរបៀប Agent ទេ វាមានសមត្ថភាពមិនត្រឹមតែបង្កើតអត្ថបទប៉ុណ្ណោះទេ ព្រមទាំងអាចបង្កើតនិងកែសម្រួលបណ្ណាល័យ, រត់ពាក្យបញ្ជា និងច្រើនទៀត។
 
-### 📣 សេចក្តីប្រកាស - _គម្រោងថ្មីសម្រាប់បង្កើតដោយ Generative AI_
+### 📣 សេចក្តីប្រកាស - _គំរោងថ្មីសម្រាប់សាងសង់ដោយប្រើ AI បង្កើត_
 
-គម្រោងជំនួយ AI ថ្មីបានបន្ថែមមក សូមពិនិត្យមើល [គម្រោង](./9-chat-project/README.md)
+គំរោងអ្នកជំនួយ AI ថ្មីត្រូវបានបន្ថែម, ពិនិត្យមើលគំរោង [project](./9-chat-project/README.md)
 
 ### 📣 សេចក្តីប្រកាស - _មេរៀនថ្មី_ ស្តីពី Generative AI សម្រាប់ JavaScript ត្រូវបានបញ្ចេញ
 
-កុំភ្លេចមេរៀនថ្មី Generative AI របស់យើង!
+កុំផុតកន្លែងមេរៀន Generative AI ថ្មីរបស់យើង!
 
-សូមចូលទៅ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ដើម្បីចាប់ផ្តើម!
+សូមចូលទៅកាន់ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ដើម្បីចាប់ផ្តើម!
 
 ![Background](../../translated_images/km/background.148a8d43afde5730.webp)
 
-- មេរៀនគ្របដណ្តប់ទាំងមូលពីមូលដ្ឋានដល់ RAG។
-- អាចបញ្ជាក់សកម្មភាពជាមួយតួអង្គប្រវត្តិសាស្ត្រដោយប្រើ GenAI និងកម្មវិធីជំនួយរបស់យើង។
-- រឿងរ៉ាវគួរឱ្យសប្បាយនិងគួរឱ្យចាប់អារម្មណ៍ ដែលអ្នកនឹងធ្វើដំណើរតាមពេលវេលា!
+- មេរៀនគ្របដណ្តប់ពីមូលដ្ឋានដល់ RAG។
+- ផ្សព្វផ្សាយជាមួយតួអង្គប្រវត្តិនិយមដោយប្រើ GenAI និងកម្មវិធីជំនួយរបស់យើង។
+- រឿងរ៉ាវគួរឱ្យរីករាយ និងគួរឱ្យចាប់អារម្មណ៍ អ្នកនឹងធ្វើដំណើរតាមពេលវេលា!
 
 ![character](../../translated_images/km/character.5c0dd8e067ffd693.webp)
 
-
-មេរៀននីមួយៗរួមមានការងារជាក់ស្តែង សំណួរត្រួតពិនិត្យចំណេះដឹង និងបញ្ហាស្វែងយល់ដើម្បីណែនាំអ្នកលើប្រធានបទដូចជា:
-- ការស្នើសុំ និងជំនាញបច្ចេកទេសស្នើសុំ
-- ការបង្កើតកម្មវិធីអក្សរនិងរូបភាព
+មេរៀននីមួយៗរួមមានភារកិច្ចត្រូវបញ្ចប់, ការត្រួតពិនិត្យចំណេះដឹង និងការប្រកួតដឹកនាំអ្នកក្នុងការសិក្សាប្រធានបទដូចជា៖
+- ការបញ្ចូលបញ្ចោល និងវិស្វកម្មបញ្ចូលបញ្ចោល
+- កម្មវិធីបង្កើតអត្ថបទ និងរូបភាព
 - កម្មវិធីស្វែងរក
 
-សូមចូលទៅ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ដើម្បីចាប់ផ្តើម!
+សូមចូលទៅកាន់ [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) ដើម្បីចាប់ផ្តើម!
 
 
 
-## 🌱 ការចាប់ផ្តើម
+## 🌱 ចាប់ផ្តើម
 
-> **គ្រូបង្រៀន**, យើងបាន [បញ្ចូលប្រភពគំនិតខ្លះៗ](for-teachers.md) អំពីវិធីប្រើប្រាស់មេរៀននេះ។ យើងសូមអញ្ជើញអោយអ្នកផ្ដល់មតិយោបល់របស់អ្នក [នៅក្នុងវេទិកាពិភាក្សារបស់យើង](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)។
+> **គ្រូបង្ហាត់**, យើងបាន [បញ្ចូលយោបល់ខ្លះៗ](for-teachers.md) អំពីរបៀបប្រើមេរៀននេះ។ យើងសូមសំណូមពរគ្រីមមតិរបស់អ្នក [នៅក្នុងក្រដាសពិភាក្សារបស់យើង](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner) ។ 
 
-**[និស្សិត](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)** សម្រាប់មេរៀននីមួយៗ ចាប់ផ្តើមជាមួយសំណួរមុនបង្រៀន ហើយអនុវត្តតាមមាតិកាបង្រៀន ការចប់ការងារប្រកបដោយជោគជ័យ និងពិនិត្យការយល់ដឹងរបស់អ្នកជាមួយសំណួរផ្សេងទៀតបន្ទាប់ពីបង្រៀន។
+**[អ្នករៀន](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)** សម្រាប់មេរៀននីមួយៗ ចាប់ផ្តើមជាមួយគ្រោងសំណួរពីមុនមេរៀន ហើយបន្តអានសារមេរៀន បញ្ចប់សកម្មភាពនានា ហើយផ្ទៀងផ្ទាត់ការយល់ដឹងរបស់អ្នកជាមួយគ្រោងសំណួរបន្ទាប់មេរៀន។
 
-ដើម្បីបង្កើតបទពិសោធន៍រៀនសូត្រពិតប្រាកដ សូមភ្ជាប់ការងារជាក្រុម និងការពិភាក្សាជាមួយមិត្តរបស់អ្នក! ការពិភាក្សាទាំងនេះត្រូវបានគាំទ្រនៅក្នុង [វេទិកាពិភាក្សារបស់យើង](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) ដែលមានក្រុមModerators រងចាំឆ្លើយសំណួររបស់អ្នក។
+ដើម្បីបង្កើនបទពិសោធន៍រៀនរបស់អ្នក សូមភ្ជាប់ជាមួយមិត្តរួមបង្រៀនដើម្បីធ្វើគំរោងរួមគ្នា! ការពិភាក្សាត្រូវបានលើកទឹកចិត្តនៅក្នុង [ក្រដាសពិភាក្សា](https://github.com/microsoft/Web-Dev-For-Beginners/discussions) ដែលក្រុមអ្នកផ្សព្វផ្សាយរបស់យើងនឹងមានស្ថិតក្នុងទីនេះ ដើម្បីឆ្លើយសំនួររបស់អ្នក។
 
-ដើម្បីបន្តការសិក្សាឡើងទៀត យើងណែនាំឲ្យស្វែងយល់ពី [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) សម្រាប់ឯកសារសិក្សាបន្ថែម។
+ដើម្បីបន្តការសិក្សារបស់អ្នក យើងអនុញ្ញាតឲ្យអ្នកស្វែងរក [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) សម្រាប់សម្ភារៈសិក្សាបន្ថែម។
 
 ### 📋 ការតំឡើងបរិយាកាសរបស់អ្នក
 
-មេរៀននេះមានបរិយាកាសអភិវឌ្ឍន៍រួចស្រេចហើយ! នៅពេលអ្នកចាប់ផ្តើម អ្នកអាចជ្រើសរើសដំណើរការមេរៀននៅក្នុង [Codespace](https://github.com/features/codespaces/) (_បរិយាកាសប្រើក្នុងកម្មវិធីរកមើល ដែលមិនត្រូវការតំឡើង_), ឬជាស្រេចលើកុំព្យូទ័រផ្ទាល់ឲ្យប្រើកម្មវិធីកែសម្រួលអក្សរដូចជា [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)។
+មេរៀននេះមានបរិយាកាសអភិវឌ្ឍន៍រួចរាល់! នៅពេលចាប់ផ្តើម អ្នកអាចជ្រើសរើសរត់មេរៀននៅក្នុង [Codespace](https://github.com/features/codespaces/) (_បរិយាកាសមិនតម្រូវការដំឡើង មាននៅលើកម្មវីធីរុករក_) ឬរត់ក្នុងកុំព្យូទ័ររបស់អ្នកដោយប្រើកម្មវិធីកែសម្រួលអត្ថបទដូចជា [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)។
 
 #### បង្កើត repository របស់អ្នក
-ដើម្បីអោយអ្នករក្សាទុកការងារនៅកាន់ថ្នាក់ខ្ពស់, យើងណែនាំឲ្យអ្នកបង្កើតច្បាប់ដែលមានច្បាស់របស់អ្នកផ្ទាល់។ អ្នកអាចធ្វើបាននេះដោយចុចប៊ូតុង **Use this template** នៅលើផ្ទាំងនេះ។ វានឹងបង្កើត repository ថ្មីនៅក្នុងគណនី GitHub របស់អ្នកជាមួយច្បាប់មេរៀន។
+ដើម្បីឲ្យអ្នករក្សាទុកការងាររបស់អ្នកបានស្រួល អ្នកត្រូវបានផ្ដល់អនុសាសន៍ឲ្យបង្កើតច្បាប់ចម្លងផ្ទាល់ខ្លួនរបស់ repository នេះ។ អ្នកអាចធ្វើបានដោយចុចប៊ូតុង **Use this template** នៅខាងលើទំព័រ។ នេះនឹងបង្កើត repository ថ្មីនៅក្នុងគណនី GitHub របស់អ្នកជាមួយច្បាប់ចម្លងនៃមេរៀន។
 
-អនុវត្តតាមជំហានទាំងនេះ៖
-1. **ចម្លង Repository**: ចុចលើប៊ូតុង "Fork" នៅជាងកំពូលខាងលើខាងស្តាំរបស់ទំព័រនេះ។
-2. **គំលោប Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+អនុវត្តជំហានទាំងនេះ៖
+1. **បង្កើត Fork របស់ Repository**: ចុចប៊ូតុង "Fork" នៅកំពូលម្ខាងស្តាំនៃទំព័រក្នុងនេះ។
+2. **ក្លោន Repository**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### ដំណើរការមេរៀននៅក្នុង Codespace
+#### រត់មេរៀននៅក្នុង Codespace
 
-នៅក្នុងច្បាប់ដែលអ្នកបានបង្កើតឡើង ចុចប៊ូតុង **Code** ហើយជ្រើស **Open with Codespaces**។ វានឹងបង្កើត Codespace ថ្មីសម្រាប់អ្នកធ្វើការនៅក្នុងការងារ។
+ក្នុងច្បាប់ចម្លងនៃ repository ដែលអ្នកបានបង្កើត, ចុចប៊ូតុង **Code** ហើយជ្រើសរើស **Open with Codespaces**។ នេះនឹងបង្កើត Codespace ថ្មីសម្រាប់អ្នកធ្វើការក្នុងវា។
 
 ![Codespace](../../translated_images/km/createcodespace.0238bbf4d7a8d955.webp)
 
-#### ដំណើរការមេរៀននៅលើកុំព្យូទ័រផ្ទាល់
+#### រត់មេរៀនក្នុងកុំព្យូទ័រផ្ទាល់ខ្លួន
 
-ដើម្បីដំណើរការមេរៀននេះនៅលើកុំព្យូទ័រជាក់ស្តែង អ្នកត្រូវការអ្នកកែសម្រួលអក្សរ, កម្មវិធីរកមើល និងឧបករណ៍បញ្ជា Command Line Tool។ មេរៀនដំបូងរបស់យើង [បើកផ្លូវទៅភាសាព្រមទាំងកម្មវិធីនានា](../../1-getting-started-lessons/1-intro-to-programming-languages) នឹងណែនាំអ្នកជម្រើសកម្មវិធីនានាសម្រាប់ឧបករណ៍ទាំងនេះដើម្បីជួយទៅរកអ្វីដែលសមរម្យសម្រាប់អ្នកបំផុត។
+ដើម្បីរត់មេរៀននេះក្នុងកុំព្យូទ័ររបស់អ្នក អ្នកត្រូវការកម្មវិធីកែសម្រួលអត្ថបទ, កម្មវិធីរុករក និងឧបករណ៍បន្ទាត់ពាក្យបញ្ជា។ មេរៀនដំបូងរបស់យើង, [ការណែនាំអំពីភាសាកម្មវិធីនិងឧបករណ៍នានា](../../1-getting-started-lessons/1-intro-to-programming-languages), នឹងដឹកនាំអ្នកតាមជម្រើសនានាសម្រាប់ឧបករណ៍ទាំងនេះដើម្បីជួយអ្នកជ្រើសរើសអ្វីដែលល្អបំផុតសម្រាប់អ្នក។
 
-យើងណែនាំឲ្យប្រើ [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ជាកម្មវិធីកែសម្រួលរបស់អ្នក ដោយវាក៏មានផ្នែក [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) ជាស្រេចផងដែរ។ អ្នកអាចទាញយក Visual Studio Code [នៅទីនេះ](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)។
-1. ក្លូនផ្ទុក repository របស់អ្នកទៅកុំព្យូទ័ររបស់អ្នក។ អ្នកអាចធ្វើបានដោយចុចប៊ូតុង **Code** ហើយចម្លង URL៖
+យើងណែនាំឲ្យប្រើ [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ជាកម្មវិធីកែសម្រួល អ្នកមាន Terminal ដែលបង្កប់ក្នុងកម្មវិធីផងដែរ [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon)។ អ្នកអាចទាញយក Visual Studio Code [នៅទីនេះ](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon)។
+1. បញ្ចូលឃ្លាំងផ្ទុកកម្មវិធីរបស់អ្នកទៅកុំព្យូទ័ររបស់អ្នក។ អ្នកអាចធ្វើបានដោយចុចប៊ូតុង **Code** ហើយចម្លង URL៖
 
     [CodeSpace](./images/createcodespace.png)
 
-    បន្ទាប់មក បើក [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) នៅក្នុង [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ហើយរត់ពាក្យបញ្ជាដូចខាងក្រោម ដោយជំនួស `<your-repository-url>` ជា URL ដែលអ្នកទើបចម្លង៖
+    បន្ទាប់មក បើក [Terminal](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) ក្នុង [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ហើយរត់ពាក្យបញ្ជាដូចខាងក្រោម ដោយជំនួស `<your-repository-url>` ជាមួយ URL ដែលអ្នកបានចម្លង៖
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. បើកថតក្នុង Visual Studio Code។ អ្នកអាចធ្វើបានដោយចុច **File** > **Open Folder** ហើយជ្រើសរើសថតដែលអ្នកទើបក្លូន។
+2. បើកថតក្នុង Visual Studio Code។ អ្នកអាចធ្វើបានដោយចុច **File** > **Open Folder** ហើយជ្រើសរើសថតដែលអ្នកបានចម្លងមកថ្មីៗនេះ។
 
->  ការផ្តល់អត្រា Visual Studio Code extensions គួរតែប្រើ៖
+>  ផ្នែកបន្ថែម Visual Studio Code ដែលបានណែនាំ៖
 >
-> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - ដើម្បីមើលជាមុនទំព័រ HTML នៅក្នុង Visual Studio Code
-> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - ដើម្បីជួយអ្នកសរសេរកូដបានលឿនជាងមុន
+> * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - ដើម្បីមើលមុនទំព័រ HTML នៅក្នុង Visual Studio Code
+> * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - ជួយអ្នកសរសេរកូដបានលឿនឡើង
 
-## 📂 មេរៀនមួយមួយរួមមាន៖
+## 📂 មេរៀនរៀងរាល់មួយរួមមាន៖
 
-- សេចក្តីសូមចំណាំជាគំរូ
-- វីដេអូបន្ថែមជាជម្រើស
-- សំនួរសាកល្បងមុនមេរៀន
-- មេរៀនដែលបានសរសេរ
-- សម្រាប់មេរៀនលើគម្រោង មានមគ្គុទេសក៍ជំហាន-ដោយ-ជំហានអំពីរបៀបសង់គម្រោង
+- សៀវភៅគំនូសមានជម្រើស
+- វីដេអូបន្ថែមមានជម្រើស
+- សាកល្បងកម្រងមុខមួយមុនមេរៀន
+- មេរៀនសរសេរ
+- សម្រាប់មេរៀនបែបគម្រោង អ្នកមានមគ្គុទេសក៍ជារបៀបជំហាន-មួយសម្រាប់កសាងគម្រោង
 - ការត្រួតពិនិត្យចំណេះដឹង
-- បញ្ហាប្រឈម
-- ការអានបន្ថែម
+- បញ្ហាសួរ
+- អានបន្ថែម
 - បេសកកម្ម
-- [សំនួរសាកល្បងបន្ទាប់ម៉េរៀន](https://ff-quizzes.netlify.app/web/)
+- [សាកល្បងបន្ទាប់មេរៀន](https://ff-quizzes.netlify.app/web/)
 
-> **ចំណាំអំពីសំនួរសាកល្បង**: សំនួរសាកល្បងទាំងអស់មាននៅក្នុងថត Quiz-app មានសំនួរប្រមាណ 48 សំណួរ រៀបចំជាក្រុម 3 សំណួរឱ្យមួយ។ អ្នកអាចរកបាន [ទីនេះ](https://ff-quizzes.netlify.app/web/) អាចរត់កម្មវិធីសាកល្បងក្នុងកន្លែងរបស់អ្នកឬផ្សាយនៅលើ Azure; អនុវត្តតាមការណែនាំនៅក្នុងថត `quiz-app`។
+> **កំណត់សម្គាល់អំពីសាកល្បង**៖ សាកល្បងទាំងអស់មាននៅក្នុងថត Quiz-app មានសរុប ៤៨ សាកល្បង ក្នុងមួយសាកល្បងមានចំលើយ ៣សំណួរ។ អាចរកបាន [នៅទីនេះ](https://ff-quizzes.netlify.app/web/) ហើយកម្មវិធីសាកល្បងអាចដំណើរការជាលក្ខណៈមូលដ្ឋាន ឬបញ្ចូលទៅ Azure; សូមអនុវត្តការណែនាំនៅក្នុងថត `quiz-app`។
 
 ## 🗃️ មេរៀន
 
-|     |                       ឈ្មោះគម្រោង                         |                            គំនិតដែលបានបង្រៀន                             | គោលបំណងការសិក្សា                                                                                                                 |                                                         មេរៀនដែលភ្ជាប់                                                              |         អ្នកនិពន្ធ          |
-| :-: | :----------------------------------------------------------: | :--------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :-------------------------: |
-| 01  |                     Getting Started                      |           ការណែនាំអំពីកម្មវិធីផ្ទឹមនិងឧបករណ៍ជំនួយ           | រៀនអំពីមូលដ្ឋានសំខាន់ៗនៅខាងក្រោយភាសាកម្មវិធីភាគច្រើន និងអំពីកម្មវិធីដែលជួយអ្នកអភិវឌ្ឍវិជ្ជាជីវៈបំពេញការងារ              | [Intro to Programming Languages and Tools of the Trade](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine           |
-| 02  |                     Getting Started                      |             មូលដ្ឋាន GitHub, រួមមានការងារជាក្រុម             | របៀបប្រើ GitHub ក្នុងគម្រោងរបស់អ្នក របៀបសហការជាមួយអ្នកដទៃលើគ្រប់ខ្នាតកូដ                                                      |                            [Intro to GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor            |
-| 03  |                     Getting Started                      |                             បែបបទឲ្យបានសមរម្យ                            | រៀនមូលដ្ឋាននៃកាផ្ដល់សមរម្យគេហទំព័រ                                                                                            |                       [Accessibility Fundamentals](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher         |
-| 04  |                        JS Basics                         |                         ប្រភេទទិន្នន័យ JavaScript                          | មូលដ្ឋាននៃប្រភេទទិន្នន័យ JavaScript                                                                                                 |                                       [Data Types](./2-js-basics/1-data-types/README.md)                                        |         Jasmine           |
-| 05  |                        JS Basics                         |                         សមាសភាគ និងវិធីសាស្រ្ត                          | រៀនអំពីសមាសភាគ និងវិធីសាស្រ្តដើម្បីគ្រប់គ្រងលំនាំចលនារបស់កម្មវិធី                                                           |                              [Functions and Methods](./2-js-basics/2-functions-methods/README.md)                               | Jasmine និង Christopher |
-| 06  |                        JS Basics                         |                        ការធ្វើសេចក្ដីសម្រេចជាមួយ JS                        | រៀនពីរបៀបបង្កើតលក្ខខណ្ឌនៅក្នុងកូដរបស់អ្នកដោយប្រើវិធីសាស្រ្តសម្រេចចិត្ត                                                           |                                 [Making Decisions](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine           |
-| 07  |                        JS Basics                         |                            ចំណងជើង និងរង្វិល                            | ធ្វើការជាមួយទិន្នន័យដោយប្រើអារៈ និងរង្វិលក្នុង JavaScript                                                                           |                                   [Arrays and Loops](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine           |
-| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML នៅក្នុងអនុវត្ត                            | សាងសង់ HTML ដើម្បីបង្កើតធុងមួយតាមអ៊ិនធឺរណេត បំផុតសម្រួលលំហររចនាឡើង                                                 |                                 [Introduction to HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen             |
-| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS នៅក្នុងអនុវត្ត                             | សាងសង់ CSS ដើម្បីបន្ថែមការតុបតែងធុងតាមអ៊ិនធឺរណេត ផ្តោតសំខាន់លើមូលដ្ឋាន CSS រួមមានការធ្វើឲ្យទំព័រទាន់សម័យ                     |                                  [Introduction to CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen             |
-| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |                 JavaScript បិទច្រវាក់, ការគ្រប់គ្រង DOM                  | សាងសង់ JavaScript ដើម្បីធ្វើឲ្យធុងដំណើរការជាមួយអ៊ីនធែរហ្វេសជាចរន្តទម្លាក់ញុះ យកចំណុចចំពោះការបិទច្រវាក់ និងការគ្រប់គ្រង DOM             |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen             |
-| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          បង្កើតហ្គេមវាយអក្សរ                           | រៀនពីរបៀបប្រើព្រឹត្តិការណ៍ក្តារចុចដើម្បីបញ្ជាលំនាំសកម្មភាពក្នុងកម្មវិធី JavaScript របស់អ្នក                                        |                                [Event-Driven Programming](./4-typing-game/typing-game/README.md)                                |       Christopher         |
-| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         ការងារជាមួយកម្មវិធី Firefox                     | រៀនពីរបៀបកម្មវិធី Firefox ធ្វើការ ប្រវត្តិសាស្រ្តរបស់វា និងរបៀបបង្កើតធាតុដំបូងនៃកម្មវិធីលំនាំប្រព័ន្ឋកម្មវិធី                    |                               [About Browsers](./5-browser-extension/1-about-browsers/README.md)                                |           Jen             |
-| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | ការបង្កើតសំណុំបែបបទ ការហៅ API និងរក្សាទុកអថេរនៅក្នុង local storage | សាងសង់ធាតុ JavaScript នៃកម្មវិធីលំនាំ Firefox របស់អ្នក ដើម្បីហៅ API ដោយប្រើអថេរដែលបានរក្សាទុកក្នុង local storage                      |                [APIs, Forms, and Local Storage](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen             |
-| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          ការប្រតិបត្តិការផ្ទៃក្រោយក្នុងកម្មវិធី Firefox, ការសម្រួលគុណភាពបណ្តាញ          | ប្រើវិធីប្រតិបត្តិការផ្ទៃក្រោយរបស់កម្មវិធី Firefox សម្រាប់គ្រប់គ្រងរូបតំណាងកម្មវិធីលំនាំ; រៀនអំពីជំហានកែលម្អគុណភាពបណ្តាញនិងបច្ចេកទេសមួយចំនួន |             [Background Tasks and Performance](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen             |
-| 15  |           [Space Game](./6-space-game/solution/README.md)           |             ការអភិវឌ្ឍហ្គេមជំហានខ្ពស់ជាមួយ JavaScript             | រៀនអំពីមេរៀនចឹងការទូទាត់ដោយប្រើទាំងក្លាស និងកំណត់រចនាសម្ព័ន្ធ និងសម្រាប់បែបបទ Pub/Sub ដើម្បីត្រៀមសម្រាប់បង្កើតហ្គេម              |                      [Introduction to Advanced Game Development](./6-space-game/1-introduction/README.md)                       |          Chris            |
-| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           គូរទៅកាន់ផ្ទៃ Canafas                                  | រៀនអំពី Canvas API ដែលប្រើគូរថាត្រូវលើផ្ទៃថ្នល់                                                                  |                                [Drawing to Canvas](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris            |
-| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   ផ្លាស់ទីធាតុកាន់តែក្រៅអេក្រង់                          | ស្វែងរកពីរបៀបដែលធាតុអាចចល័តដោយប្រើ coordinate អក្សរ Cartesian និង Canvas API                                               |                           [Moving Elements Around](./6-space-game/3-moving-elements-around/README.md)                           |          Chris            |
-| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          ការស្គាល់ការប៉ះ撞                               | ធ្វើឱ្យធាតុទាក់ទងព្រមគ្នា និងឆ្លើយតបគ្នាជាមួយការចុចក្តារចុច និងផ្តល់មុខងារពេលស្ងៀមដើម្បីធានាបាននូវកម្រិតប្រតិបត្តិការរបស់ហ្គេម   |                              [Collision Detection](./6-space-game/4-collision-detection/README.md)                              |          Chris            |
-| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             ដោះស្រាយពិន្ទុ                              | គណនាផ្នែកគណិតអាគរស្តីពីស្ថានភាព និងការប្រតិបត្តិការរបស់ហ្គេម                                                              |                                    [Keeping Score](./6-space-game/5-keeping-score/README.md)                                    |          Chris            |
-| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     បញ្ចប់ និងចាប់ផ្តើមហ្គេមឡើងវិញ                      | រៀនអំពីការបញ្ចប់ និងចាប់ផ្តើមហ្គេមឡើងវិញ រួមមានការសម្អាតមូលធាតុ និងកំណត់តម្លៃអថេរឡើងវិញ                              |                                [The Ending Condition](./6-space-game/6-end-condition/README.md)                                 |          Chris            |
-| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                 តំបន់គំរូ HTML និងផ្លូវ ក្នុងកម្មវិធីវេប                   | រៀនអំពីការបង្កើតគ្រប់គ្រងស្ថាបត្យកម្មគេហទំព័រជាគម្រប់ទំព័រដោយប្រើ routing និង template HTML                              |                            [HTML Templates and Routes](./7-bank-project/1-template-route/README.md)                             |          Yohan            |
-| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  បង្កើតទម្រង់ចូលប្រើប្រាស់និងចុះឈ្មោះ                  | រៀនពីការបង្កើតទម្រង់ និងការដាក់កូដត្រួតពិនិត្យលក្ខណៈ                                                                       |                                           [Forms](./7-bank-project/2-forms/README.md)                                           |          Yohan            |
-| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   វិធីសាស្រ្តនៃការទាញយក និងប្រើទិន្នន័យ                   | របៀបផ្គត់ផ្គង់ទិន្នន័យចូល និងចេញពីកម្មវិធី របៀបទាញយក រក្សាទុក និងលុបចោល                                                       |                                            [Data](./7-bank-project/3-data/README.md)                                            |          Yohan            |
-| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      គំនិតនៃការគ្រប់គ្រងរដ្ឋ                                | រៀនពីរបៀបកម្មវិធីរបស់អ្នករក្សាទុករដ្ឋ និងរបៀបគ្រប់គ្រងប្រព័ន្ធនៅក្នុងកម្មវិធី                                            |                                [State Management](./7-bank-project/4-state-management/README.md)                                |          Yohan            |
-| 25 | [Browser/VScode Code](../../8-code-editor) | ការងារជាមួយ VScode | រៀនពីរបៀបប្រើកម្មវិធីកែសម្រួលកូដ | [Use VScode Code Editor](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AI Assistants](./9-chat-project/README.md) | ការងារជាមួយអាប់ស៊ីស AI | រៀនពីរបៀបបង្កើតជំនួយ AI របស់អ្នកផ្ទាល់ | [AI Assistant project](./9-chat-project/README.md) | Chris |
+|     |                       ឈ្មោះគម្រោង                        |                       គំនិតបានបង្រៀន                        |    គោលដៅបង្រៀន                                                                                                               |                                                        មេរៀនភ្ជាប់                                                          |         អ្នកនិពន្ធ         |
+| :-: | :------------------------------------------------------: | :------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :-----------------------: |
+| 01  |                     ការចាប់ផ្តើម                        |           ការណែនាំអំពីកម្មវិធីនិងឧបករណ៍ប្រើប្រាស់           | រៀនពីមូលដ្ឋានសំខាន់ៗពីភាសាកម្មវិធីភាគច្រើន និងអំពីកម្មវិធីជួយអ្នកអwickុំកវិជ្ជាជិតបំពេញការងារ                     | [ការណែនាំអំពីភាសាកម្មវិធីនិងឧបករណ៍ប្រើប្រាស់](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine           |
+| 02  |                     ការចាប់ផ្តើម                        |             មូលដ្ឋាន GitHub រួមទាំងការងារជាក្រុម             | របៀបប្រើប្រាស់ GitHub នៅក្នុងគម្រោងរបស់អ្នក និងរបៀបសហការ ជាមួយអ្នកដទៃនៅលើមូលដ្ឋានកូដ                                   |                            [មូលដ្ឋាន GitHub](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor            |
+| 03  |                     ការចាប់ផ្តើម                        |                             ភាពចូលដល់                        | រៀនពីមូលដ្ឋាននៃភាពចូលដល់គេហទំព័រ                                                                                           |                       [មូលដ្ឋានភាពចូលដល់](./1-getting-started-lessons/3-accessibility/README.md)                           |       Christopher         |
+| 04  |                        ជាភាសា JS                         |                         ប្រភេទទិន្នន័យ JavaScript                | មូលដ្ឋាននៃប្រភេទទិន្នន័យ JavaScript                                                                                              |                                       [ប្រភេទទិន្នន័យ](./2-js-basics/1-data-types/README.md)                                   |         Jasmine           |
+| 05  |                        ជាភាសា JS                         |                         មុខងារ និង វិធីសាស្រ្ត                 | រៀនអំពីមុខងារនិងវិធីសាស្រ្តក្នុងការគ្រប់គ្រងលំនាំចិត្តកម្មវិធី                                                                |                              [មុខងារ និង វិធីសាស្រ្ត](./2-js-basics/2-functions-methods/README.md)                           | Jasmine និង Christopher   |
+| 06  |                        ជាភាសា JS                         |                        ការធ្វើសេចក្តីសម្រេចជាមួយ JS              | រៀនរបៀបបង្កើតលក្ខខណ្ឌនៅក្នុងកូដរបស់អ្នកដោយប្រើវិធីសាស្រ្តធ្វើសេចក្តីសម្រេច                                                    |                                 [ការធ្វើសេចក្តីសម្រេច](./2-js-basics/3-making-decisions/README.md)                              |         Jasmine           |
+| 07  |                        ជាភាសា JS                         |                            អារេនិងរុំជុំ                     | ប្រើទិន្នន័យជាមួយអារេនិងរុំជុំក្នុង JavaScript                                                                                  |                                   [អារេនិងរុំជុំ](./2-js-basics/4-arrays-loops/README.md)                                  |         Jasmine           |
+| 08  |       [Terrarium](./3-terrarium/solution/README.md)       |                            HTML ក្នុងកិច្ចការអនុវត្ត             | សាងសង់ HTML ដើម្បីបង្កើតប្រអប់ចងចាំតាមអនឡាញ រួមទាំងផ្តោតលើការសាងសង់រៀបចំផ្ទាំង                                            |                                 [ការណែនាំអំពី HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen             |
+| 09  |       [Terrarium](./3-terrarium/solution/README.md)       |                            CSS ក្នុងកិច្ចការអនុវត្ត              | បង្កើត CSS ដើម្បីតុបតែងប្រអប់ចងចាំតាមអនឡាញ ផ្តោតលើមូលដ្ឋាន CSS រួមទាំងការបង្កើតទំព័រឲ្យឆបគ្នា                                      |                                  [ការណែនាំអំពី CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen             |
+| 10  |            [Terrarium](./3-terrarium/solution/README.md)            |           JavaScript Closures, DOM manipulation                  | បង្កើត JavaScript ដើម្បីឲ្យប្រអប់ចងចាំដំណើរការជាផ្ទាំងទាញដាក់ ប្រើការចងខ្សែមុខងារ និងការកំណត់ DOM                            |                  [JavaScript Closures, DOM manipulation](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen             |
+| 11  |          [Typing Game](./4-typing-game/solution/README.md)          |                          បង្កើតហ្គេមវាយអក្សរ                       | រៀនរបៀបប្រើព្រឹត្តិការណ៍ក្តារចុចដើម្បីបើកលំហូរល lógica នៃកម្មវិធី JavaScript របស់អ្នក                                      |                                [កម្មវិធីបើកលំហូរ](./4-typing-game/typing-game/README.md)                                   |       Christopher         |
+| 12  | [Green Browser Extension](./5-browser-extension/solution/README.md) |                         ការងារជាមួយកម្មវិធីរុករកថតើរ             | រៀនពីរបៀបដំណើរការរបស់កម្មវិធីរុករក ប្រវត្តិសាស្ត្រ និងរបៀបបង្កើតធាតុដំបូងៗនៃភ្ជាប់កម្មវិធីរុករក                      |                               [អំពីកម្មវិធីរុករក](./5-browser-extension/1-about-browsers/README.md)                            |           Jen             |
+| 13  | [Green Browser Extension](./5-browser-extension/solution/README.md) | សង់បែបបទហៅ API និងរក្សាទុកអថេរនៅក្នុង local storage       | បង្កើតធាតុ JavaScript នៃកម្មវិធីរុករករបស់អ្នក ដើម្បីហៅ API ដោយប្រើអថេរដែលរក្សាទុកក្នុង local storage                         |                [API, បែបបទ និងការរក្សាទុកនៅក្នុងធាតុ](./5-browser-extension/2-forms-browsers-local-storage/README.md)        |           Jen             |
+| 14  | [Green Browser Extension](./5-browser-extension/solution/README.md) |          ដំណើរការផ្ទៃខាងក្រោយក្នុងកម្មវិធីរុករក និងការសម្រួលបណ្ដាញ  | ប្រើដំណើរការផ្ទៃខាងក្រោយរបស់កម្មវិធីរុករកដើម្បីគ្រប់គ្រងរូបតំណាងនៃកម្មវិធី បន្ថែមពីការសម្រួលបណ្ដាញ                      |             [ភារកិច្ចផ្ទៃខាងក្រោយ និងការសម្រួលបណ្ដាញ](./5-browser-extension/3-background-tasks-and-performance/README.md)     |           Jen             |
+| 15  |           [Space Game](./6-space-game/solution/README.md)           |             ការអភិវឌ្ឍហ្គេមកម្រិតខ្ពស់ជាមួយ JavaScript          | រៀនអំពីមេរៀនវារីធម៍ IDE inheritance ជាមួយ Classes និង Composition និងល្បិច Pub/Sub ក្នុងការរៀបចំសម្រាប់បង្កើតហ្គេម                   |                      [ការណែនាំអំពីការអភិវឌ្ឍហ្គេមកម្រិតខ្ពស់](./6-space-game/1-introduction/README.md)                     |          Chris            |
+| 16  |           [Space Game](./6-space-game/solution/README.md)           |                           គូរមាតិកាលើកង់ខាត់                 | រៀនអំពី Canvas API សម្រាប់គូរធាតុទៅលើអេក្រង់                                                                              |                                [គូរលើកង់ខាត់](./6-space-game/2-drawing-to-canvas/README.md)                              |          Chris            |
+| 17  |           [Space Game](./6-space-game/solution/README.md)           |                   ធ្វើចលនាធាតុជុំវិញអេក្រង់                    | រកឃើញរបៀបធ្វើឲ្យធាតុចលនា ដោយប្រើផ្លូវកាតេស៊ីង និង Canvas API                                                               |                           [ធ្វើចលនាធាតុជុំវិញ](./6-space-game/3-moving-elements-around/README.md)                          |          Chris            |
+| 18  |           [Space Game](./6-space-game/solution/README.md)           |                          ការកំណត់បាតដណ្ដឹងផ្ទុក                       | ធ្វើឲ្យធាតុបត់បែនគ្នានិងឆ្លើយតបទៅគ្នា ដោយប្រើ keypresses ហើយផ្តល់មុខងារជម្ងឺប្រាប់ដើម្បីធានាឲ្យមានប្រសិទ្ធភាពគ្រប់គ្រាន់    |                              [ការប៉ះទង្គិច](./6-space-game/4-collision-detection/README.md)                                 |          Chris            |
+| 19  |           [Space Game](./6-space-game/solution/README.md)           |                             ការរក្សាជ័យជំនះ                      | បំពេញការប្រមូលគណនាផ្អែកលើស្ថានភាពហ្គេម និងប្រសិទ្ធភាព                                                                       |                                    [រក្សាជ័យជំនះ](./6-space-game/5-keeping-score/README.md)                                   |          Chris            |
+| 20  |           [Space Game](./6-space-game/solution/README.md)           |                     ការបញ្ចប់ហ្គេម និងការចាប់ផ្តើមឡើងវិញ             | រៀនអំពីបញ្ចប់ហ្គេម និងចាប់ផ្តើមឡើងវិញ រួមទាំងសម្អាតធនធាន និងកំណត់តម្លៃអថេរថ្មី                                          |                                [លក្ខខណ្ឌបញ្ចប់](./6-space-game/6-end-condition/README.md)                                   |          Chris            |
+| 21  |         [Banking App](./7-bank-project/solution/README.md)          |                សារពើភណ្ឌ HTML និង Routing ក្នុងកម្មវិធីបណ្ដាញ           | រៀនពីរបៀបបង្កើតរចនា​សម្ព័ន្ធគេហទំព័រជាច្រើនទំព័រដោយប្រើ routing និង សារពើភណ្ឌ HTML                                      |                            [សារពើភណ្ឌ HTML និង Routing](./7-bank-project/1-template-route/README.md)                          |          Yohan            |
+| 22  |         [Banking App](./7-bank-project/solution/README.md)          |                  បង្កើតបែបបទចូលប្រើ និងចុះឈ្មោះ                   | រៀនអំពីការបង្កើតបែបបទ និងការត្រួតពិនិត្យភាពត្រឹមត្រូវ                                                                   |                                           [បែបបទ](./7-bank-project/2-forms/README.md)                                   |          Yohan            |
+| 23  |         [Banking App](./7-bank-project/solution/README.md)          |                   វិធីសាស្រ្តទាញយក និងប្រើប្រាស់ទិន្នន័យ               | របៀបដំណើរការទិន្នន័យចូលចេញពីកម្មវិធី របៀបទាញយក រក្សាទុក និងលុបចោល                                                   |                                            [ទិន្នន័យ](./7-bank-project/3-data/README.md)                                    |          Yohan            |
+| 24  |         [Banking App](./7-bank-project/solution/README.md)          |                      គំនិតគ្រប់គ្រងស្ថានភាព                           | រៀនពីរបៀបកម្មវិធីរបស់អ្នករក្សាស្ថានភាព និងរបៀបគ្រប់គ្រងវាដោយប្រើកម្មវិធី                                               |                                [គ្រប់គ្រងស្ថានភាព](./7-bank-project/4-state-management/README.md)                            |          Yohan            |
+| 25 | [Browser/VScode Code](../../8-code-editor) | ការងារជាមួយ VScode | រៀនរបៀបប្រើប្រាស់កម្មវិធីកែសម្រួលកូដ| [ប្រើកម្មវិធីកែសម្រួលកូដ VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI Assistants](./9-chat-project/README.md) | ការងារជាមួយ AI | រៀនរបៀបបង្កើតជំនួយការប្រព័ន្ធ AI ផ្ទាល់ខ្លួន | [គម្រោងជំនួយការប្រព័ន្ធ AI](./9-chat-project/README.md) | Chris |
 
-## 🏫 វិធីសាស្រ្តបង្រៀន
+## 🏫 គ្រឹះការបង្រៀន
 
-កម្មវិធីសិក្សារបស់យើងត្រូវបានរចនាឡើងជាមួយគោលការណ៍បង្រៀនសំខាន់ពីរប្រភេទ៖
-* ការសិក្សាដោយគម្រោង
-* សំនួរសាកល្បងជាញឹកញាប់
+មេរៀនរបស់យើងត្រូវបានបង្កើតឡើងដោយគោលការណ៍គ្រឿងសម្រាប់បង្រៀនអង្គការចម្បង​ពីរ​៖
+* ការសិក្សាតាមគម្រោង
+* សាកល្បងញឹកញាប់
 
-កម្មវិធីបង្រៀនមូលដ្ឋាន JavaScript, HTML និង CSS រួមទាំងឧបករណ៍ និងបច្ចេកទេសថ្មីៗដែលអ្នកអភិវឌ្ឍវេបសាយប្រើប្រាស់នៅថ្ងៃនេះ។ សិស្សនឹងមានឱកាសអភិវឌ្ឍបទពិសោធន៍ដៃគូដោយសាងសង់ហ្គេមវាយអក្សរ Terrarium តាមអ៊ិនធឺរណេត កម្មវិធីលំនាំ Firefox មិត្តបរិស្ថានហ្គេមល្ខៅល្ខៅលើអេក្រង់ និងកម្មវិធីធនាគារសម្រាប់អាជីវកម្ម។ បញ្ចប់ស៊េរីនេះ សិស្សនឹងមានការយល់ដឹងជ្រាលជ្រៅអំពីការអភិវឌ្ឍវេប។
+កម្មវិធីបង្រៀននេះផ្តោតបង្រៀនមូលដ្ឋាន JavaScript, HTML និង CSS និងឧបករណ៍និងបច្ចេកទេសថ្មីៗដែលអ្នកអwickុម្មួយបណ្ដាញប្រើប្រាស់សព្វថ្ងៃ។ និស្សិតនឹងមានឱកាសអភិវឌ្ឍន៍បទពិសោធន៍អនុវត្តដោយការកសាងហ្គេមវាយអក្សរ ទីតាំងត្រួតពិនិត្យតាមអនឡាញ ការតភ្ជាប់កម្មវិធីរុករកបៃតង ហ្គេមបែបចល័តអាកាសធាតុ និងកម្មវិធីធនាគារ សម្រាប់អាជីវកម្ម។ នៅចប់ស៊េរីនេះ និស្សិតនឹងមានការយល់ដឹងរឹងមាំអំពីការអwickុម្មួយបណ្ដាញ។
 
-> 🎓 អ្នកអាចយកមេរៀនដំបូងៗនៅក្នុងកម្មវិធីនេះជាផ្លូវ [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) នៅលើ Microsoft Learn!
+> 🎓 អ្នកអាចចាប់ផ្តើមមេរៀនដំបូងនៃមេរៀននេះជា [ផ្លូវរៀន](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) នៅលើ Microsoft Learn!
 
-ដោយធានាថាខ្លឹមសារត្រូវតែស្របទៅតាមគម្រោង នេះធ្វើឲ្យដំណើរការបង្រៀនមានការចាប់អារម្មណ៍សម្រាប់សិស្ស និងកែលម្អការចងចាំគំនិត។ យើងក៏បានសរសេរមេរៀនដំបូងជាច្រើននៅវិស័យ JavaScript មូលដ្ឋានសម្រាប់បង្ហាញគំនិតរួមជាមួយវីដេអូពី "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" ជាការប្រមូលផ្តុំវីដេអូដែលអ្នកនិពន្ធមួយចំនួនបានរួមចំណែកក្នុងកម្មវិធីនេះ។
+ដោយធានាថាតិចតួចនៃមេរៀនត្រូវស្របគ្នាជាមួយគម្រោង វិធីសាស្រ្តនេះធ្វើឲ្យមានការចាប់អារម្មណ៍ច្រើនសម្រាប់និស្សិត និងកំណត់ចំណេះដឹងបានល្អឡើង។ យើងបានសរសេរមេរៀនចាប់ផ្តើមជាច្រើននៅមូលដ្ឋាន JavaScript ដើម្បីណែនាំមូលដ្ឋាន ភ្ជាប់ជាមួយវីដេអូពីស៊េរី "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)" ដែលអ្នកនិពន្ធខ្លះបានរួមចំណែកក្នុងកម្មវិធីនេះ។
 
-បន្ថែមពីនេះ ការសាកល្បងមួយមុនថ្នាក់បង្ហាត់ដាក់បំណងក្តីចង់រៀនរបស់សិស្សមួយ ជាមួយសំនួរសាកល្បងទីពីរពីរបន្ទាប់បន្ទាប់គឺធានាការចងចាំបន្ថែម។ កម្មវិធីនេះរចនាឡើងឱ្យបត់បែន និងរីករាយ ហើយអាចយកទាំងស្រុងឬផ្នែកមួយចំណែកមកអានបាន។ គម្រោង​តូចៗ តែរីកចម្រើនកាន់តែស្មុគស្មាញតាមរយៈរយៈពេល 12 សប្ដាហ៍។
+ក្រៅពីនេះ ភាពតិចតួចនៃសាកល្បងមុនថ្នាក់ចុះបួន ធ្វើឲ្យនិស្សិតមានចំណង់ចំណូលចិត្តសិក្សាពីមុខវិជ្ជា មួយសាកល្បងបន្ទាប់មកធានាសិប្បនិម្មិតយ៉ាងល្អ។ មេរៀននេះត្រូវបានរចនាឡើងឲ្យមានភាពបត់បែន និងរីករាយ អាចរៀនទាំងមូល ឬជាផ្នែកបាន។ គម្រោងចាប់ផ្តើមតូចៗ ហើយកាន់តែពិបាកឡើងនៅចប់មូលដ្ឋាន ១២ សប្តាហ៍។
 
-នៅពេលយើងបានជ្រើសរើសមិនណែនាំខ្នាត JavaScript frameworks ទេ ដើម្បីផ្តោតលើជំនាញមូលដ្ឋានដែលត្រូវការជាអ្នកអភិវឌ្ឍវេបមុនពេលយក framework មួយ។ ជំហានបន្ទាប់ល្អដើម្បីបញ្ចប់កម្មវិធីនេះគឺរៀនអំពី Node.js តាមប្រមូលផ្តុំវីដេអូផ្សេងទៀត៖ "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)"។
+បើទោះជាយើងបានចៀសវាងការណែនាំហ្គ្រamework JavaScript ដើម្បីផ្តោតលើជំនាញមូលដ្ឋានរបស់អ្នកអwickុម្មួយបណ្ដាញ មុនពេលយក framework មកប្រើ ការជ្រើសរើសល្អបន្ទាប់សម្រាប់បញ្ចប់ការសិក្សានេះគឺរៀនអំពី Node.js តាមការបង្ហាញវីដេអូផ្សេងៗ: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> សូមចូលមើល [Code of Conduct](CODE_OF_CONDUCT.md) និង [Contributing](CONTRIBUTING.md) ដើម្បីទទួលបានការណែនាំ។ យើងស្វាគមន៍មតិយោបល់សាងសង់របស់អ្នក!
+> សូមចូលទៅកាន់ [Code of Conduct](CODE_OF_CONDUCT.md) និង [Contributing](CONTRIBUTING.md) នៃយើង។ យើងស្វាគមន៍មតិយោបល់ដែលមានប្រយោជន៍ពីអ្នក!
 
-## 🧭 ការចូលប្រើក្រៅបណ្ដាញ
+## 🧭 ការចូលប្រើដោយអនឡាញ
 
-អ្នកអាចរត់ឯកសារនេះក្រៅបណ្ដាញដោយប្រើ [Docsify](https://docsify.js.org/#/)! នៅក្នុង repo នេះ សូម fork, [ដំឡើង Docsify](https://docsify.js.org/#/quickstart) លើកុំព្យូទ័រប្រព័ន្ធរបស់អ្នក ហើយនៅក្នុងថត root នៃ repo នេះវាយ `docsify serve` ។ គេហទំព័រនឹងរត់នៅកំពង់ផែ 3000 នៅ localhost របស់អ្នក៖ `localhost:3000`។
+អ្នកអាចរត់ឯកសារនេះដោយអនឡាញដោយប្រើ [Docsify](https://docsify.js.org/#/។) ចម្លងក្ដីបន្ទុកនេះ [install Docsify](https://docsify.js.org/#/quickstart) លើម៉ាស៊ីនដោយភាពផ្ទាល់ច្រក រួចនៅក្នុងថតដើម នៃក្ដីបន្ទុកនេះ បញ្ចូល `docsify serve`។ គេហទំព័រនឹងរត់លើផត 3000 នៅ localhost របស់អ្នក៖ `localhost:3000`។
 
 ## 📘 PDF
-ការបោះពុម្ព PDF របស់មេរៀនទាំងអស់អាចរកបាន [ tại đây](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)។
+ឯកសារ PDF សម្រាប់មេរៀនទាំងអស់អាចស្វែងរកបាន [នៅទីនេះ](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf)។
 
-## 🎒វគ្គសិក្សាផ្សេងទៀត
 
-ក្រុមការងាររបស់យើងផលិតវគ្គសិក្សាផ្សេងទៀតផងដែរ! សូមមើល៖
+## 🎒 វគ្គផ្សេងទៀត
 
+ក្រុមរបស់យើងបង្កើតវគ្គផ្សេងទៀតផងដែរ! សូមពិនិត្យមើល៖
+
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
-[![LangChain4j សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
-[![LangChain.js សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
-[![LangChain សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
+[![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
+[![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
 ### Azure / Edge / MCP / Agents
-[![AZD សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Edge AI សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![MCP សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI Agents សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI Agents for Beginners](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### ស៊េរី Generative AI
-[![Generative AI សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+### ស៊៊ីរី AI បង្កើតមាន
+[![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### ការសិក្សាមូលដ្ឋាន
-[![ML សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![វិទ្យាសាស្ត្រ​ទិន្នន័យ​សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![សុវត្ថិភាពបណ្ដាញសម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![ការអភិវឌ្ឍវែបសម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![ការអភិវឌ្ឍ XR សម្រាប់អ្នកចាប់ផ្តើម](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+### ការរៀនមូលដ្ឋាន
+[![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### ស៊េរី Copilot
-[![Copilot សម្រាប់កម្មវិធីភាគី AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot សម្រាប់ C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+### ស៊៊ីរី Copilot
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## ទទូលជំនួយ
+## ការជួយទំនាក់ទំនង
 
-បើអ្នកជួបបញ្ហា ឬមានសំណួរណាមួយអំពីការបង្កើតកម្មវិធី AI។ ចូលរួមជាមួយអ្នករៀនរួម និងអ្នកអភិវឌ្ឍដែលមានបទពិសោធន៍ ក្នុងការពិភាក្សាអំពី MCP។ នេះគឺជាសហគមន៍គាំទ្រដែលសំណួរត្រូវបានស្វាគមន៍ ហើយចំណេះដឹងត្រូវបានចែករំពែកដោយសេរី។
+បើអ្នកប្រឈមមុខនឹងប្រតិបត្តិការលំបាក ឬមានសំណួរណាមួយទាក់ទងទៅនឹងការបង្កើតកម្មវិធី AI សូមចូលរួមជាមួយអ្នករៀនដទៃទៀត និងអ្នកអភិវឌ្ឍមានបទពិសោធន៍ ក្នុងការចូលរួមពិភាក្សាអំពី MCP។ វាជាសហគមន៍មួយដែលគាំទ្រនិងស្វាគមន៍សំណួរ នឹងការចែករំលែកចំណេះដឹងដោយមិនគិតលុយ។
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-បើអ្នកមានមតិយោបល់អំពីផលិតផល ឬកំហុសពេលកំពុងបង្កើត សូមចូលរួមពិនិត្យ៖
+បើអ្នកមានមតិយោបល់លើផលិតផល ឬកំហុស ពេលកសាង សូមចូលទៅកាន់៖
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
-## អាជ្ញាប័ណ្ណ
+## ហិរញ្ញប្បទាន
 
-ឃ្លាំងទិន្នន័យនេះមានអាជ្ញាបណ្ណក្រោមអាជ្ញាបណ្ណ MIT។ សូមមើលឯកសារ [LICENSE](../../LICENSE) ដើម្បីទទួលបានព័ត៌មានបន្ថែម។
+ឃ្លាំងនេះត្រូវបានចុះបញ្ជីផ្សាយក្រោមប័ណ្ណអាជ្ញាប័ណ្ណ MIT។ សូមមើលឯកសារ [LICENSE](../../LICENSE) សម្រាប់ព័ត៌មានបន្ថែម។
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ការបដិសេធ**៖
-ឯកសារនេះត្រូវបានប្រែជាភាសាខ្មែរ ដោយប្រើសេវាកម្មបម្លែងភាសា AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ខណៈពេលដែលយើងព្យាយាមអោយបានត្រឹមត្រូវអត្ថន័យ សូមយល់ថាការប្រែដោយស្វ័យប្រវត្តិកម្មនេះអាចមានកំហុស ឬភាពមិនត្រឹមត្រូវ។ ឯកសារដើមជាភាសាបង្កើតគឺជាជាលក្ខណៈប្រភពពិតប្រាកដ។ សម្រាប់ព័ត៌មានដ៏សំខាន់ សូមប្រើការប្រែដោយមនុស្សជាន់ខ្ពស់ជាជម្រើស។ យើងមិនទទួលខុសត្រូវចំពោះការយល់ខុស ឬការបកប្រែខុសពីការប្រើប្រាស់ការប្រែនេះឡើយ។
+**ការបដិសេធ**៖  
+ឯកសារនេះត្រូវបានបម្លែងជាភាសាដោយប្រើសេវាកម្មបកប្រែ AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ខណៈពេលដែលយើងខំប្រឹងសម្រាប់ភាពត្រឹមត្រូវ សូមយល់ដឹងថាការបកប្រែដោយប្រព័ន្ធស្វ័យប្រវត្តិអាចមានកំហុសឬភាពមិនត្រឹមត្រូវ។ ឯកសារដើមនៅក្នុងភាសាមួយដែលមានដើមគួរត្រូវបានកត់សម្គាល់ថាជាផ្នែកដែលមានអំណាចបំផុត។ សម្រាប់ព័ត៌មានសំខាន់ ការបកប្រែដោយអ្នកជំនាញមនុស្សត្រូវបានណែនាំ។ យើងមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំ ឬការបកប្រែខុសពីការប្រើប្រាស់ការបកប្រែនេះឡើយ។
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

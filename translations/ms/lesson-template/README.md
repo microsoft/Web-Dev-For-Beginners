@@ -1,56 +1,79 @@
-# [Topik Pelajaran]
+# Topik Pelajaran
 
-![Sisipkan video di sini](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Kuiz Pra-Kuliah](../../../lesson-template/quiz-url)
-
-[Terangkan apa yang akan kita pelajari]
-
-### Pengenalan
-
-Terangkan apa yang akan dibincangkan
-
-> Nota
-
-### Prasyarat
-
-Langkah-langkah apa yang sepatutnya telah diselesaikan sebelum pelajaran ini?
-
-### Persediaan
-
-Langkah-langkah persediaan untuk memulakan pelajaran ini
+> Tambahkan video terbenam atau pautan pelajaran di sini.
 
 ---
 
-[Langkah-langkah melalui kandungan dalam blok]
+## Kuiz Pra-ceramah
 
-## [Topik 1]
+> Tambahkan pautan kuiz di sini apabila tersedia.
 
-### Tugasan:
+---
 
-Bekerjasama untuk meningkatkan kod anda secara progresif bagi membina projek dengan kod yang dikongsi:
+Berikan gambaran ringkas tentang apa yang pelajar akan pelajari dalam pelajaran ini.
+
+---
+
+### Pengenalan
+
+Berikan pengenalan ringkas yang menerangkan apa yang akan dibincangkan dalam pelajaran ini.
+
+> Nota
+
+---
+
+### Prasyarat
+
+Senaraikan konsep atau topik yang pelajar harus sudah biasa sebelum memulakan pelajaran ini.
+
+---
+
+### Persediaan
+
+Senaraikan sebarang langkah penyediaan atau alat yang diperlukan sebelum memulakan pelajaran.
+
+---
+
+### Kandungan
+
+Terangkan kandungan pelajaran secara berstruktur dalam seksyen-seksyen.
+
+---
+
+## Topik 1
+
+### Tugas:
+
+Bekerjasama untuk meningkatkan kod anda secara berperingkat untuk membina projek dengan kod bersama:
 
 ```html
 code blocks
 ```
 
-✅ Semakan Pengetahuan - gunakan masa ini untuk mengembangkan pengetahuan pelajar dengan soalan terbuka
+✅ Semakan Pengetahuan
+Gunakan masa ini untuk menguji pengetahuan pelajar dengan soalan terbuka.
 
-## [Topik 2]
+## Topik 2
+## Topik 3
 
-## [Topik 3]
+🚀 Cabaran
+Tambah cabaran kolaboratif untuk pelajar meningkatkan projek.
 
-🚀 Cabaran: Tambahkan cabaran untuk pelajar bekerjasama dalam kelas bagi meningkatkan projek
+Pilihan: Tambah tangkapan skrin UI pelajaran yang telah selesai jika sesuai.
 
-Pilihan: tambahkan tangkapan skrin UI pelajaran yang telah siap jika sesuai
+## Kuiz Pasca-ceramah
 
-## [Kuiz Pasca-Kuliah](../../../lesson-template/quiz-url)
+Tambah pautan kuiz di sini selepas menyelesaikan pelajaran.
 
-## Ulasan & Kajian Kendiri
+## Semakan & Kajian Kendiri
 
-**Tugasan Perlu Diserahkan [MM/YY]**: [Nama Tugasan](assignment.md)
+**Penyerahan Tugasan [MM/YY]**: [Nama Tugasan](assignment.md)
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidakakuratan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

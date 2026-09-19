@@ -1,56 +1,79 @@
-# [Paksa ng Aralin]
+# Paksa ng Aralin
 
-![Mag-embed ng video dito](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Pre-lecture quiz](../../../lesson-template/quiz-url)
-
-[Ipaliwanag kung ano ang matututunan]
-
-### Panimula
-
-Ipaliwanag kung ano ang tatalakayin
-
-> Mga Tala
-
-### Paunang Kaalaman
-
-Anong mga hakbang ang dapat natapos bago ang araling ito?
-
-### Paghahanda
-
-Mga hakbang na kailangang gawin upang simulan ang araling ito
+> Magdagdag ng naka-embed na video o link ng aralin dito.
 
 ---
 
-[Hakbangin sa nilalaman sa mga bloke]
+## Paunang pagsusulit
 
-## [Paksa 1]
+> Magdagdag ng link ng pagsusulit dito kapag available na.
+
+---
+
+Magbigay ng maikling pangkalahatang-ideya kung ano ang matututunan ng mga estudyante sa araling ito.
+
+---
+
+### Panimula
+
+Magbigay ng maikling panimula na naglalarawan kung ano ang tatalakayin sa araling ito.
+
+> Mga Tala
+
+---
+
+### Paunang Kaalaman
+
+Ilista ang mga konsepto o paksang dapat nang alam ng mga estudyante bago simulan ang araling ito.
+
+---
+
+### Paghahanda
+
+Ilista ang anumang mga hakbang sa setup o mga kasangkapang kinakailangan bago simulan ang aralin.
+
+---
+
+### Nilalaman
+
+Sundan ang nilalaman ng aralin sa mga nakaayos na seksyon.
+
+---
+
+## Paksa 1
 
 ### Gawain:
 
-Magtrabaho nang sama-sama upang unti-unting pagandahin ang inyong codebase para buuin ang proyekto gamit ang shared code:
+Magtrabaho nang sama-sama upang unti-unting pagbutihin ang iyong codebase para mabuo ang proyekto gamit ang pinagsamang code:
 
 ```html
 code blocks
 ```
 
-✅ Pagpapalawak ng Kaalaman - gamitin ang pagkakataong ito upang palawakin ang kaalaman ng mga mag-aaral sa pamamagitan ng mga bukas na tanong
+✅ Pagsusuri ng Kaalaman
+Gamitin ang sandaling ito upang palawakin ang kaalaman ng mga estudyante sa pamamagitan ng mga tanong na bukas.
 
-## [Paksa 2]
+## Paksa 2
+## Paksa 3
 
-## [Paksa 3]
+🚀 Hamon
+Magdagdag ng isang kumpetitibong hamon para sa mga estudyante upang pagandahin ang proyekto.
 
-🚀 Hamon: Magdagdag ng hamon para sa mga mag-aaral na magtulungan sa klase upang mapahusay ang proyekto
+Opsyonal: Magdagdag ng screenshot ng natapos na UI ng aralin kung naaangkop.
 
-Opsyonal: magdagdag ng screenshot ng UI ng natapos na aralin kung naaangkop
+## Pagsusulit Pagkatapos ng Aralin
 
-## [Post-lecture quiz](../../../lesson-template/quiz-url)
+Magdagdag ng link ng pagsusulit dito pagkatapos makumpleto ang aralin.
 
-## Review at Sariling Pag-aaral
+## Repasuhin at Sariling Pag-aaral
 
-**Takdang Aralin Na Dapat Ipasang [MM/YY]**: [Pangalan ng Takdang Aralin](assignment.md)
+**Takdang Aralin Kailangang Isumite [MM/YY]**: [Pangalan ng Takdang Aralin](assignment.md)
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Paalala**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na may kapangyarihang sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot para sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

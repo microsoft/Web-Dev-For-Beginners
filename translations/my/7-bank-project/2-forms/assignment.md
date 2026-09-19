@@ -133,7 +133,6 @@
 | **User Experience** | Intuitive, professional interface ကို ဖန်တီးပြီး usability နှင့် visual appeal ကောင်းမွန်သည် | navigation ရှင်းလင်းပြီး ဖတ်ရှုနိုင်သော content ဖြင့် user experience ကောင်းမွန်သည် | usability အခြေခံပြီး UX အဆင့်မြှင့်တင်မှုများ လိုအပ်သည် | usability မကောင်း၊ navigation သို့မဟုတ် ဖတ်ရှုရန် အခက်အခဲရှိသည် |
 | **Technical Implementation** | ခေတ်မီ CSS နည်းလမ်းများ၊ စီမံခန့်ခွဲမှုကောင်းမွန်သော code structure နှင့် best practices ကို လိုက်နာသည် | CSS ကို ထိရောက်စွာ အကောင်အထည်ဖော်ပြီး စီမံခန့်ခွဲမှုကောင်းမွန်သည် | CSS သေချာစွာ အလုပ်လုပ်သော်လည်း စီမံခန့်ခွဲမှု သို့မဟုတ် ခေတ်မီနည်းလမ်းများ မပါဝင်နိုင် | CSS အကောင်အထည်ဖော်မှုမကောင်း၊ နည်းပညာပြဿနာများ သို့မဟုတ် browser compatibility ပြဿနာများ |
 | **Responsive Design** | Fully responsive design ကို ဖန်တီးပြီး စက်ပစ္စည်းအရွယ်အစားအားလုံးတွင် အလှဆင်မှုကောင်းမွန်သည် | responsive behavior ကောင်းမွန်ပြီး screen size အချို့တွင် အနည်းငယ်ပြဿနာရှိသည် | responsive implementation အခြေခံပြီး layout ပြဿနာများ ရှိသည် | responsive မရှိ သို့မဟုတ် mobile devices တွင် ပြဿနာများ |
-
 | **Accessibility** | WCAG guidelines ကို ဖြည့်ဆည်းပြီး keyboard navigation နှင့် screen reader support ကောင်းမွန်သည် | accessibility practices ကောင်းမွန်ပြီး contrast နှင့် focus indicators သေချာသည် | accessibility အခြေခံအချက်များကို စဉ်းစားထားပြီး အချို့အချက်များ ပျောက်နေသည် | accessibility မကောင်း၊ အခက်အခဲရှိသော users များအတွက် အသုံးမဝင်နိုင် |
 
 ## တင်သွင်းရန် လမ်းညွှန်ချက်များ

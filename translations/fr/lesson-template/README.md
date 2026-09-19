@@ -1,30 +1,48 @@
-# [Sujet de la leçon]
+# Sujet de la leçon
 
-![Intégrer une vidéo ici](../../../lesson-template/video-url)
+## 🎥 Vidéo
 
-## [Quiz avant le cours](../../../lesson-template/quiz-url)
-
-[Décrire ce que nous allons apprendre]
-
-### Introduction
-
-Décrire ce qui sera abordé
-
-> Notes
-
-### Prérequis
-
-Quelles étapes devraient avoir été couvertes avant cette leçon ?
-
-### Préparation
-
-Étapes préparatoires pour commencer cette leçon
+> Ajoutez une vidéo intégrée ou un lien vers la leçon ici.
 
 ---
 
-[Parcourir le contenu par blocs]
+## Quiz pré-lecture
 
-## [Sujet 1]
+> Ajoutez un lien vers un quiz ici lorsqu'il est disponible.
+
+---
+
+Fournissez un aperçu bref de ce que les étudiants apprendront dans cette leçon.
+
+---
+
+### Introduction
+
+Fournissez une courte introduction décrivant ce qui sera couvert dans cette leçon.
+
+> Notes
+
+---
+
+### Prérequis
+
+Listez les concepts ou sujets que les étudiants doivent déjà connaître avant de commencer cette leçon.
+
+---
+
+### Préparation
+
+Listez les étapes d'installation ou les outils requis avant de commencer la leçon.
+
+---
+
+### Contenu
+
+Déroulez le contenu de la leçon en sections structurées.
+
+---
+
+## Sujet 1
 
 ### Tâche :
 
@@ -34,21 +52,28 @@ Travaillez ensemble pour améliorer progressivement votre base de code afin de c
 code blocks
 ```
 
-✅ Vérification des connaissances - utilisez ce moment pour élargir les connaissances des étudiants avec des questions ouvertes
+✅ Vérification des connaissances
+Profitez de ce moment pour tester les connaissances des étudiants avec des questions ouvertes.
 
-## [Sujet 2]
+## Sujet 2
+## Sujet 3
 
-## [Sujet 3]
+🚀 Défi
+Ajoutez un défi collaboratif pour que les étudiants améliorent le projet.
 
-🚀 Défi : Ajoutez un défi pour que les étudiants travaillent ensemble en classe afin d'améliorer le projet
+Optionnel : Ajoutez une capture d'écran de l'interface utilisateur de la leçon terminée si cela est pertinent.
 
-Optionnel : ajoutez une capture d'écran de l'interface utilisateur de la leçon terminée si cela est pertinent
+## Quiz post-lecture
 
-## [Quiz après le cours](../../../lesson-template/quiz-url)
+Ajoutez un lien vers un quiz ici après avoir terminé la leçon.
 
-## Révision & Étude personnelle
+## Revue & Auto-apprentissage
 
 **Devoir à rendre [MM/AA]** : [Nom du devoir](assignment.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction humaine professionnelle. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+Ce document a été traduit à l’aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d’assurer l’exactitude, veuillez noter que les traductions automatiques peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d’origine doit être considéré comme la source faisant foi. Pour les informations critiques, une traduction professionnelle réalisée par un humain est recommandée. Nous déclinons toute responsabilité en cas de malentendus ou d’interprétations erronées résultant de l’utilisation de cette traduction.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

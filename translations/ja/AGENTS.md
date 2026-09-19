@@ -2,36 +2,36 @@
 
 ## プロジェクト概要
 
-これは初心者にウェブ開発の基礎を教えるための教育用カリキュラムリポジトリです。カリキュラムはMicrosoft Cloud Advocatesによって開発された包括的な12週間のコースで、JavaScript、CSS、HTMLをカバーする24の実践的なレッスンが含まれています。
+初心者にウェブ開発の基礎を教えるための教育用カリキュラムリポジトリです。このカリキュラムはMicrosoft Cloud Advocatesによって開発された包括的な12週間コースで、JavaScript、CSS、HTMLをカバーする24の実践的なレッスンで構成されています。
 
-### 主な構成要素
+### 主要コンポーネント
 
-- <strong>教育コンテンツ</strong>: プロジェクトベースのモジュールに整理された24の構造化レッスン
-- <strong>実践プロジェクト</strong>: テラリウム、タイピングゲーム、ブラウザ拡張機能、スペースゲーム、銀行アプリ、コードエディター、AIチャットアシスタント
-- <strong>インタラクティブなクイズ</strong>: 各3問の48のクイズ（レッスン前後の評価）
-- <strong>多言語サポート</strong>: GitHub Actionsによる50以上の言語への自動翻訳
-- <strong>技術スタック</strong>: HTML、CSS、JavaScript、Vue.js 3、Vite、Node.js、Express、Python（AIプロジェクト向け）
+- <strong>教育コンテンツ</strong>: プロジェクトベースのモジュールに整理された24の構造化されたレッスン
+- <strong>実践プロジェクト</strong>: テラリウム、タイピングゲーム、ブラウザ拡張、スペースゲーム、バンキングアプリ、コードエディター、AIチャットアシスタント
+- <strong>インタラクティブクイズ</strong>: 各3問の48クイズ（レッスン前後の評価用）
+- <strong>多言語対応</strong>: GitHub Actionsによる50以上の言語への自動翻訳
+- <strong>技術スタック</strong>: HTML、CSS、JavaScript、Vue.js 3、Vite、Node.js、Express、Python（AIプロジェクト用）
 
 ### アーキテクチャ
 
-- レッスンベースの構造を持つ教育用リポジトリ
-- 各レッスンフォルダーにREADME、コード例、解答が含まれる
-- 独立したプロジェクトは別のディレクトリに配置（quiz-app、各レッスンのプロジェクト）
-- GitHub Actions（co-op-translator）を利用した翻訳システム
-- Docsifyによるドキュメンテーション配信およびPDF形式で利用可能
+- レッスンベース構造を持つ教育リポジトリ
+- 各レッスンフォルダーにREADME、コード例、ソリューションを含む
+- 独立したプロジェクトは別ディレクトリに配置（quiz-app、各種レッスンプロジェクト）
+- GitHub Actions（co-op-translator）を使った翻訳システム
+- Docsifyでドキュメント提供およびPDF形式も利用可能
 
 ## セットアップコマンド
 
-このリポジトリは主に教育用コンテンツの利用を目的としています。特定のプロジェクトで作業する場合:
+このリポジトリは主に教育コンテンツの消費を目的としています。特定のプロジェクトを扱う場合：
 
-### メインリポジトリのセットアップ
+### メインリポジトリセットアップ
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### クイズアプリセットアップ (Vue 3 + Vite)
+### Quiz App セットアップ（Vue 3 + Vite）
 
 ```bash
 cd quiz-app
@@ -41,17 +41,17 @@ npm run build      # 本番用にビルドする
 npm run lint       # ESLintを実行する
 ```
 
-### 銀行プロジェクトAPI (Node.js + Express)
+### 銀行プロジェクトAPI（Node.js + Express）
 
 ```bash
 cd 7-bank-project/api
 npm install
 npm start          # APIサーバーを起動する
-npm run lint       # ESLint を実行する
-npm run format     # Prettier で整形する
+npm run lint       # ESLintを実行する
+npm run format     # Prettierでフォーマットする
 ```
 
-### ブラウザ拡張機能プロジェクト
+### ブラウザ拡張プロジェクト
 
 ```bash
 cd 5-browser-extension/solution
@@ -64,10 +64,10 @@ npm install
 ```bash
 cd 6-space-game/solution
 npm install
-# ブラウザーでindex.htmlを開くか、Live Serverを使用してください
+# ブラウザでindex.htmlを開くか、Live Serverを使用してください
 ```
 
-### チャットプロジェクト (Pythonバックエンド)
+### チャットプロジェクト（Pythonバックエンド）
 
 ```bash
 cd 9-chat-project/solution/backend/python
@@ -80,63 +80,63 @@ python api.py
 
 ### コンテンツ寄稿者向け
 
-1. リポジトリをGitHubアカウントに<strong>フォーク</strong>
+1. GitHubアカウントにリポジトリを<strong>フォーク</strong>
 2. フォークをローカルに<strong>クローン</strong>
 3. 変更用に<strong>新しいブランチを作成</strong>
-4. レッスン内容やコード例の変更を行う
-5. 関連プロジェクトディレクトリでコード変更をテスト
-6. コントリビューションガイドラインに従いプルリクエストを提出
+4. レッスン内容やコード例を編集
+5. 関連するプロジェクトディレクトリでコード変更をテスト
+6. 貢献ガイドラインに従ってプルリクエストを提出
 
 ### 学習者向け
 
 1. リポジトリをフォークまたはクローン
-2. レッスンディレクトリを順に移動
+2. レッスンディレクトリに順に移動
 3. 各レッスンのREADMEを読む
 4. https://ff-quizzes.netlify.app/web/ でレッスン前クイズを完了
-5. レッスンフォルダ内のコード例を進める
-6. 課題やチャレンジを完了する
-7. レッスン後クイズを受ける
+5. レッスンフォルダー内のコード例を進める
+6. 課題やチャレンジを完了
+7. レッスン後クイズを受験
 
 ### ライブ開発
 
-- <strong>ドキュメント</strong>: ルートで `docsify serve` 実行（ポート3000）
-- <strong>クイズアプリ</strong>: quiz-appディレクトリで `npm run dev` 実行
-- <strong>プロジェクト</strong>: HTMLプロジェクトはVS Code Live Server拡張を使用
-- **APIプロジェクト**: 対応するAPIディレクトリで `npm start` 実行
+- <strong>ドキュメント</strong>: ルートで `docsify serve` （ポート3000）
+- **Quiz App**: quiz-appディレクトリで `npm run dev`
+- <strong>プロジェクト</strong>: HTMLプロジェクトにVS Code Live Server拡張を使用
+- **APIプロジェクト**: 各APIディレクトリで `npm start`
 
 ## テスト手順
 
-### クイズアプリテスト
+### Quiz App テスト
 
 ```bash
 cd quiz-app
 npm run lint       # コードスタイルの問題をチェックする
-npm run build      # ビルドが成功することを確認する
+npm run build      # ビルドが成功するか確認する
 ```
 
 ### 銀行APIテスト
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # コーディングスタイルの問題を確認する
+npm run lint       # コードスタイルの問題をチェックする
 node server.js     # サーバーがエラーなく起動することを確認する
 ```
 
 ### 一般的なテストアプローチ
 
-- このリポジトリは包括的な自動テストを備えていない教育用
-- 手動テストは以下に注力:
-  - コード例がエラーなく動作すること
-  - ドキュメント内リンクが動作すること
-  - プロジェクトビルドが成功すること
-  - 例がベストプラクティスに沿っていること
+- 包括的な自動テストはない教育用リポジトリ
+- 手動テストは主に以下に焦点を当てる：
+  - コード例がエラーなく実行されること
+  - ドキュメント内リンクが正しく機能すること
+  - プロジェクトのビルドが成功すること
+  - 例がベストプラクティスに従っていること
 
-### 提出前チェックポイント
+### 提出前チェック
 
 - package.jsonがあるディレクトリで `npm run lint` を実行
 - マークダウンリンクが有効か確認
 - ブラウザやNode.jsでコード例をテスト
-- 翻訳が正しい構造を維持していることを確認
+- 翻訳が構造を保っていることをチェック
 
 ## コードスタイルガイドライン
 
@@ -144,139 +144,139 @@ node server.js     # サーバーがエラーなく起動することを確認�
 
 - モダンなES6+構文を使用
 - プロジェクト提供の標準ESLint設定に従う
-- 教育的明確さを考慮した意味のある変数・関数名を使用
+- 教育的な明確さのため意味のある変数・関数名を使う
 - 学習者向けに概念を説明するコメントを追加
-- Prettier設定がある場合は整形使用
+- 設定されている場合はPrettierで整形
 
 ### HTML/CSS
 
 - セマンティックなHTML5要素
-- レスポンシブデザイン原則の適用
-- 明確なクラス命名規則
-- CSS手法を説明するコメントを学習者向けに追加
+- レスポンシブデザインの原則
+- 明瞭なクラス名命名規則
+- 学習者向けにCSS技術を説明するコメント
 
 ### Python
 
-- PEP 8スタイルガイドに従う
-- 分かりやすい教育的コード例
-- 学習に役立つ場合はタイプヒントを使用
+- PEP 8スタイルガイドライン
+- 明確で教育的なコード例
+- 学習補助のための型ヒントを適宜使用
 
-### Markdownドキュメンテーション
+### Markdownドキュメント
 
 - 明確な見出し階層
-- 言語指定付きコードブロック
+- 言語指定のコードブロック
 - 追加リソースへのリンク
-- `images/`フォルダ内のスクリーンショット・画像
-- アクセシビリティのための画像のaltテキスト
+- `images/`ディレクトリ内のスクリーンショットと画像
+- 画像のアクセシビリティのための代替テキスト
 
 ### ファイル構成
 
-- レッスンは連番（1-getting-started-lessons、2-js-basicsなど）
-- 各プロジェクトは `solution/`、場合によっては `start/` や `your-work/` ディレクトリを持つ
-- 画像はレッスンごとの `images/` フォルダ内に格納
-- 翻訳ファイルは `translations/{language-code}/` フォルダ構造
+- レッスンは連番付き（1-getting-started-lessons、2-js-basicsなど）
+- 各プロジェクトに `solution/` と多くは `start/` や `your-work/` ディレクトリ
+- レッスン専用 `images/` フォルダに画像を保存
+- 翻訳は `translations/{language-code}/` 構造で管理
 
 ## ビルドとデプロイ
 
-### クイズアプリのデプロイ (Azure Static Web Apps)
+### Quiz App デプロイメント（Azure Static Web Apps）
 
-quiz-appはAzure Static Web Apps用に設定されています:
+quiz-appはAzure Static Web Apps向けに構成済み：
 
 ```bash
 cd quiz-app
-npm run build      # dist/フォルダーを作成します
-# mainブランチへのプッシュ時にGitHub Actionsワークフローを介してデプロイします
+npm run build      # dist/ フォルダーを作成します
+# main ブランチへのプッシュ時に GitHub Actions ワークフローを通じてデプロイします
 ```
 
-Azure Static Web Appsの設定:
-- <strong>アプリ場所</strong>: `/quiz-app`
-- <strong>出力場所</strong>: `dist`
+Azure Static Web Apps設定：
+- <strong>アプリ位置</strong>: `/quiz-app`
+- <strong>出力先</strong>: `dist`
 - <strong>ワークフロー</strong>: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
 ### ドキュメントPDF生成
 
 ```bash
-npm install                    # docsify-to-pdf をインストールする
-npm run convert               # docs から PDF を生成する
+npm install                    # docsify-to-pdfをインストールする
+npm run convert               # docsからPDFを生成する
 ```
 
 ### Docsifyドキュメント
 
 ```bash
-npm install -g docsify-cli    # Docsify をグローバルにインストールする
-docsify serve                 # localhost:3000 で提供する
+npm install -g docsify-cli    # Docsifyをグローバルにインストールする
+docsify serve                 # localhost:3000でサーブする
 ```
 
-### プロジェクト固有のビルド
+### プロジェクト別ビルド
 
-各プロジェクトディレクトリは独自のビルドプロセスを持つ場合がある:
-- Vueプロジェクト: `npm run build` で本番バンドル作成
-- 静的プロジェクト: ビルド不要でファイルを直接配信
+各プロジェクトディレクトリに独自のビルドプロセスがある場合も：
+- Vueプロジェクトは `npm run build` で本番バンドルを作成
+- 静的プロジェクトはビルド不要で直接ファイル提供
 
 ## プルリクエストガイドライン
 
-### タイトルフォーマット
+### タイトル形式
 
-明確で説明的なタイトルを使用:
-- `[Quiz-app] レッスンXの新しいクイズを追加`
+変更箇所を示す明確で説明的なタイトルを使用：
+- `[Quiz-app] レッスンX用の新クイズ追加`
 - `[Lesson-3] テラリウムプロジェクトの誤字修正`
-- `[Translation] レッスン5のスペイン語翻訳を追加`
-- `[Docs] セットアップ手順を更新`
+- `[Translation] レッスン5のスペイン語翻訳追加`
+- `[Docs] セットアップ手順の更新`
 
 ### 必須チェック
 
-PR提出前に:
+PR提出前に：
 
-1. <strong>コード品質</strong>:
+1. <strong>コード品質</strong>：
    - 影響を受けるプロジェクトディレクトリで `npm run lint` 実行
-   - すべてのエラー・警告を修正
+   - すべてのリンティングエラーと警告を修正
 
-2. <strong>ビルド検証</strong>:
-   - 該当すれば `npm run build` 実行
-   - ビルドエラーなしを確認
+2. <strong>ビルド確認</strong>：
+   - 該当する場合は `npm run build` を実行
+   - ビルドエラーがないことを確認
 
-3. <strong>リンク検証</strong>:
+3. <strong>リンク検証</strong>：
    - すべてのマークダウンリンクをテスト
-   - 画像参照が有効か確認
+   - 画像参照が機能するか確認
 
-4. <strong>コンテンツレビュー</strong>:
-   - スペル・文法を校正
-   - コード例が正しく教育的か確認
-   - 翻訳が意味を維持しているか検証
+4. <strong>コンテンツレビュー</strong>：
+   - スペルと文法の校正
+   - コード例が正しく教育的であることを確認
+   - 翻訳が元の意味を維持しているか確認
 
-### コントリビューション要件
+### 貢献条件
 
-- Microsoft CLAに同意（初回PRで自動チェック）
-- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)に従う
-- 詳細は[CONTRIBUTING.md](./CONTRIBUTING.md)参照
-- PR説明に該当する場合はイシュー番号を記載
+- Microsoft CLAに同意（最初のPRで自動チェック）
+- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)を遵守
+- 詳細は[CONTRIBUTING.md](./CONTRIBUTING.md)を参照
+- PR説明に関連Issue番号を記載（該当する場合）
 
 ### レビュー手順
 
-- PRはメンテナーとコミュニティがレビュー
-- 教育的明確さを最優先
-- コード例は最新のベストプラクティスに従うこと
-- 翻訳は正確性と文化的適切性をレビュー
+- PRはメンテナとコミュニティがレビュー
+- 教育上の明快さを優先
+- コード例は現行ベストプラクティスに準拠
+- 翻訳は正確さと文化適合性をチェック
 
 ## 翻訳システム
 
 ### 自動翻訳
 
-- GitHub Actionsのco-op-translatorワークフローを使用
+- GitHub Actionsとco-op-translatorワークフローを使用
 - 50以上の言語に自動翻訳
-- ソースファイルはメインディレクトリ内
-- 翻訳ファイルは `translations/{language-code}/` に格納
+- ソースファイルはメインディレクトリ
+- 翻訳ファイルは `translations/{language-code}/` に配置
 
-### 手動での翻訳改善追加
+### 手動翻訳改善の追加
 
-1. `translations/{language-code}/` 内のファイルを特定
-2. 構造を維持しつつ改善を行う
-3. コード例の機能を維持
-4. ローカライズされたクイズ内容を確認
+1. `translations/{language-code}/` で対象ファイルを探す
+2. 構造を保ちながら改善を実施
+3. コード例が機能することを確認
+4. ローカライズされたクイズ内容もテスト
 
 ### 翻訳メタデータ
 
-翻訳ファイルには以下のようなメタデータヘッダーが含まれます:
+翻訳ファイルにはメタデータヘッダーが含まれる：
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -293,88 +293,88 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### よくある問題
 
-<strong>クイズアプリが起動しない</strong>:
-- Node.jsバージョンを確認（v14+推奨）
-- `node_modules` と `package-lock.json` を削除し `npm install` 実行
-- ポート競合を確認（デフォルト: Viteはポート5173）
+**Quizアプリが起動しない：**
+- Node.jsバージョンを確認（v14以上推奨）
+- `node_modules` と `package-lock.json` を削除後、再度 `npm install`
+- ポート競合をチェック（既定はViteの5173ポート）
 
-**APIサーバーが起動しない**:
-- Node.jsのバージョン確認（node >=10必要）
-- ポートがすでに使われていないかチェック
-- 依存関係がすべて `npm install` でインストールされているか確認
+**APIサーバーが起動しない：**
+- Node.jsバージョンが最低要求（node >=10）を満たしているか
+- ポートが既に使われていないか確認
+- すべての依存関係を `npm install` でインストール
 
-<strong>ブラウザ拡張機能が読み込まれない</strong>:
-- manifest.jsonのフォーマットが正しいか確認
-- ブラウザのコンソールでエラーをチェック
-- ブラウザ別の拡張機能インストール手順に従う
+**ブラウザ拡張が読み込まれない：**
+- manifest.jsonのフォーマットを確認
+- ブラウザコンソールのエラーをチェック
+- 各ブラウザの拡張インストール手順に従う
 
-**Pythonチャットプロジェクトの問題**:
+**Pythonチャットプロジェクトの問題：**
 - OpenAIパッケージがインストールされているか: `pip install openai`
 - GITHUB_TOKEN環境変数が設定されているか
-- GitHub Modelsアクセス権限を確認
+- GitHub Modelsのアクセス権を確認
 
-**Docsifyがドキュメントを配信しない**:
-- docsify-cliをグローバルにインストール: `npm install -g docsify-cli`
+**Docsifyがドキュメントを提供しない：**
+- docsify-cliをグローバルインストール: `npm install -g docsify-cli`
 - リポジトリルートから実行
 - `docs/_sidebar.md` が存在するか確認
 
-### 開発環境ヒント
+### 開発環境のヒント
 
-- HTMLプロジェクトにはVS CodeのLive Server拡張を使用
-- ESLintとPrettierの拡張をインストールしてコード整形を統一
-- JavaScriptのデバッグにはブラウザの開発者ツールを使用
-- VueプロジェクトにはVue DevToolsブラウザ拡張を導入
+- HTMLプロジェクトはVS CodeのLive Server拡張を使用
+- 一貫したフォーマットのためESLintとPrettier拡張を導入
+- JavaScriptのデバッグにはブラウザの開発者ツール
+- VueプロジェクトにはVue DevToolsブラウザ拡張を使用
 
-### パフォーマンスの考慮点
+### パフォーマンス考慮事項
 
-- 翻訳ファイルは多数（50以上の言語）あり、フルクローンは大きい
+- 翻訳ファイル多数（50＋言語）のため完全クローンは大容量
 - コンテンツ作業のみなら浅いクローンを推奨: `git clone --depth 1`
-- 英語コンテンツ作業時は翻訳ファイルを検索対象から除外
-- 初回実行はビルドや依存インストールのため遅い可能性あり
+- 英語コンテンツ作業時は翻訳ファイルを検索から除外
+- 初回実行時のビルドプロセスは遅いことがある（npm install、Viteビルド）
 
 ## セキュリティ考慮事項
 
 ### 環境変数
 
 - APIキーはリポジトリにコミットしない
-- `.env`ファイルを利用（`.gitignore`に含まれている）
+- `.env`ファイルを使用（すでに`.gitignore`に登録済み）
 - 必要な環境変数は各プロジェクトのREADMEに記載
 
 ### Pythonプロジェクト
 
-- 仮想環境の利用推奨: `python -m venv venv`
+- 仮想環境を使用: `python -m venv venv`
 - 依存関係は常に最新に保つ
-- GitHubトークンは必要最小限の権限で
+- GitHubトークンは必要最低限の権限を設定
 
 ### GitHub Modelsアクセス
 
-- GitHub Models用の個人アクセストークン（PAT）が必要
+- GitHub ModelsにはPersonal Access Tokens (PAT)が必要
 - トークンは環境変数として管理
-- トークンや認証情報をコミットしない
+- トークンや資格情報は決してコミットしない
 
-## 追加ノート
+## 追加の注意事項
 
 ### 対象ユーザー
 
-- ウェブ開発の完全初心者
-- 学生や自己学習者
-- 教室でカリキュラムを使用する教師
-- コンテンツはアクセシビリティと段階的スキル習得を目標
+- ウェブ開発初心者全般
+- 学習者や独学者
+- 教室でカリキュラムを使う先生方
+- アクセシビリティと段階的スキル構築を意図したコンテンツ
 
-### 教育的理念
+### 教育方針
 
-- プロジェクトベース学習
+- プロジェクトベース学習アプローチ
 - 頻繁な知識確認（クイズ）
-- ハンズオンコーディング演習
-- 実世界の応用例
+- 実践的なコーディング演習
+- 現実世界の応用例
 - フレームワークより基礎重視
 
-### リポジトリのメンテナンス
+### リポジトリメンテナンス
 
-- 活発な学習者と寄稿者コミュニティ
-- 依存関係とコンテンツの定期的な更新
-- イシューや議論はメンテナーが監視
-- GitHub Actionsで翻訳更新を自動化
+- 活発な学習者・貢献者コミュニティ
+- 定期的な依存関係・コンテンツの更新
+- メンテナによる課題管理と議論
+- GitHub Actionsによる自動翻訳更新
 
 ### 関連リソース
 
@@ -383,26 +383,26 @@ CO_OP_TRANSLATOR_METADATA:
 - 学習者向けに [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) 推奨
 - 追加コース: ジェネレーティブAI、データサイエンス、ML、IoTカリキュラム
 
-### 個別プロジェクトでの作業
+### 特定プロジェクトでの作業
 
-各プロジェクトの詳細手順はREADMEを参照:
-- `quiz-app/README.md` - Vue 3クイズアプリケーション
-- `7-bank-project/README.md` - 認証付き銀行アプリケーション
+各プロジェクトの詳細指示はそれぞれのREADMEを参照：
+- `quiz-app/README.md` - Vue 3クイズアプリ
+- `7-bank-project/README.md` - 認証付きバンキングアプリ
 - `5-browser-extension/README.md` - ブラウザ拡張開発
 - `6-space-game/README.md` - Canvasベースゲーム開発
-- `9-chat-project/README.md` - AIチャットアシスタントプロジェクト
+- `9-chat-project/README.md` - AIチャットアシスタント
 
 ### モノレポ構造
 
-厳密なモノレポではありませんが複数の独立プロジェクトを含む:
+伝統的なモノレポではないが複数独立プロジェクトを含む：
 - 各レッスンは自己完結型
-- プロジェクトは依存関係を共有しない
-- 個別プロジェクトに影響を与えず作業可能
-- 全カリキュラム体験にはリポジトリ全体をクローン
+- プロジェクト間で依存関係共有なし
+- 個別プロジェクトに影響せず作業可能
+- フルカリキュラム体験のためにリポジトリ全体をクローン推奨
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**:  
-本書類はAI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確を期していますが、自動翻訳には誤りや不正確な部分が含まれる場合があります。原文の母国語版が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の使用により生じた誤解や誤訳に関して当方は一切の責任を負いません。
+本書類は AI 翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を期していますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知おきください。原文の原言語版が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じる誤解や誤訳については当方は一切責任を負いません。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,54 +1,79 @@
-# [Tópico da Aula]
+# Tópico da Lição
 
-![Incorporar um vídeo aqui](../../../lesson-template/video-url)
+## 🎥 Vídeo
 
-## [Questionário pré-aula](../../../lesson-template/quiz-url)
-
-[Descreva o que iremos aprender]
-
-### Introdução
-
-Descreva o que será abordado
-
-> Notas
-
-### Pré-requisitos
-
-Que passos devem ter sido concluídos antes desta aula?
-
-### Preparação
-
-Passos preparatórios para começar esta aula
+> Adicione aqui um vídeo incorporado ou um link da lição.
 
 ---
 
-[Avance pelo conteúdo em blocos]
+## Questionário pré-aula
 
-## [Tópico 1]
+> Adicione um link para o questionário aqui, quando disponível.
+
+---
+
+Forneça uma breve visão geral do que os estudantes irão aprender nesta lição.
+
+---
+
+### Introdução
+
+Forneça uma curta introdução descrevendo o que será abordado nesta lição.
+
+> Notas
+
+---
+
+### Pré-requisitos
+
+Liste os conceitos ou tópicos com os quais os estudantes deverão estar familiarizados antes de iniciar esta lição.
+
+---
+
+### Preparação
+
+Liste quaisquer passos de configuração ou ferramentas necessárias antes de iniciar a lição.
+
+---
+
+### Conteúdo
+
+Percorra o conteúdo da lição em secções estruturadas.
+
+---
+
+## Tópico 1
 
 ### Tarefa:
 
-Trabalhem juntos para melhorar progressivamente a vossa base de código e construir o projeto com código partilhado:
+Trabalhem juntos para melhorar progressivamente a base do código de forma a construir o projeto com código partilhado:
 
 ```html
 code blocks
 ```
 
-✅ Verificação de Conhecimento - aproveite este momento para expandir o conhecimento dos alunos com perguntas abertas
+✅ Verificação de Conhecimento
+Aproveite este momento para expandir o conhecimento dos estudantes com perguntas abertas.
 
-## [Tópico 2]
+## Tópico 2
+## Tópico 3
 
-## [Tópico 3]
+🚀 Desafio
+Adicione um desafio colaborativo para os estudantes melhorarem o projeto.
 
-🚀 Desafio: Adicione um desafio para os alunos trabalharem colaborativamente em aula para melhorar o projeto
+Opcional: Adicione uma captura de ecrã da interface do utilizador da lição concluída, se apropriado.
 
-Opcional: adicione uma captura de ecrã da interface do utilizador da aula concluída, se apropriado
+## Questionário pós-aula
 
-## [Questionário pós-aula](../../../lesson-template/quiz-url)
+Adicione um link para o questionário aqui após a conclusão da lição.
 
-## Revisão e Estudo Autónomo
+## Revisão & Autoestudo
 
-**Entrega do Trabalho [MM/AA]**: [Nome do Trabalho](assignment.md)
+**Entrega da Tarefa [MM/AA]**: [Nome da Tarefa](assignment.md)
 
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original no seu idioma nativo deve ser considerado a fonte autoritativa. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso Legal**:
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, tenha em atenção que as traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,54 +1,79 @@
-# [Tema de la lección]
+# Tema de la Lección
 
-![Incrustar un video aquí](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Cuestionario previo a la clase](../../../lesson-template/quiz-url)
-
-[Describe lo que aprenderemos]
-
-### Introducción
-
-Describe lo que se cubrirá
-
-> Notas
-
-### Requisitos previos
-
-¿Qué pasos deberían haberse completado antes de esta lección?
-
-### Preparación
-
-Pasos preparatorios para comenzar esta lección
+> Agrega un video incrustado o enlace de la lección aquí.
 
 ---
 
-[Avanza por el contenido en bloques]
+## Cuestionario previo a la clase
 
-## [Tema 1]
+> Agrega un enlace al cuestionario aquí cuando esté disponible.
+
+---
+
+Proporciona una breve visión general de lo que los estudiantes aprenderán en esta lección.
+
+---
+
+### Introducción
+
+Proporciona una breve introducción que describa lo que se cubrirá en esta lección.
+
+> Notas
+
+---
+
+### Requisitos previos
+
+Enumera los conceptos o temas que los estudiantes ya deberían conocer antes de comenzar esta lección.
+
+---
+
+### Preparación
+
+Enumera los pasos de configuración o herramientas necesarias antes de comenzar la lección.
+
+---
+
+### Contenido
+
+Avanza a través del contenido de la lección en secciones estructuradas.
+
+---
+
+## Tema 1
 
 ### Tarea:
 
-Trabajen juntos para mejorar progresivamente su base de código y construir el proyecto con código compartido:
+Trabajen juntos para mejorar progresivamente su base de código para construir el proyecto con código compartido:
 
 ```html
 code blocks
 ```
 
-✅ Verificación de conocimiento: aprovecha este momento para ampliar el conocimiento de los estudiantes con preguntas abiertas
+✅ Verificación de conocimiento
+Aprovecha este momento para desafiar el conocimiento de los estudiantes con preguntas abiertas.
 
-## [Tema 2]
+## Tema 2
+## Tema 3
 
-## [Tema 3]
+🚀 Desafío
+Agrega un desafío colaborativo para que los estudiantes mejoren el proyecto.
 
-🚀 Desafío: Agrega un desafío para que los estudiantes trabajen colaborativamente en clase y mejoren el proyecto
+Opcional: agrega una captura de pantalla de la interfaz de usuario completa de la lección si es apropiado.
 
-Opcional: agrega una captura de pantalla de la interfaz de usuario de la lección completada si es apropiado
+## Cuestionario posterior a la clase
 
-## [Cuestionario posterior a la clase](../../../lesson-template/quiz-url)
+Agrega un enlace al cuestionario aquí después de completar la lección.
 
-## Revisión y estudio autónomo
+## Revisión y Estudio Personal
 
-**Entrega de tarea [MM/YY]**: [Nombre de la tarea](assignment.md)
+**Entrega de asignación [MM/AA]**: [Nombre de la asignación](assignment.md)
 
-**Descargo de responsabilidad**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Si bien nos esforzamos por lograr precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o imprecisiones. El documento original en su idioma nativo debe considerarse como la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que puedan surgir del uso de esta traducción.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso legal**:  
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables por malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
