@@ -181,7 +181,10 @@ router.delete('/accounts/:user/transactions/:id', (req, res) => {
   }
 
   // Remove transaction
-  account.transactions.splice(transactionIndex, 1);
+  const [transaction] = account.transactions.splice(transactionIndex, 1);
+
+  // Reverse the transaction's effect on the account balance
+  account.balance -= transaction.amount;
 
   res.sendStatus(204);
 });
@@ -191,7 +194,11 @@ router.delete('/accounts/:user/transactions/:id', (req, res) => {
 // Add 'api` prefix to all routes
 app.use(apiPrefix, router);
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+// Start the server when launched directly
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+  });
+}
+
+module.exports = app;
