@@ -6,6 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "test": "node server.test.js",
     "lint": "eslint",
     "format": "prettier --single-quote --write *.js"
   },
