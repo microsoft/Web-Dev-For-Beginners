@@ -951,7 +951,7 @@ Ecco un esempio di come potrebbe apparire la pagina di login finale dopo un po' 
 
 ## Revisione e studio autonomo
 
-Gli sviluppatori sono diventati molto creativi nella costruzione dei moduli, specialmente per quanto riguarda le strategie di validazione. Scopri diversi flussi di moduli dando un'occhiata a [CodePen](https://codepen.com); riesci a trovare moduli interessanti e ispiratori?
+Gli sviluppatori sono diventati molto creativi nella costruzione dei moduli, specialmente per quanto riguarda le strategie di validazione. Scopri diversi flussi di moduli dando un'occhiata a [CodePen](https://codepen.io/); riesci a trovare moduli interessanti e ispiratori?
 
 ## Compito
 

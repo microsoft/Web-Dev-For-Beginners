@@ -942,7 +942,7 @@ Hapa kuna mfano wa jinsi ukurasa wa kuingia unaweza kuonekana baada ya kubadilis
 
 ## Mapitio & Kujifunza Binafsi
 
-Waendelezaji wamekuwa wabunifu sana kuhusu juhudi zao za kujenga fomu, hasa kuhusu mikakati ya uthibitishaji. Jifunze kuhusu mito tofauti ya fomu kwa kupitia [CodePen](https://codepen.com); unaweza kupata fomu za kuvutia na zenye msukumo?
+Waendelezaji wamekuwa wabunifu sana kuhusu juhudi zao za kujenga fomu, hasa kuhusu mikakati ya uthibitishaji. Jifunze kuhusu mito tofauti ya fomu kwa kupitia [CodePen](https://codepen.io/); unaweza kupata fomu za kuvutia na zenye msukumo?
 
 ## Kazi ya Nyumbani
 

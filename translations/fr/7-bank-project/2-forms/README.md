@@ -942,7 +942,7 @@ Voici un exemple de l'apparence que peut avoir la page de connexion finale aprè
 
 ## Révision & Auto-apprentissage
 
-Les développeurs ont fait preuve de beaucoup de créativité dans leurs efforts de création de formulaires, notamment en ce qui concerne les stratégies de validation. Découvrez différents flux de formulaires en explorant [CodePen](https://codepen.com) ; pouvez-vous trouver des formulaires intéressants et inspirants ?
+Les développeurs ont fait preuve de beaucoup de créativité dans leurs efforts de création de formulaires, notamment en ce qui concerne les stratégies de validation. Découvrez différents flux de formulaires en explorant [CodePen](https://codepen.io/) ; pouvez-vous trouver des formulaires intéressants et inspirants ?
 
 ## Devoir
 

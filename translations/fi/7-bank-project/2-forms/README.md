@@ -858,7 +858,7 @@ Tässä on esimerkki siitä, miltä lopullinen kirjautumissivu voi näyttää pi
 
 ## Kertaus ja itseopiskelu
 
-Kehittäjät ovat olleet erittäin luovia lomakkeiden rakentamisessa, erityisesti validointistrategioiden osalta. Tutustu erilaisiin lomakevirtoihin selaamalla [CodePen](https://codepen.com); löydätkö mielenkiintoisia ja inspiroivia lomakkeita?
+Kehittäjät ovat olleet erittäin luovia lomakkeiden rakentamisessa, erityisesti validointistrategioiden osalta. Tutustu erilaisiin lomakevirtoihin selaamalla [CodePen](https://codepen.io/); löydätkö mielenkiintoisia ja inspiroivia lomakkeita?
 
 ## Tehtävä
 

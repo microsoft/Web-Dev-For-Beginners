@@ -937,7 +937,7 @@ Kullanıcı zaten varsa HTML'de bir hata mesajı gösterin.
 
 ## İnceleme ve Kendi Kendine Çalışma
 
-Geliştiriciler, özellikle doğrulama stratejileri konusunda form oluşturma çabalarında oldukça yaratıcı hale geldiler. [CodePen](https://codepen.com) üzerinden farklı form akışlarını inceleyerek bilgi edinin; ilginç ve ilham verici formlar bulabilir misiniz?
+Geliştiriciler, özellikle doğrulama stratejileri konusunda form oluşturma çabalarında oldukça yaratıcı hale geldiler. [CodePen](https://codepen.io/) üzerinden farklı form akışlarını inceleyerek bilgi edinin; ilginç ve ilham verici formlar bulabilir misiniz?
 
 ## Ödev
 

@@ -942,7 +942,7 @@ Her er et eksempel på hvordan den endelige innloggingssiden kan se ut etter lit
 
 ## Gjennomgang & Selvstudium
 
-Utviklere har blitt svært kreative når det gjelder bygging av skjemaer, spesielt rundt valideringsstrategier. Lær om forskjellige skjema flyter ved å bla gjennom [CodePen](https://codepen.com); kan du finne noen interessante og inspirerende skjemaer?
+Utviklere har blitt svært kreative når det gjelder bygging av skjemaer, spesielt rundt valideringsstrategier. Lær om forskjellige skjema flyter ved å bla gjennom [CodePen](https://codepen.io/); kan du finne noen interessante og inspirerende skjemaer?
 
 ## Oppgave
 

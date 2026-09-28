@@ -931,7 +931,7 @@ Narito ang isang halimbawa ng kung ano ang magiging hitsura ng final login page 
 
 ## Review & Pag-aaral sa Sarili
 
-Ang mga developer ay naging napaka-malikhain sa kanilang mga pagsisikap sa paggawa ng form, lalo na sa mga estratehiya sa pag-validate. Alamin ang iba't ibang daloy ng form sa pamamagitan ng pagtingin sa [CodePen](https://codepen.com); makakakita ka ba ng mga kawili-wili at nakaka-inspire na mga form?
+Ang mga developer ay naging napaka-malikhain sa kanilang mga pagsisikap sa paggawa ng form, lalo na sa mga estratehiya sa pag-validate. Alamin ang iba't ibang daloy ng form sa pamamagitan ng pagtingin sa [CodePen](https://codepen.io/); makakakita ka ba ng mga kawili-wili at nakaka-inspire na mga form?
 
 ## Takdang-Aralin
 

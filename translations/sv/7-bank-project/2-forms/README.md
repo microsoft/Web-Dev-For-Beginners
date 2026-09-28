@@ -942,7 +942,7 @@ Här är ett exempel på hur den slutliga inloggningssidan kan se ut efter lite 
 
 ## Genomgång & Självstudier
 
-Utvecklare har blivit mycket kreativa i sina formulärbyggnadsinsatser, särskilt när det gäller valideringsstrategier. Lär dig om olika formulärflöden genom att titta på [CodePen](https://codepen.com); kan du hitta några intressanta och inspirerande formulär?
+Utvecklare har blivit mycket kreativa i sina formulärbyggnadsinsatser, särskilt när det gäller valideringsstrategier. Lär dig om olika formulärflöden genom att titta på [CodePen](https://codepen.io/); kan du hitta några intressanta och inspirerande formulär?
 
 ## Uppgift
 

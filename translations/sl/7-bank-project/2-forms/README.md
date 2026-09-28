@@ -942,7 +942,7 @@ Tukaj je primer, kako lahko končna prijavna stran izgleda po dodani nekaj oblik
 
 ## Pregled in samostojno učenje
 
-Razvijalci so zelo ustvarjalni pri gradnji obrazcev, zlasti glede strategij preverjanja. Spoznajte različne pristope k obrazcem tako, da pregledate [CodePen](https://codepen.com); lahko najdete nekaj zanimivih in navdihujočih obrazcev?
+Razvijalci so zelo ustvarjalni pri gradnji obrazcev, zlasti glede strategij preverjanja. Spoznajte različne pristope k obrazcem tako, da pregledate [CodePen](https://codepen.io/); lahko najdete nekaj zanimivih in navdihujočih obrazcev?
 
 ## Naloga
 

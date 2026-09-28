@@ -951,7 +951,7 @@ Berikut adalah contoh tampilan halaman login setelah ditambahkan beberapa gaya C
 
 ## Tinjauan & Belajar Mandiri
 
-Para pengembang telah menjadi sangat kreatif dalam upaya mereka membangun formulir, terutama terkait strategi validasi. Pelajari berbagai alur formulir dengan melihat melalui [CodePen](https://codepen.com); bisakah Anda menemukan beberapa formulir yang menarik dan menginspirasi?
+Para pengembang telah menjadi sangat kreatif dalam upaya mereka membangun formulir, terutama terkait strategi validasi. Pelajari berbagai alur formulir dengan melihat melalui [CodePen](https://codepen.io/); bisakah Anda menemukan beberapa formulir yang menarik dan menginspirasi?
 
 ## Tugas
 
