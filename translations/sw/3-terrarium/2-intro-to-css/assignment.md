@@ -98,7 +98,7 @@ Kuelewa wakati na jinsi ya kutumia mbinu tofauti za mpangilio ni ujuzi muhimu kw
 ### Miongozo ya Mbinu za Mpangilio
 - 📖 [Mwongozo Kamili wa Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Mwongozo Kamili wa CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Chagua Zana Sahihi](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Chagua Zana Sahihi](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Zana za Upimaji wa Kivinjari
 - 🛠️ [Njia ya Kujibika ya DevTools ya Kivinjari](https://developer.chrome.com/docs/devtools/device-mode/)

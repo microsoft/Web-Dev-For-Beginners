@@ -98,7 +98,7 @@ Compreender quando e como usar diferentes métodos de layout é uma competência
 ### Guias de Métodos de Layout
 - 📖 [Um Guia Completo para Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Um Guia Completo para CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid – Escolhe a Ferramenta Correta](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid – Escolhe a Ferramenta Correta](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Ferramentas de Teste em Navegadores
 - 🛠️ [Modo Responsivo das Ferramentas de Desenvolvimento do Navegador](https://developer.chrome.com/docs/devtools/device-mode/)

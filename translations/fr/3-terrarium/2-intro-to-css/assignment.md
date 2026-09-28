@@ -98,7 +98,7 @@ Comprendre quand et comment utiliser différentes méthodes de mise en page est 
 ### Guides de méthode de mise en page
 - 📖 [Un guide complet de Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Un guide complet de CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Choisir le bon outil](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Choisir le bon outil](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Outils de test navigateurs
 - 🛠️ [Mode responsive des DevTools du navigateur](https://developer.chrome.com/docs/devtools/device-mode/)

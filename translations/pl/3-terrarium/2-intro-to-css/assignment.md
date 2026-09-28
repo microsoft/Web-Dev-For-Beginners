@@ -98,7 +98,7 @@ Zrozumienie kiedy i jak używać różnych metod układu to kluczowa umiejętno�
 ### Przewodniki po metodach układu
 - 📖 [Kompletny przewodnik po Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Kompletny przewodnik po CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - wybierz odpowiednie narzędzie](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - wybierz odpowiednie narzędzie](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Narzędzia do testowania przeglądarek
 - 🛠️ [Tryb responsywny w narzędziach deweloperskich przeglądarki](https://developer.chrome.com/docs/devtools/device-mode/)

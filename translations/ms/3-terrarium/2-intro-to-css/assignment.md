@@ -98,7 +98,7 @@ Memahami bila dan bagaimana menggunakan kaedah susun atur yang berbeza adalah ke
 ### Panduan Kaedah Susun Atur
 - 📖 [Panduan Lengkap Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Panduan Lengkap CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Pilih Alat yang Tepat](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Pilih Alat yang Tepat](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Alat Ujian Pelayar
 - 🛠️ [Mod Responsif DevTools Pelayar](https://developer.chrome.com/docs/devtools/device-mode/)

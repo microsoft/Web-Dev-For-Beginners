@@ -98,7 +98,7 @@
 ### ವಿನ್ಯಾಸ ವಿಧಾನ ಮಾರ್ಗದರ್ಶಿಗಳು
 - 📖 [ಫ್ಲೆಕ್ಸ್ಬಾಕ್ಸ್‌ಗೆ ಸಂಪೂರ್ಣ ಮಾರ್ಗದರ್ಶಿ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS ಗ್ರಿಡ್‌ಗೆ ಸಂಪೂರ್ಣ ಮಾರ್ಗದರ್ಶಿ](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [ಫ್ಲೆಕ್ಸ್ಬಾಕ್ಸ್ ವಿರುದ್ಧ ಗ್ರಿಡ್ - ಸರಿಯಾದ ಸಾಧನ ಆಯ್ಕೆಮಾಡಿ](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [ಫ್ಲೆಕ್ಸ್ಬಾಕ್ಸ್ ವಿರುದ್ಧ ಗ್ರಿಡ್ - ಸರಿಯಾದ ಸಾಧನ ಆಯ್ಕೆಮಾಡಿ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### ಬ್ರೌಸರ್ ಪರೀಕ್ಷಾ ಸಾಧನಗಳು
 - 🛠️ [ಬ್ರೌಸರ್ ಡೆವ್‌ಟೂಲ್ಸ್ ಪ್ರತಿಕ್ರಿಯಾಶೀಲ ಮೋಡ್](https://developer.chrome.com/docs/devtools/device-mode/)

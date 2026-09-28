@@ -98,7 +98,7 @@ At forstå hvornår og hvordan man bruger forskellige layoutmetoder er en afgør
 ### Layoutmetode Guides
 - 📖 [En komplet guide til Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [En komplet guide til CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Vælg det rigtige værktøj](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Vælg det rigtige værktøj](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Browser Testværktøjer
 - 🛠️ [Browser DevTools Responsiv Tilstand](https://developer.chrome.com/docs/devtools/device-mode/)

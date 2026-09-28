@@ -98,7 +98,7 @@ Az, hogy mikor és hogyan használjuk a különböző elrendezési módszereket,
 ### Elrendezési Módszerek Útmutatói
 - 📖 [Teljes útmutató a Flexboxhoz](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Teljes útmutató a CSS Gridhez](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Válaszd a megfelelő eszközt](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Válaszd a megfelelő eszközt](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Böngésző Tesztelési Eszközök
 - 🛠️ [Böngésző DevTools Reszponzív Mód](https://developer.chrome.com/docs/devtools/device-mode/)

@@ -98,7 +98,7 @@
 ### Layout Method Guides
 - 📖 [Flexbox အကြောင်းလမ်းညွှန်](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid အကြောင်းလမ်းညွှန်](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Tool ရွေးချယ်ခြင်း](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Tool ရွေးချယ်ခြင်း](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Browser Testing Tools
 - 🛠️ [Browser DevTools Responsive Mode](https://developer.chrome.com/docs/devtools/device-mode/)
