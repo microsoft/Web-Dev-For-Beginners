@@ -939,7 +939,7 @@ Dưới đây là một ví dụ về giao diện trang đăng nhập cuối cù
 
 ## Ôn tập & Tự học
 
-Các nhà phát triển đã rất sáng tạo trong việc xây dựng biểu mẫu, đặc biệt là về chiến lược kiểm tra. Tìm hiểu về các luồng biểu mẫu khác nhau bằng cách xem qua [CodePen](https://codepen.com); bạn có thể tìm thấy một số biểu mẫu thú vị và truyền cảm hứng không?
+Các nhà phát triển đã rất sáng tạo trong việc xây dựng biểu mẫu, đặc biệt là về chiến lược kiểm tra. Tìm hiểu về các luồng biểu mẫu khác nhau bằng cách xem qua [CodePen](https://codepen.io/); bạn có thể tìm thấy một số biểu mẫu thú vị và truyền cảm hứng không?
 
 ## Bài tập
 

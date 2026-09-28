@@ -942,7 +942,7 @@ Hier ist ein Beispiel, wie die finale Anmeldeseite nach ein wenig Styling ausseh
 
 ## Rückblick & Selbststudium
 
-Entwickler sind bei ihren Formular-Erstellungsbemühungen besonders in Bezug auf Validierungsstrategien sehr kreativ geworden. Erfahren Sie mehr über verschiedene Formularabläufe, indem Sie durch [CodePen](https://codepen.com) stöbern; können Sie einige interessante und inspirierende Formulare finden?
+Entwickler sind bei ihren Formular-Erstellungsbemühungen besonders in Bezug auf Validierungsstrategien sehr kreativ geworden. Erfahren Sie mehr über verschiedene Formularabläufe, indem Sie durch [CodePen](https://codepen.io/) stöbern; können Sie einige interessante und inspirierende Formulare finden?
 
 ## Aufgabe
 

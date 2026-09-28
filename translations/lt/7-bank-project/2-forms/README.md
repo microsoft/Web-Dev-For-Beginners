@@ -942,7 +942,7 @@ HTML faile parodykite klaidos žinutę, jei vartotojas jau egzistuoja.
 
 ## Apžvalga ir savarankiškas mokymasis
 
-Kūrėjai labai išradingai kuria savo formas, ypač dėl validacijos strategijų. Pažinkite skirtingas formų eigas naršydami per [CodePen](https://codepen.com); ar pavyks rasti įdomių ir įkvepiančių formų?
+Kūrėjai labai išradingai kuria savo formas, ypač dėl validacijos strategijų. Pažinkite skirtingas formų eigas naršydami per [CodePen](https://codepen.io/); ar pavyks rasti įdomių ir įkvepiančių formų?
 
 ## Užduotis
 

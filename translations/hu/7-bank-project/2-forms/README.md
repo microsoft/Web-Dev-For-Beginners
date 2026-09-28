@@ -942,7 +942,7 @@ Mutass meg egy hibaüzenetet az HTML-ben, ha a felhasználó már létezik.
 
 ## Áttekintés & Önkéntes tanulás
 
-A fejlesztők nagyon kreatívak lettek az űrlapépítési munkájuk során, különösen az érvényesítési stratégiákat illetően. Ismerj meg különböző űrlapfolyamatokat a [CodePen](https://codepen.com) böngészésével; találsz érdekes és inspiráló űrlapokat?
+A fejlesztők nagyon kreatívak lettek az űrlapépítési munkájuk során, különösen az érvényesítési stratégiákat illetően. Ismerj meg különböző űrlapfolyamatokat a [CodePen](https://codepen.io/) böngészésével; találsz érdekes és inspiráló űrlapokat?
 
 ## Feladat
 

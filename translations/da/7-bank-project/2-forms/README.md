@@ -942,7 +942,7 @@ Her er et eksempel på, hvordan den endelige login-side kan se ud efter lidt sty
 
 ## Gennemgang & Selvstudie
 
-Udviklere er blevet meget kreative med deres formbygning, især med hensyn til valideringsstrategier. Lær om forskellige formflows ved at kigge gennem [CodePen](https://codepen.com); kan du finde nogle interessante og inspirerende formularer?
+Udviklere er blevet meget kreative med deres formbygning, især med hensyn til valideringsstrategier. Lær om forskellige formflows ved at kigge gennem [CodePen](https://codepen.io/); kan du finde nogle interessante og inspirerende formularer?
 
 ## Opgave
 

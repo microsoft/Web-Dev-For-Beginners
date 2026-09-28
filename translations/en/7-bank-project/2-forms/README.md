@@ -943,7 +943,7 @@ Here's an example of what the final login page can look like after a bit of styl
 
 ## Review & Self Study
 
-Developers have gotten very creative about their form building efforts, especially regarding validation strategies. Learn about different form flows by looking through [CodePen](https://codepen.com); can you find some interesting and inspiring forms?
+Developers have gotten very creative about their form building efforts, especially regarding validation strategies. Learn about different form flows by looking through [CodePen](https://codepen.io/); can you find some interesting and inspiring forms?
 
 ## Assignment
 
