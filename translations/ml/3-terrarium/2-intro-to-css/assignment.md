@@ -98,7 +98,7 @@
 ### ലെയ്ഔട്ട് മാർഗ്ഗനിർദേശങ്ങൾ
 - 📖 [Flexbox-ന് സമഗ്ര ഗൈഡ്](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid-ന് സമഗ്ര ഗൈഡ്](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - ശരിയായ ഉപകരണം തിരഞ്ഞെടുക്കുക](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - ശരിയായ ഉപകരണം തിരഞ്ഞെടുക്കുക](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### ബ്രൗസർ പരിശോധന ഉപകരണങ്ങൾ
 - 🛠️ [Browser DevTools പ്രതികരണ മുഖം](https://developer.chrome.com/docs/devtools/device-mode/)

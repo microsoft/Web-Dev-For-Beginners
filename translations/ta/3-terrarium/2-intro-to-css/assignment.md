@@ -97,7 +97,7 @@
 ### விரல் முறை வழிகாட்டிகள்
 - 📖 [Flexbox-க்கு முழுமையான வழிகாட்டி](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid-க்கு முழுமையான வழிகாட்டி](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - சரியான கருவியைத் தேர்வு செய்யவும்](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - சரியான கருவியைத் தேர்வு செய்யவும்](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### உலாவி சோதனை கருவிகள்
 - 🛠️ [உலாவி DevTools பதிலளிக்கும் முறை](https://developer.chrome.com/docs/devtools/device-mode/)

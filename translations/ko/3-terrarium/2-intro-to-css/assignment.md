@@ -98,7 +98,7 @@
 ### 레이아웃 방법 가이드
 - 📖 [Flexbox 완전 가이드](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid 완전 가이드](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - 적합한 도구 선택하기](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - 적합한 도구 선택하기](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### 브라우저 테스트 도구
 - 🛠️ [브라우저 개발자 도구 반응형 모드](https://developer.chrome.com/docs/devtools/device-mode/)

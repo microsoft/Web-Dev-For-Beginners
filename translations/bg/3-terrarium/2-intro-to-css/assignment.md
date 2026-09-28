@@ -98,7 +98,7 @@
 ### Ръководства за методи на оформление
 - 📖 [Пълно ръководство за Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Пълно ръководство за CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox срещу Grid - Изберете правилния инструмент](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox срещу Grid - Изберете правилния инструмент](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Инструменти за тестване на браузъри
 - 🛠️ [Режим за адаптивност в DevTools на браузъра](https://developer.chrome.com/docs/devtools/device-mode/)

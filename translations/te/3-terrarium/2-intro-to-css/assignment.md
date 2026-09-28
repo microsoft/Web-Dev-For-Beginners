@@ -98,7 +98,7 @@
 ### లేఅవుట్ పద్ధతి మార్గదర్శకాలు
 - 📖 [Flexbox కు పూర్తి మార్గదర్శिका](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid కు పూర్తి మార్గదర్శిక](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox మరియు Grid - సరైన పరికరాన్ని ఎంచుకోండి](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox మరియు Grid - సరైన పరికరాన్ని ఎంచుకోండి](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### బ్రౌజర్ పరీక్ష టూల్స్
 - 🛠️ [Browser DevTools స్పందనాత్మక మోడ్](https://developer.chrome.com/docs/devtools/device-mode/)

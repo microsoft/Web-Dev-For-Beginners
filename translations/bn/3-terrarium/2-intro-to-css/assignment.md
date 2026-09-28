@@ -98,7 +98,7 @@
 ### লেআউট পদ্ধতির গাইড
 - 📖 [Flexbox-এর সম্পূর্ণ গাইড](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid-এর সম্পূর্ণ গাইড](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox বনাম Grid - সঠিক টুল নির্বাচন করুন](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox বনাম Grid - সঠিক টুল নির্বাচন করুন](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### ব্রাউজার টেস্টিং টুলস
 - 🛠️ [Browser DevTools Responsive Mode](https://developer.chrome.com/docs/devtools/device-mode/)

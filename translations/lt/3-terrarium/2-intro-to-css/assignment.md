@@ -98,7 +98,7 @@ Suprasti, kada ir kaip naudoti skirtingus išdėstymo metodus, yra svarbus įgū
 ### Išdėstymo metodų vadovai
 - 📖 [Pilnas Flexbox vadovas](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Pilnas CSS Grid vadovas](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid – pasirinkite tinkamą įrankį](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid – pasirinkite tinkamą įrankį](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Naršyklių testavimo įrankiai
 - 🛠️ [Naršyklių kūrimo įrankių reaguojantis režimas](https://developer.chrome.com/docs/devtools/device-mode/)
