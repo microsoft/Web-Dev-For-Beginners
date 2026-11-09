@@ -198,7 +198,7 @@ It's always best to develop iteratively to see how things look. Let's launch our
 - **Automatically** refreshes the browser when you save files
 - **Serves** your files from a local URL (typically `localhost:5500`)
 
-**Open a browser and navigate to `https://localhost:5500`:**
+**Open a browser and navigate to the URL shown by Live Server (typically `http://localhost:5500`):**
 
 You should now see the page you created! Let's add some functionality.
 

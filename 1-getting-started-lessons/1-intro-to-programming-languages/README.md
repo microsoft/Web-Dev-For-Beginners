@@ -665,7 +665,7 @@ npx vite
 
 **Linux:**
 - **[Bash](https://www.gnu.org/software/bash/)** 💻 - Standard Linux shell
-- **[KDE Konsole](https://docs.kde.org/trunk5/en/konsole/konsole/index.html)** - Advanced terminal emulator
+- **[KDE Konsole](https://docs.kde.org/trunk_kf6/en/konsole/konsole/index.html)** - Advanced terminal emulator
 
 > 💻 = Pre-installed on the operating system
 
