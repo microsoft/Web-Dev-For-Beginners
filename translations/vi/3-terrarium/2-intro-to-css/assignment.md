@@ -98,7 +98,7 @@ Hiểu khi nào và cách sử dụng các phương pháp bố cục khác nhau 
 ### Hướng dẫn phương pháp bố cục
 - 📖 [Hướng dẫn đầy đủ về Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Hướng dẫn đầy đủ về CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Chọn công cụ phù hợp](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Chọn công cụ phù hợp](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Công cụ kiểm tra trình duyệt
 - 🛠️ [Chế độ đáp ứng của DevTools trình duyệt](https://developer.chrome.com/docs/devtools/device-mode/)

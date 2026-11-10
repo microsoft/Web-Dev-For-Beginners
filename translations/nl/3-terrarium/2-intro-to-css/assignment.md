@@ -98,7 +98,7 @@ Begrijpen wanneer en hoe je verschillende layoutmethoden gebruikt, is een essent
 ### Layoutmethoden Gidsen
 - 📖 [Een complete gids voor Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Een complete gids voor CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Kies het juiste hulpmiddel](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Kies het juiste hulpmiddel](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Browser Testtools
 - 🛠️ [Browser DevTools Responsieve Modus](https://developer.chrome.com/docs/devtools/device-mode/)

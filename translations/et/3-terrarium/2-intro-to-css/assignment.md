@@ -98,7 +98,7 @@ Mõistmine, millal ja kuidas kasutada erinevaid paigutusmeetodeid, on kaasaegse 
 ### Paigutusmeetodi juhendid
 - 📖 [Täielik juhend Flexboxile](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)  
 - 📖 [Täielik juhend CSS Gridile](https://css-tricks.com/snippets/css/complete-guide-grid/)  
-- 📖 [Flexbox vs Grid - vali õige tööriist](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)  
+- 📖 [Flexbox vs Grid - vali õige tööriist](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)  
 
 ### Brauserite testimise tööriistad
 - 🛠️ [Brauseri arendustööriistade reageerimisvõime režiim](https://developer.chrome.com/docs/devtools/device-mode/)  

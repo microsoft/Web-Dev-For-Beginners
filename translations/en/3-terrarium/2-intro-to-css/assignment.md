@@ -98,7 +98,7 @@ Understanding when and how to use different layout methods is a crucial skill fo
 ### Layout Method Guides
 - 📖 [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Choose the Right Tool](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Choose the Right Tool](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Browser Testing Tools
 - 🛠️ [Browser DevTools Responsive Mode](https://developer.chrome.com/docs/devtools/device-mode/)

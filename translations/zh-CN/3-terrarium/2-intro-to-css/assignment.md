@@ -98,7 +98,7 @@
 ### 布局方法指南
 - 📖 [Flexbox 完整指南](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid 完整指南](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox 与 Grid 的选择](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox 与 Grid 的选择](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### 浏览器测试工具
 - 🛠️ [浏览器开发者工具响应式模式](https://developer.chrome.com/docs/devtools/device-mode/)

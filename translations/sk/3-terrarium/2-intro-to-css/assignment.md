@@ -98,7 +98,7 @@ Porozumenie tomu, kedy a ako používať rôzne metódy rozloženia, je kľúčo
 ### Príručky k metódam rozloženia
 - 📖 [Kompletný sprievodca Flexboxom](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Kompletný sprievodca CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Vyberte správny nástroj](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Vyberte správny nástroj](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Nástroje na testovanie prehliadačov
 - 🛠️ [Režim responzívnych zariadení v DevTools](https://developer.chrome.com/docs/devtools/device-mode/)

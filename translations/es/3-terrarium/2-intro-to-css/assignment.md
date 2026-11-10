@@ -98,7 +98,7 @@ Entender cuándo y cómo usar diferentes métodos de diseño es una habilidad cr
 ### Guías de Métodos de Diseño
 - 📖 [Guía Completa de Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Guía Completa de CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Elige la Herramienta Correcta](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Elige la Herramienta Correcta](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Herramientas para Prueba en Navegadores
 - 🛠️ [Modo Responsivo de DevTools de Navegador](https://developer.chrome.com/docs/devtools/device-mode/)

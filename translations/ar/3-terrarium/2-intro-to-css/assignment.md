@@ -98,7 +98,7 @@
 ### أدلة طرق التخطيط
 - 📖 [دليل شامل لـ Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [دليل شامل لـ CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox مقابل Grid - اختيار الأداة المناسبة](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox مقابل Grid - اختيار الأداة المناسبة](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### أدوات اختبار المتصفحات
 - 🛠️ [وضع الاستجابة في أدوات المطور للمتصفح](https://developer.chrome.com/docs/devtools/device-mode/)

@@ -98,7 +98,7 @@ Razumijevanje kada i kako koristiti različite metode rasporeda ključna je vje�
 ### Vodiči za metode rasporeda
 - 📖 [Potpuni vodič za Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Potpuni vodič za CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Odaberite pravi alat](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Odaberite pravi alat](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Alati za testiranje preglednika
 - 🛠️ [Responsive Mode u DevTools pregledniku](https://developer.chrome.com/docs/devtools/device-mode/)

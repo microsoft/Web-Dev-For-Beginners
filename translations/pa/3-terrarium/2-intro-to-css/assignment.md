@@ -98,7 +98,7 @@
 ### ਲੇਆਉਟ ਤਰੀਕਾ ਗਾਈਡ
 - 📖 [Flexbox ਦਾ ਪੂਰਾ ਗਾਈਡ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid ਦਾ ਪੂਰਾ ਗਾਈਡ](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - ਸਹੀ ਟੂਲ ਚੁਣੋ](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - ਸਹੀ ਟੂਲ ਚੁਣੋ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### ਬ੍ਰਾਊਜ਼ਰ ਟੈਸਟਿੰਗ ਟੂਲ
 - 🛠️ [Browser DevTools Responsive Mode](https://developer.chrome.com/docs/devtools/device-mode/)

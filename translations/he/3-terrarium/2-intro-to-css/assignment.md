@@ -98,7 +98,7 @@
 ### מדריכי שיטות עיצוב
 - 📖 [מדריך מלא ל-Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [מדריך מלא ל-CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox מול Grid - בחר את הכלי הנכון](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox מול Grid - בחר את הכלי הנכון](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### כלים לבדיקת דפדפנים
 - 🛠️ [מצב רספונסיבי של DevTools בדפדפן](https://developer.chrome.com/docs/devtools/device-mode/)

@@ -98,7 +98,7 @@ Razumevanje, kdaj in kako uporabiti različne metode postavitve, je ključna ve�
 ### Vodniki za metode postavitve
 - 📖 [Celovit vodnik za Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [Celovit vodnik za CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox proti Grid - Izberite pravo orodje](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox proti Grid - Izberite pravo orodje](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Orodja za testiranje brskalnikov
 - 🛠️ [Način odzivnosti v orodjih za razvijalce brskalnika](https://developer.chrome.com/docs/devtools/device-mode/)

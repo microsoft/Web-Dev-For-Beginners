@@ -98,7 +98,7 @@ Farklı düzen yöntemlerini ne zaman ve nasıl kullanacağınızı anlamak, mod
 ### Düzen Yöntemi Kılavuzları
 - 📖 [Flexbox'a Tam Kılavuz](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - 📖 [CSS Grid'e Tam Kılavuz](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- 📖 [Flexbox vs Grid - Doğru Aracı Seçin](https://blog.webdevsimplified.com/2022-11/flexbox-vs-grid/)
+- 📖 [Flexbox vs Grid - Doğru Aracı Seçin](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
 ### Tarayıcı Test Araçları
 - 🛠️ [Tarayıcı Geliştirici Araçları Duyarlı Modu](https://developer.chrome.com/docs/devtools/device-mode/)
