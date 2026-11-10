@@ -24,7 +24,7 @@ flowchart LR
     D --> E[See AI responses]
 ```
 
-- **Minute 1**: Visit [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) and create a personal access token
+- **Minute 1**: Visit [GitHub Models Playground](https://github.com/marketplace?type=models) and create a personal access token
 - **Minute 2**: Test AI interactions directly in the playground interface
 - **Minute 3**: Click "Code" tab and copy the Python snippet
 - **Minute 4**: Run the code locally with your token: `GITHUB_TOKEN=your_token python test.py`
@@ -130,7 +130,7 @@ graph LR
     B --> A
 ```
 
-We'll use GitHub Models for our backend integration, which provides access to professional-grade AI capabilities through a developer-friendly interface. The [GitHub Models Playground](https://github.com/marketplace/models/azure-openai/gpt-4o-mini/playground) serves as a testing environment where you can experiment with different AI models and understand their capabilities before implementing them in code.
+We'll use GitHub Models for our backend integration, which provides access to professional-grade AI capabilities through a developer-friendly interface. The [GitHub Models Playground](https://github.com/marketplace?type=models) serves as a testing environment where you can experiment with different AI models and understand their capabilities before implementing them in code.
 
 ## 🧠 AI Application Development Ecosystem
 
