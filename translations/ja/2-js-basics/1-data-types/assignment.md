@@ -33,58 +33,56 @@ JavaScriptのデータ型がショッピングカートアプリケーション�
 各データ型について、以下のように構成してください:
 
 ```markdown
-## [Data Type Name]
+## [データ型名]
 
-**Purpose in Shopping Cart:** [Explain what this data type does]
+**ショッピングカートにおける目的:** [このデータ型が何をするものか説明してください]
 
-**Why This Type:** [Explain why this is the best choice]
-
-**Code Example:**
-```javascript
-// Your realistic code example here
+**この型が選ばれる理由:** [なぜこれが最適な選択なのか説明してください]
 ```
+
+**コード例:**
+```javascript
+// 現実的なコード例をここに記載
 
 **実際の使用例:** [これが実際にどのように機能するかを説明]
 
 **連携:** [このデータ型が他のデータ型とどのように連携するかを説明]
 ```
 
-### Bonus Challenges
+### ボーナスチャレンジ
 
-1. **Type Coercion**: Show an example where JavaScript automatically converts between data types in your shopping cart (e.g., string "5" + number 10)
+1. **型強制（Type Coercion）**: ショッピングカート内でJavaScriptが自動的にデータ型を変換する例を示してください（例: 文字列 `"5"` + 数値 `10`）。
+2. **データ検証（Data Validation）**: 処理を行う前に、ユーザー入力が正しいデータ型であるかどうかを確認する方法を実演してください。
+3. **パフォーマンスの考慮事項**: パフォーマンス上の理由から、あるデータ型を別のデータ型よりも選択する理由について説明してください。
 
-2. **Data Validation**: Demonstrate how you would check if user input is the correct data type before processing
+### 提出ガイドライン
 
-3. **Performance Considerations**: Explain when you might choose one data type over another for performance reasons
+- 各データ型に対する明確な見出しを持つMarkdownドキュメントを作成すること。
+- 実際に動作するJavaScriptのコード例を含めること。
+- 例には現実的なEコマースのシナリオを使用すること。
+- 初心者にも理解できるよう、論理を明確に説明すること。
+- コード例をテストし、正しく動作することを確認すること。
 
-### Submission Guidelines
+## 評価基準 (Rubric)
 
-- Create a markdown document with clear headings for each data type
-- Include working JavaScript code examples
-- Use realistic e-commerce scenarios in your examples
-- Explain your reasoning clearly for beginners to understand
-- Test your code examples to ensure they work correctly
-
-## Rubric
-
-| Criteria | Exemplary (90-100%) | Proficient (80-89%) | Developing (70-79%) | Needs Improvement (Below 70%) |
+| 評価基準 | 優秀 (90-100%) | 良好 (80-89%) | 展開中 (70-79%) | 改善が必要 (70%未満) |
 |----------|---------------------|---------------------|---------------------|------------------------------|
-| **Data Type Coverage** | All 7 primitive types and objects/arrays covered with detailed explanations | 6-7 data types covered with good explanations | 4-5 data types covered with basic explanations | Fewer than 4 data types or minimal explanations |
-| **Code Examples** | All examples are realistic, working, and well-commented | Most examples work and are relevant to e-commerce | Some examples work but may be generic | Code examples are incomplete or non-functional |
-| **Real-world Application** | Clearly connects each data type to practical shopping cart features | Good connection to e-commerce scenarios | Some connection to shopping cart context | Limited real-world application demonstrated |
-| **Technical Accuracy** | All technical information is correct and demonstrates deep understanding | Most technical information is accurate | Generally accurate with minor errors | Contains significant technical errors |
-| **Communication** | Explanations are clear, beginner-friendly, and well-organized | Good explanations that are mostly clear | Explanations are understandable but may lack clarity | Explanations are unclear or poorly organized |
-| **Bonus Elements** | Includes multiple bonus challenges with excellent execution | Includes one or more bonus challenges well done | Attempts bonus challenges with mixed success | No bonus challenges attempted |
+| **データ型の網羅性** | 7つのプリミティブ型すべてとオブジェクト/配列が詳細な説明とともに網羅されている | 6〜7つのデータ型が良好な説明とともに網羅されている | 4〜5つのデータ型が基本的な説明とともに網羅されている | 4つ未満のデータ型、または最小限の説明にとどまっている |
+| **コード例** | すべての例が現実的で、動作し、十分なコメントがついている | ほとんどの例が動作し、Eコマースに関連している | 一部の例は動作するが汎用的である | コード例が不完全または機能しない |
+| **実践的な応用** | 各データ型と実用的なショッピングカート機能との関連性が明確である | Eコマースのシナリオと良好に関連付けられている | ショッピングカートのコンテキストとの関連性が一部にとどまる | 実践的な応用の実証が限られている |
+| **技術的正確性** | すべての技術情報が正確であり、深い理解を示している | ほとんどの技術情報が正確である | 軽微なエラーはあるが概ね正確である | 重大な技術的エラーが含まれている |
+| **表現力** | 説明が明確で初心者にも分かりやすく、よく整理されている | 説明がわかりやすく、おおむね明確である | 理解はできるがわかりやすさに欠ける部分がある | 説明が不明確または整理されていない |
+| **ボーナス要素** | 複数のボーナスチャレンジが優れた実行内容で含まれている | 1つ以上のボーナスチャレンジがうまく完了している | ボーナスチャレンジに挑戦しているが成功の度合いがまちまちである | ボーナスチャレンジに挑戦していない |
 
-### Learning Objectives
+### 学習目標
 
-By completing this assignment, you will:
-- ✅ **Understand** the seven JavaScript primitive data types and their uses
-- ✅ **Apply** data types to real-world programming scenarios
-- ✅ **Analyze** when to choose specific data types for different purposes
-- ✅ **Create** working code examples that demonstrate data type usage
-- ✅ **Explain** technical concepts in beginner-friendly language
-- ✅ **Connect** fundamental programming concepts to practical applications
+この課題を完了することで、以下のことができるようになります:
+- ✅ **理解する**: 7つのJavaScriptのプリミティブデータ型とその用途
+- ✅ **応用する**: 現実的なプログラミングのシナリオにデータ型を適用する
+- ✅ **分析する**: さまざまな目的に応じて特定のデータ型を選択すべきタイミングを分析する
+- ✅ **作成する**: データ型の使用法を示す動作するコード例を作成する
+- ✅ **説明する**: 初心者向けの言語で技術的な概念を説明する
+- ✅ **結びつける**: 基本的なプログラミング概念を実践的なアプリケーションに結びつける
 
 ---
 
