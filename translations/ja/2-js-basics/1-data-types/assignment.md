@@ -86,7 +86,7 @@ By completing this assignment, you will:
 - ✅ **Explain** technical concepts in beginner-friendly language
 - ✅ **Connect** fundamental programming concepts to practical applications
 
----
+```
 
 **免責事項**:  
 この文書はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されています。正確性を追求していますが、自動翻訳には誤りや不正確さが含まれる可能性があります。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解について、当社は責任を負いません。
