@@ -155,7 +155,7 @@ En esta lección aprendió un poco sobre la historia del navegador web; Aprovech
 
 [Historia de la Web](https://webfoundation.org/about/vision/history-of-the-web/)
 
-[Una entrevista con Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-sueñe-un-poco-podemos-conseguir-la-web-que-queremos)
+[Una entrevista con Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
 
 **Tarea**: [Cambia el estilo de tu extensión](assignment.md)
 
