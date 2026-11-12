@@ -1,6 +1,6 @@
 # Terrarium Project Part 3: DOM Manipulación y cierre
 
-![DOM y un cierre](../../sketchnotes/webdev101-js.png)
+![DOM y un cierre](../../../sketchnotes/webdev101-js.png)
 > Boceto de [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## [Pre-lecture prueba](https://ff-quizzes.netlify.app/web/quiz/19)
