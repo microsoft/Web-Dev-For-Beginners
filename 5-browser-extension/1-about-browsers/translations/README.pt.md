@@ -160,7 +160,7 @@ Nesta lição você aprendeu um pouco sobre a história do navegador da web; apr
 
 [História da Web](https://webfoundation.org/about/vision/history-of-the-web/)
 
-[Uma entrevista com Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-sueñe-un-poco-podemos-conseguir-la-web-que-queremos)
+[Uma entrevista com Tim Berners-Lee](https://www.theguardian.com/technology/2019/mar/12/tim-berners-lee-on-30-years-of-the-web-if-we-dream-a-little-we-can-get-the-web-we-want)
 
 ## Tarefa
 [Refatore o estilo de sua extensão](assignment.pt.md)
