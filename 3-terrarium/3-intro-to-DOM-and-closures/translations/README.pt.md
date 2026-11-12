@@ -223,7 +223,7 @@ Adicione um novo manipulador de eventos ao seu fechamento para fazer algo mais p
 
 Embora arrastar elementos pela tela pareça trivial, existem muitas maneiras de fazer isso e muitas armadilhas, dependendo do efeito que você busca. Na verdade, existe toda uma [API de arrastrar e soltar](https://developer.mozilla.org/docs/Web/API/HTML_Drag_and_Drop_API) que você pode experimentar. Não a usamos neste módulo porque o efeito que queríamos era um pouco diferente, mas experimente esta API em seu próprio projeto e veja o que você pode conseguir.
 
-Encontre mais informações sobre eventos de ponteiro nos documentos [W3C](https://www.w3.org/TR/pointerevents1/) e [MDN web docs](https://developer.mozilla.org/pt-BR/docs/Web/API/Pointer_events).
+Encontre mais informações sobre eventos de ponteiro nos documentos [W3C](https://www.w3.org/TR/pointerevents1/) e [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events).
 
 Sempre verifique os recursos do navegador usando [CanIUse](https://caniuse.com/)
 
