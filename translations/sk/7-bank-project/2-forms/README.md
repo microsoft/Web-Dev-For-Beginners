@@ -942,7 +942,7 @@ Tu je príklad, ako môže konečná prihlasovacia stránka vyzerať po miernom 
 
 ## Prehľad & Samostatné štúdium
 
-Vývojári sa stali veľmi kreatívnymi v tvorbe svojich formulárov, najmä čo sa týka stratégií validácie. Prezrite si rôzne postupy pri tvorbe formulárov na [CodePen](https://codepen.com); dokážete nájsť nejaké zaujímavé a inšpiratívne formuláre?
+Vývojári sa stali veľmi kreatívnymi v tvorbe svojich formulárov, najmä čo sa týka stratégií validácie. Prezrite si rôzne postupy pri tvorbe formulárov na [CodePen](https://codepen.io/); dokážete nájsť nejaké zaujímavé a inšpiratívne formuláre?
 
 ## Zadanie
 

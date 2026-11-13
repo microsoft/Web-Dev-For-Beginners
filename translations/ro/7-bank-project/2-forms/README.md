@@ -942,7 +942,7 @@ Iată un exemplu de cum poate arăta pagina finală de login după un pic de sti
 
 ## Revizuire & Auto-studiu
 
-Dezvoltatorii au devenit foarte creativi în eforturile lor de construire a formularelor, în special în ceea ce privește strategiile de validare. Explorează diferite fluxuri ale formularelor vizitând [CodePen](https://codepen.com); poți găsi formulare interesante și inspiraționale?
+Dezvoltatorii au devenit foarte creativi în eforturile lor de construire a formularelor, în special în ceea ce privește strategiile de validare. Explorează diferite fluxuri ale formularelor vizitând [CodePen](https://codepen.io/); poți găsi formulare interesante și inspiraționale?
 
 ## Tema
 

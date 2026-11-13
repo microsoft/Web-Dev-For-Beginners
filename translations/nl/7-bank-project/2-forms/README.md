@@ -951,7 +951,7 @@ Hier is een voorbeeld van hoe de uiteindelijke inlogpagina eruit kan zien na wat
 
 ## Review & Zelfstudie
 
-Ontwikkelaars zijn erg creatief geworden met hun inspanningen voor het bouwen van formulieren, vooral wat betreft validatiestrategieën. Leer meer over verschillende formulierstromen door te kijken op [CodePen](https://codepen.com); kun je interessante en inspirerende formulieren vinden?
+Ontwikkelaars zijn erg creatief geworden met hun inspanningen voor het bouwen van formulieren, vooral wat betreft validatiestrategieën. Leer meer over verschillende formulierstromen door te kijken op [CodePen](https://codepen.io/); kun je interessante en inspirerende formulieren vinden?
 
 ## Opdracht
 

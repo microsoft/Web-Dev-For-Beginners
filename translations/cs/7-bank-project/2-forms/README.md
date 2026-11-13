@@ -942,7 +942,7 @@ Zde je příklad, jak může finální přihlašovací stránka vypadat po malé
 
 ## Přehled a samostudium
 
-Vývojáři jsou velmi kreativní ve svých snahách o tvorbu formulářů, zejména pokud jde o strategie validace. Prozkoumejte různé způsoby vytváření formulářů prohlížením [CodePen](https://codepen.com); dokážete najít nějaké zajímavé a inspirativní formuláře?
+Vývojáři jsou velmi kreativní ve svých snahách o tvorbu formulářů, zejména pokud jde o strategie validace. Prozkoumejte různé způsoby vytváření formulářů prohlížením [CodePen](https://codepen.io/); dokážete najít nějaké zajímavé a inspirativní formuláře?
 
 ## Zadání
 

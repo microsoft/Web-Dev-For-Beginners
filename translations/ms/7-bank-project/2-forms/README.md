@@ -951,7 +951,7 @@ Berikut adalah contoh bagaimana halaman log masuk akhir boleh kelihatan selepas 
 
 ## Ulasan & Kajian Kendiri
 
-Pembangun telah menjadi sangat kreatif dalam usaha membina borang mereka, terutamanya berkaitan strategi pengesahan. Ketahui tentang aliran borang yang berbeza dengan melihat melalui [CodePen](https://codepen.com); bolehkah anda menemui beberapa borang yang menarik dan memberi inspirasi?
+Pembangun telah menjadi sangat kreatif dalam usaha membina borang mereka, terutamanya berkaitan strategi pengesahan. Ketahui tentang aliran borang yang berbeza dengan melihat melalui [CodePen](https://codepen.io/); bolehkah anda menemui beberapa borang yang menarik dan memberi inspirasi?
 
 ## Tugasan
 

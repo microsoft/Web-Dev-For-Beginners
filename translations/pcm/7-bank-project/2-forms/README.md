@@ -942,7 +942,7 @@ Here be example of how the final login page fit look after small styling:
 
 ## Review & Self Study
 
-Developers don become very creative for their form building, especially for validation strategies. Learn about different form flows by checking [CodePen](https://codepen.com); fit you find some interesting and inspiring forms?
+Developers don become very creative for their form building, especially for validation strategies. Learn about different form flows by checking [CodePen](https://codepen.io/); fit you find some interesting and inspiring forms?
 
 ## Assignment
 

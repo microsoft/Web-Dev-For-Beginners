@@ -942,7 +942,7 @@ Näide sellest, kuidas lõplik sisselogimisleht võib välja näha pärast veidi
 
 ## Kordamine ja iseseisev õpe
 
-Arendajad on olnud väga loovad oma vormide loomisel, eriti valideerimisstrateegiate osas. Uuri erinevaid vormivoogusid, sirvides [CodePen](https://codepen.com); kas suudad leida mõnda huvitavat ja inspireerivat vormi?
+Arendajad on olnud väga loovad oma vormide loomisel, eriti valideerimisstrateegiate osas. Uuri erinevaid vormivoogusid, sirvides [CodePen](https://codepen.io/); kas suudad leida mõnda huvitavat ja inspireerivat vormi?
 
 ## Kodutöö
 

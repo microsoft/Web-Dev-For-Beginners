@@ -942,7 +942,7 @@ Oto przykład, jak może wyglądać końcowa strona logowania po dodaniu stylów
 
 ## Przegląd i samodzielna nauka
 
-Twórcy aplikacji wykazali się dużą kreatywnością w budowie formularzy, szczególnie w zakresie strategii walidacji. Poznaj różne przebiegi formularzy, przeglądając [CodePen](https://codepen.com); czy znajdziesz interesujące i inspirujące formularze?
+Twórcy aplikacji wykazali się dużą kreatywnością w budowie formularzy, szczególnie w zakresie strategii walidacji. Poznaj różne przebiegi formularzy, przeglądając [CodePen](https://codepen.io/); czy znajdziesz interesujące i inspirujące formularze?
 
 ## Zadanie
 

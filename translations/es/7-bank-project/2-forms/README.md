@@ -942,7 +942,7 @@ Aquí tienes un ejemplo de cómo puede verse la página de inicio de sesión fin
 
 ## Revisión y autoestudio
 
-Los desarrolladores han sido muy creativos con sus esfuerzos de construcción de formularios, especialmente en cuanto a estrategias de validación. Aprende sobre diferentes flujos de formularios explorando [CodePen](https://codepen.com); ¿puedes encontrar algunos formularios interesantes e inspiradores?
+Los desarrolladores han sido muy creativos con sus esfuerzos de construcción de formularios, especialmente en cuanto a estrategias de validación. Aprende sobre diferentes flujos de formularios explorando [CodePen](https://codepen.io/); ¿puedes encontrar algunos formularios interesantes e inspiradores?
 
 ## Tarea
 

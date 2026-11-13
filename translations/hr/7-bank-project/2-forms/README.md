@@ -942,7 +942,7 @@ Evo primjera kako završna stranica za prijavu može izgledati nakon malo stiliz
 
 ## Pregled i samostalan rad
 
-Programeri su vrlo kreativno pristupili izradi obrazaca, posebno u vezi sa strategijama validacije. Istražite različite tokove obrazaca pregledavajući [CodePen](https://codepen.com); možete li pronaći neke zanimljive i inspirativne obrasce?
+Programeri su vrlo kreativno pristupili izradi obrazaca, posebno u vezi sa strategijama validacije. Istražite različite tokove obrazaca pregledavajući [CodePen](https://codepen.io/); možete li pronaći neke zanimljive i inspirativne obrasce?
 
 ## Zadatak
 

@@ -951,7 +951,7 @@ Aqui está um exemplo de como a página de login final pode ficar após um pouco
 
 ## Revisão & Autoestudo
 
-Os desenvolvedores têm sido muito criativos em seus esforços de criação de formulários, especialmente em relação às estratégias de validação. Aprenda sobre diferentes fluxos de formulários explorando o [CodePen](https://codepen.com); você consegue encontrar alguns formulários interessantes e inspiradores?
+Os desenvolvedores têm sido muito criativos em seus esforços de criação de formulários, especialmente em relação às estratégias de validação. Aprenda sobre diferentes fluxos de formulários explorando o [CodePen](https://codepen.io/); você consegue encontrar alguns formulários interessantes e inspiradores?
 
 ## Tarefa
 
