@@ -360,9 +360,9 @@ flowchart TD
 let myString1 = "Hello";
 let myString2 = "World";
 
-myString1 + myString2 + "!"; //你好，世界！
-myString1 + " " + myString2 + "!"; //你好，世界！
-myString1 + ", " + myString2 + "!"; //你好，世界！
+myString1 + myString2 + "!"; // HelloWorld!
+myString1 + " " + myString2 + "!"; // Hello World!
+myString1 + ", " + myString2 + "!"; // Hello, World!
 ```
 
 **一步步来看，发生了什么：**
@@ -379,8 +379,8 @@ myString1 + ", " + myString2 + "!"; //你好，世界！
 let myString1 = "Hello";
 let myString2 = "World";
 
-`${myString1} ${myString2}!` //你好，世界！
-`${myString1}, ${myString2}!` //你好，世界！
+`${myString1} ${myString2}!` // Hello World!
+`${myString1}, ${myString2}!` // Hello, World!
 ```
 
 **我们来理解每个部分：**
