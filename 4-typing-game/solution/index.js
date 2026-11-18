@@ -30,7 +30,13 @@ const messages = {
 };
 
 // Utility: pick random quote
-const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
+const getRandomQuote = () => {
+  if (!Array.isArray(quotes) || quotes.length === 0) {
+    return "";
+  }
+  const index= MAth.floor(Math.random() * quotes.length);
+  return quotes[index];
+};
 
 // Utility: render quote as spans
 const renderQuote = (quote) => {
