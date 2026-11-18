@@ -54,11 +54,13 @@ const startGame = () => {
   wordIndex = 0;
   renderQuote(quote);
 
-  messageElement.textContent = messages.start;
-  typedValueElement.value = "";
-  typedValueElement.focus();
+ messageElement.textContent = messages.start;
+typedValueElement.value = "";
+typedValueElement.disabled = false; 
+  typedValueElement.classList.remove("error"); 
+typedValueElement.focus();
 
-  startTime = Date.now();
+startTime = Date.now();
 };
 
 // Typing logic
