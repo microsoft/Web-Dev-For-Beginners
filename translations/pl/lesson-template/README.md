@@ -1,54 +1,79 @@
-# [Temat Lekcji]
+# Temat lekcji
 
-![Osadź tutaj wideo](../../../lesson-template/video-url)
+## 🎥 Wideo
 
-## [Quiz przed wykładem](../../../lesson-template/quiz-url)
-
-[Opisz, czego się nauczymy]
-
-### Wprowadzenie
-
-Opisz, co zostanie omówione
-
-> Notatki
-
-### Wymagania wstępne
-
-Jakie kroki powinny zostać wykonane przed tą lekcją?
-
-### Przygotowanie
-
-Kroki przygotowawcze do rozpoczęcia tej lekcji
+> Dodaj tutaj osadzone wideo lub link do lekcji.
 
 ---
 
-[Przejdź przez treść w blokach]
+## Quiz przed wykładem
 
-## [Temat 1]
+> Dodaj tutaj link do quizu, gdy będzie dostępny.
+
+---
+
+Podaj krótkie podsumowanie tego, czego uczniowie nauczą się na tej lekcji.
+
+---
+
+### Wprowadzenie
+
+Podaj krótkie wprowadzenie opisujące, co zostanie omówione na tej lekcji.
+
+> Uwagi
+
+---
+
+### Wymagania wstępne
+
+Wymień pojęcia lub tematy, z którymi uczniowie powinni być już zaznajomieni przed rozpoczęciem lekcji.
+
+---
+
+### Przygotowanie
+
+Wymień wszelkie kroki przygotowawcze lub narzędzia wymagane przed rozpoczęciem lekcji.
+
+---
+
+### Treść
+
+Przeprowadź lekcję w uporządkowanych sekcjach.
+
+---
+
+## Temat 1
 
 ### Zadanie:
 
-Pracujcie razem, aby stopniowo ulepszać swoją bazę kodu i zbudować projekt z wykorzystaniem wspólnego kodu:
+Pracujcie razem, aby stopniowo rozwijać bazę kodu i zbudować projekt z współdzielonym kodem:
 
 ```html
 code blocks
 ```
 
-✅ Sprawdzenie wiedzy - wykorzystaj ten moment, aby poszerzyć wiedzę uczniów za pomocą otwartych pytań
+✅ Sprawdzenie wiedzy
+Wykorzystaj ten moment, aby rozciągnąć wiedzę uczniów pytaniami otwartymi.
 
-## [Temat 2]
+## Temat 2
+## Temat 3
 
-## [Temat 3]
+🚀 Wyzwanie
+Dodaj współpracujące wyzwanie dla uczniów, aby ulepszyć projekt.
 
-🚀 Wyzwanie: Dodaj wyzwanie dla uczniów, aby wspólnie pracowali w klasie nad ulepszeniem projektu
+Opcjonalnie: Dodaj zrzut ekranu interfejsu ukończonej lekcji, jeśli to stosowne.
 
-Opcjonalnie: dodaj zrzut ekranu interfejsu ukończonej lekcji, jeśli to stosowne
+## Quiz po wykładzie
 
-## [Quiz po wykładzie](../../../lesson-template/quiz-url)
+Dodaj link do quizu po ukończeniu lekcji.
 
-## Podsumowanie i samodzielna nauka
+## Przegląd i samodzielna nauka
 
-**Termin oddania zadania [MM/RR]**: [Nazwa zadania](assignment.md)
+**Termin zadania [MM/RR]**: [Nazwa zadania](assignment.md)
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+Niniejszy dokument został przetłumaczony przy użyciu usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w języku źródłowym powinien być traktowany jako autorytatywne źródło. W przypadku informacji o krytycznym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

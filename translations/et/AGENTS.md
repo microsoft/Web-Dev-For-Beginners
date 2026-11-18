@@ -2,46 +2,46 @@
 
 ## Projekti ülevaade
 
-See on hariduslik õppekava hoidla veebiarenduse aluste õpetamiseks algajatele. Õppekava on Microsoft Cloud Advocatesi poolt välja töötatud põhjalik 12-nädalane kursus, mis sisaldab 24 praktilist õppetundi JavaScripti, CSSi ja HTMLi kohta.
+See on õppekava hoidla veebiarenduse alusteadmiste õpetamiseks algajatele. Õppekava on põhjalik 12-nädalane kursus, mille on välja töötanud Microsoft Cloud Advocates, sisaldades 24 praktilist tundit JavaScripti, CSS-i ja HTML-i kohta.
 
 ### Peamised komponendid
 
-- **Hariduslik sisu**: 24 struktureeritud õppetundi projektipõhistes moodulites
-- **Praktilised projektid**: Terrarium, Trükkimismäng, Brauserilaiendus, Kosmosemäng, Pangaäpp, Koodiredaktor ja AI vestlusassistent
-- **Interaktiivsed viktoriinid**: 48 viktoriini, igaühes 3 küsimust (enne ja pärast õppetundi hindamised)
-- **Mitmekeelne tugi**: 50+ keele automaatne tõlge GitHub Actions abil
-- **Tehnoloogiad**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (AI projektide jaoks)
+- **Õppe sisu**: 24 struktureeritud tundi, organiseeritud projektipõhistesse moodulitesse
+- **Praktilised projektid**: Terrarium, Klahvivajutuse mäng, Brauserilaiendus, Kosmosemäng, Panga rakendus, Koodiredaktor ja tehisintellekti vestlusassistent
+- **Interaktiivsed viktoriinid**: 48 viktoriini, igaühes 3 küsimust (enne/järgi tunni hindamine)
+- **Mitmekeelsus**: Automaatne tõlge 50+ keelde GitHub Actions abil
+- **Tehnoloogiad**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (tehisintellekti projektide jaoks)
 
 ### Arhitektuur
 
-- Hariduslik hoidla õppetundide struktuuriga
-- Igas õppetunni kaustas on README, koodinäited ja lahendused
-- Eraldiseisvad projektid eraldi kataloogides (quiz-app, erinevad õppetunniprojektid)
-- Tõlkesüsteem GitHub Actions (co-op-translator) abil
-- Dokumentatsioon esitatakse Docsify kaudu ja on saadaval PDF-formaadis
+- Õppehoidla, millel on tunnipõhine struktuur
+- Igas tunni kaustas on README, koodinäited ja lahendused
+- Iseseisvad projektid eraldi kataloogides (quiz-app, erinevad tundide projektid)
+- Tõlkesüsteem kasutades GitHub Actions (co-op-translator)
+- Dokumentatsioon on kättesaadav läbi Docsify ja PDF-vormingus
 
-## Paigaldus käsud
+## Seadistuskäsud
 
-See hoidla on mõeldud peamiselt haridussisu tarbimiseks. Spetsiifiliste projektidega töötamiseks:
+See hoidla on peamiselt mõeldud õppe sisuga tutvumiseks. Konkreetsete projektidega töötamiseks:
 
-### Peamise hoidla seadistamine
+### Peahoidla seadistus
 
 ```bash
 git clone https://github.com/microsoft/Web-Dev-For-Beginners.git
 cd Web-Dev-For-Beginners
 ```
 
-### Quiz App seadistamine (Vue 3 + Vite)
+### Viktoriini rakenduse seadistus (Vue 3 + Vite)
 
 ```bash
 cd quiz-app
 npm install
 npm run dev        # Käivita arendusserver
-npm run build      # Ehita tootmiseks
+npm run build      # Koosta tootmiseks
 npm run lint       # Käivita ESLint
 ```
 
-### Pangaprojekti API (Node.js + Express)
+### Panga projekti API (Node.js + Express)
 
 ```bash
 cd 7-bank-project/api
@@ -51,12 +51,12 @@ npm run lint       # Käivita ESLint
 npm run format     # Vorminda Prettieriga
 ```
 
-### Brauserilaienduse projektid
+### Brauserilaienduste projektid
 
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Järgige brauserispetsiifilisi laienduse laadimise juhiseid
+# Järgige brauserispetsiifilisi laienduste laadimisjuhiseid
 ```
 
 ### Kosmosemängu projektid
@@ -67,50 +67,50 @@ npm install
 # Ava index.html brauseris või kasuta Live Serverit
 ```
 
-### Vestlusprojekti tagaplaan (Python)
+### Vestlusprojekti (Python taust)
 
 ```bash
 cd 9-chat-project/solution/backend/python
 pip install openai
-# Määra keskkonnamuutuja GITHUB_TOKEN
+# Sea GITHUB_TOKEN keskkonnamuutuja
 python api.py
 ```
 
-## Arendustöövoog
+## Arendusprotsess
 
-### Sisuloomele
+### Sisulooja jaoks
 
-1. **Forki hoidla** oma GitHub kontole
-2. **Klooni oma fork lokaalselt**
-3. **Loo uus haru** oma muudatuste jaoks
-4. Tee muudatusi õppe sisu või koodinäidetes
-5. Testi muudatusi vastavates projektikaustades
-6. Esita pull request vastavalt panustamise juhistele
+1. **Looge hoidla forkitus** oma GitHubi kontole
+2. **Kloonige oma fork kohalikult**
+3. **Looge uus haru** oma muudatuste jaoks
+4. Tehke muudatusi tunni sisus või koodinäidetes
+5. Testige koodimuudatusi vastavates projektikaustades
+6. Esitage pull requestid vastavalt panustamise juhistele
 
-### Õppijatele
+### Õppija jaoks
 
-1. Forki või klooni hoidla
-2. Liigu õppetundide kaustades järjekorras
-3. Loe iga õppetunni README faile
-4. Täida eelnevad viktoriinid aadressil https://ff-quizzes.netlify.app/web/
-5. Töötle läbi õppetunni koodinäited
-6. Täida ülesanded ja väljakutsed
-7. Tee lõppviktoriinid
+1. Forkige või kloonige hoidla
+2. Liikuge järjestikku läbi tunnikaustade
+3. Lugege iga tunni README-faile
+4. Täitke enne tundi viktoriinid aadressil https://ff-quizzes.netlify.app/web/
+5. Töötage läbi koodinäited tunnikaustades
+6. Täitke ülesanded ja väljakutsed
+7. Tehke pärast tundi viktoriinid
 
 ### Reaalajas arendus
 
-- **Dokumentatsioon**: käivita juurkataloogis `docsify serve` (port 3000)
-- **Quiz App**: käivita `npm run dev` quiz-app kataloogis
-- **Projektid**: kasuta VS Code Live Server laiendust HTML projektide jaoks
-- **API projektid**: käivita vastavates API kaustades `npm start`
+- **Dokumentatsioon**: Käivitage `docsify serve` juurkataloogis (port 3000)
+- **Viktoriinirakendus**: Käivitage `npm run dev` quiz-app kaustas
+- **Projektid**: Kasutage VS Code Live Server laiendit HTML projektide jaoks
+- **API projektid**: Käivitage `npm start` vastavates API kaustades
 
-## Testimisjuhised
+## Testimise juhised
 
-### Quiz App testimine
+### Viktoriinirakenduse testimine
 
 ```bash
 cd quiz-app
-npm run lint       # Kontrolli koodistiili probleeme
+npm run lint       # Kontrolli koodi stiili probleeme
 npm run build      # Kontrolli, kas ehitus õnnestub
 ```
 
@@ -118,165 +118,165 @@ npm run build      # Kontrolli, kas ehitus õnnestub
 
 ```bash
 cd 7-bank-project/api
-npm run lint       # Kontrolli koodi stiiliprobleeme
+npm run lint       # Kontrolli koodistiili vigu
 node server.js     # Kontrolli, et server käivitub ilma vigadeta
 ```
 
-### Üldine testimisviis
+### Üldine testimislähenemine
 
-- See on hariduslik hoidla ilma põhjalike automatiseeritud testideta
-- Käsitsi testimine keskendub:
-  - Koodinäited töötavad ilma vigadeta
-  - Dokumentatsiooni lingid töötavad korrektselt
-  - Projektide ehitused õnnestuvad
+- See on õppehoidla ilma täielike automatiseeritud testideta
+- Käsitsi testimisel keskendutakse:
+  - Koodinäited töötavad vigadeta
+  - Dokumentatsiooni lingid toimivad korrektselt
+  - Projektide ehitused lõppevad edukalt
   - Näited järgivad parimaid tavasid
 
-### Enne esitamist kontroll
+### Enne esitamist kontrollid
 
-- Käivita kataloogides, kus on package.json, `npm run lint`
-- Kontrolli markdown linkide korrasolekut
-- Testi koodinäiteid brauseris või Node.js-s
-- Veendu, et tõlked säilitavad õige struktuuri
+- Käivitage `npm run lint` kaustades, kus on package.json
+- Kontrollige markdowni lingid kehtivust
+- Testige koodi näited brauseris või Node.js-s
+- Veenduge, et tõlked säilitavad õige struktuuri
 
-## Koodi stiili juhised
+## Koodistiili juhised
 
 ### JavaScript
 
-- Kasuta kaasaegset ES6+ süntaksit
-- Järgi projektides olevaid standardseid ESLint konfiguratsioone
-- Kasuta tähenduslikke muutujate ja funktsioonide nimesid selguse huvides
-- Lisa kommentaare, mis selgitavad mõisteid õppijatele
-- Vorminda koodi Prettieriga, kus see on seadistatud
+- Kasutage kaasaegset ES6+ süntaksit
+- Järgige projektides olevaid standardseid ESLint konfiguratsioone
+- Kasutage tähenduslikke muutujate ja funktsioonide nimesid hariduse lihtsustamiseks
+- Lisage kommentaare kontseptsioonide selgitamiseks õppijatele
+- Vormindage Prettier abil, kui see on seadistatud
 
 ### HTML/CSS
 
-- Semantiline HTML5 elementide kasutus
-- Reageeriv disainiprintsiip
-- Selged klassinimede reeglid
-- Kommentaarid, mis selgitavad CSS tehnikaid õppijatele
+- Semeantiline HTML5 kasutamine
+- Reageeriv disaini põhimõtted
+- Selged klassinimed
+- Kommentaarid CSS tehnikate selgitamiseks õppijatele
 
 ### Python
 
-- Järgi PEP 8 stiilijuhiseid
-- Selged ja hariduslikud koodinäited
-- Kasuta tüübiviiteid, kus õppimiseks kasulik
+- PEP 8 stiiljuhised
+- Selged, hariduslikud koodinäited
+- Kui kasulik, siis tüüpi vihjed õppe hõlbustamiseks
 
 ### Markdown dokumentatsioon
 
-- Selge pealkirjade hierarhia
-- Koodiplokid koos keelespetsifikatsiooniga
-- Lingid lisamaterjalidele
+- Selge pealkirjastruktuur
+- Koodiblokid keelespetsiifikatsiooniga
+- Lingid täiendavatele ressurssidele
 - Ekraanipildid ja pildid `images/` kaustades
-- Piltide jaoks alternatiivtekst ligipääsetavuse tagamiseks
+- Piltide alt-tekst ligipääsetavuse tagamiseks
 
 ### Failide organiseerimine
 
-- Õppetunnid nummerdatud järjestikku (1-getting-started-lessons, 2-js-basics jne)
+- Tunnid nummerdatud järjestikku (1-getting-started-lessons, 2-js-basics jne)
 - Igal projektil on `solution/` ja sageli `start/` või `your-work/` kaustad
-- Pildid salvestatud õppetundide spetsiifilistesse `images/` kaustadesse
-- Tõlked `translations/{language-code}/` struktuuris
+- Pildid on salvestatud konkreetse tunni `images/` kaustadesse
+- Tõlked struktuuris `translations/{language-code}/`
 
-## Ehitamine ja juurutamine
+## Ehitus ja juurutamine
 
-### Quiz App juurutamine (Azure Static Web Apps)
+### Viktoriinirakenduse juurutamine (Azure Static Web Apps)
 
-Quiz-app on konfigureeritud Azure Static Web Apps juurutamiseks:
+Viktoriinirakendus on seadistatud Azure Static Web Apps jaoks:
 
 ```bash
 cd quiz-app
-npm run build      # Loob dist/ kausta
-# Paigaldab GitHub Actions töövoo kaudu, kui tehakse push main harusse
+npm run build      # Loob kausta dist/
+# Käivitab juurutamise GitHub Actions töövoo kaudu, kui tehakse push main harusse
 ```
 
-Azure Static Web Apps konfiguratsioon:
+Azure Static Web Apps seadistus:
 - **Rakenduse asukoht**: `/quiz-app`
-- **Väljundasukoht**: `dist`
+- **Väljundi asukoht**: `dist`
 - **Töövoog**: `.github/workflows/azure-static-web-apps-ashy-river-0debb7803.yml`
 
 ### Dokumentatsiooni PDF genereerimine
 
 ```bash
-npm install                    # Paigalda docsify-to-pdf
-npm run convert               # Genereeri PDF docsist
+npm install                    # Installi docsify-to-pdf
+npm run convert               # Genereeri PDF docs-ist
 ```
 
 ### Docsify dokumentatsioon
 
 ```bash
-npm install -g docsify-cli    # Paigalda Docsify ülemaailmselt
-docsify serve                 # Serveeri aadressil localhost:3000
+npm install -g docsify-cli    # Installi Docsify globaalselt
+docsify serve                 # Serveri aadressil localhost:3000
 ```
 
-### Projekti-spetsiifilised ehitused
+### Projektipõhised ehitused
 
 Igal projekti kaustal võib olla oma ehitusprotsess:
-- Vue projektid: `npm run build` loob tootmispaketid
-- Staatilised projektid: eraldi ehitusetappi ei ole, faile serveeritakse otse
+- Vue projektid: `npm run build` loob tootmisversiooni pakid
+- Staatilised projektid: ehitusetapp puudub, failid serveeritakse otse
 
-## Pull requesti juhised
+## Pull requestide juhised
 
-### Pealkirja formaat
+### Pealkirja vorming
 
-Kasuta selgeid ja kirjeldavaid pealkirju, mis näitavad muudatuse valdkonda:
-- `[Quiz-app] Lisa uus viktoriin õppetunnile X`
+Kasutage selgeid, kirjeldavaid pealkirju muudatuse teema täpsustamiseks:
+- `[Quiz-app] Lisa uus viktoriin tunnile X`
 - `[Lesson-3] Paranda kirjaviga terrarium projekti juures`
-- `[Translation] Lisa hispaania tõlge õppetunnile 5`
-- `[Docs] Uuenda paigaldusjuhiseid`
+- `[Translation] Lisa hispaania tõlge tunnile 5`
+- `[Docs] Uuenda seadistamise juhiseid`
 
-### Nõutavad kontrollid
+### Vajalikud kontrollid
 
-Enne PR-i esitamist:
+Enne PR esitamist:
 
 1. **Koodi kvaliteet**:
-   - Käivita mõjutatud projektikaustades `npm run lint`
-   - Paranda kõik lintimise vead ja hoiatused
+   - Käivitage `npm run lint` mõjutanud projektikaustades
+   - Parandage kõik lintimise vead ja hoiatused
 
 2. **Ehituse kontroll**:
-   - Käivita `npm run build`, kui see kehtib
-   - Veendu, et ehitus ei anna vigu
+   - Käivitage `npm run build` kui rakendub
+   - Veenduge, et ehitus ei ole ebaõnnestunud
 
 3. **Linkide kontroll**:
-   - Testi kõiki markdown linke
-   - Kontrolli pildi viidete toimimist
+   - Testige kõiki markdowni lingid
+   - Kontrollige piltide viited töötavad
 
-4. **Sisu ülevaade**:
-   - Tee õigekirja ja grammatika ülevaade
-   - Veendu, et koodinäited on korrektsed ja hariduslikud
-   - Kontrolli, et tõlked säilitavad algse tähenduse
+4. **Sisu ülevaatus**:
+   - Toimetage õigekirja ja grammatika osas
+   - Veenduge, et koodinäited on korrektsed ja õpetlikud
+   - Kontrollige, et tõlked säilitavad algse tähenduse
 
-### Panustamise nõuded
+### Panustamise tingimused
 
-- Nõustu Microsoft CLA-ga (automaatselt esimese PR-i juures)
-- Järgi [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- Vaata [CONTRIBUTING.md](./CONTRIBUTING.md) üksikasjalike juhiste jaoks
-- Viita PR kirjelduses vajadusel issue numbritele
+- Nõustuge Microsoft CLA-ga (automaatne kontroll esimesel PR-il)
+- Järgige [Microsofti avatud lähtekoodi käitumisreegleid](https://opensource.microsoft.com/codeofconduct/)
+- Vaadake üksikasjalikke juhiseid failist [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Viidake probleeminumbritele PR kirjelduse juures, kui asjakohane
 
 ### Ülevaatusprotsess
 
-- PR-e vaatavad läbi hoidla hooldajad ja kogukond
-- Eesmärk on haridusliku selguse tagamine
-- Koodinäited peavad järgima parimaid tänaseid tavasid
-- Tõlked üle vaadatakse täpsuse ja kultuurilise sobivuse osas
+- PR-e vaatavad üle hoidjate ja kogukonna liikmed
+- Eetiline hariduslik selgus on prioriteet
+- Koodinäited peaksid järgima parimaid praktikaid
+- Tõlked kontrollitakse täpsuse ja kultuurilise sobivuse suhtes
 
 ## Tõlkesüsteem
 
 ### Automaatne tõlge
 
-- Kasutab GitHub Actions koos co-op-translator töövooga
-- Tõlgib automaatselt 50+ keelde
-- Algfailid peamistest kataloogidest
-- Tõlgitud failid `translations/{language-code}/` kataloogides
+- Kasutatakse GitHub Actions koos co-op-translator töövooga
+- Tõlgib automaatselt enam kui 50 keelde
+- Allikfailid asuvad põhikaustades
+- Tõlgitud failid asuvad struktuuris `translations/{language-code}/`
 
-### Käsitsi tõlkete parandused
+### Käsitsi tõlkeparanduste lisamine
 
-1. Leia fail `translations/{language-code}/` kataloogis
-2. Tee parandused, hoides struktuuri muutumatuna
-3. Veendu, et koodinäited jäävad toimima
-4. Testi lokaliseeritud viktoriini sisu
+1. Leidke fail kaustast `translations/{language-code}/`
+2. Tehke parandused säilitades struktuuri
+3. Veenduge, et koodinäited jäävad töökorras
+4. Testige tõlgitud viktoriini sisu
 
 ### Tõlke metaandmed
 
-Tõlgitud failidel on metaandmete päis:
+Tõlgitud failid sisaldavad metaandmete päist:
 ```markdown
 <!--
 CO_OP_TRANSLATOR_METADATA:
@@ -291,118 +291,118 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Silumine ja probleemide lahendamine
 
-### Levinud probleemid
+### Tavalised probleemid
 
-**Quiz app ei käivitu**:
-- Kontrolli Node.js versiooni (soovituslik v14+)
-- Kustuta `node_modules` ja `package-lock.json`, käivita uuesti `npm install`
-- Kontrolli portide konflikte (vaikimisi: Vite kasutab porti 5173)
+**Viktoriinirakendus ei käivitu**:
+- Kontrollige Node.js versiooni (soovitatav v14+)
+- Kustutage `node_modules` ja `package-lock.json`, käivitage uuesti `npm install`
+- Kontrollige pordi konflikte (vaikimisi Vite kasutab porti 5173)
 
 **API server ei käivitu**:
-- Kontrolli, et Node.js versioon on minimaalne (node >=10)
-- Veendu, et port ei ole juba kasutusel
-- Kontrolli, et kõik sõltuvused on paigaldatud `npm install` abil
+- Kontrollige, et Node.js versioon on minimaalne (node >=10)
+- Veenduge, et port ei ole juba kasutusel
+- Veenduge, et kõik sõltuvused on installitud käsuga `npm install`
 
-**Brauserilaiend ei laaditu**:
-- Kontrolli, et manifest.json on korrektselt vormindatud
-- Vaata brauseri konsooli vigade jaoks
-- Järgi brauserispetsiifilisi laienduste paigaldusjuhiseid
+**Brauserilaiendus ei laadi**:
+- Kontrollige, et manifest.json on õigesti vormindatud
+- Vaadake brauseri konsooli vigade osas
+- Järgige konkreetse brauseri laienduse paigaldamise juhiseid
 
 **Python vestlusprojekti probleemid**:
-- Veendu, et OpenAI pakett on paigaldatud: `pip install openai`
-- Kontrolli, et GITHUB_TOKEN keskkonnamuutuja on määratud
-- Vaata GitHub Models juurde pääsemise õigusi
+- Veenduge, et OpenAI pakett on installitud: `pip install openai`
+- Veenduge, et keskkonnamuutuja GITHUB_TOKEN on määratud
+- Kontrollige GitHubi mudelite ligipääsu õigusi
 
 **Docsify ei serveeri dokumente**:
-- Paigalda docsify-cli globaalset: `npm install -g docsify-cli`
-- Käivita hoidla juurkataloogist
-- Veendu, et `docs/_sidebar.md` fail on olemas
+- Installige globaalne docsify-cli: `npm install -g docsify-cli`
+- Käivitage hoidla juurkataloogist
+- Kontrollige, et `docs/_sidebar.md` on olemas
 
 ### Arenduskeskkonna nõuanded
 
-- Kasuta VS Code Live Server laiendust HTML projektide jaoks
-- Paigalda ESLint ja Prettier laiendused konsistentseks vormindamiseks
-- Kasuta brauseri DevTools JavaScripti silumiseks
-- Vue projektide jaoks installi Vue DevTools brauserilaiendus
+- Kasutage VS Code ja Live Server laiendit HTML projektide jaoks
+- Installige ESLint ja Prettier laiendid ühtlase vorminduse tagamiseks
+- Kasutage brauseri arendajatööriistu JavaScripti silumiseks
+- Vue projektide puhul installige Vue DevTools brauserilaiendus
 
-### Tulemuslikkuse kaalutlused
+### Jõudluse kaalutlused
 
-- Suur hulk tõlgitud faile (50+ keelt) teeb täielikud kloonid mahukaks
-- Kasuta sumbunud klooni, kui töötad ainult sisuga: `git clone --depth 1`
-- Väldi tõlgete otsinguid, kui töötad ingliskeelse sisuga
-- Ehitusteenused võivad esimesel käivitamisel olla aeglased (npm install, Vite build)
+- Paljud tõlgitud failid (50+ keelt) muudavad täiskloonimise suureks
+- Kasutage sügava klooni asemel madalat klooni, kui töötate ainult sisuga: `git clone --depth 1`
+- Välistage tõlked otsingutest, kui töötate ingliskeelse sisuga
+- Ehitused võivad olla esineb esmakordsel käivitamisel aeglased (npm install, Vite build)
 
-## Turvanõuded
+## Turvakaalutlused
 
 ### Keskkonnamuutujad
 
-- API võtmeid ei tohi kunagi hoidlas hoida
-- Kasuta `.env` faile (mida on juba `.gitignore`-s)
-- Dokumenteeri vajalikud keskkonnamuutujad projektide README-des
+- API võtmeks ei tohi kunagi olla kodeeritud hoidlas
+- Kasutage `.env` faile (juba .gitignore-s)
+- Dokumenteerige nõutavad keskkonnamuutujad projekti README-des
 
 ### Python projektid
 
-- Kasuta virtuaalkeskkonda: `python -m venv venv`
-- Hoia sõltuvused värskendatud
-- GitHub tokenitel peaksid olema minimaalsed õigused
+- Kasutage virtuaalseid keskkondi: `python -m venv venv`
+- Hoidke sõltuvused ajakohasena
+- GitHubi tokenid peaksid olema minimaalsete õigustega
 
-### GitHub Models ligipääs
+### GitHub mudelite ligipääs
 
-- Isiklikud ligipääsu tokenid (PAT) on vajalikud GitHub Models jaoks
-- Tokenid salvestada keskkonnamuutujatena
-- Tokenid ega mandaadid ei tohi kunagi hoidlasse jõuda
+- Isiklikud ligipääsu tokenid (PAT) on vajalikud GitHubi mudelite jaoks
+- Tokenid tuleb hoida keskkonnamuutujatena
+- Ärge kunagi pange tokeneid ega mandaate hoidlasse
 
 ## Lisamärkused
 
 ### Sihtgrupp
 
 - Täielikud algajad veebiarenduses
-- Õpilased ja iseseisvad õppijad
+- Õpilased ja iseseisvalt õppijad
 - Õpetajad, kes kasutavad õppekava klassiruumis
-- Sisu on loodud ligipääsetavaks ja samm-sammuliseks oskuste kasvatamiseks
+- Sisu on loodud ligipääsetavaks ja järkjärguliseks oskuste arendamiseks
 
 ### Haridusfilosoofia
 
-- Projektipõhine õppimisviis
+- Projektipõhine õpe
 - Sageli teadmiste kontrollid (viktoriinid)
-- Praktiseerivad kodeerimise harjutused
-- Reaalsed näited rakendustest
-- Keskendutakse alustele enne raamistikke
+- Praktilised kodeerimise harjutused
+- Reaalmaailma rakenduste näited
+- Fookus algteadmistel enne raamistikke
 
 ### Hoidla hooldus
 
 - Aktiivne õppijate ja panustajate kogukond
-- Regulaarne sõltuvuste ja sisu uuendamine
-- Probleemid ja arutelud hooldajate jälgimisel
-- Tõlkeuuendused automatiseeritud GitHub Actions kaudu
+- Regulaarne sisu ja sõltuvuste uuendamine
+- Probleemide ja arutelude jälgimine hoidjate poolt
+- Tõlke uuendused automatiseeritud GitHub Actions abil
 
 ### Seotud ressursid
 
 - [Microsoft Learn moodulid](https://docs.microsoft.com/learn/)
-- [Student Hub ressursid](https://docs.microsoft.com/learn/student-hub/)
+- [Õpilaste tugikeskuse ressursid](https://docs.microsoft.com/learn/student-hub/)
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) soovitatav õppijatele
-- Täiendavad kursused: Generatiivne AI, Andmeteadus, ML, IoT õppekavad saadaval
+- Täiendavad kursused: generatiivne AI, andmeteadus, ML, IoT õppekavad kättesaadavad
 
-### Töö spetsiifiliste projektidega
+### Konkreetsete projektidega töötamine
 
-Detailseid juhiseid üksikute projektide jaoks leiad nende README failidest:
-- `quiz-app/README.md` - Vue 3 viktoriini rakendus
-- `7-bank-project/README.md` - Pangarakendus autentimisega
+Üksikasjalikeks juhisteks konkreetsetes projektides vaadake README-faile:
+- `quiz-app/README.md` - Vue 3 viktoriinirakendus
+- `7-bank-project/README.md` - Panga rakendus autentimisega
 - `5-browser-extension/README.md` - Brauserilaienduse arendus
-- `6-space-game/README.md` - Canvas-põhine mänguarendus
-- `9-chat-project/README.md` - AI vestlusassistiendi projekt
+- `6-space-game/README.md` - Canvas põhine mänguarendus
+- `9-chat-project/README.md` - Tehisintellekti vestlusassistent
 
 ### Monorepo struktuur
 
-Kuigi see ei ole traditsiooniline monorepo, sisaldab see hoidla mitmeid iseseisvaid projekte:
-- Iga õppetund on eraldiseisev
+Kuigi ei ole traditsiooniline monorepo, sisaldab see hoidla mitut iseseisvat projekti:
+- Iga tund on iseseisev
 - Projektid ei jaga sõltuvusi
-- Töötada saab üksikute projektidega mõjutamata teisi
-- Klooni kogu hoidla tervikliku õppekava kogemiseks
+- Tööta üksikute projektidega mõjutamata teisi
+- Klooni kogu hoidla, et saada kogu õppekava kogemus
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastutusest loobumine**:
-See dokument on tõlgitud kasutades tehisintellekti tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüame täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpseid osi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste ega väärarusaamade eest.
+**Vastutusest loobumine**:  
+See dokument on tõlgitud kasutades tehisintellekti tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame tagada täpsust, palun arvestage, et automatiseeritud tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks lugeda autoriteetse allikana. Kriitilise info puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta ühegi arusaamatuse või valesti mõistmise eest, mis võib tekkida selle tõlke kasutamisest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

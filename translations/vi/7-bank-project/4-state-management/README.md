@@ -406,7 +406,6 @@ Hãy xem xét cách các đồng hồ nguyên tử duy trì thời gian chính x
 Trước khi triển khai duy trì, hãy xem xét các yếu tố quan trọng này:
 
 | Câu hỏi | Ngữ cảnh ứng dụng ngân hàng | Tác động quyết định |
-
 | **Thời gian lưu trữ nên kéo dài bao lâu?** | Trạng thái đăng nhập so với tùy chọn giao diện tạm thời | Chọn thời gian lưu trữ phù hợp |
 | **Máy chủ có cần dữ liệu này không?** | Token xác thực so với cài đặt giao diện | Xác định yêu cầu chia sẻ |
 

@@ -1,54 +1,79 @@
-# [Argomento della lezione]
+# Argomento della lezione
 
-![Incorpora un video qui](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Quiz pre-lezione](../../../lesson-template/quiz-url)
-
-[Descrivi cosa impareremo]
-
-### Introduzione
-
-Descrivi cosa verrà trattato
-
-> Note
-
-### Prerequisiti
-
-Quali passaggi dovrebbero essere stati completati prima di questa lezione?
-
-### Preparazione
-
-Passaggi preparatori per iniziare questa lezione
+> Aggiungi qui un video incorporato o un link alla lezione.
 
 ---
 
-[Procedi attraverso il contenuto in blocchi]
+## Quiz pre-lezione
 
-## [Argomento 1]
+> Aggiungi qui un link al quiz quando disponibile.
+
+---
+
+Fornisci una breve panoramica di ciò che gli studenti impareranno in questa lezione.
+
+---
+
+### Introduzione
+
+Fornisci una breve introduzione che descriva cosa sarà trattato in questa lezione.
+
+> Note
+
+---
+
+### Prerequisiti
+
+Elenca i concetti o gli argomenti che gli studenti dovrebbero già conoscere prima di iniziare questa lezione.
+
+---
+
+### Preparazione
+
+Elenca eventuali passaggi di configurazione o strumenti necessari prima di iniziare la lezione.
+
+---
+
+### Contenuto
+
+Procedi con il contenuto della lezione in sezioni strutturate.
+
+---
+
+## Argomento 1
 
 ### Compito:
 
-Collaborate per migliorare progressivamente il vostro codice e costruire il progetto con codice condiviso:
+Lavorate insieme per migliorare progressivamente il vostro codice per costruire il progetto con codice condiviso:
 
 ```html
 code blocks
 ```
 
-✅ Verifica della conoscenza - usa questo momento per stimolare la conoscenza degli studenti con domande aperte
+✅ Controllo della conoscenza
+Approfitta di questo momento per stimolare la conoscenza degli studenti con domande aperte.
 
-## [Argomento 2]
+## Argomento 2
+## Argomento 3
 
-## [Argomento 3]
+🚀 Sfida
+Aggiungi una sfida collaborativa per gli studenti per migliorare il progetto.
 
-🚀 Sfida: Proponi una sfida per gli studenti da affrontare collaborativamente in classe per migliorare il progetto
+Opzionale: Aggiungi uno screenshot dell’interfaccia utente completata della lezione se appropriato.
 
-Opzionale: aggiungi uno screenshot dell'interfaccia utente della lezione completata, se appropriato
+## Quiz post-lezione
 
-## [Quiz post-lezione](../../../lesson-template/quiz-url)
+Aggiungi qui un link al quiz dopo aver completato la lezione.
 
 ## Revisione e studio autonomo
 
-**Consegna compito [MM/YY]**: [Nome del compito](assignment.md)
+**Compito da consegnare entro [MM/AA]**: [Nome del compito](assignment.md)
 
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire l'accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa dovrebbe essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall'uso di questa traduzione.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o inesattezze. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda la traduzione professionale umana. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall’uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,192 +1,188 @@
-# Web Development pre začiatočníkov - Kurz
+# Vývoj webu pre začiatočníkov - učebný plán
 
-Naučte sa základy webového vývoja v rámci nášho 12-týždňového komplexného kurzu od Microsoft Cloud Advocates. Každá z 24 lekcií skúma JavaScript, CSS a HTML prostredníctvom praktických projektov ako teráriá, rozšírenia pre prehliadače a vesmírne hry. Zúčastnite sa kvízov, diskusií a praktických úloh. Zlepšite svoje zručnosti a optimalizujte si udržanie vedomostí s našou efektívnou projektovo orientovanou pedagogikou. Začnite svoju programátorskú cestu ešte dnes!
+Naučte sa základy vývoja webu s naším komplexným 12-týždňovým kurzom od Microsoft Cloud Advocates. Každá zo 24 lekcií sa venuje JavaScriptu, CSS a HTML prostredníctvom praktických projektov ako teráriá, rozšírenia prehliadača a vesmírne hry. Zapojte sa do kvízov, diskusií a praktických úloh. Zlepšite svoje schopnosti a optimalizujte si osvojenie vedomostí efektívnou projektovo orientovanou pedagogikou. Začnite svoju programátorskú cestu ešte dnes!
 
-Pridajte sa do komunity Azure AI Foundry Discord
+Pridajte sa k Discordu Azure AI Foundry a stretnite sa s odborníkmi a ďalšími vývojármi.
 
-Nasledujte tieto kroky, aby ste začali používať tieto zdroje:  
-1. **Vytvorte Fork úložiska**: Kliknite na [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)  
-2. **Naklonujte úložisko**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`  
-3. [**Pridajte sa do Azure AI Foundry Discord a spoznajte odborníkov a ostatných vývojárov**](https://discord.com/invite/ByRwuEEgH4)
+Nasledujte tieto kroky, aby ste začali využívať tieto zdroje:
+1. **Forknite si repozitár**: Kliknite na [![GitHub forks](https://img.shields.io/github/forks/microsoft/Web-Dev-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Web-Dev-For-Beginners/fork)
+2. **Naklonujte si repozitár**: `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+3. [**Pridajte sa k Discordu Azure AI Foundry a stretnite sa s odborníkmi a ďalšími vývojármi**](https://discord.com/invite/ByRwuEEgH4)
 
 ### 🌐 Podpora viacerých jazykov
 
-#### Podporované cez GitHub Action (automatizované a vždy aktuálne)
+#### Podporované cez GitHub Action (automatické a vždy aktuálne)
 
-> **Radšej klonovať lokálne?**  
->  
-> Toto úložisko obsahuje viac ako 50 jazykových prekladov, ktoré výrazne zväčšujú veľkosť sťahovania. Pre klonovanie bez prekladov použite sparse checkout:  
->  
-> **Bash / macOS / Linux:**  
-> > ```bash
+> **Preferujete klonovať lokálne?**
+>
+> Tento repozitár obsahuje viac ako 50 jazykových prekladov, čo výrazne zväčšuje veľkosť na stiahnutie. Ak chcete klonovať bez prekladov, použite sparse checkout:
+>
+> **Bash / macOS / Linux:**
+> ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
 > cd Web-Dev-For-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
->  
-> **CMD (Windows):**  
-> > ```cmd
+>
+> **CMD (Windows):**
+> ```cmd
 > git clone --filter=blob:none --sparse https://github.com/microsoft/Web-Dev-For-Beginners.git
 > cd Web-Dev-For-Beginners
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
->  
-> Táto možnosť vám umožní získať všetko potrebné na dokončenie kurzu s oveľa rýchlejším sťahovaním.  
+>
+> Takto získate všetko potrebné na dokončenie kurzu oveľa rýchlejším stiahnutím.
 
-**Ak chcete pridať ďalšie prekladové jazyky, podporované jazyky nájdete [tu](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
+**Ak chcete mať ďalšie preklady, podporované jazyky sú uvedené tu. [tu](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)**
 
 #### 🧑‍🎓 _Ste študent?_
 
-Navštívte [**Student Hub stránku**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), kde nájdete zdroje pre začiatočníkov, balíčky pre študentov a dokonca možnosti získať bezplatný certifikát. Túto stránku si uložíte do záložiek a občas skontrolujte, pretože každý mesiac meníme obsah.
+Navštívte [**študentský portál**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon), kde nájdete zdroje pre začiatočníkov, študentské balíčky a dokonca možnosti, ako získať poukaz na bezplatný certifikát. Túto stránku si odporúčame uložiť medzi obľúbené a občas skontrolovať, pretože mesačne aktualizujeme obsah.
 
-### 📣 Oznámenie - Nové výzvy GitHub Copilot Agent módu na dokončenie!
+### 📣 Oznámenie - Nové výzvy s režimom GitHub Copilot Agent!
 
-Pridaná nová výzva, nájdete ju pod názvom "GitHub Copilot Agent Challenge 🚀" v niektorých kapitolách. Ide o novú výzvu, ktorú môžete splniť použitím GitHub Copilot a Agent módu. Ak ste Agent mód ešte nepoužili, vie nielen generovať text, ale aj vytvárať a upravovať súbory, spúšťať príkazy a ďalšie.
+Pridaná nová výzva, hľadajte "GitHub Copilot Agent Challenge 🚀" v niektorých kapitolách. Je to nová výzva, ktorú dokončíte pomocou GitHub Copilot a režimu Agent. Ak ste režim Agent ešte nepoužívali, dokáže nielen generovať text, ale aj vytvárať a upravovať súbory, spúšťať príkazy a viac.
 
-### 📣 Oznámenie - _Nový projekt na vývoj pomocou generatívnej AI_ 
+### 📣 Oznámenie - _Nový projekt na tvorbu pomocou Generatívnej AI_
 
-Práve bol pridaný nový projekt AI asistenta, pozrite si ho [projekt](./9-chat-project/README.md)
+Pridaný nový projekt AI asistenta, pozrite si ho [projekt](./9-chat-project/README.md)
 
-### 📣 Oznámenie - _Nový kurz_ o generatívnej AI pre JavaScript práve vydaný
+### 📣 Oznámenie - _Nový učebný plán_ o Generatívnej AI pre JavaScript práve vydaný
 
-Nezmeškajte náš nový kurz o generatívnej AI!
+Nezmeškajte náš nový učebný plán Generatívnej AI!
 
-Navštívte [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) a začnite!
+Začnite na [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
-![Background](../../translated_images/sk/background.148a8d43afde5730.webp)
+- Lekcie pokrývajú všetko od základov po RAG.
+- Interagujte s historickými postavami pomocou GenAI a našej sprievodnej aplikácie.
+- Zábavný a pútavý príbeh, zažijete cestovanie časom!
 
-- Lekcie pokrývajú všetko od základov až po RAG.  
-- Interagujte s historickými postavami pomocou GenAI a našej doplnkovej aplikácie.  
-- Zábavný a pútavý príbeh, budete cestovať časom!
-
-![character](../../translated_images/sk/character.5c0dd8e067ffd693.webp)
-
-Každá lekcia obsahuje úlohu na dokončenie, test vedomostí a výzvu, ktorá vás prevedie témami ako:  
-- Vytváranie promptov a prompt engineering  
-- Generovanie textových a obrazových aplikácií  
+Každá lekcia obsahuje úlohu na dokončenie, kontrolu vedomostí a výzvu, ktorá vás prevedie témami ako:
+- Promptovanie a návrh promptov
+- Generovanie textových a obrazových aplikácií
 - Vyhľadávacie aplikácie
 
-Navštívte [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course) a začnite!
+Začnite na [https://aka.ms/genai-js-course](https://aka.ms/genai-js-course)!
 
 ## 🌱 Začíname
 
-> **Učitelia**, pripravili sme [niekoľko návrhov](for-teachers.md) na používanie tohto kurikula. Budeme radi za vaše pripomienky [v našom diskusnom fóre](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
+> **Učitelia**, pripravili sme [niekoľko odporúčaní](for-teachers.md), ako tento učebný plán využiť. Radi uvítame vaše názory [v našom diskusnom fóre](https://github.com/microsoft/Web-Dev-For-Beginners/discussions/categories/teacher-corner)!
 
-**[Študenti](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, ku každej lekcii začnite kvízom pred prednáškou, prečítajte si prednáškový materiál, dokončite rôzne aktivity a overte si porozumenie pomocou kvízu po prednáške.
+**[Študenti](https://aka.ms/student-page/?WT.mc_id=academic-77807-sagibbon)**, ku každej lekcii začnite prednáškovým kvízom, pokračujte čítaním materiálov, plnením rôznych aktivít a svoju znalosť si overte záverečným kvízom.
 
-Pre lepší zážitok z učenia sa spojte so svojimi rovesníkmi a pracujte na projektoch spoločne! Diskusie sú vítané v našom [diskusnom fóre](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), kde sú dostupní naši moderátori, ktorí vám radi zodpovedia otázky.
+Pre lepší zážitok z učenia sa spojte so spolužiakmi a pracujte na projektoch spoločne! Diskusie sú vítané v našom [diskusnom fóre](https://github.com/microsoft/Web-Dev-For-Beginners/discussions), kde sú naši moderátori pripravení odpovedať na vaše otázky.
 
-Pre ďalšie štúdium vám vrelo odporúčame preskúmať [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) pre doplnkové študijné materiály.
+Pre ďalšie vzdelávanie odporúčame preskúmať [Microsoft Learn](https://learn.microsoft.com/users/wirelesslife/collections/p1ddcy5jwy0jkm?WT.mc_id=academic-77807-sagibbon) pre doplnkové študijné materiály.
 
 ### 📋 Nastavenie prostredia
 
-Tento kurz má pripravené vývojové prostredie! Na začiatku si môžete vybrať spustenie kurzu v prostredí [Codespace](https://github.com/features/codespaces/) (_prostredie v prehliadači bez potreby inštalácie_), alebo lokálne na vašom počítači pomocou textového editora ako je [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+Tento učebný plán je pripravený na spustenie vývojového prostredia! Na začiatku si môžete vybrať spustenie v [Codespace](https://github.com/features/codespaces/) (_prostredie v prehliadači bez nutnosti inštalácie_) alebo lokálne na počítači v textovom editore ako je [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
 
-#### Vytvorte si vlastné úložisko
+#### Vytvorte si svoj repozitár
 
-Pre jednoduché ukladanie vašej práce sa odporúča vytvoriť si vlastnú kópiu tohto úložiska. Môžete to spraviť kliknutím na tlačidlo **Použiť túto šablónu** v hornej časti stránky. Takto sa vytvorí nové úložisko vo vašom GitHub konte s kópiou kurikula.
+Pre jednoduché ukladanie práce je odporúčané vytvoriť si vlastnú kópiu tohto repozitára. Urobíte to kliknutím na tlačidlo **Use this template** v hornej časti stránky. Tým sa vám vytvorí nový repozitár vo vašom GitHub konte s kópiou učebného plánu.
 
-Postupujte podľa týchto krokov:  
-1. **Vytvorte Fork úložiska**: Kliknite na tlačidlo "Fork" v pravom hornom rohu tejto stránky.  
-2. **Naklonujte úložisko**:   `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
+Postupujte podľa týchto krokov:
+1. **Forknite repozitár**: Kliknite na tlačidlo „Fork“ v pravom hornom rohu tejto stránky.
+2. **Naklonujte repozitár**: `git clone https://github.com/microsoft/Web-Dev-For-Beginners.git`
 
-#### Spustenie kurzu v Codespace
+#### Spustenie učebného plánu v Codespace
 
-Vo vašej kópii úložiska kliknite na tlačidlo **Code** a vyberte **Open with Codespaces**. Týmto vytvoríte nový Codespace, v ktorom môžete pracovať.
+Vo svojej kópii repozitára kliknite na tlačidlo **Code** a vyberte **Open with Codespaces**. Tým sa vytvorí nový Codespace, v ktorom môžete pracovať.
 
 ![Codespace](../../translated_images/sk/createcodespace.0238bbf4d7a8d955.webp)
 
-#### Spustenie kurzu lokálne na počítači
+#### Spustenie učebného plánu lokálne na vašom počítači
 
-Na spustenie kurzu lokálne budete potrebovať textový editor, prehliadač a nástroj príkazového riadku. Naša prvá lekcia, [Úvod do programovacích jazykov a nástrojov](../../1-getting-started-lessons/1-intro-to-programming-languages), vás prevedie rôznymi možnosťami pre tieto nástroje, aby ste si mohli vybrať, čo vám najviac vyhovuje.
+Na spustenie učebného plánu na počítači budete potrebovať textový editor, prehliadač a príkazový riadok. Naša prvá lekcia, [Úvod do programovacích jazykov a nástrojov remesla](../../1-getting-started-lessons/1-intro-to-programming-languages), vás prevedie rôznymi možnosťami pre tieto nástroje, aby ste si vybrali, čo vám najviac vyhovuje.
 
-Odporúčame použiť [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ako editor, ktorý obsahuje aj zabudovaný [Terminál](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Visual Studio Code si môžete stiahnuť [tu](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
-1. Naklonujte si svoj repozitár do počítača. Môžete to urobiť kliknutím na tlačidlo **Code** a skopírovaním URL:
+Odporúčame použiť [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) ako editor, ktorý obsahuje aj vstavaný [Terminál](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon). Visual Studio Code si môžete stiahnuť [tu](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon).
+1. Klonujte si svoje úložisko do počítača. Môžete to urobiť kliknutím na tlačidlo **Code** a skopírovaním URL adresy:
 
     [CodeSpace](./images/createcodespace.png)
 
-    Potom otvorte [Terminál](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) v rámci [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) a spustite nasledujúci príkaz, pričom `<your-repository-url>` nahraďte URL, ktorú ste práve skopírovali:
+    Potom otvorte [Terminál](https://code.visualstudio.com/docs/terminal/basics/?WT.mc_id=academic-77807-sagibbon) v [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-77807-sagibbon) a spustite nasledujúci príkaz, pričom `<your-repository-url>` nahradíte URL, ktorú ste práve skopírovali:
 
     ```bash 
     git clone <your-repository-url>
     ```
 
-2. Otvorte priečinok vo Visual Studio Code. Môžete to urobiť kliknutím na **File** > **Open Folder** a výberom práve naklonovaného priečinka.
+2. Otvorte priečinok vo Visual Studio Code. Môžete to urobiť kliknutím na **File** > **Open Folder** a výberom práve sklonovaného priečinka.
 
 
->  Odporúčané rozšírenia pre Visual Studio Code:
+>  Odporúčané rozšírenia Visual Studio Code:
 >
 > * [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer&WT.mc_id=academic-77807-sagibbon) - na náhľad HTML stránok priamo vo Visual Studio Code
 > * [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-77807-sagibbon) - na rýchlejšie písanie kódu
 
 ## 📂 Každá lekcia obsahuje:
 
-- voliteľnú skicovaciu poznámku
+- voliteľnú náčrtok (sketchnote)
 - voliteľné doplnkové video
-- rozcvičku pred lekciou formou kvízu
+- rozcvičku pred lekciou (warmup quiz)
 - písanú lekciu
-- pre lekcie založené na projektoch, krok za krokom návody, ako projekt vybudovať
-- kontroly vedomostí
+- pre projektové lekcie podrobné návody krok za krokom, ako projekt vytvoriť
+- kontrolu vedomostí
 - výzvu
 - doplnkové čítanie
-- zadanie
-- [kvíz po lekcii](https://ff-quizzes.netlify.app/web/)
+- zadanie úlohy
+- [test po lekcii](https://ff-quizzes.netlify.app/web/)
 
-> **Poznámka o kvízoch**: Všetky kvízy sú uložené v priečinku Quiz-app, celkovo 48 kvízov so štyrmi otázkami každý. Sú dostupné [tu](https://ff-quizzes.netlify.app/web/), kvízová aplikácia môže byť spustená lokálne alebo nasadená na Azure; postupujte podľa inštrukcií v priečinku `quiz-app`.
+> **Poznámka k testom:** Všetky testy sa nachádzajú v priečinku Quiz-app, spolu 48 testov so štruktúrou troch otázok v každom. Sú dostupné [tu](https://ff-quizzes.netlify.app/web/), aplikáciu testu možno spustiť lokálne alebo nasadiť do Azure; postupujte podľa inštrukcií v priečinku `quiz-app`.
 
 ## 🗃️ Lekcie
 
-|     |                       Názov projektu                       |                            Konzepte vyučované                             | Ciele učenia                                                                                                                 |                                                         Prepojená lekcia                                                          |         Autor          |
-| :-: | :--------------------------------------------------------: | :-----------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
-| 01  |                     Začínáme                      |           Úvod do programovania a nástroje remesla           | Naučte sa základné princípy väčšiny programovacích jazykov a o softvéri, ktorý pomáha profesionálnym vývojárom pri práci | [Úvod do programovacích jazykov a nástrojov](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
-| 02  |                     Začínáme                      |             Základy GitHubu, vrátane práce v tíme             | Ako používať GitHub vo svojom projekte, ako spolupracovať s inými na kóde                                                    |                            [Úvod do GitHubu](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
-| 03  |                     Začínáme                      |                             Prístupnosť                              | Naučte sa základy prístupnosti webu                                                                                               |                       [Základy prístupnosti](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
-| 04  |                        Základy JS                         |                         Typy dát v JavaScript                           | Základy typov dát v JavaScript                                                                                                 |                                       [Typy dát](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
-| 05  |                        Základy JS                         |                         Funkcie a metódy                           | Naučte sa o funkciách a metódach na riadenie logiky aplikácie                                                             |                              [Funkcie a metódy](./2-js-basics/2-functions-methods/README.md)                               | Jasmine a Christopher |
-| 06  |                        Základy JS                         |                        Tvorba rozhodnutí v JS                        | Naučte sa vytvárať podmienky vo svojom kóde pomocou rozhodovacích metód                                                           |                                 [Tvorba rozhodnutí](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
-| 07  |                        Základy JS                         |                            Polia a cykly                            | Práca s dátami pomocou polí a cyklov v JavaScript                                                                                 |                                   [Polia a cykly](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
-| 08  |       [Terrárium](./3-terrarium/solution/README.md)       |                            HTML v praxi                            | Vytvorte HTML pre online terrárium, zamerajte sa na tvorbu rozloženia                                                         |                                 [Úvod do HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
-| 09  |       [Terrárium](./3-terrarium/solution/README.md)       |                            CSS v praxi                             | Vytvorte CSS pre štýlovanie online terrária, naučte sa základy CSS vrátane responzívneho návrhu stránky                     |                                  [Úvod do CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
-| 10  |            [Terrárium](./3-terrarium/solution/README.md)            |                 Uzávierky JavaScriptu, manipulácia s DOMom                  | Vytvorte JavaScript, ktorý umožní terráriu fungovať ako drag/drop rozhranie, zamerajte sa na uzávierky a manipuláciu s DOMom             |                  [Uzávierky JavaScriptu, manipulácia s DOMom](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
-| 11  |          [Hra na písanie](./4-typing-game/solution/README.md)          |                          Vytvorte hru na písanie                           | Naučte sa používať udalosti klávesnice na riadenie logiky vašej JavaScriptovej aplikácie                                                          |                                [Programovanie založené na udalostiach](./4-typing-game/typing-game/README.md)                                |       Christopher       |
-| 12  | [Rozšírenie pre prehliadač Green](./5-browser-extension/solution/README.md) |                         Práca s prehliadačmi                          | Naučte sa, ako fungujú prehliadače, ich históriu a ako vytvoriť základné prvky rozšírenia prehliadača                               |                               [O prehliadačoch](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
-| 13  | [Rozšírenie pre prehliadač Green](./5-browser-extension/solution/README.md) | Vytvorenie formulára, volanie API a uchovávanie premenných v lokálnom úložisku | Vytvorte JavaScriptové prvky rozšírenia prehliadača na volanie API pomocou premenných uložených v lokálnom úložisku                      |                [API, formuláre a lokálne úložisko](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
-| 14  | [Rozšírenie pre prehliadač Green](./5-browser-extension/solution/README.md) |          Systémové procesy na pozadí v prehliadači, výkon webu          | Použite systémové procesy prehliadača na správu ikony rozšírenia; učte sa o výkone webu a niektorých optimalizáciách               |             [Úlohy na pozadí a výkon](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
-| 15  |           [Hra v priestore](./6-space-game/solution/README.md)           |            Pokročilý vývoj hier v JavaScripte             | Naučte sa o dedičnosti pomocou tried a kompozície a o vzore Pub/Sub, ako prípravu na tvorbu hry              |                      [Úvod k pokročilému vývoju hier](./6-space-game/1-introduction/README.md)                       |          Chris          |
-| 16  |           [Hra v priestore](./6-space-game/solution/README.md)           |                           Kreslenie na plátno                            | Naučte sa o Canvas API používanom na kreslenie prvkov na obrazovku                                                                       |                                [Kreslenie na plátno](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
-| 17  |           [Hra v priestore](./6-space-game/solution/README.md)           |                   Pohyb prvkov po obrazovke                    | Objavte, ako môžu prvky získať pohyb pomocou kartézskych súradníc a Canvas API                                            |                           [Pohyb prvkov](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
-| 18  |           [Hra v priestore](./6-space-game/solution/README.md)           |                          Detekcia kolízií                           | Urobte, aby sa prvky zrážali a reagovali na seba pomocou stlačenia kláves a zabezpečte funkciu cooldown pre výkon hry    |                              [Detekcia kolízií](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
-| 19  |           [Hra v priestore](./6-space-game/solution/README.md)           |                             Uchovávanie skóre                              | Vykonávajte matematické výpočty na základe stavu a výkonu hry                                                                |                                    [Uchovávanie skóre](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
-| 20  |           [Hra v priestore](./6-space-game/solution/README.md)           |                     Ukončenie a reštart hry                     | Naučte sa o ukončení a reštarte hry vrátane čistenia zdrojov a resetovania premenných                              |                                [Podmienka ukončenia](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
-| 21  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                 HTML šablóny a routovanie vo webovej aplikácii                 | Naučte sa vytvoriť kostru viacstránkovej webovej architektúry pomocou routovania a HTML šablón                             |                            [HTML šablóny a routovanie](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
-| 22  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                  Vytvorenie prihlasovacieho a registračného formulára                   | Naučte sa vytvárať formuláre a spracovávať validačné rutiny                                                                          |                                           [Formuláre](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
-| 23  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                   Spôsoby získavania a používania dát                   | Ako dáta prúdia dovnútra a von z vašej aplikácie, ako ich získavať, ukladať a likvidovať                                                 |                                            [Dáta](./7-bank-project/3-data/README.md)                                            |          Yohan          |
-| 24  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                      Koncepty správy stavu                      | Naučte sa, ako si vaša aplikácia udržiava stav a ako ho programovo spravovať                                                              |                                [Správa stavu](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
-| 25 | [Prehliadač/VScode Kód](../../8-code-editor) | Práca s VScode | Naučte sa používať kódový editor| [Použitie VScode kódového editora](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
-| 26 | [AI asistenti](./9-chat-project/README.md) | Práca s AI | Naučte sa vytvoriť vlastného AI asistenta | [Projekt AI asistenta](./9-chat-project/README.md) | Chris |
+|     |                       Názov projektu                      |                            Učené koncepty                             | Učebné ciele                                                                                                                     |                                                         Prepojená lekcia                                                          |         Autor          |
+| :-: | :------------------------------------------------------: | :------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------: |
+| 01  |                     Začíname                              |           Úvod do programovania a nástroje remesla                  | Naučiť sa základné princípy väčšiny programovacích jazykov a softvér, ktorý pomáha profesionálnym vývojárom                      | [Úvod do programovacích jazykov a nástrojov](./1-getting-started-lessons/1-intro-to-programming-languages/README.md) |         Jasmine         |
+| 02  |                     Začíname                              |             Základy GitHubu, vrátane práce v tíme                   | Ako používať GitHub v projekte a spolupracovať s ostatnými na kóde                                                               |                            [Úvod do GitHubu](./1-getting-started-lessons/2-github-basics/README.md)                             |          Floor          |
+| 03  |                     Začíname                              |                             Prístupnosť                             | Naučiť sa základy prístupnosti webu                                                                                              |                       [Základy prístupnosti](./1-getting-started-lessons/3-accessibility/README.md)                       |       Christopher       |
+| 04  |                        Základy JS                         |                         Typy údajov v JavaScripte                  | Základy typov údajov v JavaScripte                                                                                               |                                       [Typy údajov](./2-js-basics/1-data-types/README.md)                                        |         Jasmine         |
+| 05  |                        Základy JS                         |                         Funkcie a metódy                           | Naučiť sa o funkciách a metódach na riadenie logiky aplikácie                                                                   |                              [Funkcie a metódy](./2-js-basics/2-functions-methods/README.md)                               | Jasmine a Christopher |
+| 06  |                        Základy JS                         |                        Rozhodovanie v JS                            | Naučiť sa vytvárať podmienky v kóde pomocou metód rozhodovania                                                                   |                                 [Rozhodovanie](./2-js-basics/3-making-decisions/README.md)                                  |         Jasmine         |
+| 07  |                        Základy JS                         |                            Polia a cykly                            | Pracovať s údajmi pomocou polí a cyklov v JavaScripte                                                                           |                                   [Polia a cykly](./2-js-basics/4-arrays-loops/README.md)                                    |         Jasmine         |
+| 08  |       [Terárium](./3-terrarium/solution/README.md)       |                            HTML v praxi                            | Vytvoriť HTML pre online terárium so zameraním na tvorbu rozloženia                                                             |                                 [Úvod do HTML](./3-terrarium/1-intro-to-html/README.md)                                 |           Jen           |
+| 09  |       [Terárium](./3-terrarium/solution/README.md)       |                            CSS v praxi                             | Vytvoriť CSS na štýlovanie online terária so zameraním na základy CSS vrátane responzívneho dizajnu                              |                                  [Úvod do CSS](./3-terrarium/2-intro-to-css/README.md)                                  |           Jen           |
+| 10  |            [Terárium](./3-terrarium/solution/README.md)            |                 JavaScriptové uzávierky, manipulácia s DOM         | Vytvoriť JavaScript pre terárium, aby fungovalo ako drag/drop rozhranie, so zameraním na uzávierky a manipuláciu s DOM           |                  [JavaScriptové uzávierky a manipulácia s DOM](./3-terrarium/3-intro-to-DOM-and-closures/README.md)                   |           Jen           |
+| 11  |          [Hra na písanie](./4-typing-game/solution/README.md)          |                          Vytváranie hry na písanie                  | Naučiť sa používať udalosti z klávesnice na riadenie logiky JavaScriptovej aplikácie                                              |                                [Programovanie na základe udalostí](./4-typing-game/typing-game/README.md)                                |       Christopher       |
+| 12  | [Zelené rozšírenie prehliadača](./5-browser-extension/solution/README.md) |                         Práca s prehliadačmi                       | Naučiť sa, ako pracujú prehliadače, ich históriu, a ako vytvoriť prvé elementy rozšírenia prehliadača                            |                               [O prehliadačoch](./5-browser-extension/1-about-browsers/README.md)                                |           Jen           |
+| 13  | [Zelené rozšírenie prehliadača](./5-browser-extension/solution/README.md) | Vytváranie formulára, volanie API a ukladanie premenných lokálne    | Vytvoriť JavaScriptové prvky rozšírenia prehliadača na volanie API pomocou premenných uložených v lokálnom úložisku             |                [API, formuláre a lokálne úložisko](./5-browser-extension/2-forms-browsers-local-storage/README.md)                 |           Jen           |
+| 14  | [Zelené rozšírenie prehliadača](./5-browser-extension/solution/README.md) |          Pozadie procesov v prehliadači, výkon webu                 | Použiť pozadie procesov prehliadača na správu ikony rozšírenia; naučiť sa o výkone webu a optimalizáciách                        |             [Pozadie úloh a výkon](./5-browser-extension/3-background-tasks-and-performance/README.md)              |           Jen           |
+| 15  |           [Hra vo vesmíre](./6-space-game/solution/README.md)           |             Pokročilejší vývoj hier s JavaScriptom                  | Naučiť sa o dedičnosti pomocou tried a kompozície a o vzore Pub/Sub, na prípravu tvorby hry                                      |                      [Úvod do pokročilého vývoja hier](./6-space-game/1-introduction/README.md)                       |          Chris          |
+| 16  |           [Hra vo vesmíre](./6-space-game/solution/README.md)           |                           Kreslenie na plátno                       | Naučiť sa o API Canvas na kreslenie prvkov na obrazovku                                                                           |                                [Kreslenie na plátno](./6-space-game/2-drawing-to-canvas/README.md)                                |          Chris          |
+| 17  |           [Hra vo vesmíre](./6-space-game/solution/README.md)           |                   Pohybovanie prvkov na obrazovke                   | Objaviť, ako môžu prvky získať pohyb pomocou kartézskych súradníc a Canvas API                                                   |                           [Pohybovanie prvkov](./6-space-game/3-moving-elements-around/README.md)                           |          Chris          |
+| 18  |           [Hra vo vesmíre](./6-space-game/solution/README.md)           |                          Detekcia kolízie                           | Zabezpečiť kolízie a reakcie prvkov na seba navzájom pomocou stláčania kláves a poskytnúť cooldown funkciu pre zabezpečenie výkonu |                              [Detekcia kolízie](./6-space-game/4-collision-detection/README.md)                              |          Chris          |
+| 19  |           [Hra vo vesmíre](./6-space-game/solution/README.md)           |                             Udržiavanie skóre                        | Vykonať matematické výpočty na základe stavu a výkonu hry                                                                        |                                    [Udržiavanie skóre](./6-space-game/5-keeping-score/README.md)                                    |          Chris          |
+| 20  |           [Hra vo vesmíre](./6-space-game/solution/README.md)           |                     Ukončenie a restartovanie hry                    | Naučiť sa o ukončení a reštartovaní hry vrátane čistenia zdrojov a resetovania premenných                                         |                                [Ukončenie hry](./6-space-game/6-end-condition/README.md)                                 |          Chris          |
+| 21  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                 HTML šablóny a trasy v webovej aplikácii            | Naučiť sa vytvárať skelet viacstránkovej webovej architektúry pomocou routingu a HTML šablón                                      |                            [HTML šablóny a trasy](./7-bank-project/1-template-route/README.md)                             |          Yohan          |
+| 22  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                  Vytváranie prihlasovacieho a registračného formulára | Naučiť sa o tvorbe formulárov a spracovaní validačných rutin                                                                     |                                           [Formuláre](./7-bank-project/2-forms/README.md)                                           |          Yohan          |
+| 23  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                   Spôsoby získavania a používania údajov            | Ako údaje prúdia dnu a von z aplikácie, ako ich načítať, uložiť a odstrániť                                                    |                                            [Údaje](./7-bank-project/3-data/README.md)                                            |          Yohan          |
+| 24  |         [Banková aplikácia](./7-bank-project/solution/README.md)          |                      Koncepty správy stavu                          | Naučiť sa, ako vaša aplikácia uchováva stav a ako s ním programovo pracovať                                                     |                                [Správa stavu](./7-bank-project/4-state-management/README.md)                                |          Yohan          |
+| 25 | [Browser/VScode kód](../../8-code-editor) | Práca s VScode | Naučiť sa používať kódový editor | [Použitie kódového editoru VScode](./8-code-editor/1-using-a-code-editor/README.md) | Chris |
+| 26 | [AI asistenti](./9-chat-project/README.md) | Práca s AI | Naučiť sa vytvoriť vlastného AI asistenta | [Projekt AI asistenta](./9-chat-project/README.md) | Chris |
 
-## 🏫 Pedagogika
+## 🏫 Pedagógia
 
-Naše učebné osnovy sú navrhnuté so dvoma kľúčovými pedagogickými princípmi:
+Naše vzdelávacie programy sú navrhnuté s ohľadom na dva kľúčové pedagogické princípy:
 * učenie založené na projektoch
-* časté kvízy
+* časté testy
 
-Program učí základy JavaScriptu, HTML a CSS, ako aj najnovšie nástroje a techniky, ktoré používajú dnešní weboví vývojári. Študenti budú mať príležitosť získať praktické skúsenosti tým, že vyvinú hru na písanie, virtuálne terárium, ekologické rozšírenie prehliadača, hru v štýle vesmírneho dobyvateľa a bankovú aplikáciu pre podniky. Na konci série budú mať pevné pochopenie webového vývoja.
+Program vyučuje základy JavaScriptu, HTML a CSS, ako aj najnovšie nástroje a techniky, ktoré dnes používajú weboví vývojári. Študenti budú mať príležitosť získať praktické skúsenosti tvorbou hry na písanie, virtuálneho terária, ekologického rozšírenia prehliadača, hry v štýle Space Invaders a bankovej aplikácie pre firmy. Na konci série študenti získajú pevné základy webového vývoja.
 
-> 🎓 Prvé lekcie tohto kurzu môžete absolvovať ako [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) na Microsoft Learn!
+> 🎓 Prvé lekcie v tomto kurze si môžete prejsť ako [Learn Path](https://docs.microsoft.com/learn/paths/web-development-101/?WT.mc_id=academic-77807-sagibbon) na Microsoft Learn!
 
-Zabezpečením zladenia obsahu s projektmi je proces pre študentov pútavejší a uchovávanie konceptov sa zlepší. Tiež sme napísali niekoľko úvodných lekcií v základoch JavaScriptu, ktoré predstavujú koncepty, sprevádzané videom zo série "[Začiatočnícka séria: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", ktorého niektorí autori prispeli do týchto osnov.
+Zabezpečením prepojenia obsahu s projektmi sa proces výučby stáva zábavnejší pre študentov a zvyšuje sa ich zapamätateľnosť. Tiež sme napísali niekoľko úvodných lekcií o základoch JavaScriptu na predstavenie konceptov, doplnených videom zo série "[Beginners Series to: JavaScript](https://channel9.msdn.com/Series/Beginners-Series-to-JavaScript/?WT.mc_id=academic-77807-sagibbon)", ktorej niektorí autori prispeli do tohto kurikula.
 
-Okrem toho nízko náročný kvíz pred triedou nastavuje študentovi zámer učiť sa danú tému, zatiaľ čo druhý kvíz po hodine zabezpečuje ďalšie uchovanie vedomostí. Tento kurz bol navrhnutý tak, aby bol flexibilný a zábavný a môže byť absolvovaný celý alebo čiastočne. Projekty začínajú jednoducho a do 12-týždňového cyklu sú čoraz zložitejšie.
+Okrem toho nízko náročný test pred triedou nastavuje študentom zámer učiť sa danú tému, zatiaľ čo druhý test po hodine zabezpečuje lepšie zapamätanie. Tento kurz bol navrhnutý tak, aby bol flexibilný a zábavný a možno ho absolvovať celý alebo po častiach. Projekty sa začínajú malé a postupne sa stávajú zložitejšími do konca 12-týždňového cyklu.
 
-Zatiaľ čo sme zámerne vynechali zavedenie JavaScriptových frameworkov, aby sme sa sústredili na základné zručnosti potrebné ako webový vývojár pred prijatím frameworku, dobrým ďalším krokom po dokončení tohto kurzu by bolo naučiť sa Node.js prostredníctvom inej kolekcie videí: "[Začiatočnícka séria: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
+Hoci sme zámerne vynechali zavedenie JavaScriptových frameworkov, aby sme sa sústredili na základné zručnosti potrebné ako webový vývojár pred prijatím frameworku, dobrou ďalšou voľbou na dokončenie tohto kurikula je naučiť sa o Node.js prostredníctvom ďalšej zbierky videí: "[Beginner Series to: Node.js](https://channel9.msdn.com/Series/Beginners-Series-to-Nodejs/?WT.mc_id=academic-77807-sagibbon)".
 
-> Navštívte naše pravidlá správania [Code of Conduct](CODE_OF_CONDUCT.md) a zásady prispievania [Contributing](CONTRIBUTING.md). Vitajte vašu konštruktívnu spätnú väzbu!
+> Navštívte naše pravidlá [Code of Conduct](CODE_OF_CONDUCT.md) a pokyny [Contributing](CONTRIBUTING.md). Tešíme sa na vaše konštruktívne názory!
 
 
-## 🧭 Prístup offline
+## 🧭 Offline prístup
 
-Môžete spustiť túto dokumentáciu offline pomocou [Docsify](https://docsify.js.org/#/). Forknite tento repozitár, [nainštalujte Docsify](https://docsify.js.org/#/quickstart) na svojom lokálnom počítači a potom v koreňovom priečinku tohto repozitára zadajte `docsify serve`. Webová stránka bude dostupná na porte 3000 na vašom localhoste: `localhost:3000`.
+Túto dokumentáciu si môžete prezerať offline pomocou [Docsify](https://docsify.js.org/#/). Forknite si tento repozitár, [nainštalujte Docsify](https://docsify.js.org/#/quickstart) na vašom lokálnom počítači a potom v koreňovom priečinku repozitára zadajte príkaz `docsify serve`. Webová stránka bude sprístupnená na porte 3000 na vašom localhoste: `localhost:3000`.
 
 ## 📘 PDF
 PDF so všetkými lekciami nájdete [tu](https://microsoft.github.io/Web-Dev-For-Beginners/pdf/readme.pdf).
@@ -194,7 +190,7 @@ PDF so všetkými lekciami nájdete [tu](https://microsoft.github.io/Web-Dev-For
 
 ## 🎒 Iné kurzy
 
-Náš tím produkuje aj iné kurzy! Pozrite si:
+Náš tím produkuje aj iné kurzy! Pozrite sa:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -203,56 +199,56 @@ Náš tím produkuje aj iné kurzy! Pozrite si:
 [![LangChain pre začiatočníkov](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
-### Azure / Edge / MCP / Agenti
+### Azure / Edge / MCP / Agentov
 [![AZD pre začiatočníkov](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI pre začiatočníkov](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP pre začiatočníkov](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI Agentov pre začiatočníkov](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI agenti pre začiatočníkov](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Generatívna AI séria
-[![Generatívna AI pre začiatočníkov](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Generatívna AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Generatívna AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![Generatívna AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+### Séria Generatívne AI
+[![Generatívne AI pre začiatočníkov](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generatívne AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generatívne AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generatívne AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Základné učenie
 [![ML pre začiatočníkov](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Dátová veda pre začiatočníkov](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science pre začiatočníkov](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI pre začiatočníkov](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Kybernetická bezpečnosť pre začiatočníkov](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Webové vývoj pre začiatočníkov](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![Webový vývoj pre začiatočníkov](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT pre začiatočníkov](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR vývoj pre začiatočníkov](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Copilot séria
-[![Copilot pre AI programovanie v pároch](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+### Séria Copilot
+[![Copilot pre AI párované programovanie](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot pre C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot dobrodružstvo](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Získanie pomoci
 
-Ak sa zaseknete alebo máte otázky ohľadom budovania AI aplikácií. Pridajte sa k ostatným študentom a skúseným vývojárom v diskusiách o MCP. Je to podporná komunita, kde sú otázky vítané a vedomosti sa slobodne zdieľajú.
+Ak ste uviazli alebo máte otázky ohľadom tvorby AI aplikácií. Pridajte sa k ďalším študentom a skúseným vývojárom do diskusií o MCP. Je to podporná komunita, kde sú otázky vítané a vedomosti sa voľne zdieľajú.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ak máte spätnú väzbu k produktu alebo narazíte na chyby pri vývoji, navštívte:
+Ak máte spätnú väzbu alebo chyby pri vývoji navštívte:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licencia
 
-Táto repozitár je licencovaný pod licenciou MIT. Viac informácií nájdete v súbore [LICENSE](../../LICENSE).
+Tento repozitár je licencovaný pod licenciou MIT. Viac informácií nájdete v súbore [LICENSE](../../LICENSE).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zrieknutie sa zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, berte prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, berte, prosím, na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne výklady vyplývajúce z používania tohto prekladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

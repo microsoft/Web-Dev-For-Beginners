@@ -1,56 +1,79 @@
-# [Tema lekcije]
+# Tema lekcije
 
-![Vstavi video tukaj](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Pred-predavanje kviz](../../../lesson-template/quiz-url)
-
-[Opis, kaj bomo spoznali]
-
-### Uvod
-
-Opis, kaj bo zajeto v tej lekciji
-
-> Opombe
-
-### Predpogoji
-
-Kateri koraki bi morali biti zaključeni pred to lekcijo?
-
-### Priprava
-
-Pripravljalni koraki za začetek te lekcije
+> Dodajte vgrajeno video ali povezavo do lekcije tukaj.
 
 ---
 
-[Korak za korakom skozi vsebino]
+## Predpredavalni kviz
 
-## [Tema 1]
+> Dodajte povezavo do kviza tukaj, ko bo na voljo.
+
+---
+
+Podajte kratek pregled, kaj se bodo študenti naučili v tej lekciji.
+
+---
+
+### Uvod
+
+Podajte kratki uvod, ki opisuje, kaj bo zajeto v tej lekciji.
+
+> Opombe
+
+---
+
+### Predpogoj
+
+Naštejte pojme ali teme, s katerimi naj bi študenti že bili seznanjeni pred začetkom te lekcije.
+
+---
+
+### Priprava
+
+Naštejte vse korake nastavitev ali orodja, potrebna pred začetkom lekcije.
+
+---
+
+### Vsebina
+
+Korak za korakom predstavite vsebino lekcije v strukturiranih odsekih.
+
+---
+
+## Tema 1
 
 ### Naloga:
 
-Sodelujte pri postopnem izboljševanju svoje kode, da zgradite projekt s skupno kodo:
+Sodelujte, da postopoma izboljšate svojo kodo in zgradite projekt z deljeno kodo:
 
 ```html
 code blocks
 ```
 
-✅ Preverjanje znanja - izkoristite ta trenutek za razširitev znanja študentov z odprtimi vprašanji
+✅ Preverjanje znanja
+Izkoristite ta trenutek, da razširite znanje študentov z odprtimi vprašanji.
 
-## [Tema 2]
+## Tema 2
+## Tema 3
 
-## [Tema 3]
+🚀 Izziv
+Dodajte skupinski izziv za študente, da izboljšajo projekt.
 
-🚀 Izziv: Dodajte izziv, na katerem študenti sodelujejo v razredu, da izboljšajo projekt
+Neobvezno: Dodajte posnetek zaslona dokončane uporabniške izkušnje lekcije, če je primerno.
 
-Neobvezno: dodajte posnetek zaslona dokončanega uporabniškega vmesnika lekcije, če je primerno
+## Po predavanju kviz
 
-## [Po-predavanje kviz](../../../lesson-template/quiz-url)
+Dodajte tukaj povezavo do kviza po zaključku lekcije.
 
 ## Pregled in samostojno učenje
 
-**Rok za oddajo [MM/YY]**: [Ime naloge](assignment.md)
+**Rok oddaje [MM/LL]**: [Ime naloge](assignment.md)
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitna nesporazumevanja ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, prosimo, upoštevajte, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v maternem jeziku je treba šteti kot pooblaščeni vir. Za ključne informacije priporočamo strokovni človeški prevod. Nismo odgovorni za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

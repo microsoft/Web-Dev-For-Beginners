@@ -1,56 +1,79 @@
-# [Lecke Témája]
+# Óratéma
 
-![Videó beágyazása itt](../../../lesson-template/video-url)
+## 🎥 Videó
 
-## [Előzetes kvíz](../../../lesson-template/quiz-url)
-
-[Leírás arról, hogy mit fogunk tanulni]
-
-### Bevezetés
-
-Ismertetés arról, hogy mit fogunk lefedni
-
-> Jegyzetek
-
-### Előfeltétel
-
-Milyen lépéseket kellett volna már teljesíteni a lecke előtt?
-
-### Felkészülés
-
-Előkészítő lépések a lecke megkezdéséhez
+> Adj meg egy beágyazott videót vagy óra linket ide.
 
 ---
 
-[Lépjünk végig a tartalmon blokkokban]
+## Előadás előtti kvíz
 
-## [1. Téma]
+> Adj meg egy kvíz linket ide, ha elérhető.
+
+---
+
+Adj egy rövid áttekintést arról, mit tanulnak a diákok ebben az órában.
+
+---
+
+### Bevezetés
+
+Adj egy rövid bevezetőt, amely leírja, mit fed le ez az óra.
+
+> Megjegyzések
+
+---
+
+### Előfeltételek
+
+Sorold fel azokat a fogalmakat vagy témákat, amelyekkel a hallgatóknak már ismerniük kell, mielőtt elkezdenék ezt az órát.
+
+---
+
+### Előkészületek
+
+Sorold fel az órakezdés előtt szükséges beállítási lépéseket vagy eszközöket.
+
+---
+
+### Tartalom
+
+Lépkedj végig az óra tartalmán strukturált részekben.
+
+---
+
+## Téma 1
 
 ### Feladat:
 
-Dolgozzatok együtt, hogy fokozatosan fejlesszétek a kódbázist, és építsétek meg a projektet közös kóddal:
+Dolgozzatok együtt a kódbázis folyamatos fejlesztésén, hogy a projektet megosztott kóddal építsétek fel:
 
 ```html
 code blocks
 ```
 
-✅ Tudásellenőrzés - használd ki ezt a pillanatot, hogy nyitott kérdésekkel bővítsd a diákok ismereteit
+✅ Tudásellenőrzés
+Használd ezt a pillanatot, hogy nyitott kérdésekkel mélyítsd el a diákok tudását.
 
-## [2. Téma]
+## Téma 2
+## Téma 3
 
-## [3. Téma]
+🚀 Kihívás
+Adj egy közös kihívást a diákoknak, hogy fejlesszék a projektet.
 
-🚀 Kihívás: Adj egy feladatot a diákoknak, amelyen közösen dolgozhatnak az órán, hogy továbbfejlesszék a projektet
+Opcionális: Adj meg egy képernyőképet a befejezett óra felhasználói felületéről, ha megfelelő.
 
-Opcionális: adj egy képernyőképet a befejezett lecke felhasználói felületéről, ha releváns
+## Az előadás utáni kvíz
 
-## [Utólagos kvíz](../../../lesson-template/quiz-url)
+Adj meg egy kvíz linket ide az óra befejezése után.
 
-## Áttekintés és Önálló Tanulás
+## Áttekintés és önálló tanulás
 
-**Határidő [HH/ÉÉ]**: [Feladat Neve](assignment.md)
+**Feladat leadási határideje [HH/ÉÉ]**: [Feladat neve](assignment.md)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Nyilatkozat**:  
+Ez a dokumentum az AI fordító szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Kritikus információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

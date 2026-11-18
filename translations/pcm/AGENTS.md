@@ -2,27 +2,27 @@
 
 ## Project Overview
 
-Dis na wan educational curriculum repository wey dem dey use teach web development fundamentals to beginners. Di curriculum na big 12-week course wey Microsoft Cloud Advocates make, get 24 hands-on lessons covering JavaScript, CSS, and HTML.
+Dis na wan educational curriculum repository wey dem use teach web development fundamentals to beginners. Di curriculum na one complete 12-week course wey Microsoft Cloud Advocates develop, e get 24 hands-on lessons wey cover JavaScript, CSS, and HTML.
 
 ### Key Components
 
-- **Educational Content**: 24 structured lessons wey dem organize inside project-based modules
+- **Educational Content**: 24 structured lessons wey dem organize into project-based modules
 - **Practical Projects**: Terrarium, Typing Game, Browser Extension, Space Game, Banking App, Code Editor, and AI Chat Assistant
 - **Interactive Quizzes**: 48 quizzes wey get 3 questions each (pre/post-lesson assessments)
-- **Multi-language Support**: Automated translations for 50+ languages through GitHub Actions
+- **Multi-language Support**: Automated translations for 50+ languages via GitHub Actions
 - **Technologies**: HTML, CSS, JavaScript, Vue.js 3, Vite, Node.js, Express, Python (for AI projects)
 
 ### Architecture
 
 - Educational repository wey get lesson-based structure
-- Every lesson folder get README, code examples, and solutions
+- Each lesson folder get README, code examples, and solutions
 - Standalone projects dey for separate directories (quiz-app, various lesson projects)
 - Translation system dey use GitHub Actions (co-op-translator)
 - Documentation dey serve through Docsify and e dey available as PDF
 
 ## Setup Commands
 
-Dis repository na mainly for educational content consumption. For to work with specific projects:
+Dis repository mainly for educational content consumption. If you wan work with specific projects:
 
 ### Main Repository Setup
 
@@ -36,7 +36,7 @@ cd Web-Dev-For-Beginners
 ```bash
 cd quiz-app
 npm install
-npm run dev        # Start di development server
+npm run dev        # Begin development server
 npm run build      # Build for production
 npm run lint       # Run ESLint
 ```
@@ -46,9 +46,9 @@ npm run lint       # Run ESLint
 ```bash
 cd 7-bank-project/api
 npm install
-npm start          # Start API server
+npm start          # Start di API server
 npm run lint       # Run ESLint
-npm run format     # Format wit Prettier
+npm run format     # Format am wit Prettier
 ```
 
 ### Browser Extension Projects
@@ -56,7 +56,7 @@ npm run format     # Format wit Prettier
 ```bash
 cd 5-browser-extension/solution
 npm install
-# Follow di browser-specific extension loading instructions
+# Follow how for put extension for browser wey you dey use
 ```
 
 ### Space Game Projects
@@ -80,29 +80,29 @@ python api.py
 
 ### For Content Contributors
 
-1. **Fork di repository** go your GitHub account
-2. **Clone your fork** for your machine
-3. **Create new branch** for your changes
-4. Make changes for lesson content or code examples
+1. **Fork di repository** to your GitHub account
+2. **Clone your fork** for your local machine
+3. **Create wan new branch** for your changes
+4. Change lesson content or code examples
 5. Test any code changes inside the relevant project directories
-6. Submit pull requests based on contribution guidelines
+6. Submit pull requests wey follow contribution guidelines
 
 ### For Learners
 
 1. Fork or clone di repository
-2. Go through lesson directories one by one
+2. waka go lesson directories one by one
 3. Read README files for each lesson
-4. Do pre-lesson quizzes at https://ff-quizzes.netlify.app/web/
+4. Complete pre-lesson quizzes at https://ff-quizzes.netlify.app/web/
 5. Work through code examples inside lesson folders
-6. Finish assignments and challenges
-7. Do post-lesson quizzes
+6. Complete assignments and challenges
+7. Take post-lesson quizzes
 
 ### Live Development
 
 - **Documentation**: Run `docsify serve` for root (port 3000)
 - **Quiz App**: Run `npm run dev` inside quiz-app directory
 - **Projects**: Use VS Code Live Server extension for HTML projects
-- **API Projects**: Run `npm start` for the API directories
+- **API Projects**: Run `npm start` for the correct API folders
 
 ## Testing Instructions
 
@@ -111,7 +111,7 @@ python api.py
 ```bash
 cd quiz-app
 npm run lint       # Check for code style wahala
-npm run build      # Make sure build dey successful
+npm run build      # Make sure build go succeed
 ```
 
 ### Bank API Testing
@@ -119,73 +119,73 @@ npm run build      # Make sure build dey successful
 ```bash
 cd 7-bank-project/api
 npm run lint       # Check for code style wahala
-node server.js     # Make sure say server fit start without any kasala
+node server.js     # Make sure server start without any gbege
 ```
 
 ### General Testing Approach
 
-- Dis na educational repository wey no get full automatic tests
+- Dis na educational repository wey no get full automated tests
 - Manual testing dey focus on:
-  - Code examples dey run without wahala
+  - Code examples wey run without wahala
   - Links for documentation dey work well
-  - Project build dey complete successful
+  - Project builds complete normally
   - Examples follow best practices
 
 ### Pre-submission Checks
 
 - Run `npm run lint` for directories wey get package.json
 - Check say markdown links dey valid
-- Test code examples for browser or Node.js
-- Confirm say translations keep correct structure
+- Test code examples inside browser or Node.js
+- Make sure translations keep proper structure
 
 ## Code Style Guidelines
 
 ### JavaScript
 
 - Use modern ES6+ syntax
-- Follow standard ESLint config wey projects get
+- Follow standard ESLint rules wey projects provide
 - Use meaningful variable and function names for educational clarity
 - Add comments wey explain concepts for learners
-- Format using Prettier if e dey setup
+- Format with Prettier where e dey setup
 
 ### HTML/CSS
 
-- Use semantic HTML5 elements
+- Semantic HTML5 elements
 - Responsive design principles
 - Clear class naming conventions
 - Comments wey dey explain CSS techniques for learners
 
 ### Python
 
-- PEP 8 style guidelines
+- PEP 8 style guide
 - Clear, educational code examples
-- Type hints where e go help learning
+- Type hints where e fit help learning
 
 ### Markdown Documentation
 
 - Clear heading hierarchy
-- Code blocks with language specification
+- Code blocks wey get language tag
 - Links to extra resources
-- Screenshots and images inside `images/` directories
-- Alt text for images to support accessibility
+- Screenshots and images for `images/` folders
+- Alt text for images so e go accessible
 
 ### File Organization
 
-- Lessons dey numbered one by one (1-getting-started-lessons, 2-js-basics, etc.)
-- Every project get `solution/` and sometimes `start/` or `your-work/` directories
-- Images for lesson-specific `images/` folders
-- Translations dey inside `translations/{language-code}/` structure
+- Lessons dey number one by one (1-getting-started-lessons, 2-js-basics, etc.)
+- Each project get `solution/` and often `start/` or `your-work/` directories
+- Images dey store inside lesson-specific `images/` folders
+- Translations for `translations/{language-code}/` folder structure
 
 ## Build and Deployment
 
 ### Quiz App Deployment (Azure Static Web Apps)
 
-The quiz-app dey configured for Azure Static Web Apps deployment:
+The quiz-app dey setup for Azure Static Web Apps deployment:
 
 ```bash
 cd quiz-app
 npm run build      # Dey create dist/ folder
-# Dey put for ground wit GitHub Actions workflow wen dem push for main
+# Dey deploy wit GitHub Actions workflow wen you push to main
 ```
 
 Azure Static Web Apps configuration:
@@ -203,23 +203,23 @@ npm run convert               # Make PDF from docs
 ### Docsify Documentation
 
 ```bash
-npm install -g docsify-cli    # Install Docsify all over di system
-docsify serve                 # Run for localhost:3000
+npm install -g docsify-cli    # Install Docsify for everywhere
+docsify serve                 # Make e dey serve for localhost:3000
 ```
 
 ### Project-specific Builds
 
-Every project directory fit get their own build process:
-- Vue projects: `npm run build` dey create production bundles
-- Static projects: No build step, just serve files directly
+Each project directory fit get im own build process:
+- Vue projects: `npm run build` go create production bundles
+- Static projects: No build step, serve files directly
 
 ## Pull Request Guidelines
 
 ### Title Format
 
-Use clear, descriptive titles wey show wetin change be:
+Use clear, descriptive titles wey show the area wey you change:
 - `[Quiz-app] Add new quiz for lesson X`
-- `[Lesson-3] Fix typo for terrarium project`
+- `[Lesson-3] Fix typo inside terrarium project`
 - `[Translation] Add Spanish translation for lesson 5`
 - `[Docs] Update setup instructions`
 
@@ -228,51 +228,51 @@ Use clear, descriptive titles wey show wetin change be:
 Before you submit PR:
 
 1. **Code Quality**:
-   - Run `npm run lint` for the project directories wey e concern
-   - Fix all lint errors and warnings
+   - Run `npm run lint` for the project directories weh change dey
+   - Fix every linting errors and warnings
 
 2. **Build Verification**:
-   - Run `npm run build` if e necessary
-   - Make sure no build errors
+   - Run `npm run build` if e dey apply
+   - Make sure no build error dey
 
 3. **Link Validation**:
-   - Test all markdown links
-   - Confirm image refs work
+   - Test every markdown links
+   - Verify image references dey work
 
 4. **Content Review**:
    - Proofread for spelling and grammar
-   - Ensure code examples correct and educational
-   - Confirm translations keep original meaning
+   - Make sure code examples dey correct and educational
+   - Verify say translations keep di original meaning
 
 ### Contribution Requirements
 
 - Agree to Microsoft CLA (automatic check for first PR)
-- Follow [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-- See [CONTRIBUTING.md](./CONTRIBUTING.md) for details
-- Reference issue numbers for PR description if e get
+- Follow the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- Check [CONTRIBUTING.md](./CONTRIBUTING.md) for full guidelines
+- Reference issue numbers for PR description if e apply
 
 ### Review Process
 
-- PRs go through maintainer and community review
-- Educational clarity dey important
-- Code examples suppose follow current best practices
-- Translations go through accuracy and cultural appropriateness check
+- PRs dey review by maintainers and community
+- Educational clarity na priority
+- Code examples suppose follow latest best practices
+- Translations go check for accuracy and cultural fit
 
 ## Translation System
 
 ### Automated Translation
 
-- Dey use GitHub Actions with co-op-translator workflow
-- Translates to 50+ languages automatically
+- Use GitHub Actions with co-op-translator workflow
+- Translate go more than 50 languages automatically
 - Source files dey main directories
-- Translated files dey inside `translations/{language-code}/`
+- Translated files dey `translations/{language-code}/` directories
 
 ### Adding Manual Translation Improvements
 
 1. Find file for `translations/{language-code}/`
-2. Make improvements but keep structure intact
-3. Make sure code examples still dey run well
-4. Test any quiz content wey localized
+2. Make improvements, keep structure safe
+3. Make sure code examples still dey work well
+4. Test any local quiz content
 
 ### Translation Metadata
 
@@ -293,72 +293,72 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### Common Issues
 
-**Quiz app no fit start**:
-- Check Node.js version (v14+ recommended)
+**Quiz app no dey start**:
+- Check Node.js version (v14+ na recommended)
 - Delete `node_modules` and `package-lock.json`, run `npm install` again
-- Check for port wahala (default: Vite dey use port 5173)
+- Check if port dey busy (default: Vite dey use port 5173)
 
-**API server no go start**:
-- Confirm Node.js version dey at least (node >=10)
-- Check if port don already dey use
+**API server no dey start**:
+- Check Node.js version (node >=10)
+- Check if port don already use
 - Make sure all dependencies install with `npm install`
 
-**Browser extension no go load**:
-- Confirm manifest.json format correct
+**Browser extension no dey load**:
+- Check manifest.json make e correct
 - Check browser console for errors
-- Follow browser extension installation instructions
+- Follow browser-specific extension install instructions
 
 **Python chat project wahala**:
-- Confirm OpenAI package install: `pip install openai`
-- Confirm GITHUB_TOKEN environment variable set
-- Check GitHub Models permission
+- Make sure OpenAI package install: `pip install openai`
+- Confirm GITHUB_TOKEN environment variable dey set
+- Check GitHub Models access permissions
 
 **Docsify no dey serve docs**:
 - Install docsify-cli globally: `npm install -g docsify-cli`
-- Run am from root directory
+- Run from repository root
 - Check say `docs/_sidebar.md` dey
 
 ### Development Environment Tips
 
 - Use VS Code with Live Server extension for HTML projects
-- Install ESLint and Prettier extensions for proper formatting
-- Use browser DevTools for JavaScript debugging
+- Install ESLint and Prettier extensions for consistent style
+- Use browser DevTools for debugging JavaScript
 - For Vue projects, install Vue DevTools browser extension
 
 ### Performance Considerations
 
-- Plenty translated files (50+ languages) mean big clones
-- Use shallow clone if na content only: `git clone --depth 1`
-- Exclude translations from searches if you dey focus on English
-- Build steps fit slow for first time (npm install, Vite build)
+- Plenty translated files (50+ languages) mean full clones go big
+- Use shallow clone if you only dey work on content: `git clone --depth 1`
+- Exclude translations from search when working on English content
+- Build processes fit slow for first run (npm install, Vite build)
 
 ## Security Considerations
 
 ### Environment Variables
 
-- API keys no suppose commit to repository
-- Use `.env` files (already for `.gitignore`)
-- Document needed environment variables inside project READMEs
+- API keys make sure no dey commit to repository
+- Use `.env` files (wey dey `.gitignore` already)
+- Document required environment variables for project READMEs
 
 ### Python Projects
 
 - Use virtual environments: `python -m venv venv`
-- Keep dependencies updated
-- GitHub tokens need minimal permissions
+- Keep dependencies up to date
+- GitHub tokens suppose get minimal permissions only
 
 ### GitHub Models Access
 
-- Personal Access Tokens (PAT) required for GitHub Models
-- Tokens suppose dey stored as environment variables
-- Never commit tokens or credentials
+- Personal Access Tokens (PAT) dey needed for GitHub Models
+- Tokens suppose dey store as environment variables
+- No commit tokens or credentials
 
 ## Additional Notes
 
 ### Target Audience
 
-- Complete beginners to web development
-- Students and self-learners
-- Teachers wey use the curriculum for classroom
+- Absolute beginners to web development
+- Students and people wey dey learn by themselves
+- Teachers wey dey use curriculum for classroom
 - Content dey designed for accessibility and gradual skill building
 
 ### Educational Philosophy
@@ -366,26 +366,26 @@ CO_OP_TRANSLATOR_METADATA:
 - Project-based learning style
 - Frequent knowledge checks (quizzes)
 - Hands-on coding exercises
-- Real-life application examples
-- Focus on fundamentals before frameworks
+- Real-world application examples
+- Focus on fundamentals before framework waka
 
 ### Repository Maintenance
 
-- Active learner and contributor community
+- Active community of learners and contributors
 - Regular updates to content and dependencies
-- Maintainers dey monitor issues and discussions
-- Translation updates automated via GitHub Actions
+- Issues and discussions dey managed by maintainers
+- Translation updates automatic by GitHub Actions
 
 ### Related Resources
 
 - [Microsoft Learn modules](https://docs.microsoft.com/learn/)
 - [Student Hub resources](https://docs.microsoft.com/learn/student-hub/)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) dey recommended for learners
-- Other courses: Generative AI, Data Science, ML, IoT curricula dey available
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) wey dey recommended for learners
+- Extra courses: Generative AI, Data Science, ML, IoT curricula dey available
 
 ### Working with Specific Projects
 
-For detailed instructions on individual projects, check README files for:
+For detailed instructions on each project, see README files for:
 - `quiz-app/README.md` - Vue 3 quiz application
 - `7-bank-project/README.md` - Banking app with authentication
 - `5-browser-extension/README.md` - Browser extension development
@@ -394,15 +394,15 @@ For detailed instructions on individual projects, check README files for:
 
 ### Monorepo Structure
 
-Even though dis no be traditional monorepo, dis repository get many independent projects:
-- Every lesson dey self-contained
+Even though e no be traditional monorepo, this repository get many independent projects:
+- Each lesson na self-contained
 - Projects no dey share dependencies
-- You fit work on individual projects without affect others
-- Clone whole repo for full curriculum experience
+- You fit work on individual projects without wahala
+- Clone entire repo for full curriculum experience
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dis dokument don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg sabi say automated translations fit get errors or mistakes. Di original dokument for im own language na di correct source. For important information, better human translation na di best. We no get fault if any misunderstanding or wrong understanding happen because of dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg sabi say automated translation fit get mistake or no too correct. Di original document for im own language na di correct one to trust. For important tin dem, e better make professional human translation do am. We no responsible for any misunderstanding or wrong meaning wey fit come from using dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

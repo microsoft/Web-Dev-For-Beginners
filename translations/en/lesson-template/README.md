@@ -1,50 +1,71 @@
-# [Lesson Topic]
+# Lesson Topic
 
-![Embed a video here](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Pre-lecture quiz](../../../lesson-template/quiz-url)
-
-[Overview of what will be learned]
-
-### Introduction
-
-Outline of the topics that will be covered.
-
-> Notes
-
-### Prerequisite
-
-What steps or knowledge should have been completed before starting this lesson?
-
-### Preparation
-
-Steps to prepare before beginning this lesson.
+> Add an embedded video or lesson link here.
 
 ---
 
-[Go through the content step by step]
+## Pre-lecture quiz
 
-## [Topic 1]
+> Add a quiz link here when available.
+
+---
+
+Provide a brief overview of what students will learn in this lesson.
+
+---
+
+### Introduction
+
+Provide a short introduction describing what will be covered in this lesson.
+
+> Notes
+
+---
+
+### Prerequisite
+
+List the concepts or topics students should already be familiar with before starting this lesson.
+
+---
+
+### Preparation
+
+List any setup steps or tools required before starting the lesson.
+
+---
+
+### Content
+
+Step through the lesson content in structured sections.
+
+---
+
+## Topic 1
 
 ### Task:
 
-Collaborate to gradually improve your codebase and develop the project using shared code:
+Work together to progressively enhance your codebase to build the project with shared code:
 
 ```html
 code blocks
 ```
 
-✅ Knowledge Check - take this opportunity to challenge students with open-ended questions to deepen their understanding.
+✅ Knowledge Check
+Use this moment to stretch students' knowledge with open-ended questions.
 
-## [Topic 2]
+## Topic 2
+## Topic 3
 
-## [Topic 3]
+🚀 Challenge
+Add a collaborative challenge for students to enhance the project.
 
-🚀 Challenge: Present a collaborative challenge for students to work on during class to further develop the project.
+Optional: Add a screenshot of the completed lesson's UI if appropriate.
 
-Optional: Include a screenshot of the final UI from the lesson if relevant.
+## Post-lecture quiz
 
-## [Post-lecture quiz](../../../lesson-template/quiz-url)
+Add a quiz link here after completing the lesson.
 
 ## Review & Self Study
 
@@ -52,5 +73,7 @@ Optional: Include a screenshot of the final UI from the lesson if relevant.
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

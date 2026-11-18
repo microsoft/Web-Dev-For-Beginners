@@ -1,56 +1,79 @@
-# [Tema lekcije]
+# Tema lekcije
 
-![Umetnite video ovdje](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Kviz prije predavanja](../../../lesson-template/quiz-url)
-
-[Opišite što ćemo naučiti]
-
-### Uvod
-
-Opišite što će biti obuhvaćeno
-
-> Bilješke
-
-### Preduvjeti
-
-Koji koraci su trebali biti obuhvaćeni prije ove lekcije?
-
-### Priprema
-
-Pripremni koraci za početak ove lekcije
+> Dodajte ugrađeni video ili poveznicu na lekciju ovdje.
 
 ---
 
-[Prođite kroz sadržaj u blokovima]
+## Kviz prije predavanja
 
-## [Tema 1]
+> Dodajte poveznicu na kviz ovdje kada bude dostupan.
+
+---
+
+Dajte kratak pregled onoga što će učenici naučiti u ovoj lekciji.
+
+---
+
+### Uvod
+
+Dajte kratak uvod koji opisuje što će biti obrađeno u ovoj lekciji.
+
+> Bilješke
+
+---
+
+### Preduvjeti
+
+Navedite pojmove ili teme s kojima bi učenici trebali biti upoznati prije početka ove lekcije.
+
+---
+
+### Priprema
+
+Navedite korake postavljanja ili alate potrebne prije početka lekcije.
+
+---
+
+### Sadržaj
+
+Koračajte kroz sadržaj lekcije u strukturiranim odjeljcima.
+
+---
+
+## Tema 1
 
 ### Zadatak:
 
-Radite zajedno kako biste postupno unaprijedili svoj kodni repozitorij i izgradili projekt sa zajedničkim kodom:
+Radite zajedno kako biste postupno unaprijedili svoju bazu koda za izgradnju projekta s dijeljenim kodom:
 
 ```html
 code blocks
 ```
 
-✅ Provjera znanja - iskoristite ovaj trenutak za proširenje znanja učenika otvorenim pitanjima
+✅ Provjera znanja
+Iskoristite ovaj trenutak za produbljivanje znanja učenika putem otvorenih pitanja.
 
-## [Tema 2]
+## Tema 2
+## Tema 3
 
-## [Tema 3]
+🚀 Izazov
+Dodajte suradnički izazov za učenike kako bi unaprijedili projekt.
 
-🚀 Izazov: Dodajte izazov za učenike kako bi surađivali u razredu na unapređenju projekta
+Opcionalno: Dodajte snimku zaslona sučelja dovršene lekcije ako je prikladno.
 
-Opcionalno: dodajte snimku zaslona korisničkog sučelja dovršene lekcije ako je prikladno
+## Kviz nakon predavanja
 
-## [Kviz nakon predavanja](../../../lesson-template/quiz-url)
+Dodajte poveznicu na kviz ovdje nakon završetka lekcije.
 
 ## Pregled i samostalno učenje
 
-**Rok za zadatak [MM/GG]**: [Naziv zadatka](assignment.md)
+**Zadatak do [MM/GG]**: [Naziv zadatka](assignment.md)
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za ključne informacije preporučuje se profesionalni prijevod od strane ljudskog prevoditelja. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Izjava o odricanju odgovornosti**:  
+Ovaj dokument je preveden pomoću AI prevoditeljskog servisa [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku smatra se službenim i autoritativnim izvorom. Za važne informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili kriva tumačenja proizašla iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

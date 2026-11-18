@@ -1,56 +1,79 @@
-# [Oppiaihe]
+# Oppitunnin aihe
 
-![Upota video tähän](../../../lesson-template/video-url)
+## 🎥 Video
 
-## [Ennakkokysely](../../../lesson-template/quiz-url)
-
-[Kuvaile, mitä opimme]
-
-### Johdanto
-
-Kuvaile, mitä käsitellään
-
-> Muistiinpanot
-
-### Esitiedot
-
-Mitkä vaiheet olisi pitänyt käydä läpi ennen tätä oppituntia?
-
-### Valmistautuminen
-
-Valmisteluvaiheet tämän oppitunnin aloittamiseksi
+> Lisää tähän upotettu video tai oppitunnin linkki.
 
 ---
 
-[Käy sisältö läpi lohkoissa]
+## Ennakkotesti
 
-## [Aihe 1]
+> Lisää tänne testi-linkki, kun se on saatavilla.
+
+---
+
+Tarjoa lyhyt yleiskatsaus siitä, mitä opiskelijat oppivat tässä oppitunnissa.
+
+---
+
+### Johdanto
+
+Anna lyhyt johdanto, jossa kuvataan, mitä tässä oppitunnissa käsitellään.
+
+> Huomautuksia
+
+---
+
+### Esitiedot
+
+Listaa käsitteet tai aiheet, joihin opiskelijoiden tulisi olla jo perehtyneitä ennen tämän oppitunnin aloittamista.
+
+---
+
+### Valmistautuminen
+
+Listaa kaikki valmistelut tai työkalut, jotka vaaditaan ennen oppitunnin aloittamista.
+
+---
+
+### Sisältö
+
+Käy oppitunnin sisältö vaiheittain läpi rakenteellisissa osioissa.
+
+---
+
+## Aihe 1
 
 ### Tehtävä:
 
-Työskennelkää yhdessä parantaaksenne koodipohjaa asteittain ja rakentaaksenne projektin yhteisellä koodilla:
+Työskentele yhdessä parantaaksesi vähitellen koodipohjaasi rakentaaksesi projektin jaettua koodia käyttäen:
 
 ```html
 code blocks
 ```
 
-✅ Tietotesti - käytä tätä hetkeä venyttääksesi opiskelijoiden tietämystä avoimilla kysymyksillä
+✅ Tietotarkistus
+Hyödynnä tämä hetki venyttääksesi opiskelijoiden tietämystä avoimiin kysymyksiin vastaamalla.
 
-## [Aihe 2]
+## Aihe 2
+## Aihe 3
 
-## [Aihe 3]
+🚀 Haaste
+Lisää yhteinen haaste opiskelijoille projektin kehittämiseksi.
 
-🚀 Haaste: Lisää haaste, jossa opiskelijat työskentelevät yhdessä luokassa projektin parantamiseksi
+Valinnainen: Lisää kuvakaappaus valmiin oppitunnin käyttöliittymästä, jos se on sopivaa.
 
-Valinnainen: lisää kuvakaappaus valmiin oppitunnin käyttöliittymästä, jos tarpeellista
+## Oppitunnin jälkeinen testi
 
-## [Jälkituntikysely](../../../lesson-template/quiz-url)
+Lisää testi-linkki tänne oppitunnin suorittamisen jälkeen.
 
-## Kertaus & Itseopiskelu
+## Kertaus & Itsenäinen opiskelu
 
 **Tehtävän palautus [KK/VV]**: [Tehtävän nimi](assignment.md)
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälykäännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, ota huomioon, että automaattikäännöksissä voi esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä on pidettävä virallisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinymmärryksistä tai virhetulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
